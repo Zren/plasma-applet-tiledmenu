@@ -13,7 +13,7 @@ AppToolButton {
 	property var parentModel: typeof modelList !== "undefined" && modelList[index] ? modelList[index].parentModel : undefined
 	property string modelDescription: model.name == model.description ? '' : model.description // Ignore the Comment if it's the same as the Name.
 	property string description: model.url ? modelDescription : '' // 
-	property bool isDesktopFile: model.url && endsWith(model.url, '.desktop')
+	property bool isDesktopFile: !!model.url && endsWith(model.url, '.desktop')
 	property bool showItemUrl: listView.showItemUrl && (!isDesktopFile || listView.showDesktopFileUrl)
 	property string secondRowText: showItemUrl && model.url ? model.url : modelDescription
 	property bool secondRowVisible: secondRowText

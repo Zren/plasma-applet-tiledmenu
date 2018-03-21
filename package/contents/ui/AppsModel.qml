@@ -7,7 +7,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 import org.kde.plasma.private.kicker 0.1 as Kicker
-import "../code/KickerTools.js" as KickerTools
 
 Item {
 	id: appsModel

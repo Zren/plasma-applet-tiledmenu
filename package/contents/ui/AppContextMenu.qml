@@ -39,7 +39,7 @@ Item {
         if (menu) {
             menu.destroy()
             // menu = null // Don't null here. Binding loop: onOpended=false => closed() => destroyMenu() => menu=null => opened=false
-            console.log('destroyMenu', menu)
+            logger.debug('AppContextMenu.destroyMenu', menu)
         }
     }
 

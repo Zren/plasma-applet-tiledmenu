@@ -28,9 +28,9 @@ Item {
 		id: rootModelRefresh
 		interval: 400
 		onTriggered: {
-			console.log('rootModel.refresh.star', Date.now())
+			logger.debug('rootModel.refresh.star', Date.now())
 			rootModel.refresh()
-			console.log('rootModel.refresh.done', Date.now())
+			logger.debug('rootModel.refresh.done', Date.now())
 		}
 	}
 
@@ -435,7 +435,7 @@ Item {
 
 		function refresh() {
 			refreshing()
-			console.log("allAppsModel.refresh().star", Date.now())
+			logger.debug("allAppsModel.refresh().star", Date.now())
 			
 			//--- Apps
 			var appList = []
@@ -471,7 +471,7 @@ Item {
 			// 	}
 			// }
 
-			console.log("allAppsModel.refresh().done", Date.now())
+			logger.debug("allAppsModel.refresh().done", Date.now())
 			refreshed()
 		}
 	}

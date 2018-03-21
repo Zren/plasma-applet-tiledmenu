@@ -165,7 +165,7 @@ Item {
 		}
 
 		onFocusChanged: {
-			console.log('onFocusChanged', focus)
+			logger.debug('searchView.onFocusChanged', focus)
 			if (!focus) {
 				open = false
 			}

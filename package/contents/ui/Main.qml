@@ -7,8 +7,16 @@ import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
+import "lib"
+
 Item {
 	id: widget
+
+	Logger {
+		id: logger
+		name: 'tiledmenu'
+		// showDebug: true
+	}
 
 	SearchModel {
 		id: search

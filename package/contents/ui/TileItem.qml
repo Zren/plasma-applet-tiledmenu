@@ -20,7 +20,7 @@ Item {
 	}
 	readonly property alias app: appObj.app
 
-	readonly property bool faded: tileGrid.editing || tileMouseArea.pressed
+	readonly property bool faded: tileGrid.editing || tileMouseArea.isLeftPressed
 	readonly property int fadedWidth: width - cellPushedMargin
 	opacity: faded ? 0.75 : 1
 	scale: faded ? fadedWidth / width : 1
@@ -63,9 +63,9 @@ Item {
 			id: tileMouseArea
 			anchors.fill: parent
 			hoverEnabled: true
-
 			acceptedButtons: Qt.LeftButton | Qt.RightButton
 			cursorShape: editing ? Qt.ClosedHandCursor : Qt.ArrowCursor
+			readonly property bool isLeftPressed: pressedButtons & Qt.LeftButton
 			
 			// This MouseArea will spam "QQuickItem::ungrabMouse(): Item is not the mouse grabber."
 			// but there's no other way of having a clickable drag area.

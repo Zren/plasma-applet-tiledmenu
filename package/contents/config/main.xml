@@ -51,6 +51,7 @@
     </entry>
     <entry name="tileModel" type="string" stringType="base64json">
       <!-- Schema: [{ url: "konsole.desktop", x: 3, y: 0, w: 2, h: 2, label: "Terminal" }, ...] -->
+      <!-- For Testing: W3siaCI6MiwidXJsIjoib3JnLmtkZS5hcmsuZGVza3RvcCIsInciOjIsIngiOjQsInkiOjB9LHsiaCI6NCwidXJsIjoiYW5kcm9pZC1zdHVkaW8uZGVza3RvcCIsInciOjQsIngiOjAsInkiOjB9LHsiaCI6MiwidXJsIjoib3JnLmtkZS5kb2xwaGluLmRlc2t0b3AiLCJ3IjoyLCJ4Ijo0LCJ5IjoyfSx7ImgiOjIsInVybCI6ImF1ZGFjaXR5LmRlc2t0b3AiLCJ3Ijo0LCJ4IjowLCJ5Ijo0fSx7ImgiOjEsInVybCI6ImJsZW5kZXIuZGVza3RvcCIsInciOjIsIngiOjAsInkiOjZ9LHsiaCI6MSwidXJsIjoiYW50aW1pY3JvLmRlc2t0b3AiLCJ3IjoxLCJ4IjoyLCJ5Ijo2fV0= -->
       <default></default>
     </entry>
     <entry name="tileScale" type="double">

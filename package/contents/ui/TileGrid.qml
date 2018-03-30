@@ -20,7 +20,7 @@ DragAndDrop.DropArea {
 	property real cellMargin: 3 * units.devicePixelRatio
 	property real cellPushedMargin: 6 * units.devicePixelRatio
 	property int cellBoxSize: cellMargin + cellSize + cellMargin
-	property int hoverOutlineSize: 6 * units.devicePixelRatio
+	property int hoverOutlineSize: 2 * units.devicePixelRatio
 
 	property int minColumns: Math.floor(width / cellBoxSize)
 	property int minRows: Math.floor(height / cellBoxSize)

@@ -6,6 +6,7 @@ import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0 as DragAndDrop
+import QtGraphicalEffects 1.0
 
 Item {
 	id: tileItem
@@ -34,16 +35,49 @@ Item {
 		anchors.margins: cellMargin
 		width: modelData.w * cellBoxSize
 		height: modelData.h * cellBoxSize
+		readonly property int minSize: Math.min(width, height)
 		hovered: tileMouseArea.containsMouse
 	}
 
-	Rectangle {
+	Item {
+		id: hoverOutlineItem
 		anchors.fill: parent
+		anchors.margins: cellMargin
 		visible: tileMouseArea.containsMouse
-		color: "transparent"
-		border.color: "#88ffffff"
-		border.width: hoverOutlineSize
+		property bool useOutlineMask: true
+
+		Rectangle {
+			id: hoverOutline
+			visible: !hoverOutlineItem.useOutlineMask
+			anchors.fill: parent
+			// color: "transparent"
+			color: "#11ffffff"
+			border.color: "#88ffffff"
+			border.width: hoverOutlineSize
+		}
+
+		RadialGradient {
+			id: hoverOutlineMask
+			visible: false
+			anchors.fill: parent
+			horizontalOffset: hoverOutlineItem.visible ? tileMouseArea.mouseX - width/2 : 0
+			verticalOffset: hoverOutlineItem.visible ? tileMouseArea.mouseY - height/2 : 0
+			horizontalRadius: tileItemView.minSize
+			verticalRadius: tileItemView.minSize
+			gradient: Gradient {
+				GradientStop { position: 0.0; color: "#FFFFFFFF" }
+				GradientStop { position: 1; color: "#00FFFFFF" }
+			}
+		}
+
+		OpacityMask {
+			anchors.fill: parent
+			visible: hoverOutlineItem.useOutlineMask
+			source: hoverOutline
+			maskSource: hoverOutlineMask
+		}
 	}
+
 	//--- View End
 
 	DragAndDrop.DragArea {

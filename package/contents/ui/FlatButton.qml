@@ -19,7 +19,7 @@ PlasmaComponents.ToolButton {
 	text: ""
 	property string label: expanded ? text : ""
 	property bool labelVisible: text != ""
-	property color backgroundColor: "transparent"
+	property color backgroundColor: Qt.rgba(theme.buttonBackgroundColor.r, theme.buttonBackgroundColor.g, theme.buttonBackgroundColor.b, 0)
 	property bool zoomOnPush: true
 
 	// http://doc.qt.io/qt-5/qt.html#Edge-enum

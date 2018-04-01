@@ -24,6 +24,8 @@ QtObject {
 	readonly property color backgroundColor: tile && typeof tile.backgroundColor !== "undefined" ? tile.backgroundColor : defaultBackgroundColor
 	readonly property string backgroundImage: tile && typeof tile.backgroundImage !== "undefined" ? tile.backgroundImage : ""
 
+	readonly property int tileX: tile && typeof tile.x !== "undefined" ? tile.x : 0
+	readonly property int tileY: tile && typeof tile.y !== "undefined" ? tile.y : 0
 	readonly property int tileW: tile && typeof tile.w !== "undefined" ? tile.w : defaultTileW
 	readonly property int tileH: tile && typeof tile.h !== "undefined" ? tile.h : defaultTileH
 

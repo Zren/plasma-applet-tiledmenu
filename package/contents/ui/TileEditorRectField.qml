@@ -11,9 +11,12 @@ import org.kde.plasma.extras 2.0 as PlasmaExtras
 import "lib"
 
 GroupBox {
+	id: tileEditorRectField
 	title: "Label"
 	implicitWidth: parent.implicitWidth
 	Layout.fillWidth: true
+
+	readonly property int xLeft: tileGrid.columns - (appObj.tileX + appObj.tileW)
 
 	style: GroupBoxStyle {}
 
@@ -28,7 +31,7 @@ GroupBox {
 				TileEditorSpinBox {
 					key: 'x'
 					minimumValue: 0
-					maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.w-1 || 0)
+					maximumValue: appObj.tileX + tileEditorRectField.xLeft
 				}
 			}
 			RowLayout {
@@ -43,7 +46,7 @@ GroupBox {
 				TileEditorSpinBox {
 					key: 'w'
 					minimumValue: 1
-					maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.x || 0)
+					maximumValue: appObj.tileW + tileEditorRectField.xLeft
 				}
 			}
 			RowLayout {
@@ -71,6 +74,7 @@ GroupBox {
 					property int h: Math.floor(modelData / resizeGrid.columns) + 1
 					text: '' + w + 'x' + h
 					checked: w <= appObj.tileW && h <= appObj.tileH
+					// enabled: w - appObj.tileW <= tileEditorRectField.xLeft
 					onClicked: {
 						appObj.tile.w = w
 						appObj.tile.h = h

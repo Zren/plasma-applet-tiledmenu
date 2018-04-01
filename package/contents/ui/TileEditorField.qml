@@ -28,7 +28,7 @@ GroupBox {
 		if (checkedKey && tileEditorField.updateOnChange) {
 			appObj.tile[checkedKey] = checked
 			appObj.tileChanged()
-			favouritesView.tileModelChanged()
+			tileGrid.tileModelChanged()
 		}
 	}
 
@@ -62,7 +62,7 @@ GroupBox {
 				if (key && textField.updateOnChange) {
 					appObj.tile[key] = text
 					appObj.tileChanged()
-					favouritesView.tileModelChanged()
+					tileGrid.tileModelChanged()
 				}
 			}
 

@@ -8,7 +8,7 @@ Main
 			SearchResultsView
 				SearchResultsList
 			SearchField
-		FavouritesView
+		TileGrid
 
 
 krunner_id (filename)

@@ -65,21 +65,21 @@ Item {
 
             function addPinToMenuAction(favoriteId) {
                 var menuItem = menu.newMenuItem();
-                if (favouritesView.hasAppTile(favoriteId)) {
+                if (tileGrid.hasAppTile(favoriteId)) {
                     menuItem.text = i18n("Unpin from Menu")
                     menuItem.icon = "list-remove"
                     menuItem.clicked.connect(function() {
                         if (root.tileIndex >= 0) {
-                            favouritesView.removeIndex(root.tileIndex)
+                            tileGrid.removeIndex(root.tileIndex)
                         } else {
-                            favouritesView.removeApp(favoriteId)
+                            tileGrid.removeApp(favoriteId)
                         }
                     })
                 } else {
                     menuItem.text = i18n("Pin to Menu")
                     menuItem.icon = "bookmark-new"
                     menuItem.clicked.connect(function() {
-                        favouritesView.addApp(favoriteId)
+                        tileGrid.addApp(favoriteId)
                     })
                 }
                 menu.addMenuItem(menuItem)

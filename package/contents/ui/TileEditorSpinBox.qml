@@ -20,7 +20,7 @@ SpinBox {
 		if (key && updateOnChange) {
 			appObj.tile[key] = value
 			appObj.tileChanged()
-			favouritesView.tileModelChanged()
+			tileGrid.tileModelChanged()
 		}
 	}
 

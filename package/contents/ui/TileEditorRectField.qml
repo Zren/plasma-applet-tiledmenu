@@ -28,7 +28,7 @@ GroupBox {
 				TileEditorSpinBox {
 					key: 'x'
 					minimumValue: 0
-					maximumValue: favouritesView.columns - (appObj.tile && appObj.tile.w-1 || 0)
+					maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.w-1 || 0)
 				}
 			}
 			RowLayout {
@@ -43,7 +43,7 @@ GroupBox {
 				TileEditorSpinBox {
 					key: 'w'
 					minimumValue: 1
-					maximumValue: favouritesView.columns - (appObj.tile && appObj.tile.x || 0)
+					maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.x || 0)
 				}
 			}
 			RowLayout {
@@ -75,7 +75,7 @@ GroupBox {
 						appObj.tile.w = w
 						appObj.tile.h = h
 						appObj.tileChanged()
-						favouritesView.tileModelChanged()
+						tileGrid.tileModelChanged()
 					}
 				}
 			}

@@ -75,7 +75,7 @@ GroupBox {
 						delete appObj.tile[key]
 					}
 					appObj.tileChanged()
-					favouritesView.tileModelChanged()
+					tileGrid.tileModelChanged()
 				}
 			}
 

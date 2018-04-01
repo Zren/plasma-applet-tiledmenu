@@ -10,7 +10,7 @@ MouseArea {
 	property alias searchView: searchView
 	property alias tileEditorView: searchView.tileEditorView
 	property alias tileEditorViewLoader: searchView.tileEditorViewLoader
-	property alias favouritesView: favouritesView
+	property alias tileGrid: tileGrid
 
 	RowLayout {
 		anchors.fill: parent
@@ -24,7 +24,7 @@ MouseArea {
 		}
 
 		TileGrid {
-			id: favouritesView
+			id: tileGrid
 			Layout.fillWidth: true
 			Layout.fillHeight: true
 

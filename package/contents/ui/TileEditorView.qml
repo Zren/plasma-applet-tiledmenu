@@ -32,7 +32,7 @@ ColumnLayout {
 		delete appObj.tile.backgroundColor
 		delete appObj.tile.backgroundImage
 		appObj.tileChanged()
-		favouritesView.tileModelChanged()
+		tileGrid.tileModelChanged()
 	}
 
 

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applets/tree/master/tiledmenu\n"
-"POT-Creation-Date: 2018-03-12 23:44-0400\n"
+"POT-Creation-Date: 2018-04-01 09:16-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: pl\n"
@@ -169,27 +169,27 @@ msgstr ""
 msgid "<b>Version:</b> %1"
 msgstr ""
 
-#: ../contents/ui/Main.qml:221
+#: ../contents/ui/Main.qml:229
 msgid "System Info"
 msgstr ""
 
-#: ../contents/ui/Main.qml:222
+#: ../contents/ui/Main.qml:230
 msgid "Terminal"
 msgstr ""
 
-#: ../contents/ui/Main.qml:224
+#: ../contents/ui/Main.qml:232
 msgid "Task Manager"
 msgstr ""
 
-#: ../contents/ui/Main.qml:225
+#: ../contents/ui/Main.qml:233
 msgid "System Settings"
 msgstr ""
 
-#: ../contents/ui/Main.qml:226
+#: ../contents/ui/Main.qml:234
 msgid "File Manager"
 msgstr ""
 
-#: ../contents/ui/Main.qml:228
+#: ../contents/ui/Main.qml:236
 msgid "Edit Applications..."
 msgstr ""
 
@@ -310,15 +310,15 @@ msgstr ""
 msgid "Power"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:44 ../contents/ui/TileItem.qml:96
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:131
 msgid "Edit Tile"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:48
+#: ../contents/ui/TileEditorView.qml:47
 msgid "Reset Tile"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:53
+#: ../contents/ui/TileEditorView.qml:52
 msgid "Close"
 msgstr ""
 
@@ -334,22 +334,39 @@ msgstr ""
 msgid "Icon"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:106
+#: ../contents/ui/TileEditorView.qml:107
 msgid "Background Image"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:116
+#: ../contents/ui/TileEditorView.qml:117
 msgid "Choose an image"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:121
+#: ../contents/ui/TileEditorView.qml:122
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:135
+#: ../contents/ui/TileEditorView.qml:136
 msgid "Background Color"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:141
+#: ../contents/ui/TileEditorView.qml:142
 msgid "Position / Size"
+msgstr ""
+
+#: ../contents/ui/TileGrid.qml:321
+msgid "New Group"
+msgstr ""
+
+#: ../contents/ui/TileGrid.qml:330
+msgid "Unlock Tiles"
+msgstr ""
+
+#: ../contents/ui/TileGrid.qml:330
+msgid "Lock Tiles"
+msgstr ""
+
+#: ../contents/ui/TileGrid.qml:515
+msgctxt "default group label"
+msgid "Group"
 msgstr ""

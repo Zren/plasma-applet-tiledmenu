@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applets/tree/master/tiledmenu\n"
-"POT-Creation-Date: 2018-03-12 23:44-0400\n"
+"POT-Creation-Date: 2018-04-01 09:16-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lin Mu <linmu789632@gmail.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -170,27 +170,27 @@ msgstr "分类（应用菜单/仪表板）"
 msgid "<b>Version:</b> %1"
 msgstr ""
 
-#: ../contents/ui/Main.qml:221
+#: ../contents/ui/Main.qml:229
 msgid "System Info"
 msgstr "系统信息"
 
-#: ../contents/ui/Main.qml:222
+#: ../contents/ui/Main.qml:230
 msgid "Terminal"
 msgstr "终端"
 
-#: ../contents/ui/Main.qml:224
+#: ../contents/ui/Main.qml:232
 msgid "Task Manager"
 msgstr "任务管理器"
 
-#: ../contents/ui/Main.qml:225
+#: ../contents/ui/Main.qml:233
 msgid "System Settings"
 msgstr "系统设置"
 
-#: ../contents/ui/Main.qml:226
+#: ../contents/ui/Main.qml:234
 msgid "File Manager"
 msgstr "文件管理器"
 
-#: ../contents/ui/Main.qml:228
+#: ../contents/ui/Main.qml:236
 msgid "Edit Applications..."
 msgstr "编辑应用列表"
 
@@ -312,15 +312,15 @@ msgstr "用户管理程序"
 msgid "Power"
 msgstr "电源"
 
-#: ../contents/ui/TileEditorView.qml:44 ../contents/ui/TileItem.qml:96
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:131
 msgid "Edit Tile"
 msgstr "编辑磁贴"
 
-#: ../contents/ui/TileEditorView.qml:48
+#: ../contents/ui/TileEditorView.qml:47
 msgid "Reset Tile"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:53
+#: ../contents/ui/TileEditorView.qml:52
 msgid "Close"
 msgstr ""
 
@@ -336,24 +336,41 @@ msgstr "标签"
 msgid "Icon"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:106
+#: ../contents/ui/TileEditorView.qml:107
 msgid "Background Image"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:116
+#: ../contents/ui/TileEditorView.qml:117
 msgid "Choose an image"
 msgstr "选择一张图片"
 
-#: ../contents/ui/TileEditorView.qml:121
+#: ../contents/ui/TileEditorView.qml:122
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 msgstr "图片文件 (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
-#: ../contents/ui/TileEditorView.qml:135
+#: ../contents/ui/TileEditorView.qml:136
 msgid "Background Color"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:141
+#: ../contents/ui/TileEditorView.qml:142
 msgid "Position / Size"
+msgstr ""
+
+#: ../contents/ui/TileGrid.qml:321
+msgid "New Group"
+msgstr ""
+
+#: ../contents/ui/TileGrid.qml:330
+msgid "Unlock Tiles"
+msgstr ""
+
+#: ../contents/ui/TileGrid.qml:330
+msgid "Lock Tiles"
+msgstr ""
+
+#: ../contents/ui/TileGrid.qml:515
+msgctxt "default group label"
+msgid "Group"
 msgstr ""
 
 #~ msgctxt "@item:inmenu Open icon chooser dialog"

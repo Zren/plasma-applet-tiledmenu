@@ -16,7 +16,7 @@ GroupBox {
 	implicitWidth: parent.implicitWidth
 	Layout.fillWidth: true
 
-	readonly property int xLeft: tileGrid.columns - (appObj.tileX + appObj.tileW)
+	// readonly property int xLeft: tileGrid.columns - (appObj.tileX + appObj.tileW)
 
 	style: GroupBoxStyle {}
 
@@ -31,7 +31,8 @@ GroupBox {
 				TileEditorSpinBox {
 					key: 'x'
 					minimumValue: 0
-					maximumValue: appObj.tileX + tileEditorRectField.xLeft
+					maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.w-1 || 0)
+					// maximumValue: appObj.tileX + tileEditorRectField.xLeft
 				}
 			}
 			RowLayout {
@@ -46,7 +47,8 @@ GroupBox {
 				TileEditorSpinBox {
 					key: 'w'
 					minimumValue: 1
-					maximumValue: appObj.tileW + tileEditorRectField.xLeft
+					maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.x || 0)
+					// maximumValue: appObj.tileW + tileEditorRectField.xLeft
 				}
 			}
 			RowLayout {

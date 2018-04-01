@@ -2,6 +2,15 @@ import QtQuick 2.0
 
 QtObject {
 	property var tile: null
+
+	readonly property bool isGroup: tile && tile.tileType == "group"
+	readonly property bool isLauncher: !isGroup
+
+	readonly property color defaultBackgroundColor: isGroup ? "transparent" : config.defaultTileColor
+	readonly property bool defaultShowIcon: isGroup ? false : true
+	readonly property int defaultTileW: isGroup ? 6 : 2
+	readonly property int defaultTileH: isGroup ? 1 : 2
+
 	readonly property string favoriteId: tile && tile.url || ''
 	readonly property var app: favoriteId ? appsModel.tileGridModel.getApp(favoriteId) : null
 	readonly property string appLabel: app ? app.display : ""
@@ -10,13 +19,13 @@ QtObject {
 	readonly property string labelText: tile && tile.label || appLabel || appUrl || ""
 	readonly property var iconSource: tile && tile.icon || appIcon
 	readonly property bool iconFill: tile && typeof tile.iconFill !== "undefined" ? tile.iconFill : false
-	readonly property bool showIcon: tile && typeof tile.showIcon !== "undefined" ? tile.showIcon : true
+	readonly property bool showIcon: tile && typeof tile.showIcon !== "undefined" ? tile.showIcon : defaultShowIcon
 	readonly property bool showLabel: tile && typeof tile.showLabel !== "undefined" ? tile.showLabel : true
-	readonly property color backgroundColor: tile && typeof tile.backgroundColor !== "undefined" ? tile.backgroundColor : config.defaultTileColor
+	readonly property color backgroundColor: tile && typeof tile.backgroundColor !== "undefined" ? tile.backgroundColor : defaultBackgroundColor
 	readonly property string backgroundImage: tile && typeof tile.backgroundImage !== "undefined" ? tile.backgroundImage : ""
 
-	readonly property int tileW: tile && typeof tile.w !== "undefined" ? tile.w : 2
-	readonly property int tileH: tile && typeof tile.h !== "undefined" ? tile.h : 2
+	readonly property int tileW: tile && typeof tile.w !== "undefined" ? tile.w : defaultTileW
+	readonly property int tileH: tile && typeof tile.h !== "undefined" ? tile.h : defaultTileH
 
 
 	// onTileChanged: console.log('onTileChanged', JSON.stringify(tile))

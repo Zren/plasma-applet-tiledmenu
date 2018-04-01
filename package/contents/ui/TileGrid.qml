@@ -295,6 +295,34 @@ DragAndDrop.DropArea {
 						border.width: 1
 						border.color: tileGrid.editing ? "#44000000" : "transparent"
 					}
+
+					MouseArea {
+						anchors.fill: parent
+						acceptedButtons: Qt.RightButton
+						onClicked: {
+							if (mouse.button == Qt.RightButton) {
+								cellContextMenu.cellX = cellItem.modelX
+								cellContextMenu.cellY = cellItem.modelY
+								var pos = mapToItem(scrollItem, mouse.x, mouse.y) // cellContextMenu is a child of scrollItem
+								cellContextMenu.open(pos.x, pos.y)
+							}
+						}
+
+					}
+				}
+			}
+			PlasmaComponents.ContextMenu {
+				id: cellContextMenu
+				property int cellX: -1
+				property int cellY: -1
+
+				PlasmaComponents.MenuItem {
+					icon: "group-new"
+					text: i18n("New Group")
+					onClicked: {
+						var tile = tileGrid.addGroup(cellContextMenu.cellX, cellContextMenu.cellY)
+						tileGrid.editTile(tile)
+					}
 				}
 			}
 
@@ -441,8 +469,7 @@ DragAndDrop.DropArea {
 		}
 	}
 
-	function addApp(url, x, y) {
-		var tile = newTile(url)
+	function parseTileXY(tile, x, y) {
 		if (typeof x !== "undefined" && typeof y !== "undefined") {
 			tile.x = x
 			tile.y = y
@@ -451,8 +478,13 @@ DragAndDrop.DropArea {
 			tile.x = openPos.x
 			tile.y = openPos.y
 		}
+	}
+	function addApp(url, x, y) {
+		var tile = newTile(url)
+		parseTileXY(tile, x, y)
 		tileModel.push(tile)
 		tileModelChanged()
+		return tile
 	}
 
 	function hasAppTile(url) {
@@ -463,6 +495,21 @@ DragAndDrop.DropArea {
 			}
 		}
 		return false
+	}
+
+	function limit(minValue, value, maxValue) {
+		return Math.max(minValue, Math.min(value, maxValue))
+	}
+	function addGroup(x, y) {
+		var tile = newTile("")
+		parseTileXY(tile, x, y)
+		tile.tileType = "group"
+		tile.label = i18nc("default group label", "Group")
+		tile.w = limit(2, columns-x, 6) // 6 unless we have less columns.
+		tile.h = 1
+		tileModel.push(tile)
+		tileModelChanged()
+		return tile
 	}
 
 	signal editTile(var tile)

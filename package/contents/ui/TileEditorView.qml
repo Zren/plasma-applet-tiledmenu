@@ -28,7 +28,6 @@ ColumnLayout {
 		delete appObj.tile.showIcon
 		delete appObj.tile.showLabel
 		delete appObj.tile.label
-		delete appObj.tile.label
 		delete appObj.tile.icon
 		delete appObj.tile.backgroundColor
 		delete appObj.tile.backgroundImage
@@ -71,6 +70,7 @@ ColumnLayout {
 			width: scrollView.viewportWidth
 
 			TileEditorField {
+				visible: appObj.isLauncher
 				title: i18n("Url")
 				key: 'url'
 			}
@@ -89,6 +89,7 @@ ColumnLayout {
 				// placeholderText: appObj.appIcon ? appObj.appIcon.toString() : ''
 				key: 'icon'
 				checkedKey: 'showIcon'
+				checkedDefault: appObj.defaultShowIcon
 
 				PlasmaComponents.Button {
 					iconName: "document-open"

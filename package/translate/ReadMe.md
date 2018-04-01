@@ -4,7 +4,7 @@ With KDE Frameworks v5.37 and above, translations are bundled with the *.plasmoi
 
 ## Install Translations
 
-Go to `~/.local/share/plasma/plasmoids/org.kde.plasma.eventcalendar/translate/` and run `sh ./build --restartplasma`.
+Go to `~/.local/share/plasma/plasmoids/com.github.zren.tiledmenu/translate/` and run `sh ./build --restartplasma`.
 
 ## New Translations
 

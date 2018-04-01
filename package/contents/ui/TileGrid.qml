@@ -324,6 +324,14 @@ DragAndDrop.DropArea {
 						tileGrid.editTile(tile)
 					}
 				}
+
+				PlasmaComponents.MenuItem {
+					icon: plasmoid.configuration.tilesLocked ? "object-unlocked" : "object-locked"
+					text: plasmoid.configuration.tilesLocked ? i18n("Unlock Tiles") : i18n("Lock Tiles")
+					onClicked: {
+						plasmoid.configuration.tilesLocked = !plasmoid.configuration.tilesLocked
+					}
+				}
 			}
 
 			Repeater {

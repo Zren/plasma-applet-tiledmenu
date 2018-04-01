@@ -60,6 +60,9 @@
     <entry name="tileMargin" type="double">
       <default>5</default>
     </entry>
+    <entry name="tilesLocked" type="bool">
+      <default>false</default>
+    </entry>
 
     <!-- Colors -->
     <!-- Use empty string instead of color type so that we can use default colors from the color scheme. -->

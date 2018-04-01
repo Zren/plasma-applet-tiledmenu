@@ -82,6 +82,7 @@ Item {
 
 	DragAndDrop.DragArea {
 		anchors.fill: parent
+		enabled: !plasmoid.configuration.tilesLocked
 		delegate: tileItemView
 		onDragStarted: {
 			console.log('onDragStarted', JSON.stringify(modelData), index, tileModel.length)

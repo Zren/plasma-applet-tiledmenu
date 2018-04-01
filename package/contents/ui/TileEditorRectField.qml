@@ -31,7 +31,7 @@ GroupBox {
 				TileEditorSpinBox {
 					key: 'x'
 					minimumValue: 0
-					maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.w-1 || 0)
+					// maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.w-1 || 0)
 					// maximumValue: appObj.tileX + tileEditorRectField.xLeft
 				}
 			}
@@ -47,7 +47,7 @@ GroupBox {
 				TileEditorSpinBox {
 					key: 'w'
 					minimumValue: 1
-					maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.x || 0)
+					// maximumValue: tileGrid.columns - (appObj.tile && appObj.tile.x || 0)
 					// maximumValue: appObj.tileW + tileEditorRectField.xLeft
 				}
 			}

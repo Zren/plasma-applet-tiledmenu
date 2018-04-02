@@ -1,3 +1,11 @@
+## v19 - April 1 2018
+
+* Disable push effect when right clicking a tile.
+* Add a radial hover effect similar to fluent design.
+* Add "group" tile to quickly label a group of tiles. No other features are implmented yet (like moving all tiles in the group or "folders"). Right click the empty grid to add a "group" label.
+* Support locking tiles so you don't accidentally drag them. Right click the empty grid > (un)lock tiles.
+* Fix tileLabelAlignment, it never got reimplemented after the refactor.
+
 ## v18 - September 25 2017
 
 * Fix tiles not launching unless we open and close the tile editor.

@@ -317,6 +317,7 @@ DragAndDrop.DropArea {
 				PlasmaComponents.MenuItem {
 					icon: "group-new"
 					text: i18n("New Group")
+					visible: !plasmoid.configuration.tilesLocked
 					onClicked: {
 						var tile = tileGrid.addGroup(cellContextMenu.cellX, cellContextMenu.cellY)
 						tileGrid.editTile(tile)

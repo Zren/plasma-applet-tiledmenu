@@ -15,7 +15,7 @@ Rectangle {
 	readonly property int mediumIconSize: 72 * units.devicePixelRatio
 	readonly property int largeIconSize: 96 * units.devicePixelRatio
 
-	readonly property int tileLabelAlignment: Text.AlignLeft
+	readonly property int tileLabelAlignment: config.tileLabelAlignment
 
 	property bool hovered: false
 

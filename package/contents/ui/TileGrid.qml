@@ -135,8 +135,6 @@ DragAndDrop.DropArea {
 		resetDragHover()
 	}
 
-	property color tileDefaultBackgroundColor: config.defaultTileColor
-
 	property var hitBox: [] // hitBox[y][x]
 	function updateSize() {
 		var c = 0;

@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-04-01 09:25-0400\n"
+"POT-Creation-Date: 2018-04-01 21:49-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr\n"
@@ -359,19 +359,19 @@ msgstr ""
 msgid "Position / Size"
 msgstr ""
 
-#: ../contents/ui/TileGrid.qml:321
+#: ../contents/ui/TileGrid.qml:319
 msgid "New Group"
 msgstr ""
 
-#: ../contents/ui/TileGrid.qml:330
+#: ../contents/ui/TileGrid.qml:328
 msgid "Unlock Tiles"
 msgstr ""
 
-#: ../contents/ui/TileGrid.qml:330
+#: ../contents/ui/TileGrid.qml:328
 msgid "Lock Tiles"
 msgstr ""
 
-#: ../contents/ui/TileGrid.qml:515
+#: ../contents/ui/TileGrid.qml:513
 msgctxt "default group label"
 msgid "Group"
 msgstr ""

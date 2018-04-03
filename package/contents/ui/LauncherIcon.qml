@@ -33,12 +33,13 @@ MouseArea {
 		}
 	}
 
+	readonly property int maxSize: Math.max(width, height)
 	property int size: {
 		if (inPanel) {
 			if (plasmoid.configuration.fixedPanelIcon) {
 				return units.iconSizeHints.panel
 			} else {
-				return Math.max(width, height)
+				return maxSize
 			}
 		} else {
 			return -1

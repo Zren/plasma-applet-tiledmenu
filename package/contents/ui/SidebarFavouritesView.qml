@@ -13,15 +13,15 @@ Repeater {
 		onClicked: {
 			repeater.parent.parent.open = false // SidebarContextMenu { Column { Repeater{} } }
 			var xdgFolder = isLocalizedFolder()
-			if (xdgFolder === 'Documents') {
+			if (xdgFolder === 'DOCUMENTS') {
 				executable.exec('xdg-open $(xdg-user-dir DOCUMENTS)')
-			} else if (xdgFolder === 'Downloads') {
+			} else if (xdgFolder === 'DOWNLOAD') {
 				executable.exec('xdg-open $(xdg-user-dir DOWNLOAD)')
-			} else if (xdgFolder === 'Music') {
+			} else if (xdgFolder === 'MUSIC') {
 				executable.exec('xdg-open $(xdg-user-dir MUSIC)')
-			} else if (xdgFolder === 'Pictures') {
+			} else if (xdgFolder === 'PICTURES') {
 				executable.exec('xdg-open $(xdg-user-dir PICTURES)')
-			} else if (xdgFolder === 'Videos') {
+			} else if (xdgFolder === 'VIDEOS') {
 				executable.exec('xdg-open $(xdg-user-dir VIDEOS)')
 			} else {
 				repeater.model.triggerIndex(index)
@@ -33,28 +33,15 @@ Repeater {
 		// since Qt 5.7 doesn't expose the localized paths anywhere.
 		function isLocalizedFolder() {
 			var s = model.url.toString()
-			if (startsWith(s, 'file:///home/')) {
-				s = s.substring('file:///home/'.length, s.length)
-				// console.log(model.url, s)
-
-				var trimIndex = s.indexOf('/')
-				if (trimIndex == -1) { // file:///home/username
-					s = ''
-				} else {
-					s = s.substring(trimIndex, s.length)
-				}
-				// console.log(model.url, s)
-
-				if (s === '/Documents') {
-					return 'Documents'
-				} else if (s === '/Downloads') {
-					return 'Downloads'
-				} else if (s === '/Music') {
-					return 'Music'
-				} else if (s === '/Pictures') {
-					return 'Pictures'
-				} else if (s === '/Videos') {
-					return 'Videos'
+			if (startsWith(s, 'xdg:')) {
+				s = s.substring('xdg:'.length, s.length)
+				if (s == 'DOCUMENTS'
+				 || s == 'DOWNLOAD'
+				 || s == 'MUSIC'
+				 || s == 'PICTURES'
+				 || s == 'VIDEOS'
+				) {
+					return s
 				}
 			}
 			return ''
@@ -89,15 +76,18 @@ Repeater {
 
 					if (s === '') { // Home Directory
 						return 'user-home-symbolic'
-					} else if (s === '/Documents') {
+					}
+				} else if (startsWith(s, 'xdg:')) {
+					s = s.substring('xdg:'.length, s.length)
+					if (s === 'DOCUMENTS') {
 						return 'folder-documents-symbolic'
-					} else if (s === '/Downloads') {
+					} else if (s === 'DOWNLOAD') {
 						return 'folder-download-symbolic'
-					} else if (s === '/Music') {
+					} else if (s === 'MUSIC') {
 						return 'folder-music-symbolic'
-					} else if (s === '/Pictures') {
+					} else if (s === 'PICTURES') {
 						return 'folder-pictures-symbolic'
-					} else if (s === '/Videos') {
+					} else if (s === 'VIDEOS') {
 						return 'folder-videos-symbolic'
 					}
 				}

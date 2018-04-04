@@ -122,25 +122,11 @@ Item {
 			id: sidebarModel
 
 			Component.onCompleted: {
-				var list = []
-				if (kuser.loginName) { // Was set for me in testing.
-					var userDirs = [
-						'file:///home/' + kuser.loginName + '/Documents',
-						'file:///home/' + kuser.loginName + '/Downloads',
-						'file:///home/' + kuser.loginName + '/Music',
-						'file:///home/' + kuser.loginName + '/Pictures',
-						'file:///home/' + kuser.loginName + '/Videos',
-						// 'file:///home/' + kuser.loginName, // Not neaded in practice since dolphin opens the homedir.
-					]
-					list = list.concat(userDirs)
-				}
+				favorites = plasmoid.configuration.sidebarShortcuts
+			}
 
-				var sidebarApps = [
-					'org.kde.dolphin.desktop',
-					'systemsettings.desktop',
-				]
-				list = list.concat(sidebarApps)
-				favorites = list
+			onFavoritesChanged: {
+				plasmoid.configuration.sidebarShortcuts = favorites
 			}
 		}
 

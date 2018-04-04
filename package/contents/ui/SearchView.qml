@@ -6,7 +6,10 @@ import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import org.kde.draganddrop 2.0 as DragAndDrop
 import org.kde.kquickcontrolsaddons 2.0 // KCMShell
+
+import "Utils.js" as Utils
 
 Item {
 	id: searchView
@@ -46,6 +49,18 @@ Item {
 			}
 		}
 	]
+
+	DragAndDrop.DropArea {
+		anchors.fill: sidebarMenu
+		
+		onDrop: {
+			if (event && event.mimeData && event.mimeData.url) {
+				var url = event.mimeData.url.toString()
+				url = Utils.parseDropUrl(url)
+				appsModel.sidebarModel.addFavorite(url, 0)
+			}
+		}
+	}
 
 	SidebarMenu {
 		id: sidebarMenu

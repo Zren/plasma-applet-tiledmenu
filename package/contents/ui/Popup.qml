@@ -47,7 +47,24 @@ MouseArea {
 	}
 
 	MouseArea {
+		visible: !plasmoid.configuration.tilesLocked && !(plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.RightEdge)
 		anchors.top: parent.top
+		anchors.right: parent.right
+		width: units.largeSpacing
+		height: units.largeSpacing
+		cursorShape: Qt.WhatsThisCursor
+
+		PlasmaCore.ToolTipArea {
+			anchors.fill: parent
+			icon: "help-hint"
+			mainText: i18n("Resize?")
+			subText: i18n("Alt + Right Click to resize the menu.")
+		}
+	}
+
+	MouseArea {
+		visible: !plasmoid.configuration.tilesLocked && !(plasmoid.location == PlasmaCore.Types.BottomEdge || plasmoid.location == PlasmaCore.Types.RightEdge)
+		anchors.bottom: parent.bottom
 		anchors.right: parent.right
 		width: units.largeSpacing
 		height: units.largeSpacing

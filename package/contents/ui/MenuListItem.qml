@@ -178,7 +178,7 @@ AppToolButton {
 	AppContextMenu {
 		id: contextMenu
 		onPopulateMenu: {
-			if (launcherUrl) {
+			if (launcherUrl && !plasmoid.configuration.tilesLocked) {
 				menu.addPinToMenuAction(launcherUrl)
 			}
 			if (listView.model.hasActionList(index)) {

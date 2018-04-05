@@ -123,16 +123,20 @@ Item {
 		id: contextMenu
 		tileIndex: index
 		onPopulateMenu: {
-			menu.addPinToMenuAction(modelData.url)
+			if (!plasmoid.configuration.tilesLocked) {
+				menu.addPinToMenuAction(modelData.url)
+			}
 			
 			appObj.addActionList(menu)
 
-			var menuItem = menu.newMenuItem()
-			menuItem.text = i18n("Edit Tile")
-			menuItem.icon = 'rectangle-shape'
-			menuItem.onClicked.connect(function(){
-				tileItem.openTileEditor()
-			})
+			if (!plasmoid.configuration.tilesLocked) {
+				var menuItem = menu.newMenuItem()
+				menuItem.text = i18n("Edit Tile")
+				menuItem.icon = 'rectangle-shape'
+				menuItem.onClicked.connect(function(){
+					tileItem.openTileEditor()
+				})
+			}
 		}
 	}
 

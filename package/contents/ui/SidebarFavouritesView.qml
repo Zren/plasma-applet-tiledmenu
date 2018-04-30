@@ -1,4 +1,5 @@
 import QtQuick 2.0
+import Qt.labs.platform 1.0 // Qt 5.8+
 
 Repeater {
 	id: repeater
@@ -8,7 +9,7 @@ Repeater {
 
 	delegate: SidebarItem {
 		icon: symbolicIconName || model.iconName || model.decoration
-		text: model.name || model.display
+		text: xdgDisplayName || model.name || model.display
 		sidebarMenu: repeater.parent.parent // SidebarContextMenu { Column { Repeater{} } }
 		onClicked: {
 			repeater.parent.parent.open = false // SidebarContextMenu { Column { Repeater{} } }
@@ -52,6 +53,22 @@ Repeater {
 		}
 		function endsWith(s, sub) {
 			return s.indexOf(sub) === s.length - sub.length
+		}
+		property string xdgDisplayName: {
+			var xdgFolder = isLocalizedFolder()
+			if (xdgFolder === 'DOCUMENTS') {
+				return StandardPaths.displayName(StandardPaths.DocumentsLocation)
+			} else if (xdgFolder === 'DOWNLOAD') {
+				return StandardPaths.displayName(StandardPaths.DownloadLocation)
+			} else if (xdgFolder === 'MUSIC') {
+				return StandardPaths.displayName(StandardPaths.MusicLocation)
+			} else if (xdgFolder === 'PICTURES') {
+				return StandardPaths.displayName(StandardPaths.PicturesLocation)
+			} else if (xdgFolder === 'VIDEOS') {
+				return StandardPaths.displayName(StandardPaths.MoviesLocation)
+			} else {
+				return ''
+			}
 		}
 		property string symbolicIconName: {
 			if (model.url) {

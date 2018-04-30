@@ -168,41 +168,44 @@ ConfigPage {
 
 			ColumnLayout {
 				id: sidebarDefaultsColumn
+
 				Label {
 					text: i18n("Add Default")
 				}
-				PlasmaComponents.Button {
-					iconName: "folder-documents-symbolic"
+
+				ConfigIconButton {
+					icon.name: "folder-documents-symbolic"
 					text: StandardPaths.displayName(StandardPaths.DocumentsLocation)
 					onClicked: sidebarShortcuts.addUrl('xdg:DOCUMENTS')
 				}
-				PlasmaComponents.Button {
-					iconName: "folder-download-symbolic"
+				ConfigIconButton {
+					icon.name: "folder-download-symbolic"
+					// Component.onCompleted: contentItem.alignment = Qt.AlignLeft
 					text: StandardPaths.displayName(StandardPaths.DownloadLocation)
 					onClicked: sidebarShortcuts.addUrl('xdg:DOWNLOAD')
 				}
-				PlasmaComponents.Button {
-					iconName: "folder-music-symbolic"
+				ConfigIconButton {
+					icon.name: "folder-music-symbolic"
 					text: StandardPaths.displayName(StandardPaths.MusicLocation)
 					onClicked: sidebarShortcuts.addUrl('xdg:MUSIC')
 				}
-				PlasmaComponents.Button {
-					iconName: "folder-pictures-symbolic"
+				ConfigIconButton {
+					icon.name: "folder-pictures-symbolic"
 					text: StandardPaths.displayName(StandardPaths.PicturesLocation)
 					onClicked: sidebarShortcuts.addUrl('xdg:PICTURES')
 				}
-				PlasmaComponents.Button {
-					iconName: "folder-videos-symbolic"
+				ConfigIconButton {
+					icon.name: "folder-videos-symbolic"
 					text: StandardPaths.displayName(StandardPaths.MoviesLocation) // Uhg, it's called 'Movies' instead of 'Videos'...
 					onClicked: sidebarShortcuts.addUrl('xdg:VIDEOS')
 				}
-				PlasmaComponents.Button {
-					iconName: "folder-open-symbolic"
+				ConfigIconButton {
+					icon.name: "folder-open-symbolic"
 					text: "Dolphin"
 					onClicked: sidebarShortcuts.addUrl('org.kde.dolphin.desktop')
 				}
-				PlasmaComponents.Button {
-					iconName: "configure"
+				ConfigIconButton {
+					icon.name: "configure"
 					text: "System Settings"
 					onClicked: sidebarShortcuts.addUrl('systemsettings.desktop')
 				}

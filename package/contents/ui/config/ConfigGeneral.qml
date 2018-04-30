@@ -5,6 +5,8 @@ import QtQuick.Layouts 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
+import Qt.labs.platform 1.0 // Qt 5.8+
+
 import ".."
 import "../lib"
 
@@ -133,14 +135,71 @@ ConfigPage {
 		
 	}
 
-	// ConfigSection {
-	// 	label: i18n("Sidebar Shortcuts")
-		
+	ConfigSection {
+		label: i18n("Sidebar Shortcuts")
 
-	// 	ConfigStringList {
-	// 		configKey: 'sidebarShortcuts'
-	// 	}
-	// }
+		RowLayout {
+			ConfigStringList {
+				id: sidebarShortcuts
+				configKey: 'sidebarShortcuts'
+				Layout.fillHeight: true
+
+				function addUrl(str) {
+					if (hasItem(str)) {
+						// Skip. Kicker.FavoritesModel will remove it anyways,
+						// and can cause a serialize + deserialize loop.
+						// Select the existing text to highlight it's existence.
+						selectItem(str)
+					} else {
+						prepend(str)
+					}
+				}
+			}
+
+			ColumnLayout {
+				id: sidebarDefaultsColumn
+				Label {
+					text: i18n("Add Default")
+				}
+				PlasmaComponents.Button {
+					iconName: "folder-documents-symbolic"
+					text: StandardPaths.displayName(StandardPaths.DocumentsLocation)
+					onClicked: sidebarShortcuts.addUrl('xdg:DOCUMENTS')
+				}
+				PlasmaComponents.Button {
+					iconName: "folder-download-symbolic"
+					text: StandardPaths.displayName(StandardPaths.DownloadLocation)
+					onClicked: sidebarShortcuts.addUrl('xdg:DOWNLOAD')
+				}
+				PlasmaComponents.Button {
+					iconName: "folder-music-symbolic"
+					text: StandardPaths.displayName(StandardPaths.MusicLocation)
+					onClicked: sidebarShortcuts.addUrl('xdg:MUSIC')
+				}
+				PlasmaComponents.Button {
+					iconName: "folder-pictures-symbolic"
+					text: StandardPaths.displayName(StandardPaths.PicturesLocation)
+					onClicked: sidebarShortcuts.addUrl('xdg:PICTURES')
+				}
+				PlasmaComponents.Button {
+					iconName: "folder-videos-symbolic"
+					text: StandardPaths.displayName(StandardPaths.MoviesLocation) // Uhg, it's called 'Movies' instead of 'Videos'...
+					onClicked: sidebarShortcuts.addUrl('xdg:VIDEOS')
+				}
+				PlasmaComponents.Button {
+					iconName: "folder-open-symbolic"
+					text: "Dolphin"
+					onClicked: sidebarShortcuts.addUrl('org.kde.dolphin.desktop')
+				}
+				PlasmaComponents.Button {
+					iconName: "configure"
+					text: "System Settings"
+					onClicked: sidebarShortcuts.addUrl('systemsettings.desktop')
+				}
+				Item { Layout.fillHeight: true }
+			}
+		}
+	}
 
 
 	ExclusiveGroup { id: searchBoxThemeGroup }

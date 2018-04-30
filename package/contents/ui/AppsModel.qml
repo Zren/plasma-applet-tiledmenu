@@ -128,6 +128,11 @@ Item {
 			onFavoritesChanged: {
 				plasmoid.configuration.sidebarShortcuts = favorites
 			}
+			
+			property Connections configConnection: Connections {
+				target: plasmoid.configuration
+				onSidebarShortcutsChanged: sidebarModel.favorites = plasmoid.configuration.sidebarShortcuts
+			}
 		}
 
 		property var openModel: Kicker.FavoritesModel {

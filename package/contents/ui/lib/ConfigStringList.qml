@@ -16,6 +16,9 @@ RowLayout {
 	onConfigValueChanged: deserialize()
 	readonly property var value: parseStringList(configValue)
 
+	property alias textArea: textArea
+	property alias textAreaText: textArea.text
+
 	function parseStringList(stringList) {
 		return stringList.toString().split(",")
 	}
@@ -47,6 +50,30 @@ RowLayout {
 		}
 	}
 
+
+	function prepend(str) {
+		textAreaText = str + '\n' + textAreaText
+	}
+
+	function append(str) {
+		textAreaText += '\n' + str
+	}
+
+	function hasItem(str) {
+		var list = parseText(textArea.text)
+		for (var i = 0; i < list.length; i++) {
+			if (list[i].trim() == str) {
+				return true
+			}
+		}
+		return false
+	}
+
+	function selectItem(str) {
+		var start = textArea.text.indexOf(str)
+		textArea.select(start, start + str.length)
+	}
+
 	property alias before: labelBefore.text
 	property alias after: labelAfter.text
 
@@ -59,6 +86,7 @@ RowLayout {
 	TextArea {
 		id: textArea
 		Layout.fillWidth: true
+		Layout.fillHeight: configStringList.Layout.fillHeight
 		// implicitHeight: font.pixelSize * (lineCount + 2)
 		// Layout.minimumHeight: implicitHeight
 		// Layout.preferredHeight: implicitHeight

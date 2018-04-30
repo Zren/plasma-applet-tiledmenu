@@ -144,6 +144,16 @@ ConfigPage {
 				configKey: 'sidebarShortcuts'
 				Layout.fillHeight: true
 
+				function parseText(text) {
+					var urls = text.split("\n")
+					for (var i = 0; i < urls.length; i++) {
+						if (urls[i][0] == '/') { // Starts with '/' (root)
+							urls[i] = 'file://' + urls[i] // Prefix URL file scheme when serializing.
+						}
+					}
+					return urls
+				}
+
 				function addUrl(str) {
 					if (hasItem(str)) {
 						// Skip. Kicker.FavoritesModel will remove it anyways,

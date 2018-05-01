@@ -11,7 +11,7 @@ Item {
 		height: dropShadowSize
 		gradient: Gradient {
 			GradientStop { position: 0.0; color: "#00000000" }
-			GradientStop { position: 1.0; color: "#80000000" }
+			GradientStop { position: 1.0; color: "#60000000" }
 		}
 	}
 	Rectangle {
@@ -26,7 +26,7 @@ Item {
 
 		gradient: Gradient {
 			GradientStop { position: 0.0; color: "#00000000" }
-			GradientStop { position: 1.0; color: "#80000000" }
+			GradientStop { position: 1.0; color: "#60000000" }
 		}
 	}
 	Rectangle {
@@ -34,9 +34,9 @@ Item {
 		anchors.left: parent.left
 		anchors.top: parent.bottom
 		width: parent.width + roundShadowHack
-		height: dropShadowSize * 2
+		height: dropShadowSize
 		gradient: Gradient {
-			GradientStop { position: 0.0; color: "#80000000" }
+			GradientStop { position: 0.0; color: "#90000000" }
 			GradientStop { position: 1.0; color: "#00000000" }
 		}
 	}

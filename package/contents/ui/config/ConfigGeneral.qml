@@ -4,6 +4,7 @@ import QtQuick.Layouts 1.0
 
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.kcoreaddons 1.0 as KCoreAddons
 
 import Qt.labs.platform 1.0 // Qt 5.8+
 
@@ -144,10 +145,23 @@ ConfigPage {
 				configKey: 'sidebarShortcuts'
 				Layout.fillHeight: true
 
+				KCoreAddons.KUser {
+					id: kuser
+				}
+
+				function startsWith(a, b) {
+					return a.substr(0, b.length) === b
+				}
+
 				function parseText(text) {
 					var urls = text.split("\n")
 					for (var i = 0; i < urls.length; i++) {
-						if (urls[i][0] == '/') { // Starts with '/' (root)
+						if (startsWith(urls[i], '~/')) { // Starts with '~/' (home dir)
+							if (kuser.loginName) {
+								urls[i] = '/home/' + kuser.loginName + urls[i].substr(1)
+							}
+						}
+						if (startsWith(urls[i], '/')) { // Starts with '/' (root)
 							urls[i] = 'file://' + urls[i] // Prefix URL file scheme when serializing.
 						}
 					}

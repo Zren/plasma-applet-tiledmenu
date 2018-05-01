@@ -7,6 +7,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 MouseArea {
+	id: sidebarMenu
 	hoverEnabled: true
 	z: 1
 	// clip: true
@@ -37,5 +38,12 @@ MouseArea {
 		visible: plasmoid.configuration.sidebarFollowsTheme
 		imagePath: "widgets/frame"
 		prefix: "raised"
+	}
+
+	property alias showDropShadow: sidebarMenuShadows.visible
+	SidebarMenuShadows {
+		id: sidebarMenuShadows
+		anchors.fill: parent
+		visible: !plasmoid.configuration.sidebarFollowsTheme && sidebarMenu.open
 	}
 }

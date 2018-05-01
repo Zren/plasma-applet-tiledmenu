@@ -41,7 +41,7 @@
     </entry>
     <entry name="sidebarShortcuts" type="StringList">
       <label>Same as favoriteApps except "xdg:DOCUMENTS", etc are constants to ~/Documents.</label>
-      <default>xdg:DOCUMENTS,xdg:DOWNLOAD,xdg:MUSIC,xdg:PICTURES,xdg:VIDEOS,org.kde.dolphin.desktop,systemsettings.desktop</default>
+      <default>xdg:DOCUMENTS,xdg:PICTURES,org.kde.dolphin.desktop,systemsettings.desktop</default>
     </entry>
 
     <!-- Base64 encoded JSON -->

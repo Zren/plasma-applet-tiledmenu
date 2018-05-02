@@ -128,35 +128,13 @@ Item {
 			}
 		}
 
-		StackView {
+		SearchStackView {
 			id: stackView
 			width: config.appListWidth
-			clip: true
 			anchors.top: parent.top
 			anchors.right: parent.right
 			anchors.bottom: parent.bottom
 			initialItem: appsView
-
-			delegate: StackViewDelegate {
-				pushTransition: StackViewTransition {
-					PropertyAnimation {
-						target: enterItem
-						property: "y"
-						from: stackView.height * (searchView.searchOnTop ? -1 : 1)
-						to: 0
-					}
-					PropertyAnimation {
-						target: exitItem
-						property: "opacity"
-						from: 1
-						to: 0
-					}
-				}
-				
-				function transitionFinished(properties) {
-					properties.exitItem.opacity = 1
-				}
-			}
 		}
 	}
 

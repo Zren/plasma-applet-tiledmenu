@@ -51,7 +51,7 @@ ColumnLayout {
 		PlasmaComponents.Button {
 			text: i18n("Close")
 			onClicked: {
-				tileEditorView.close() // Defined in SearchView.qml
+				tileEditorView.close()
 			}
 		}
 	}

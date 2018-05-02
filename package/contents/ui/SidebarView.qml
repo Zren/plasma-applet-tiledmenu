@@ -55,10 +55,7 @@ Item {
 			SidebarItem {
 				iconName: 'view-sort-ascending-symbolic'
 				text: i18n("Apps")
-				onClicked: {
-					appsModel.order = "alphabetical"
-					appsView.show()
-				}
+				onClicked: appsView.showAppsAlphabetically()
 				// checked: stackView.currentItem == appsView
 				// checkedEdge: Qt.RightEdge
 				// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
@@ -66,10 +63,7 @@ Item {
 			SidebarItem {
 				iconName: 'view-list-tree'
 				text: i18n("Categories")
-				onClicked: {
-					appsModel.order = "categories"
-					appsView.show()
-				}
+				onClicked: appsView.showAppsCategorically()
 				// checked: stackView.currentItem == appsView
 				// checkedEdge: Qt.RightEdge
 				// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal

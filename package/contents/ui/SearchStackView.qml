@@ -13,12 +13,9 @@ StackView {
 	property real zoomedInRatio: Math.max(1, stackView.width + zoomDelta * units.devicePixelRatio) / stackView.width
 	property real zoomedOutRatio: Math.max(1, stackView.width - zoomDelta * units.devicePixelRatio) / stackView.width
 
-	StackViewDelegate {
-		id: noTransition
-	}
-	StackViewDelegate {
-		id: panUp
+	readonly property var noTransition: StackViewDelegate {}
 
+	readonly property var panUp: StackViewDelegate {
 		pushTransition: StackViewTransition {
 			PropertyAnimation {
 				target: enterItem
@@ -38,9 +35,7 @@ StackView {
 			properties.exitItem.opacity = 1
 		}
 	}
-	StackViewDelegate {
-		id: zoomOut
-
+	readonly property var zoomOut: StackViewDelegate {
 		function transitionFinished(properties) {
 			properties.exitItem.opacity = 1
 			properties.exitItem.scale = 1
@@ -81,9 +76,7 @@ StackView {
 			}
 		}
 	}
-	StackViewDelegate {
-		id: zoomIn
-
+	readonly property var zoomIn: StackViewDelegate {
 		function transitionFinished(properties) {
 			properties.exitItem.opacity = 1
 			properties.exitItem.scale = 1

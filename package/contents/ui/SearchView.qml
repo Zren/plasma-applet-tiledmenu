@@ -91,9 +91,23 @@ Item {
 			id: appsView
 			visible: false
 
+			function showAppsAlphabetically() {
+				appsModel.order = "alphabetical"
+				show()
+			}
+
+			function showAppsCategorically() {
+				appsModel.order = "categories"
+				show()
+			}
+
 			function show() {
 				if (stackView.currentItem != appsView) {
-					stackView.push(appsView, true)
+					stackView.delegate = stackView.panUp
+					stackView.push({
+						item: appsView,
+						replace: true,
+					})
 				}
 				appsView.scrollToTop()
 			}

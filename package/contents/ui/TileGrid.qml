@@ -128,7 +128,7 @@ DragAndDrop.DropArea {
 			return
 		}
 
-		dropHoverX = Math.min(modelX, columns - dropWidth)
+		dropHoverX = Math.max(0, Math.min(modelX, columns - dropWidth))
 		dropHoverY = modelY
 		canDrop = !hits(dropHoverX, dropHoverY, dropWidth, dropHeight)
 	}

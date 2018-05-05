@@ -30,7 +30,7 @@ MouseArea {
 		id: styleLoader
 		anchors.fill: parent
 		asynchronous: true
-		source: "AppToolButtonStyle.qml"
+		source: "HoverOutlineButtonStyle.qml"
 		property var control: control
 
 		readonly property int paddingTop: item ? item.paddingTop : 0

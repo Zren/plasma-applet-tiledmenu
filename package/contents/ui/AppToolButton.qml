@@ -26,109 +26,26 @@ MouseArea {
 	property real minimumHeight: 0
 	property bool flat: true
 
-	ButtonShadow {
-		id: shadow
-		visible: control.activeFocus
+	Loader {
+		id: styleLoader
 		anchors.fill: parent
-		enabledBorders: surfaceNormal.enabledBorders
-		state: {
-			if (control.pressed) {
-				return "hidden"
-			} else if (control.containsMouse) {
-				return "hover"
-			} else if (control.activeFocus) {
-				return "focus"
-			} else {
-				return "shadow"
-			}
-		}
-	}
-	PlasmaCore.Svg {
-		id: bordersSvg
-		imagePath: "widgets/button"
-	}
-	PlasmaCore.FrameSvgItem {
-		id: surfaceNormal
-		anchors.fill: parent
-		imagePath: "widgets/button"
-		prefix: "normal"
-		enabledBorders: "AllBorders"
-	}
-	PlasmaCore.FrameSvgItem {
-		id: surfacePressed
-		anchors.fill: parent
-		imagePath: "widgets/button"
-		prefix: "pressed"
-		enabledBorders: surfaceNormal.enabledBorders
-		opacity: 0
-	}
+		asynchronous: true
+		source: "AppToolButtonStyle.qml"
+		property var control: control
 
-	state: (control.pressed || control.checked ? "pressed" : (control.containsMouse ? "hover" : "normal"))
-
-	states: [
-		State { name: "normal"
-			PropertyChanges {
-				target: surfaceNormal
-				opacity: 0
-			}
-			PropertyChanges {
-				target: surfacePressed
-				opacity: 0
-			}
-		},
-		State { name: "hover"
-			PropertyChanges {
-				target: surfaceNormal
-				opacity: 1
-			}
-			PropertyChanges {
-				target: surfacePressed
-				opacity: 0
-			}
-		},
-		State { name: "pressed"
-			PropertyChanges {
-				target: surfaceNormal
-				opacity: 0
-			}
-			PropertyChanges {
-				target: surfacePressed
-				opacity: 1
-			}
-		}
-	]
-
-	transitions: [
-		Transition {
-			//Cross fade from pressed to normal
-			ParallelAnimation {
-				NumberAnimation { target: surfaceNormal; property: "opacity"; duration: 100 }
-				NumberAnimation { target: surfacePressed; property: "opacity"; duration: 100 }
-			}
-		}
-	]
-
-	// property alias padding: padding
-	// Item {
-	// 	id: padding
-	// 	property alias top: label.margins.top
-	// }
+		readonly property int paddingTop: item ? item.paddingTop : 0
+		readonly property int paddingLeft: item ? item.paddingLeft : 0
+		readonly property int paddingRight: item ? item.paddingRight : 0
+		readonly property int paddingBottom: item ? item.paddingBottom : 0
+	}
 
 	Item {
-		// id: buttonLabel
+		// id: buttonArea
 		anchors.fill: parent
-		anchors.topMargin: surfaceNormal.margins.top
-		anchors.leftMargin: surfaceNormal.margins.left
-		anchors.rightMargin: surfaceNormal.margins.right
-		anchors.bottomMargin: surfaceNormal.margins.bottom
-
-		// Rectangle {
-		// 	color: "red"
-		// 	anchors.fill: parent
-		// }
-		
-		// implicitHeight: buttonContent.Layout.preferredHeight
-		// implicitWidth: buttonContent.implicitWidth
+		anchors.topMargin: styleLoader.paddingTop
+		anchors.leftMargin: styleLoader.paddingLeft
+		anchors.rightMargin: styleLoader.paddingRight
+		anchors.bottomMargin: styleLoader.paddingBottom
 
 		RowLayout {
 			id: buttonContent

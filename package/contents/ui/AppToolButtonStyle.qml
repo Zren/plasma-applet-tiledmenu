@@ -1,13 +1,5 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.draganddrop 2.0 as DragAndDrop
-import QtQuick.Controls.Private 1.0 as QtQuickControlsPrivate
-import QtGraphicalEffects 1.0
 
 Item {
 	id: style

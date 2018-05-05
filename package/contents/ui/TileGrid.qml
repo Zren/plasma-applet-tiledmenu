@@ -39,12 +39,16 @@ DragAndDrop.DropArea {
 	property bool editing: isDragging && draggedItem || adding
 	property int dropHoverX: -1
 	property int dropHoverY: -1
+	property int dropOffsetX: 0
+	property int dropOffsetY: 0
 	readonly property int dropWidth: draggedItem ? draggedItem.w : addedItem ? addedItem.w : 0
 	readonly property int dropHeight: draggedItem ? draggedItem.h : addedItem ? addedItem.h : 0
 	property bool canDrop: false
 	function resetDragHover() {
 		dropHoverX = -1
 		dropHoverY = -1
+		dropOffsetX = 0
+		dropOffsetY = 0
 		scrollUpArea.containsDrag = false
 		scrollDownArea.containsDrag = false
 		addedItem = null
@@ -102,8 +106,8 @@ DragAndDrop.DropArea {
 	}
 
 	function dragTick(event) {
-		var dragX = event.x + scrollView.flickableItem.contentX
-		var dragY = event.y + scrollView.flickableItem.contentY
+		var dragX = event.x + scrollView.flickableItem.contentX - dropOffsetX
+		var dragY = event.y + scrollView.flickableItem.contentY - dropOffsetY
 		var modelX = Math.floor(dragX / cellBoxSize)
 		var modelY = Math.floor(dragY / cellBoxSize)
 		// console.log('onDragMove', event.x, event.y, modelX, modelY)

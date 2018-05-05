@@ -58,6 +58,8 @@ Item {
 			console.log('onDragStarted', JSON.stringify(modelData), index, tileModel.length)
 			// tileGrid.draggedItem = tileModel.splice(index, 1)[0]
 			tileGrid.startDrag(index)
+			tileGrid.dropOffsetX = Math.floor(tileMouseArea.mouseX / cellBoxSize) * cellBoxSize
+			tileGrid.dropOffsetY = Math.floor(tileMouseArea.mouseY / cellBoxSize) * cellBoxSize
 		}
 		onDrop: {
 			console.log('DragArea.onDrop', draggedItem)

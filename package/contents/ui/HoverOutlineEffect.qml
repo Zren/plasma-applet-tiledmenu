@@ -18,13 +18,21 @@ Item {
 	
 	visible: control.containsMouse
 
+	function alpha(c, a) {
+		return Qt.rgba(c.r, c.g, c.b, a)
+	}
+	property color effectColor: theme.textColor
+	property color fillColor: alpha(effectColor, 1/16)
+	property color pressedFillColor: alpha(effectColor, 4/16)
+	property color borderColor: alpha(effectColor, 8/16)
+
 	Rectangle {
 		id: hoverOutline
 		visible: !hoverOutlineEffect.useOutlineMask
 		anchors.fill: parent
 		// color: "transparent"
-		color: control.pressed ? "#44ffffff" : "#11ffffff"
-		border.color: "#88ffffff"
+		color: control.pressed ? pressedFillColor : fillColor
+		border.color: borderColor
 		border.width: hoverOutlineSize
 
 		Behavior on color {

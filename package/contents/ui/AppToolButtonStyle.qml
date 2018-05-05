@@ -34,10 +34,6 @@ Item {
 			}
 		}
 	}
-	PlasmaCore.Svg {
-		id: bordersSvg
-		imagePath: "widgets/button"
-	}
 	PlasmaCore.FrameSvgItem {
 		id: surfaceNormal
 		anchors.fill: parent

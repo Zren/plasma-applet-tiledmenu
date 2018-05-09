@@ -1,3 +1,14 @@
+## v20 - May 9 2018
+
+* Add ability to edit the sidebar shortcuts in the config. By default, only System Settings, Dolphin, ~/Pictures, and ~/Documents is visible. You can drop apps/folders onto the sidebar to add it, though you'll need to open the config to delete it.
+* Use a "hover outline" effect for the app list, utilizing several lazy loading tricks to load the list faster. An option to use the Desktop Theme buttons will return in a later version.
+* Add option to set the default app list order to "Categories" for when you first login.
+* Remember tile drag offset. When you click the bottom right of a tile and drag, the cursor will drop the bottom right of the tile instead of the top left.
+* Don't allow creating new groups when tiles are locked.
+* Hide "Pin to Menu" and "Edit Tile" items when tiles are locked.
+* Add a "Alt+RightClick" to resize hint to the bottom right when widget is in a top panel.
+* Add drop shadow to the "power" and "switch user" sidebar submenues.
+
 ## v19 - April 1 2018
 
 * Disable push effect when right clicking a tile.

@@ -22,6 +22,7 @@ ScrollView {
 			secondRowVisible: config.appDescriptionBelow
 			description: config.appDescriptionVisible ? modelDescription : ''
 		}
+
 		iconSize: config.menuItemHeight
 		showItemUrl: false
 	}

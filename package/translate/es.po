@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-04-01 21:49-0400\n"
+"POT-Creation-Date: 2018-05-09 13:40-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kepa Badiola <badiol@yahoo.es>\n"
 "Language-Team: Spanish <LL@li.org>\n"
@@ -37,131 +37,151 @@ msgstr "Anclar al Menú"
 msgid "Pin to Taskbar"
 msgstr "Anclar a la Barra de Tareas"
 
-#: ../contents/ui/config/ConfigGeneral.qml:21
+#: ../contents/ui/config/ConfigGeneral.qml:24
 msgid "Popup"
 msgstr "Mensaje Emergente"
 
-#: ../contents/ui/config/ConfigGeneral.qml:24
+#: ../contents/ui/config/ConfigGeneral.qml:27
 msgid "Fullscreen"
 msgstr "Pantalla Completa"
 
-#: ../contents/ui/config/ConfigGeneral.qml:30
+#: ../contents/ui/config/ConfigGeneral.qml:33
 msgid "Panel Icon"
 msgstr "Icono del Panel"
 
-#: ../contents/ui/config/ConfigGeneral.qml:37
+#: ../contents/ui/config/ConfigGeneral.qml:40
 msgid "Fixed Size"
 msgstr "Tamaño Fijo"
 
-#: ../contents/ui/config/ConfigGeneral.qml:45
+#: ../contents/ui/config/ConfigGeneral.qml:48
 msgid "Tiles"
 msgstr "Baldosas"
 
-#: ../contents/ui/config/ConfigGeneral.qml:51
+#: ../contents/ui/config/ConfigGeneral.qml:54
 msgid "Tile Size"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:52
+#: ../contents/ui/config/ConfigGeneral.qml:55
 msgid "x"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:58
+#: ../contents/ui/config/ConfigGeneral.qml:61
 msgid "%1 px"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:63
+#: ../contents/ui/config/ConfigGeneral.qml:66
 msgid "Tile Margin"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:64 ../contents/ui/config/ConfigGeneral.qml:153 ../contents/ui/config/ConfigGeneral.qml:178 ../contents/ui/config/ConfigGeneral.qml:209
+#: ../contents/ui/config/ConfigGeneral.qml:67 ../contents/ui/config/ConfigGeneral.qml:238 ../contents/ui/config/ConfigGeneral.qml:263 ../contents/ui/config/ConfigGeneral.qml:304
 msgid "px"
 msgstr "px"
 
-#: ../contents/ui/config/ConfigGeneral.qml:69 ../contents/ui/config/ConfigGeneral.qml:116 ../contents/ui/config/ConfigGeneral.qml:158
+#: ../contents/ui/config/ConfigGeneral.qml:72 ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:243
 msgid "Desktop Theme (%1)"
 msgstr "Tema de Escritorio (%1)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:77 ../contents/ui/config/ConfigGeneral.qml:123
+#: ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:126
 msgid "Custom Color"
 msgstr "Color Personalizado"
 
-#: ../contents/ui/config/ConfigGeneral.qml:88
+#: ../contents/ui/config/ConfigGeneral.qml:91
 msgid "Transparent"
 msgstr "Transparente"
 
-#: ../contents/ui/config/ConfigGeneral.qml:97
+#: ../contents/ui/config/ConfigGeneral.qml:100
 msgid "Text Alignment"
 msgstr "Alineamiento del Texto"
 
-#: ../contents/ui/config/ConfigGeneral.qml:99
+#: ../contents/ui/config/ConfigGeneral.qml:102
 msgid "Left"
 msgstr "Izquierda"
 
-#: ../contents/ui/config/ConfigGeneral.qml:100
+#: ../contents/ui/config/ConfigGeneral.qml:103
 msgid "Center"
 msgstr "Centro"
 
-#: ../contents/ui/config/ConfigGeneral.qml:101
+#: ../contents/ui/config/ConfigGeneral.qml:104
 msgid "Right"
 msgstr "Derecha"
 
-#: ../contents/ui/config/ConfigGeneral.qml:113
+#: ../contents/ui/config/ConfigGeneral.qml:116
 msgid "Sidebar"
 msgstr "Barra Lateral"
 
-#: ../contents/ui/config/ConfigGeneral.qml:148
+#: ../contents/ui/config/ConfigGeneral.qml:140
+msgid "Sidebar Shortcuts"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:186
+msgid "Add Default"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:233
 msgid "Search Box"
 msgstr "Caja de Búsqueda"
 
-#: ../contents/ui/config/ConfigGeneral.qml:152
+#: ../contents/ui/config/ConfigGeneral.qml:237
 msgid "Search Field Height"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:164
+#: ../contents/ui/config/ConfigGeneral.qml:249
 msgid "Windows (White)"
 msgstr "Ventanas (Blanco)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:172
+#: ../contents/ui/config/ConfigGeneral.qml:257
 msgid "App List"
 msgstr "Lista de Aplicaciones"
 
-#: ../contents/ui/config/ConfigGeneral.qml:177
+#: ../contents/ui/config/ConfigGeneral.qml:262
 msgid "App List Area Width"
 msgstr "Ancho del area de la Lista de Aplicaciones"
 
-#: ../contents/ui/config/ConfigGeneral.qml:185
+#: ../contents/ui/config/ConfigGeneral.qml:270
+msgid "Default Order"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:272
+msgid "Alphabetical"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:273 ../contents/ui/SidebarView.qml:65
+msgid "Categories"
+msgstr "Categorías"
+
+#: ../contents/ui/config/ConfigGeneral.qml:280
 msgid "App Description"
 msgstr "Descripción de la Applicación"
 
-#: ../contents/ui/config/ConfigGeneral.qml:187
+#: ../contents/ui/config/ConfigGeneral.qml:282
 msgid "Hidden"
 msgstr "Oculto"
 
-#: ../contents/ui/config/ConfigGeneral.qml:188
+#: ../contents/ui/config/ConfigGeneral.qml:283
 msgid "After"
 msgstr "Después"
 
-#: ../contents/ui/config/ConfigGeneral.qml:189
+#: ../contents/ui/config/ConfigGeneral.qml:284
 msgid "Below"
 msgstr "Debajo"
 
-#: ../contents/ui/config/ConfigGeneral.qml:201
+#: ../contents/ui/config/ConfigGeneral.qml:296
 msgid "Show recent applications"
 msgstr "Mostrar aplicaciones recientes"
 
-#: ../contents/ui/config/ConfigGeneral.qml:208
+#: ../contents/ui/config/ConfigGeneral.qml:303
 msgid "Icon Size"
 msgstr "Tamaño de Icono"
 
-#: ../contents/ui/config/ConfigGeneral.qml:224
+#: ../contents/ui/config/ConfigGeneral.qml:319
 msgid "Search Results"
 msgstr "Resultados de la Búsqueda"
 
-#: ../contents/ui/config/ConfigGeneral.qml:228
+#: ../contents/ui/config/ConfigGeneral.qml:323
 msgid "Merged (Application Launcher)"
 msgstr "Fusionado (Lanzador de Aplicaciones)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:237
+#: ../contents/ui/config/ConfigGeneral.qml:332
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Dividir en Categorías (Menú de Aplicaciones / Tablero de Mandos)"
 
@@ -169,35 +189,35 @@ msgstr "Dividir en Categorías (Menú de Aplicaciones / Tablero de Mandos)"
 msgid "<b>Version:</b> %1"
 msgstr "<b>Versión:</b> %1"
 
-#: ../contents/ui/Main.qml:229
+#: ../contents/ui/Main.qml:232
 msgid "System Info"
 msgstr "Información del Sistema"
 
-#: ../contents/ui/Main.qml:230
+#: ../contents/ui/Main.qml:233
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../contents/ui/Main.qml:232
+#: ../contents/ui/Main.qml:235
 msgid "Task Manager"
 msgstr "Administrador de Tareas"
 
-#: ../contents/ui/Main.qml:233
+#: ../contents/ui/Main.qml:236
 msgid "System Settings"
 msgstr "Preferencias del Sistema"
 
-#: ../contents/ui/Main.qml:234
+#: ../contents/ui/Main.qml:237
 msgid "File Manager"
 msgstr "Explorador de Archivos"
 
-#: ../contents/ui/Main.qml:236
+#: ../contents/ui/Main.qml:239
 msgid "Edit Applications..."
 msgstr "Editar Aplicaciones..."
 
-#: ../contents/ui/Popup.qml:59
+#: ../contents/ui/Popup.qml:60 ../contents/ui/Popup.qml:76
 msgid "Resize?"
 msgstr "¿Redimensionar?"
 
-#: ../contents/ui/Popup.qml:60
+#: ../contents/ui/Popup.qml:61 ../contents/ui/Popup.qml:77
 msgid "Alt + Right Click to resize the menu."
 msgstr "Alt + Click Derecho para redimensioanr el menú"
 
@@ -290,27 +310,23 @@ msgstr "Conversor de Unidades"
 msgid "Filters"
 msgstr "Filtros"
 
-#: ../contents/ui/SearchView.qml:65
+#: ../contents/ui/SidebarView.qml:50
 msgid "Menu"
 msgstr "Menú"
 
-#: ../contents/ui/SearchView.qml:72
+#: ../contents/ui/SidebarView.qml:57
 msgid "Apps"
 msgstr "Aplicaciones"
 
-#: ../contents/ui/SearchView.qml:83
-msgid "Categories"
-msgstr "Categorías"
-
-#: ../contents/ui/SearchView.qml:116
+#: ../contents/ui/SidebarView.qml:95
 msgid "User Manager"
 msgstr "Administrador de Usuario"
 
-#: ../contents/ui/SearchView.qml:154
+#: ../contents/ui/SidebarView.qml:133
 msgid "Power"
 msgstr "Inicio y Apagado"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:131
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:106
 msgid "Edit Tile"
 msgstr "Editar Baldosa"
 
@@ -354,19 +370,19 @@ msgstr "Color de Fondo"
 msgid "Position / Size"
 msgstr "Posición / Tamaño"
 
-#: ../contents/ui/TileGrid.qml:319
+#: ../contents/ui/TileGrid.qml:323
 msgid "New Group"
 msgstr ""
 
-#: ../contents/ui/TileGrid.qml:328
+#: ../contents/ui/TileGrid.qml:333
 msgid "Unlock Tiles"
 msgstr ""
 
-#: ../contents/ui/TileGrid.qml:328
+#: ../contents/ui/TileGrid.qml:333
 msgid "Lock Tiles"
 msgstr ""
 
-#: ../contents/ui/TileGrid.qml:513
+#: ../contents/ui/TileGrid.qml:518
 msgctxt "default group label"
 msgid "Group"
 msgstr ""

@@ -172,11 +172,10 @@ ConfigPage {
 					if (hasItem(str)) {
 						// Skip. Kicker.FavoritesModel will remove it anyways,
 						// and can cause a serialize + deserialize loop.
-						// Select the existing text to highlight it's existence.
-						selectItem(str)
 					} else {
 						prepend(str)
 					}
+					selectItem(str) // Select the existing text to highlight it's existence.
 				}
 			}
 

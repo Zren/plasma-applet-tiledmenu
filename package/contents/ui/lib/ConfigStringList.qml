@@ -52,10 +52,14 @@ RowLayout {
 
 
 	function prepend(str) {
+		textArea.focus = true
+		textArea.select(0, 0) // Make sure the text area has focus or we'll enter a loop.
 		textAreaText = str + '\n' + textAreaText
 	}
 
 	function append(str) {
+		textArea.focus = true
+		textArea.select(0, 0) // Make sure the text area has focus or we'll enter a loop.
 		textAreaText += '\n' + str
 	}
 

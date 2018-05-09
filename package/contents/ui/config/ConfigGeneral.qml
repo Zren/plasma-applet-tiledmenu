@@ -264,7 +264,17 @@ ConfigPage {
 			suffix: i18n("px")
 			minimumValue: 0
 		}
-		
+
+		ConfigComboBox {
+			id: defaultAppListOrderControl
+			configKey: "defaultAppListOrder"
+			label: i18n("Default Order")
+			model: [
+				{ value: "alphabetical", text: i18n("Alphabetical") },
+				{ value: "categories", text: i18n("Categories") },
+			]
+		}
+
 		ConfigComboBox {
 			id: appDescriptionControl
 			configKey: "appDescription"

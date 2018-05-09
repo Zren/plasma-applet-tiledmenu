@@ -43,6 +43,10 @@
       <label>Same as favoriteApps except "xdg:DOCUMENTS", etc are constants to ~/Documents.</label>
       <default>xdg:DOCUMENTS,xdg:PICTURES,org.kde.dolphin.desktop,systemsettings.desktop</default>
     </entry>
+    <entry name="defaultAppListOrder" type="string">
+      <!-- enum: alphabetical, categories -->
+      <default>alphabetical</default>
+    </entry>
 
     <!-- Base64 encoded JSON -->
     <entry name="tileData" type="string" stringType="base64json">

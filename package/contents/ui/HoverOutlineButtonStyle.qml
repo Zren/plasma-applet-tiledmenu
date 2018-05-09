@@ -7,11 +7,12 @@ Item {
 	property int paddingBottom: 0
 	property int paddingLeft: 0
 
-	HoverOutlineEffect {
-		id: hoverOutlineEffect
+	Loader {
+		id: hoverOutlineEffectLoader
 		anchors.fill: parent
-		hoverRadius: width/2
-		pressedRadius: width
+		active: control.containsMouse
+		visible: active
+		source: "HoverOutlineButtonEffect.qml"
 	}
 
 }

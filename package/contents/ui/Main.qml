@@ -136,6 +136,9 @@ Item {
 	Layout.preferredWidth: config.popupWidth
 	Layout.preferredHeight: config.popupHeight
 
+	// Layout.minimumHeight: 600 // For quickly testing as a desktop widget
+	// Layout.minimumWidth: 800
+
 	Connections {
 		target: config
 		property int lastAppListWidth: -1

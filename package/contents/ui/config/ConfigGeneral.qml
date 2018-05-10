@@ -214,12 +214,12 @@ ConfigPage {
 				}
 				ConfigIconButton {
 					iconName: "folder-open-symbolic"
-					text: "Dolphin"
+					text: i18nd("dolphin", "Dolphin")
 					onClicked: sidebarShortcuts.addUrl('org.kde.dolphin.desktop')
 				}
 				ConfigIconButton {
 					iconName: "configure"
-					text: "System Settings"
+					text: i18nd("systemsettings", "System Settings")
 					onClicked: sidebarShortcuts.addUrl('systemsettings.desktop')
 				}
 				Item { Layout.fillHeight: true }

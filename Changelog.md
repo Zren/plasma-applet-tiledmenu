@@ -1,3 +1,7 @@
+## v21 - May 10 2018
+
+* Fix error when opening the config with Qt 5.9 / Kubuntu 18.04.
+
 ## v20 - May 9 2018
 
 * Add ability to edit the sidebar shortcuts in the config. By default, only System Settings, Dolphin, ~/Pictures, and ~/Documents is visible. You can drop apps/folders onto the sidebar to add it, though you'll need to open the config to delete it.

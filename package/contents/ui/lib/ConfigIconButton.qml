@@ -12,5 +12,17 @@ import QtQuick.Controls 2.0 as QQC2
 // with no way to set the alignment or the minimum width.
 // So we use toolbutton which left aligns.
 QQC2.Button {
-	Component.onCompleted: background.elementType = 'toolbutton'
+	id: iconButton
+	
+	property string iconName: ""
+
+	Component.onCompleted: {
+		background.elementType = 'toolbutton'
+
+		// icon.name is a Qt 5.10 feature
+		// So to be backward compatible with Kubuntu which has Qt 5.9, we need to do this.
+		if (iconButton.hasOwnProperty("icon") && iconName && !icon.name) {
+			icon.name = iconName
+		}
+	}
 }

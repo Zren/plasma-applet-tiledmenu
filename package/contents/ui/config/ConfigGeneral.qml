@@ -187,38 +187,38 @@ ConfigPage {
 				}
 
 				ConfigIconButton {
-					icon.name: "folder-documents-symbolic"
+					iconName: "folder-documents-symbolic"
 					text: StandardPaths.displayName(StandardPaths.DocumentsLocation)
 					onClicked: sidebarShortcuts.addUrl('xdg:DOCUMENTS')
 				}
 				ConfigIconButton {
-					icon.name: "folder-download-symbolic"
+					iconName: "folder-download-symbolic"
 					// Component.onCompleted: contentItem.alignment = Qt.AlignLeft
 					text: StandardPaths.displayName(StandardPaths.DownloadLocation)
 					onClicked: sidebarShortcuts.addUrl('xdg:DOWNLOAD')
 				}
 				ConfigIconButton {
-					icon.name: "folder-music-symbolic"
+					iconName: "folder-music-symbolic"
 					text: StandardPaths.displayName(StandardPaths.MusicLocation)
 					onClicked: sidebarShortcuts.addUrl('xdg:MUSIC')
 				}
 				ConfigIconButton {
-					icon.name: "folder-pictures-symbolic"
+					iconName: "folder-pictures-symbolic"
 					text: StandardPaths.displayName(StandardPaths.PicturesLocation)
 					onClicked: sidebarShortcuts.addUrl('xdg:PICTURES')
 				}
 				ConfigIconButton {
-					icon.name: "folder-videos-symbolic"
+					iconName: "folder-videos-symbolic"
 					text: StandardPaths.displayName(StandardPaths.MoviesLocation) // Uhg, it's called 'Movies' instead of 'Videos'...
 					onClicked: sidebarShortcuts.addUrl('xdg:VIDEOS')
 				}
 				ConfigIconButton {
-					icon.name: "folder-open-symbolic"
+					iconName: "folder-open-symbolic"
 					text: "Dolphin"
 					onClicked: sidebarShortcuts.addUrl('org.kde.dolphin.desktop')
 				}
 				ConfigIconButton {
-					icon.name: "configure"
+					iconName: "configure"
 					text: "System Settings"
 					onClicked: sidebarShortcuts.addUrl('systemsettings.desktop')
 				}

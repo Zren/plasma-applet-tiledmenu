@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import Qt.labs.platform 1.0 // Qt 5.8+
+import Qt.labs.platform 1.0 // StandardPaths (Qt 5.8+)
 
 Repeater {
 	id: repeater

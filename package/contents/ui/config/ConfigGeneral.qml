@@ -6,7 +6,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
-import Qt.labs.platform 1.0 // Qt 5.8+
+import Qt.labs.platform 1.0 // StandardPaths (Qt 5.8+)
 
 import ".."
 import "../lib"

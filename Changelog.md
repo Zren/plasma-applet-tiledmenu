@@ -1,3 +1,8 @@
+## v22 - May 15 2018
+
+* Fix error when loading in Kubuntu 18.04 LiveCD. We now lazy load qml-module-qt-labs-platform which was used to retrieve the translated xdg folder names.
+* Merge updated Chinese translations by https://github.com/lm789632
+
 ## v21 - May 10 2018
 
 * Fix error when opening the config with Qt 5.9 / Kubuntu 18.04.

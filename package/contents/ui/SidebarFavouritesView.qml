@@ -1,5 +1,4 @@
 import QtQuick 2.0
-import Qt.labs.platform 1.0 // StandardPaths (Qt 5.8+)
 
 Repeater {
 	id: repeater
@@ -54,18 +53,11 @@ Repeater {
 		function endsWith(s, sub) {
 			return s.indexOf(sub) === s.length - sub.length
 		}
+
 		property string xdgDisplayName: {
 			var xdgFolder = isLocalizedFolder()
-			if (xdgFolder === 'DOCUMENTS') {
-				return StandardPaths.displayName(StandardPaths.DocumentsLocation)
-			} else if (xdgFolder === 'DOWNLOAD') {
-				return StandardPaths.displayName(StandardPaths.DownloadLocation)
-			} else if (xdgFolder === 'MUSIC') {
-				return StandardPaths.displayName(StandardPaths.MusicLocation)
-			} else if (xdgFolder === 'PICTURES') {
-				return StandardPaths.displayName(StandardPaths.PicturesLocation)
-			} else if (xdgFolder === 'VIDEOS') {
-				return StandardPaths.displayName(StandardPaths.MoviesLocation)
+			if (xdgFolder) {
+				return xdgPathsLoader.displayName(xdgFolder)
 			} else {
 				return ''
 			}

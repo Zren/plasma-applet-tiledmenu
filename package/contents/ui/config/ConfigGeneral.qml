@@ -6,8 +6,6 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
-import Qt.labs.platform 1.0 // StandardPaths (Qt 5.8+)
-
 import ".."
 import "../lib"
 
@@ -19,6 +17,7 @@ ConfigPage {
 		id: config
 	}
 
+	XdgPathsLoader { id: xdgPathsLoader }
 
 	ConfigSection {
 		label: i18n("Popup")
@@ -188,28 +187,28 @@ ConfigPage {
 
 				ConfigIconButton {
 					iconName: "folder-documents-symbolic"
-					text: StandardPaths.displayName(StandardPaths.DocumentsLocation)
+					text: xdgPathsLoader.displayName('DOCUMENTS')
 					onClicked: sidebarShortcuts.addUrl('xdg:DOCUMENTS')
 				}
 				ConfigIconButton {
 					iconName: "folder-download-symbolic"
 					// Component.onCompleted: contentItem.alignment = Qt.AlignLeft
-					text: StandardPaths.displayName(StandardPaths.DownloadLocation)
+					text: xdgPathsLoader.displayName('DOWNLOAD')
 					onClicked: sidebarShortcuts.addUrl('xdg:DOWNLOAD')
 				}
 				ConfigIconButton {
 					iconName: "folder-music-symbolic"
-					text: StandardPaths.displayName(StandardPaths.MusicLocation)
+					text: xdgPathsLoader.displayName('MUSIC')
 					onClicked: sidebarShortcuts.addUrl('xdg:MUSIC')
 				}
 				ConfigIconButton {
 					iconName: "folder-pictures-symbolic"
-					text: StandardPaths.displayName(StandardPaths.PicturesLocation)
+					text: xdgPathsLoader.displayName('PICTURES')
 					onClicked: sidebarShortcuts.addUrl('xdg:PICTURES')
 				}
 				ConfigIconButton {
 					iconName: "folder-videos-symbolic"
-					text: StandardPaths.displayName(StandardPaths.MoviesLocation) // Uhg, it's called 'Movies' instead of 'Videos'...
+					text: xdgPathsLoader.displayName('VIDEOS') // Uhg, it's displayed 'Movies' instead of 'Videos'...
 					onClicked: sidebarShortcuts.addUrl('xdg:VIDEOS')
 				}
 				ConfigIconButton {

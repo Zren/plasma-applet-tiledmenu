@@ -31,6 +31,8 @@ Item {
 	}
 
 	Item {
+		XdgPathsLoader { id: xdgPathsLoader }
+
 		KCoreAddons.KUser {
 			id: kuser
 		}

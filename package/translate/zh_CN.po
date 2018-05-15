@@ -1,6 +1,6 @@
 # Translation of tiledmenu in zh_CN
 # Copyright (C) 2018
-# This file is distributed under the same license as the PACKAGE package.
+# This file is distributed under the same license as the tiledmenu package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 #, fuzzy

@@ -39,4 +39,4 @@ Or if you know how to make a pull request
 |es	|78/92	|84%	|
 |fr	|25/92	|27%	|
 |pl	|1/92	|1%	|
-|zh_CN	|68/92	|73%	|
+|zh_CN	|92/92	|100%	|

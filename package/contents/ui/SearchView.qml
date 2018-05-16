@@ -13,10 +13,11 @@ import "Utils.js" as Utils
 
 Item {
 	id: searchView
-	width: config.leftSectionWidth
+	width: config.showAppList ? config.leftSectionWidth : config.sidebarWidth
 	height: config.popupHeight
 	property alias searchResultsView: searchResultsView
 	property alias appsView: appsView
+	property alias hideAppListView: hideAppListView
 	property alias tileEditorView: tileEditorViewLoader.item
 	property alias tileEditorViewLoader: tileEditorViewLoader
 	property alias searchField: searchField
@@ -57,7 +58,24 @@ Item {
 
 	Item {
 		id: stackViewContainer
-		anchors.fill: parent
+		width: config.appListWidth
+		anchors.top: parent.top
+		anchors.right: parent.right
+		anchors.bottom: parent.bottom
+
+		Item {
+			id: hideAppListView
+
+			function show() {
+				if (stackView.currentItem != hideAppListView) {
+					stackView.delegate = stackView.noTransition
+					stackView.push({
+						item: hideAppListView,
+						replace: true,
+					})
+				}
+			}
+		}
 
 		SearchResultsView {
 			id: searchResultsView
@@ -144,11 +162,17 @@ Item {
 
 		SearchStackView {
 			id: stackView
-			width: config.appListWidth
-			anchors.top: parent.top
-			anchors.right: parent.right
-			anchors.bottom: parent.bottom
-			initialItem: appsView
+			anchors.fill: parent
+			initialItem: hideAppListView // appsView
+
+
+			onCurrentItemChanged: {
+				if (currentItem == hideAppListView) {
+					config.showAppList = false
+				} else {
+					config.showAppList = true
+				}
+			}
 		}
 	}
 

@@ -8,6 +8,10 @@ Item {
 		return c2
 	}
 
+	//---
+	property bool showAppList: false
+	property string viewOnOpen: 'hideAppList'
+
 	//--- Sizes
 	readonly property int panelIconSize: 24 * units.devicePixelRatio
 	readonly property int flatButtonSize: 60 * units.devicePixelRatio
@@ -15,7 +19,7 @@ Item {
 	readonly property int sidebarWidth: flatButtonSize
 	readonly property int sidebarOpenWidth: 200 * units.devicePixelRatio
 	readonly property int appListWidth: plasmoid.configuration.appListWidth * units.devicePixelRatio
-	readonly property int leftSectionWidth: sidebarWidth + appListWidth
+	readonly property int leftSectionWidth: sidebarWidth + (showAppList ? appListWidth : 0)
 
 	readonly property real tileScale: plasmoid.configuration.tileScale
 	readonly property int cellBoxUnits: 80

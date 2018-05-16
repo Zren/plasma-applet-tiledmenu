@@ -122,7 +122,11 @@ Item {
 			search.query = ""
 			search.applyDefaultFilters()
 			popup.searchView.searchField.forceActiveFocus()
-			popup.searchView.appsView.show()
+			if (config.viewOnOpen == 'hideAppList') {
+				popup.searchView.hideAppListView.show()
+			} else if (config.viewOnOpen == 'appList') {
+				popup.searchView.appsView.show()
+			}
 			// popup.searchView.tileEditorView.open('preferred://browser')
 		}
 	}

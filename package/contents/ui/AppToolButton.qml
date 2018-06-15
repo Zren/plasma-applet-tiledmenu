@@ -52,7 +52,6 @@ MouseArea {
 			PlasmaCore.IconItem {
 				id: icon
 				source: control.iconName || control.iconSource
-				anchors.verticalCenter: parent.verticalCenter
 
 				implicitHeight: label.implicitHeight
 				implicitWidth: implicitHeight

@@ -119,7 +119,7 @@ AppToolButton {
 		ColumnLayout {
 			Layout.fillWidth: true
 			// Layout.fillHeight: true
-			anchors.verticalCenter: parent.verticalCenter
+			Layout.alignment: Qt.AlignVCenter
 			spacing: 0
 
 			RowLayout {

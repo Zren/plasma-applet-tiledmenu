@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-05-15 13:58-0400\n"
+"POT-Creation-Date: 2018-06-17 13:59-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kepa Badiola <badiol@yahoo.es>\n"
 "Language-Team: Spanish <LL@li.org>\n"
@@ -338,35 +338,35 @@ msgstr "Reiniciar Baldosa"
 msgid "Close"
 msgstr "Cerrar"
 
-#: ../contents/ui/TileEditorView.qml:74
+#: ../contents/ui/TileEditorView.qml:75
 msgid "Url"
 msgstr "Url"
 
-#: ../contents/ui/TileEditorView.qml:80
+#: ../contents/ui/TileEditorView.qml:81
 msgid "Label"
 msgstr "Etiqueta"
 
-#: ../contents/ui/TileEditorView.qml:88
+#: ../contents/ui/TileEditorView.qml:89
 msgid "Icon"
 msgstr "Icono"
 
-#: ../contents/ui/TileEditorView.qml:107
+#: ../contents/ui/TileEditorView.qml:108
 msgid "Background Image"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:117
+#: ../contents/ui/TileEditorView.qml:118
 msgid "Choose an image"
 msgstr "Elegir una Imagen"
 
-#: ../contents/ui/TileEditorView.qml:122
+#: ../contents/ui/TileEditorView.qml:123
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 msgstr "Archivos de Imagen (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
-#: ../contents/ui/TileEditorView.qml:136
+#: ../contents/ui/TileEditorView.qml:137
 msgid "Background Color"
 msgstr "Color de Fondo"
 
-#: ../contents/ui/TileEditorView.qml:142
+#: ../contents/ui/TileEditorView.qml:143
 msgid "Position / Size"
 msgstr "Posición / Tamaño"
 

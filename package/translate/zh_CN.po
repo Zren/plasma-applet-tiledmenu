@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-05-15 13:58-0400\n"
+"POT-Creation-Date: 2018-06-17 13:59-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lin Mu <linmu789632@gmail.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -339,35 +339,35 @@ msgstr "重置磁贴"
 msgid "Close"
 msgstr "关闭"
 
-#: ../contents/ui/TileEditorView.qml:74
+#: ../contents/ui/TileEditorView.qml:75
 msgid "Url"
 msgstr "网址"
 
-#: ../contents/ui/TileEditorView.qml:80
+#: ../contents/ui/TileEditorView.qml:81
 msgid "Label"
 msgstr "标签"
 
-#: ../contents/ui/TileEditorView.qml:88
+#: ../contents/ui/TileEditorView.qml:89
 msgid "Icon"
 msgstr "图标"
 
-#: ../contents/ui/TileEditorView.qml:107
+#: ../contents/ui/TileEditorView.qml:108
 msgid "Background Image"
 msgstr "背景图片"
 
-#: ../contents/ui/TileEditorView.qml:117
+#: ../contents/ui/TileEditorView.qml:118
 msgid "Choose an image"
 msgstr "选择一张图片"
 
-#: ../contents/ui/TileEditorView.qml:122
+#: ../contents/ui/TileEditorView.qml:123
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 msgstr "图片文件 (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
-#: ../contents/ui/TileEditorView.qml:136
+#: ../contents/ui/TileEditorView.qml:137
 msgid "Background Color"
 msgstr "背景颜色"
 
-#: ../contents/ui/TileEditorView.qml:142
+#: ../contents/ui/TileEditorView.qml:143
 msgid "Position / Size"
 msgstr "位置/大小"
 

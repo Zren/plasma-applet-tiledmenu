@@ -17,6 +17,8 @@ MouseArea {
 	onOpenChanged: {
 		if (open) {
 			forceActiveFocus()
+		} else {
+			searchField.forceActiveFocus()
 		}
 	}
 

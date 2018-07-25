@@ -24,4 +24,4 @@ Read the [theming guide](Theming.md) to develop Desktop/Icon Themes for this wid
 
 ## Translating
 
-See the [package/locale](package/locale) folder for instructions on translating.
+See the [package/translate](package/translate) folder for instructions on translating.

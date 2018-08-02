@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-06-17 13:59-0400\n"
+"POT-Creation-Date: 2018-08-02 19:46-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -242,7 +242,7 @@ msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
 msgstr ""
 
-#: ../contents/ui/SearchFiltersViewItem.qml:109 ../contents/ui/SearchFiltersView.qml:30
+#: ../contents/ui/SearchFiltersViewItem.qml:115 ../contents/ui/SearchFiltersView.qml:30
 msgid "Default"
 msgstr ""
 
@@ -338,35 +338,35 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:75
+#: ../contents/ui/TileEditorView.qml:73
 msgid "Url"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:81
+#: ../contents/ui/TileEditorView.qml:79
 msgid "Label"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:89
+#: ../contents/ui/TileEditorView.qml:87
 msgid "Icon"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:108
+#: ../contents/ui/TileEditorView.qml:106
 msgid "Background Image"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:118
+#: ../contents/ui/TileEditorView.qml:116
 msgid "Choose an image"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:123
+#: ../contents/ui/TileEditorView.qml:121
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:137
+#: ../contents/ui/TileEditorView.qml:135
 msgid "Background Color"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:143
+#: ../contents/ui/TileEditorView.qml:141
 msgid "Position / Size"
 msgstr ""
 

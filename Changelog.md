@@ -1,3 +1,12 @@
+## v23 - August 2 2018
+
+* Added Dutch translation by @Vistaus (Pull Request #15)
+* Fix non-default font size causing issues in app list (Issue #7)
+* Fix a number of deprecation warnings logged in Qt 5.11.
+* Make sure the panel icon should be smooth.
+* Focus on searchField when a sidebar menu closes.
+* Fix icon sizes in the search filter view.
+
 ## v22 - May 15 2018
 
 * Fix error when loading in Kubuntu 18.04 LiveCD. We now lazy load qml-module-qt-labs-platform which was used to retrieve the translated xdg folder names.

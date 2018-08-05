@@ -30,4 +30,15 @@ ScrollView {
 	function scrollToTop() {
 		appsListView.positionViewAtBeginning()
 	}
+
+	function jumpToSection(section) {
+		for (var i = 0; i < appsListView.model.count; i++) {
+			var app = appsListView.model.get(i)
+			if (section == app.sectionKey) {
+				appsListView.currentIndex = i
+				appsListView.positionViewAtIndex(i, ListView.Beginning)
+				break
+			}
+		}
+	}
 }

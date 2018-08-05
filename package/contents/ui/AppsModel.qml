@@ -296,7 +296,7 @@ Item {
 			//--- section
 			for (var i = 0; i < recentAppList.length; i++) {
 				var item = recentAppList[i];
-				item.sectionKey = i18n('Recent Apps');
+				item.sectionKey = i18n("Recent Apps");
 			}
 
 			return recentAppList;

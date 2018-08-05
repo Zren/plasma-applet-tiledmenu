@@ -20,6 +20,7 @@ Item {
 	property alias tileEditorView: tileEditorViewLoader.item
 	property alias tileEditorViewLoader: tileEditorViewLoader
 	property alias searchField: searchField
+	property alias jumpToLetterView: jumpToLetterView
 
 	property bool searchOnTop: false
 
@@ -110,6 +111,21 @@ Item {
 					})
 				}
 				appsView.scrollToTop()
+			}
+		}
+
+		JumpToLetterView {
+			id: jumpToLetterView
+			visible: false
+
+			function show() {
+				if (stackView.currentItem != jumpToLetterView) {
+					stackView.delegate = stackView.panUp
+					stackView.push({
+						item: jumpToLetterView,
+						replace: true,
+					})
+				}
 			}
 		}
 

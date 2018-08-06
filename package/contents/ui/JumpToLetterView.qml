@@ -13,8 +13,7 @@ GridView {
 
 	Connections {
 		target: appsModel.allAppsModel
-		onDataChanged: jumpToLetterView.update()
-		onCountChanged: jumpToLetterView.update()
+		onRefreshed: jumpToLetterView.update()
 	}
 
 	function update() {

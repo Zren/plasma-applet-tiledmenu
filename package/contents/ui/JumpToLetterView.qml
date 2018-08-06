@@ -67,11 +67,18 @@ GridView {
 
 		enabled: availableSections.indexOf(section) >= 0
 
-		font.pixelSize: isRecentApps ? height * 1 : height * 0.6
+		font.pixelSize: height * 0.6
 
+		iconName: {
+			if (isRecentApps) {
+				return 'view-history'
+			} else {
+				return ''
+			}
+		}
 		text: {
 			if (isRecentApps) {
-				return '◷'
+				return  '' // Use '◷' icon
 			} else if (section == '0-9') {
 				return '#'
 			} else {

@@ -23,46 +23,7 @@ ListView {
 	property bool showDesktopFileUrl: false
 	property int iconSize: 36 * units.devicePixelRatio
 
-	section.delegate: MouseArea {
-		id: sectionDelegate
-
-		width: parent.width
-		// height: childrenRect.height
-		implicitHeight: listView.iconSize
-
-		PlasmaComponents.Label {
-			id: sectionHeading
-			anchors {
-				left: parent.left
-				leftMargin: units.smallSpacing
-				verticalCenter:  parent.verticalCenter
-			}
-			text: section
-			font.bold: true
-			font.pointSize: 14 * units.devicePixelRatio
-
-			property bool centerOverIcon: sectionHeading.contentWidth <= listView.iconSize
-			width: centerOverIcon ? listView.iconSize : parent.width
-			horizontalAlignment: centerOverIcon ? Text.AlignHCenter : Text.AlignLeft
-		}
-
-		HoverOutlineEffect {
-			id: hoverOutlineEffect
-			anchors.fill: parent
-			hoverRadius: width/2
-			pressedRadius: width
-			property alias control: sectionDelegate
-		}
-
-		hoverEnabled: true
-		onClicked: {
-			if (appsModel.order == "alphabetical") {
-				jumpToLetterView.show()
-			} else { // appsModel.order = "categories"
-				jumpToLetterView.show()
-			}
-		}
-	}
+	section.delegate: KickerSectionHeader {}
 
 	delegate: MenuListItem {}
 

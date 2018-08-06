@@ -27,11 +27,21 @@ GridView {
 			}
 		}
 		availableSections = sections
-		// console.log('jumpToLetterView.update', sections)
+		// console.log('jumpToLetterView.update.availableSections', sections)
+
+		sections = presetSections.slice() // shallow copy
+		for (var i = 0; i < availableSections.length; i++) {
+			var section = availableSections[i]
+			if (sections.indexOf(section) == -1) {
+				sections.push(section)
+			}
+		}
+		allSections = sections
+		// console.log('jumpToLetterView.update.allSections', allSections)
 	}
 
 	property var availableSections: []
-	property var allSections: [
+	property var presetSections: [
 		i18n("Recent Apps"),
 		'&',
 		'0-9',
@@ -41,6 +51,7 @@ GridView {
 		'S', 'T', 'U', 'V', 'W', 'X',
 		'Y', 'Z',
 	]
+	property var allSections: []
 	model: allSections
 
 	property int buttonSize: 70 * units.devicePixelRatio

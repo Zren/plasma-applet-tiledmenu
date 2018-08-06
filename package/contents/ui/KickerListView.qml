@@ -56,10 +56,10 @@ ListView {
 
 		hoverEnabled: true
 		onClicked: {
-			if (appsModel.order = "alphabetical") {
+			if (appsModel.order == "alphabetical") {
 				jumpToLetterView.show()
 			} else { // appsModel.order = "categories"
-				// jumpToLetterView.show()
+				jumpToLetterView.show()
 			}
 		}
 	}

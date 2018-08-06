@@ -102,9 +102,9 @@ Item {
 				show()
 			}
 
-			function show() {
+			function show(animation) {
 				if (stackView.currentItem != appsView) {
-					stackView.delegate = stackView.panUp
+					stackView.delegate = animation || stackView.panUp
 					stackView.push({
 						item: appsView,
 						replace: true,
@@ -120,7 +120,7 @@ Item {
 
 			function show() {
 				if (stackView.currentItem != jumpToLetterView) {
-					stackView.delegate = stackView.panUp
+					stackView.delegate = stackView.zoomOut
 					stackView.push({
 						item: jumpToLetterView,
 						replace: true,

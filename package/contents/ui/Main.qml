@@ -122,7 +122,7 @@ Item {
 			search.query = ""
 			search.applyDefaultFilters()
 			popup.searchView.searchField.forceActiveFocus()
-			popup.searchView.appsView.show()
+			popup.searchView.showDefaultView()
 			// popup.searchView.tileEditorView.open('preferred://browser')
 		}
 	}

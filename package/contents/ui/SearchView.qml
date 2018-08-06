@@ -24,6 +24,11 @@ Item {
 
 	property bool searchOnTop: false
 
+	function showDefaultView() {
+		appsView.show()
+		// jumpToLetterView.show()
+	}
+
 	states: [
 		State {
 			name: "searchOnTop"

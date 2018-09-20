@@ -400,6 +400,12 @@ Item {
 					var firstCharCode = item.name.charCodeAt(0);
 					if (48 <= firstCharCode && firstCharCode <= 57) { // isDigit
 						item.sectionKey = '0-9';
+					} else if ((33 <= firstCharCode && firstCharCode <= 47)
+						|| (58 <= firstCharCode && firstCharCode <= 64)
+						|| (91 <= firstCharCode && firstCharCode <= 96)
+						|| (123 <= firstCharCode && firstCharCode <= 126)
+					) { // isSymbol
+						item.sectionKey = '&';
 					} else {
 						item.sectionKey = item.name.charAt(0).toUpperCase();
 					}

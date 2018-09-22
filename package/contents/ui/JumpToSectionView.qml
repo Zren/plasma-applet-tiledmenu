@@ -42,24 +42,25 @@ GridView {
 	}
 	cellHeight: buttonSize
 
-	delegate: PlasmaComponents.ToolButton {
+	delegate: AppToolButton {
 		width: jumpToLetterView.cellWidth
 		height: jumpToLetterView.cellHeight
 
 		readonly property string section: modelData || ''
 		readonly property bool isRecentApps: section == i18n("Recent Apps")
+		readonly property var sectionIcon: appsModel.allAppsModel.sectionIcons[section] || null
 
 		enabled: availableSections.indexOf(section) >= 0
 
 		font.pixelSize: height * 0.6
 
-		iconName: {
+		iconSource: {
 			if (isRecentApps) {
 				return 'view-history'
 			} else if (jumpToLetterView.squareView) {
 				return ''
 			} else {
-				return 'view-list-tree'
+				return sectionIcon
 			}
 		}
 		text: {

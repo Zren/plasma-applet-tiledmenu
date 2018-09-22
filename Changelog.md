@@ -1,3 +1,11 @@
+## v24 - September 22 2018
+
+* Hide the solid sidebar background color. "Desktop theme" styled sidebars remain the same.
+* Add Jump to Letter/Category views when clicking the section header.
+* Add ability to start in Jump To Letter/Category view when menu opens.
+* Fix a binding loop when drawing tile labels which caused a line of text to overflow the bottom of the tile (Issue #11).
+* Group apps starting with symbols/punctuation under '&'.
+
 ## v23 - August 2 2018
 
 * Added Dutch translation by @Vistaus (Pull Request #15)

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-08-02 19:46-0400\n"
+"POT-Creation-Date: 2018-09-22 12:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ruman Gerst <rumangerst@gmail.com>\n"
 "Language-Team: German <LL@li.org>\n"
@@ -36,6 +36,10 @@ msgstr "An Menü anheften"
 #: ../contents/ui/AppContextMenu.qml:120
 msgid "Pin to Taskbar"
 msgstr "An Anwendungsleiste anheften"
+
+#: ../contents/ui/AppsModel.qml:299 ../contents/ui/JumpToLetterView.qml:40 ../contents/ui/JumpToSectionView.qml:50
+msgid "Recent Apps"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:23
 msgid "Popup"
@@ -73,7 +77,7 @@ msgstr ""
 msgid "Tile Margin"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:66 ../contents/ui/config/ConfigGeneral.qml:237 ../contents/ui/config/ConfigGeneral.qml:262 ../contents/ui/config/ConfigGeneral.qml:303
+#: ../contents/ui/config/ConfigGeneral.qml:66 ../contents/ui/config/ConfigGeneral.qml:237 ../contents/ui/config/ConfigGeneral.qml:262 ../contents/ui/config/ConfigGeneral.qml:305
 msgid "px"
 msgstr "px"
 
@@ -138,7 +142,7 @@ msgid "App List Area Width"
 msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:269
-msgid "Default Order"
+msgid "Default View"
 msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:271
@@ -149,39 +153,47 @@ msgstr ""
 msgid "Categories"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:279
+#: ../contents/ui/config/ConfigGeneral.qml:273
+msgid "Jump To Letter"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:274
+msgid "Jump To Category"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:281
 msgid "App Description"
 msgstr "Anwendungsbeschreibung"
 
-#: ../contents/ui/config/ConfigGeneral.qml:281
+#: ../contents/ui/config/ConfigGeneral.qml:283
 msgid "Hidden"
 msgstr "Versteckt"
 
-#: ../contents/ui/config/ConfigGeneral.qml:282
+#: ../contents/ui/config/ConfigGeneral.qml:284
 msgid "After"
 msgstr "Danach"
 
-#: ../contents/ui/config/ConfigGeneral.qml:283
+#: ../contents/ui/config/ConfigGeneral.qml:285
 msgid "Below"
 msgstr "Darunter"
 
-#: ../contents/ui/config/ConfigGeneral.qml:295
+#: ../contents/ui/config/ConfigGeneral.qml:297
 msgid "Show recent applications"
 msgstr "Letzte Anwendungen anzeigen"
 
-#: ../contents/ui/config/ConfigGeneral.qml:302
+#: ../contents/ui/config/ConfigGeneral.qml:304
 msgid "Icon Size"
 msgstr "Symbolgröße"
 
-#: ../contents/ui/config/ConfigGeneral.qml:318
+#: ../contents/ui/config/ConfigGeneral.qml:320
 msgid "Search Results"
 msgstr "Suchergebnisse"
 
-#: ../contents/ui/config/ConfigGeneral.qml:322
+#: ../contents/ui/config/ConfigGeneral.qml:324
 msgid "Merged (Application Launcher)"
 msgstr "Vereinigt (Anwendungsstarter)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:331
+#: ../contents/ui/config/ConfigGeneral.qml:333
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "In Kategorien unterteilen (Anwendungsmenü / Dashboard)"
 
@@ -189,27 +201,27 @@ msgstr "In Kategorien unterteilen (Anwendungsmenü / Dashboard)"
 msgid "<b>Version:</b> %1"
 msgstr ""
 
-#: ../contents/ui/Main.qml:234
+#: ../contents/ui/Main.qml:215
 msgid "System Info"
 msgstr "Systeminformationen"
 
-#: ../contents/ui/Main.qml:235
+#: ../contents/ui/Main.qml:216
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../contents/ui/Main.qml:237
+#: ../contents/ui/Main.qml:218
 msgid "Task Manager"
 msgstr "Taskmanager"
 
-#: ../contents/ui/Main.qml:238
+#: ../contents/ui/Main.qml:219
 msgid "System Settings"
 msgstr "Systemeinstellungen"
 
-#: ../contents/ui/Main.qml:239
+#: ../contents/ui/Main.qml:220
 msgid "File Manager"
 msgstr "Dateiverwaltung"
 
-#: ../contents/ui/Main.qml:241
+#: ../contents/ui/Main.qml:222
 msgid "Edit Applications..."
 msgstr "Anwendungen bearbeiten..."
 

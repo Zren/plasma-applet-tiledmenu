@@ -34,10 +34,10 @@ Or if you know how to make a pull request
 ## Status
 |  Locale  |  Lines  | % Done|
 |----------|---------|-------|
-| Template |      92 |       |
-| de       |   44/92 |   47% |
-| es       |   78/92 |   84% |
-| fr       |   25/92 |   27% |
-| nl_NL    |   92/92 |  100% |
-| pl       |    1/92 |    1% |
-| zh_CN    |   92/92 |  100% |
+| Template |      95 |       |
+| de       |   44/95 |   46% |
+| es       |   78/95 |   82% |
+| fr       |   25/95 |   26% |
+| nl_NL    |   91/95 |   95% |
+| pl       |    1/95 |    1% |
+| zh_CN    |   91/95 |   95% |

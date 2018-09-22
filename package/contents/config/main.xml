@@ -43,9 +43,9 @@
       <label>Same as favoriteApps except "xdg:DOCUMENTS", etc are constants to ~/Documents.</label>
       <default>xdg:DOCUMENTS,xdg:PICTURES,org.kde.dolphin.desktop,systemsettings.desktop</default>
     </entry>
-    <entry name="defaultAppListOrder" type="string">
-      <!-- enum: alphabetical, categories -->
-      <default>alphabetical</default>
+    <entry name="defaultAppListView" type="string">
+      <!-- enum: Alphabetical, Categories, JumpToLetter, JumpToCategory -->
+      <default>Alphabetical</default>
     </entry>
 
     <!-- Base64 encoded JSON -->
@@ -107,6 +107,14 @@
     <entry name="popupHeight" type="int">
       <default>620</default>
     </entry>
+
+    
+    <!-- Removed v24
+    <entry name="defaultAppListOrder" type="string">
+      < enum: alphabetical, categories >
+      <default>alphabetical</default>
+    </entry>
+    -->
   </group>
 
 </kcfg>

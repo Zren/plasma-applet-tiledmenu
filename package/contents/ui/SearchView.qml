@@ -25,8 +25,16 @@ Item {
 	property bool searchOnTop: false
 
 	function showDefaultView() {
-		appsView.show()
-		// jumpToLetterView.show()
+		var defView = plasmoid.configuration.defaultAppListView
+		if (defView == 'Alphabetical') {
+			appsView.showAppsAlphabetically()
+		} else if (defView == 'Categories') {
+			appsView.showAppsCategorically()
+		} else if (defView == 'JumpToLetter') {
+			jumpToLetterView.showLetters()
+		} else if (defView == 'JumpToCategory') {
+			jumpToLetterView.showCategories()
+		}
 	}
 
 	states: [
@@ -122,6 +130,16 @@ Item {
 		JumpToLetterView {
 			id: jumpToLetterView
 			visible: false
+
+			function showLetters() {
+				appsModel.order = "alphabetical"
+				show()
+			}
+
+			function showCategories() {
+				appsModel.order = "categories"
+				show()
+			}
 
 			function show() {
 				if (stackView.currentItem != jumpToLetterView) {

@@ -334,6 +334,8 @@ Item {
 		function getCategory(rootIndex) {
 			var modelIndex = rootModel.index(rootIndex, 0)
 			var categoryLabel = rootModel.data(modelIndex, Qt.DisplayRole)
+			var categoryIcon = rootModel.data(modelIndex, Qt.DecorationRole)
+			console.log('categoryLabel', categoryLabel, categoryIcon)
 			var categoryModel = rootModel.modelForRow(rootIndex)
 			var appList = []
 			if (categoryModel) {
@@ -345,6 +347,7 @@ Item {
 			for (var i = 0; i < appList.length; i++) {
 				var item = appList[i];
 				item.sectionKey = categoryLabel
+				item.sectionIcon = categoryIcon
 			}
 			return appList
 		}
@@ -452,6 +455,15 @@ Item {
 			// var systemList = []
 			// parseModel(systemList, systemModel)
 			// powerActionsModel.list = systemList;
+
+			//--- parse sectionIcons
+			allAppsModel.sectionIcons = {}
+			for (var i = 0; i < appList.length; i++) {
+				var item = appList[i]
+				if (item.sectionKey && item.sectionIcon) {
+					allAppsModel.sectionIcons[item.sectionKey] = item.sectionIcon
+				}
+			}
 
 			//--- apply model
 			allAppsModel.list = appList;

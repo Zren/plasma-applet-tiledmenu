@@ -10,12 +10,12 @@ MouseArea {
 
 	property alias hovered: control.containsMouse
 	property string iconName: ""
+	property var iconSource: null
 	property string text: ""
 	property string tooltip: ""
 
 
 	property font font: theme.defaultFont
-	property alias iconSource: control.iconName
 	property real minimumWidth: 0
 	property real minimumHeight: 0
 	property bool flat: true

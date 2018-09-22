@@ -42,6 +42,8 @@ MouseArea {
 		anchors.rightMargin: styleLoader.paddingRight
 		anchors.bottomMargin: styleLoader.paddingBottom
 
+		opacity: control.enabled ? 1 : 0.5
+
 		RowLayout {
 			id: buttonContent
 			anchors.fill: parent

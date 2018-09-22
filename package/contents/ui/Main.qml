@@ -143,7 +143,6 @@ Item {
 
 	onWidthChanged: {
 		// console.log('popup.size', width, height, 'width')
-		// plasmoid.configuration.width = width
 		resizeToFit.run()
 	}
 	onHeightChanged: {

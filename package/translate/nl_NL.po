@@ -38,8 +38,7 @@ msgstr "Vastmaken aan menu"
 msgid "Pin to Taskbar"
 msgstr "Vastmaken aan taakbalk"
 
-#: ../contents/ui/AppsModel.qml:299 ../contents/ui/JumpToLetterView.qml:40
-#: ../contents/ui/JumpToSectionView.qml:50
+#: ../contents/ui/AppsModel.qml:299 ../contents/ui/JumpToLetterView.qml:40 ../contents/ui/JumpToSectionView.qml:50
 msgid "Recent Apps"
 msgstr "Recente apps"
 
@@ -79,21 +78,15 @@ msgstr "%1 px"
 msgid "Tile Margin"
 msgstr "Tegelruimte"
 
-#: ../contents/ui/config/ConfigGeneral.qml:66
-#: ../contents/ui/config/ConfigGeneral.qml:237
-#: ../contents/ui/config/ConfigGeneral.qml:262
-#: ../contents/ui/config/ConfigGeneral.qml:305
+#: ../contents/ui/config/ConfigGeneral.qml:66 ../contents/ui/config/ConfigGeneral.qml:237 ../contents/ui/config/ConfigGeneral.qml:262 ../contents/ui/config/ConfigGeneral.qml:305
 msgid "px"
 msgstr "px"
 
-#: ../contents/ui/config/ConfigGeneral.qml:71
-#: ../contents/ui/config/ConfigGeneral.qml:118
-#: ../contents/ui/config/ConfigGeneral.qml:242
+#: ../contents/ui/config/ConfigGeneral.qml:71 ../contents/ui/config/ConfigGeneral.qml:118 ../contents/ui/config/ConfigGeneral.qml:242
 msgid "Desktop Theme (%1)"
 msgstr "Bureaubladthema (%1)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:79
-#: ../contents/ui/config/ConfigGeneral.qml:125
+#: ../contents/ui/config/ConfigGeneral.qml:79 ../contents/ui/config/ConfigGeneral.qml:125
 msgid "Custom Color"
 msgstr "Aangepaste kleur"
 
@@ -157,8 +150,7 @@ msgstr "Standaardweergave"
 msgid "Alphabetical"
 msgstr "Alfabetisch"
 
-#: ../contents/ui/config/ConfigGeneral.qml:272
-#: ../contents/ui/SidebarView.qml:65
+#: ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/SidebarView.qml:65
 msgid "Categories"
 msgstr "Categorieën"
 
@@ -263,8 +255,7 @@ msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
 msgstr "%1 zoeken"
 
-#: ../contents/ui/SearchFiltersViewItem.qml:115
-#: ../contents/ui/SearchFiltersView.qml:30
+#: ../contents/ui/SearchFiltersViewItem.qml:115 ../contents/ui/SearchFiltersView.qml:30
 msgid "Default"
 msgstr "Standaard"
 

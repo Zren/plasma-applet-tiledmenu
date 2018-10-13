@@ -20,8 +20,22 @@ Item {
 	property alias tileEditorView: tileEditorViewLoader.item
 	property alias tileEditorViewLoader: tileEditorViewLoader
 	property alias searchField: searchField
+	property alias jumpToLetterView: jumpToLetterView
 
 	property bool searchOnTop: false
+
+	function showDefaultView() {
+		var defView = plasmoid.configuration.defaultAppListView
+		if (defView == 'Alphabetical') {
+			appsView.showAppsAlphabetically()
+		} else if (defView == 'Categories') {
+			appsView.showAppsCategorically()
+		} else if (defView == 'JumpToLetter') {
+			jumpToLetterView.showLetters()
+		} else if (defView == 'JumpToCategory') {
+			jumpToLetterView.showCategories()
+		}
+	}
 
 	states: [
 		State {
@@ -101,15 +115,40 @@ Item {
 				show()
 			}
 
-			function show() {
+			function show(animation) {
 				if (stackView.currentItem != appsView) {
-					stackView.delegate = stackView.panUp
+					stackView.delegate = animation || stackView.panUp
 					stackView.push({
 						item: appsView,
 						replace: true,
 					})
 				}
 				appsView.scrollToTop()
+			}
+		}
+
+		JumpToLetterView {
+			id: jumpToLetterView
+			visible: false
+
+			function showLetters() {
+				appsModel.order = "alphabetical"
+				show()
+			}
+
+			function showCategories() {
+				appsModel.order = "categories"
+				show()
+			}
+
+			function show() {
+				if (stackView.currentItem != jumpToLetterView) {
+					stackView.delegate = stackView.zoomOut
+					stackView.push({
+						item: jumpToLetterView,
+						replace: true,
+					})
+				}
 			}
 		}
 

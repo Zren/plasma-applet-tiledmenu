@@ -296,7 +296,7 @@ Item {
 			//--- section
 			for (var i = 0; i < recentAppList.length; i++) {
 				var item = recentAppList[i];
-				item.sectionKey = i18n('Recent Apps');
+				item.sectionKey = i18n("Recent Apps");
 			}
 
 			return recentAppList;
@@ -334,6 +334,8 @@ Item {
 		function getCategory(rootIndex) {
 			var modelIndex = rootModel.index(rootIndex, 0)
 			var categoryLabel = rootModel.data(modelIndex, Qt.DisplayRole)
+			var categoryIcon = rootModel.data(modelIndex, Qt.DecorationRole)
+			console.log('categoryLabel', categoryLabel, categoryIcon)
 			var categoryModel = rootModel.modelForRow(rootIndex)
 			var appList = []
 			if (categoryModel) {
@@ -345,6 +347,7 @@ Item {
 			for (var i = 0; i < appList.length; i++) {
 				var item = appList[i];
 				item.sectionKey = categoryLabel
+				item.sectionIcon = categoryIcon
 			}
 			return appList
 		}
@@ -400,6 +403,12 @@ Item {
 					var firstCharCode = item.name.charCodeAt(0);
 					if (48 <= firstCharCode && firstCharCode <= 57) { // isDigit
 						item.sectionKey = '0-9';
+					} else if ((33 <= firstCharCode && firstCharCode <= 47)
+						|| (58 <= firstCharCode && firstCharCode <= 64)
+						|| (91 <= firstCharCode && firstCharCode <= 96)
+						|| (123 <= firstCharCode && firstCharCode <= 126)
+					) { // isSymbol
+						item.sectionKey = '&';
 					} else {
 						item.sectionKey = item.name.charAt(0).toUpperCase();
 					}
@@ -446,6 +455,15 @@ Item {
 			// var systemList = []
 			// parseModel(systemList, systemModel)
 			// powerActionsModel.list = systemList;
+
+			//--- parse sectionIcons
+			allAppsModel.sectionIcons = {}
+			for (var i = 0; i < appList.length; i++) {
+				var item = appList[i]
+				if (item.sectionKey && item.sectionIcon) {
+					allAppsModel.sectionIcons[item.sectionKey] = item.sectionIcon
+				}
+			}
 
 			//--- apply model
 			allAppsModel.list = appList;

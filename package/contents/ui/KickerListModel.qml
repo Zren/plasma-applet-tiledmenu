@@ -4,6 +4,7 @@ ListModel {
 	id: listModel
 	
 	property var list: []
+	property var sectionIcons: { return {} }
 
 	signal refreshing()
 	signal refreshed()

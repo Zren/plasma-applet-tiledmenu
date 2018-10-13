@@ -264,12 +264,14 @@ ConfigPage {
 		}
 
 		ConfigComboBox {
-			id: defaultAppListOrderControl
-			configKey: "defaultAppListOrder"
-			label: i18n("Default Order")
+			id: defaultAppListViewControl
+			configKey: "defaultAppListView"
+			label: i18n("Default View")
 			model: [
-				{ value: "alphabetical", text: i18n("Alphabetical") },
-				{ value: "categories", text: i18n("Categories") },
+				{ value: "Alphabetical", text: i18n("Alphabetical") },
+				{ value: "Categories", text: i18n("Categories") },
+				{ value: "JumpToLetter", text: i18n("Jump To Letter") },
+				{ value: "JumpToCategory", text: i18n("Jump To Category") },
 			]
 		}
 

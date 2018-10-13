@@ -1,3 +1,20 @@
+## v24 - September 22 2018
+
+* Hide the solid sidebar background color. "Desktop theme" styled sidebars remain the same.
+* Add Jump to Letter/Category views when clicking the section header.
+* Add ability to start in Jump To Letter/Category view when menu opens.
+* Fix a binding loop when drawing tile labels which caused a line of text to overflow the bottom of the tile (Issue #11).
+* Group apps starting with symbols/punctuation under '&'.
+
+## v23 - August 2 2018
+
+* Added Dutch translation by @Vistaus (Pull Request #15)
+* Fix non-default font size causing issues in app list (Issue #7)
+* Fix a number of deprecation warnings logged in Qt 5.11.
+* Make sure the panel icon should be smooth.
+* Focus on searchField when a sidebar menu closes.
+* Fix icon sizes in the search filter view.
+
 ## v22 - May 15 2018
 
 * Fix error when loading in Kubuntu 18.04 LiveCD. We now lazy load qml-module-qt-labs-platform which was used to retrieve the translated xdg folder names.

@@ -122,7 +122,7 @@ Item {
 			search.query = ""
 			search.applyDefaultFilters()
 			popup.searchView.searchField.forceActiveFocus()
-			popup.searchView.appsView.show()
+			popup.searchView.showDefaultView()
 			// popup.searchView.tileEditorView.open('preferred://browser')
 		}
 	}
@@ -141,27 +141,8 @@ Item {
 	// Layout.minimumHeight: 600 // For quickly testing as a desktop widget
 	// Layout.minimumWidth: 800
 
-	Connections {
-		target: config
-		property int lastAppListWidth: -1
-		onAppListWidthChanged: {
-			// We we increase the appListWidth, we need to increase the window width too.
-			// console.log('onAppListWidthChanged')
-			if (config.appListWidth != lastAppListWidth) {
-				// console.log('onAppListWidthChanged', config.appListWidth != lastAppListWidth)
-				if (lastAppListWidth != -1 && lastAppListWidth < config.appListWidth) {
-					var deltaPixels = config.appListWidth - lastAppListWidth
-					// console.log('onAppListWidthChanged', deltaPixels)
-					plasmoid.configuration.width += deltaPixels
-				}
-				lastAppListWidth = config.appListWidth
-			}
-		}
-	}
-
 	onWidthChanged: {
 		// console.log('popup.size', width, height, 'width')
-		// plasmoid.configuration.width = width
 		resizeToFit.run()
 	}
 	onHeightChanged: {

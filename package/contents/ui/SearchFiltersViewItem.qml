@@ -55,12 +55,18 @@ RowLayout {
 
 		style: PlasmaStyles.ToolButtonStyle {
 			id: style
+			readonly property bool smallIcon: !control.subText
+
 			label: RowLayout {
 				PlasmaCore.IconItem {
 					source: control.iconSource
+					Layout.preferredHeight: style.smallIcon ? config.flatButtonIconSize : -1
+					Layout.preferredWidth: style.smallIcon ? config.flatButtonIconSize : -1
 				}
 				ColumnLayout {
+					id: textColumn
 					Layout.fillWidth: true
+					Layout.fillHeight: true
 					spacing: 0
 					PlasmaComponents.Label {
 						Layout.fillWidth: true

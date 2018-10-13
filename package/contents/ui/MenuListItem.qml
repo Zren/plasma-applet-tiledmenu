@@ -8,7 +8,7 @@ AppToolButton {
 	id: itemDelegate
 
 	width: parent.width
-	height: row.height
+	implicitHeight: row.implicitHeight
 
 	property var parentModel: typeof modelList !== "undefined" && modelList[index] ? modelList[index].parentModel : undefined
 	property string modelDescription: model.name == model.description ? '' : model.description // Ignore the Comment if it's the same as the Name.
@@ -19,6 +19,7 @@ AppToolButton {
 	property bool secondRowVisible: secondRowText
 	property string launcherUrl: model.favoriteId || model.url
 	property alias iconSource: itemIcon.source
+	property int iconSize: model.largeIcon ? listView.iconSize * 2 : listView.iconSize
 
 	function endsWith(s, substr) {
 		return s.indexOf(substr) == s.length - substr.length
@@ -86,27 +87,17 @@ AppToolButton {
 		anchors.leftMargin: units.smallSpacing
 		anchors.right: parent.right
 		anchors.rightMargin: units.smallSpacing
-		// width: parent.width
-		// height: 36 // 2 lines
-		height: model.largeIcon ? listView.iconSize * 2 : listView.iconSize
 
 		Item {
-			height: parent.height
-			width: parent.height
-			// width: itemIcon.width
 			Layout.fillHeight: true
-			Layout.preferredWidth: parent.height
+			implicitHeight: itemIcon.implicitHeight
+			implicitWidth: itemIcon.implicitWidth
 
 			PlasmaCore.IconItem {
 				id: itemIcon
 				anchors.centerIn: parent
-				height: parent.height
-				width: height
-				// height: 48
-				
-
-				// height: parent.height
-				// width: height
+				implicitHeight: itemDelegate.iconSize
+				implicitWidth: implicitHeight
 
 				// visible: iconsEnabled
 
@@ -119,7 +110,7 @@ AppToolButton {
 		ColumnLayout {
 			Layout.fillWidth: true
 			// Layout.fillHeight: true
-			anchors.verticalCenter: parent.verticalCenter
+			Layout.alignment: Qt.AlignVCenter
 			spacing: 0
 
 			RowLayout {

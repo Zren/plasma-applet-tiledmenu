@@ -1,4 +1,4 @@
-> Version 3 of Zren's i18n scripts.
+> Version 4 of Zren's i18n scripts.
 
 With KDE Frameworks v5.37 and above, translations are bundled with the *.plasmoid file downloaded from the store.
 
@@ -17,9 +17,9 @@ Or if you know how to make a pull request
 ## Scripts
 
 * `./merge` will parse the `i18n()` calls in the `*.qml` files and write it to the `template.pot` file. Then it will merge any changes into the `*.po` language files.
-* `./build` will convert the `*.po` files to it's binary `*.mo` version and move it to `contents/locale/...` which will bundle the translations in the *.plasmoid without needed the user to manually install them.
+* `./build` will convert the `*.po` files to it's binary `*.mo` version and move it to `contents/locale/...` which will bundle the translations in the *.plasmoid without needing the user to manually install them.
 * `./install` will convert the `*.po` files to it's binary `*.mo` version and move it to `~/.local/share/locale/...`.
-* `./test` will run `./merge` then `./install`.
+* `./plasmoidlocaletest` will run `./build` then `plasmoidviewer` (part of `plasma-sdk`).
 
 ## Links
 
@@ -32,12 +32,12 @@ Or if you know how to make a pull request
 * https://github.com/kotelnik/plasma-applet-redshift-control/tree/master/translations
 
 ## Status
-|Locale | Lines | % Done|
-|-------|-------|-------|
-|Template\t|92\t|\t|
-|de\t|44/92\t|47%\t|
-|es\t|78/92\t|84%\t|
-|fr\t|25/92\t|27%\t|
-|nl_NL\t|92/92\t|100%\t|
-|pl\t|1/92\t|1%\t|
-|zh_CN\t|92/92\t|100%\t|
+|  Locale  |  Lines  | % Done|
+|----------|---------|-------|
+| Template |      95 |       |
+| de       |   44/95 |   46% |
+| es       |   78/95 |   82% |
+| fr       |   25/95 |   26% |
+| nl_NL    |   91/95 |   95% |
+| pl       |    1/95 |    1% |
+| zh_CN    |   91/95 |   95% |

@@ -10,12 +10,12 @@ MouseArea {
 
 	property alias hovered: control.containsMouse
 	property string iconName: ""
+	property var iconSource: null
 	property string text: ""
 	property string tooltip: ""
 
 
 	property font font: theme.defaultFont
-	property alias iconSource: control.iconName
 	property real minimumWidth: 0
 	property real minimumHeight: 0
 	property bool flat: true
@@ -42,6 +42,8 @@ MouseArea {
 		anchors.rightMargin: styleLoader.paddingRight
 		anchors.bottomMargin: styleLoader.paddingBottom
 
+		opacity: control.enabled ? 1 : 0.5
+
 		RowLayout {
 			id: buttonContent
 			anchors.fill: parent
@@ -52,7 +54,6 @@ MouseArea {
 			PlasmaCore.IconItem {
 				id: icon
 				source: control.iconName || control.iconSource
-				anchors.verticalCenter: parent.verticalCenter
 
 				implicitHeight: label.implicitHeight
 				implicitWidth: implicitHeight

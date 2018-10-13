@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-05-15 13:58-0400\n"
+"POT-Creation-Date: 2018-09-22 12:20-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Kepa Badiola <badiol@yahoo.es>\n"
 "Language-Team: Spanish <LL@li.org>\n"
@@ -36,6 +36,10 @@ msgstr "Anclar al Menú"
 #: ../contents/ui/AppContextMenu.qml:120
 msgid "Pin to Taskbar"
 msgstr "Anclar a la Barra de Tareas"
+
+#: ../contents/ui/AppsModel.qml:299 ../contents/ui/JumpToLetterView.qml:40 ../contents/ui/JumpToSectionView.qml:50
+msgid "Recent Apps"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:23
 msgid "Popup"
@@ -73,7 +77,7 @@ msgstr ""
 msgid "Tile Margin"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:66 ../contents/ui/config/ConfigGeneral.qml:237 ../contents/ui/config/ConfigGeneral.qml:262 ../contents/ui/config/ConfigGeneral.qml:303
+#: ../contents/ui/config/ConfigGeneral.qml:66 ../contents/ui/config/ConfigGeneral.qml:237 ../contents/ui/config/ConfigGeneral.qml:262 ../contents/ui/config/ConfigGeneral.qml:305
 msgid "px"
 msgstr "px"
 
@@ -138,7 +142,7 @@ msgid "App List Area Width"
 msgstr "Ancho del area de la Lista de Aplicaciones"
 
 #: ../contents/ui/config/ConfigGeneral.qml:269
-msgid "Default Order"
+msgid "Default View"
 msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:271
@@ -149,39 +153,47 @@ msgstr ""
 msgid "Categories"
 msgstr "Categorías"
 
-#: ../contents/ui/config/ConfigGeneral.qml:279
+#: ../contents/ui/config/ConfigGeneral.qml:273
+msgid "Jump To Letter"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:274
+msgid "Jump To Category"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:281
 msgid "App Description"
 msgstr "Descripción de la Applicación"
 
-#: ../contents/ui/config/ConfigGeneral.qml:281
+#: ../contents/ui/config/ConfigGeneral.qml:283
 msgid "Hidden"
 msgstr "Oculto"
 
-#: ../contents/ui/config/ConfigGeneral.qml:282
+#: ../contents/ui/config/ConfigGeneral.qml:284
 msgid "After"
 msgstr "Después"
 
-#: ../contents/ui/config/ConfigGeneral.qml:283
+#: ../contents/ui/config/ConfigGeneral.qml:285
 msgid "Below"
 msgstr "Debajo"
 
-#: ../contents/ui/config/ConfigGeneral.qml:295
+#: ../contents/ui/config/ConfigGeneral.qml:297
 msgid "Show recent applications"
 msgstr "Mostrar aplicaciones recientes"
 
-#: ../contents/ui/config/ConfigGeneral.qml:302
+#: ../contents/ui/config/ConfigGeneral.qml:304
 msgid "Icon Size"
 msgstr "Tamaño de Icono"
 
-#: ../contents/ui/config/ConfigGeneral.qml:318
+#: ../contents/ui/config/ConfigGeneral.qml:320
 msgid "Search Results"
 msgstr "Resultados de la Búsqueda"
 
-#: ../contents/ui/config/ConfigGeneral.qml:322
+#: ../contents/ui/config/ConfigGeneral.qml:324
 msgid "Merged (Application Launcher)"
 msgstr "Fusionado (Lanzador de Aplicaciones)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:331
+#: ../contents/ui/config/ConfigGeneral.qml:333
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Dividir en Categorías (Menú de Aplicaciones / Tablero de Mandos)"
 
@@ -189,27 +201,27 @@ msgstr "Dividir en Categorías (Menú de Aplicaciones / Tablero de Mandos)"
 msgid "<b>Version:</b> %1"
 msgstr "<b>Versión:</b> %1"
 
-#: ../contents/ui/Main.qml:234
+#: ../contents/ui/Main.qml:215
 msgid "System Info"
 msgstr "Información del Sistema"
 
-#: ../contents/ui/Main.qml:235
+#: ../contents/ui/Main.qml:216
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../contents/ui/Main.qml:237
+#: ../contents/ui/Main.qml:218
 msgid "Task Manager"
 msgstr "Administrador de Tareas"
 
-#: ../contents/ui/Main.qml:238
+#: ../contents/ui/Main.qml:219
 msgid "System Settings"
 msgstr "Preferencias del Sistema"
 
-#: ../contents/ui/Main.qml:239
+#: ../contents/ui/Main.qml:220
 msgid "File Manager"
 msgstr "Explorador de Archivos"
 
-#: ../contents/ui/Main.qml:241
+#: ../contents/ui/Main.qml:222
 msgid "Edit Applications..."
 msgstr "Editar Aplicaciones..."
 
@@ -242,7 +254,7 @@ msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
 msgstr "Buscar %1"
 
-#: ../contents/ui/SearchFiltersViewItem.qml:109 ../contents/ui/SearchFiltersView.qml:30
+#: ../contents/ui/SearchFiltersViewItem.qml:115 ../contents/ui/SearchFiltersView.qml:30
 msgid "Default"
 msgstr "Predeterminado"
 
@@ -338,35 +350,35 @@ msgstr "Reiniciar Baldosa"
 msgid "Close"
 msgstr "Cerrar"
 
-#: ../contents/ui/TileEditorView.qml:74
+#: ../contents/ui/TileEditorView.qml:73
 msgid "Url"
 msgstr "Url"
 
-#: ../contents/ui/TileEditorView.qml:80
+#: ../contents/ui/TileEditorView.qml:79
 msgid "Label"
 msgstr "Etiqueta"
 
-#: ../contents/ui/TileEditorView.qml:88
+#: ../contents/ui/TileEditorView.qml:87
 msgid "Icon"
 msgstr "Icono"
 
-#: ../contents/ui/TileEditorView.qml:107
+#: ../contents/ui/TileEditorView.qml:106
 msgid "Background Image"
 msgstr ""
 
-#: ../contents/ui/TileEditorView.qml:117
+#: ../contents/ui/TileEditorView.qml:116
 msgid "Choose an image"
 msgstr "Elegir una Imagen"
 
-#: ../contents/ui/TileEditorView.qml:122
+#: ../contents/ui/TileEditorView.qml:121
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 msgstr "Archivos de Imagen (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
-#: ../contents/ui/TileEditorView.qml:136
+#: ../contents/ui/TileEditorView.qml:135
 msgid "Background Color"
 msgstr "Color de Fondo"
 
-#: ../contents/ui/TileEditorView.qml:142
+#: ../contents/ui/TileEditorView.qml:141
 msgid "Position / Size"
 msgstr "Posición / Tamaño"
 

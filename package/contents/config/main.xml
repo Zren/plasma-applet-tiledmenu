@@ -10,12 +10,6 @@
       <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
       <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover</default>
     </entry>
-    <entry name="width" type="int">
-      <default>0</default> <!-- serialized in pixels in older versions unfortunately -->
-    </entry>
-    <entry name="height" type="int"> 
-      <default>0</default> <!-- serialized in pixels in older versions unfortunately -->
-    </entry>
     <entry name="fullscreen" type="bool"> 
       <default>false</default>
     </entry>
@@ -43,9 +37,9 @@
       <label>Same as favoriteApps except "xdg:DOCUMENTS", etc are constants to ~/Documents.</label>
       <default>xdg:DOCUMENTS,xdg:PICTURES,org.kde.dolphin.desktop,systemsettings.desktop</default>
     </entry>
-    <entry name="defaultAppListOrder" type="string">
-      <!-- enum: alphabetical, categories -->
-      <default>alphabetical</default>
+    <entry name="defaultAppListView" type="string">
+      <!-- enum: Alphabetical, Categories, JumpToLetter, JumpToCategory -->
+      <default>Alphabetical</default>
     </entry>
 
     <!-- Base64 encoded JSON -->
@@ -107,6 +101,24 @@
     <entry name="popupHeight" type="int">
       <default>620</default>
     </entry>
+
+    
+    <!-- Removed v24
+    <entry name="defaultAppListOrder" type="string">
+      < enum: alphabetical, categories >
+      <default>alphabetical</default>
+    </entry>
+    -->
+    
+    <!-- Removed v14
+    Both were serialized in pixels rather than dpi units
+    <entry name="width" type="int">
+      <default>0</default>
+    </entry>
+    <entry name="height" type="int"> 
+      <default>0</default>
+    </entry>
+    -->
   </group>
 
 </kcfg>

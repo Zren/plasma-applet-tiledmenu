@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-05-15 13:58-0400\n"
+"POT-Creation-Date: 2018-09-22 12:20-0400\n"
 "PO-Revision-Date: 2018-06-15 20:51+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -37,6 +37,10 @@ msgstr "Vastmaken aan menu"
 #: ../contents/ui/AppContextMenu.qml:120
 msgid "Pin to Taskbar"
 msgstr "Vastmaken aan taakbalk"
+
+#: ../contents/ui/AppsModel.qml:299 ../contents/ui/JumpToLetterView.qml:40 ../contents/ui/JumpToSectionView.qml:50
+msgid "Recent Apps"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:23
 msgid "Popup"
@@ -74,7 +78,7 @@ msgstr "%1 px"
 msgid "Tile Margin"
 msgstr "Tegelruimte"
 
-#: ../contents/ui/config/ConfigGeneral.qml:66 ../contents/ui/config/ConfigGeneral.qml:237 ../contents/ui/config/ConfigGeneral.qml:262 ../contents/ui/config/ConfigGeneral.qml:303
+#: ../contents/ui/config/ConfigGeneral.qml:66 ../contents/ui/config/ConfigGeneral.qml:237 ../contents/ui/config/ConfigGeneral.qml:262 ../contents/ui/config/ConfigGeneral.qml:305
 msgid "px"
 msgstr "px"
 
@@ -139,8 +143,8 @@ msgid "App List Area Width"
 msgstr "Breedte"
 
 #: ../contents/ui/config/ConfigGeneral.qml:269
-msgid "Default Order"
-msgstr "Standaardvolgorde"
+msgid "Default View"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:271
 msgid "Alphabetical"
@@ -150,39 +154,47 @@ msgstr "Alfabetisch"
 msgid "Categories"
 msgstr "Categorieën"
 
-#: ../contents/ui/config/ConfigGeneral.qml:279
+#: ../contents/ui/config/ConfigGeneral.qml:273
+msgid "Jump To Letter"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:274
+msgid "Jump To Category"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:281
 msgid "App Description"
 msgstr "Beschrijving"
 
-#: ../contents/ui/config/ConfigGeneral.qml:281
+#: ../contents/ui/config/ConfigGeneral.qml:283
 msgid "Hidden"
 msgstr "Verborgen"
 
-#: ../contents/ui/config/ConfigGeneral.qml:282
+#: ../contents/ui/config/ConfigGeneral.qml:284
 msgid "After"
 msgstr "Naast"
 
-#: ../contents/ui/config/ConfigGeneral.qml:283
+#: ../contents/ui/config/ConfigGeneral.qml:285
 msgid "Below"
 msgstr "Onder"
 
-#: ../contents/ui/config/ConfigGeneral.qml:295
+#: ../contents/ui/config/ConfigGeneral.qml:297
 msgid "Show recent applications"
 msgstr "Recente applicaties tonen"
 
-#: ../contents/ui/config/ConfigGeneral.qml:302
+#: ../contents/ui/config/ConfigGeneral.qml:304
 msgid "Icon Size"
 msgstr "Pictogramgrootte"
 
-#: ../contents/ui/config/ConfigGeneral.qml:318
+#: ../contents/ui/config/ConfigGeneral.qml:320
 msgid "Search Results"
 msgstr "Zoekresultaten"
 
-#: ../contents/ui/config/ConfigGeneral.qml:322
+#: ../contents/ui/config/ConfigGeneral.qml:324
 msgid "Merged (Application Launcher)"
 msgstr "Samengevoegd (applicatiestarter)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:331
+#: ../contents/ui/config/ConfigGeneral.qml:333
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Opgesplitst in categorieën (applicatiemenu/dashboard)"
 
@@ -190,27 +202,27 @@ msgstr "Opgesplitst in categorieën (applicatiemenu/dashboard)"
 msgid "<b>Version:</b> %1"
 msgstr "<b>Versie:</b> %1"
 
-#: ../contents/ui/Main.qml:234
+#: ../contents/ui/Main.qml:215
 msgid "System Info"
 msgstr "Systeeminformatie"
 
-#: ../contents/ui/Main.qml:235
+#: ../contents/ui/Main.qml:216
 msgid "Terminal"
 msgstr "Terminalvenster"
 
-#: ../contents/ui/Main.qml:237
+#: ../contents/ui/Main.qml:218
 msgid "Task Manager"
 msgstr "Systeemmonitor"
 
-#: ../contents/ui/Main.qml:238
+#: ../contents/ui/Main.qml:219
 msgid "System Settings"
 msgstr "Systeeminstellingen"
 
-#: ../contents/ui/Main.qml:239
+#: ../contents/ui/Main.qml:220
 msgid "File Manager"
 msgstr "Bestandsbeheerder"
 
-#: ../contents/ui/Main.qml:241
+#: ../contents/ui/Main.qml:222
 msgid "Edit Applications..."
 msgstr "Applicaties bewerken..."
 
@@ -243,7 +255,7 @@ msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
 msgstr "%1 zoeken"
 
-#: ../contents/ui/SearchFiltersViewItem.qml:109 ../contents/ui/SearchFiltersView.qml:30
+#: ../contents/ui/SearchFiltersViewItem.qml:115 ../contents/ui/SearchFiltersView.qml:30
 msgid "Default"
 msgstr "Standaard"
 
@@ -339,35 +351,35 @@ msgstr "Standaardwaarden"
 msgid "Close"
 msgstr "Sluiten"
 
-#: ../contents/ui/TileEditorView.qml:74
+#: ../contents/ui/TileEditorView.qml:73
 msgid "Url"
 msgstr "URL"
 
-#: ../contents/ui/TileEditorView.qml:80
+#: ../contents/ui/TileEditorView.qml:79
 msgid "Label"
 msgstr "Label"
 
-#: ../contents/ui/TileEditorView.qml:88
+#: ../contents/ui/TileEditorView.qml:87
 msgid "Icon"
 msgstr "Pictogram"
 
-#: ../contents/ui/TileEditorView.qml:107
+#: ../contents/ui/TileEditorView.qml:106
 msgid "Background Image"
 msgstr "Achtergrondafbeelding"
 
-#: ../contents/ui/TileEditorView.qml:117
+#: ../contents/ui/TileEditorView.qml:116
 msgid "Choose an image"
 msgstr "Kies een afbeelding"
 
-#: ../contents/ui/TileEditorView.qml:122
+#: ../contents/ui/TileEditorView.qml:121
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 msgstr "Afbeeldingsbestanden (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
-#: ../contents/ui/TileEditorView.qml:136
+#: ../contents/ui/TileEditorView.qml:135
 msgid "Background Color"
 msgstr "Achtergrondkleur"
 
-#: ../contents/ui/TileEditorView.qml:142
+#: ../contents/ui/TileEditorView.qml:141
 msgid "Position / Size"
 msgstr "Positie / Grootte"
 
@@ -387,3 +399,6 @@ msgstr "Tegels vergrendelen"
 msgctxt "default group label"
 msgid "Group"
 msgstr "Groep"
+
+#~ msgid "Default Order"
+#~ msgstr "Standaardvolgorde"

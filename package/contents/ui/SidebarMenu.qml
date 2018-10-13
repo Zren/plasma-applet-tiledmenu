@@ -17,6 +17,8 @@ MouseArea {
 	onOpenChanged: {
 		if (open) {
 			forceActiveFocus()
+		} else {
+			searchField.forceActiveFocus()
 		}
 	}
 
@@ -24,7 +26,7 @@ MouseArea {
 		anchors.fill: parent
 		visible: !plasmoid.configuration.sidebarFollowsTheme
 		color: config.sidebarBackgroundColor
-		opacity: parent.open ? 1 : 0.5
+		opacity: parent.open ? 1 : 0
 	}
 
 	Rectangle {

@@ -11,6 +11,7 @@ Rectangle {
 	id: tileItemView
 	color: appObj.backgroundColor
 
+	readonly property int tilePadding: 4 * units.devicePixelRatio
 	readonly property int smallIconSize: 32 * units.devicePixelRatio
 	readonly property int mediumIconSize: 72 * units.devicePixelRatio
 	readonly property int largeIconSize: 96 * units.devicePixelRatio
@@ -31,24 +32,20 @@ Rectangle {
 				anchors.horizontalCenter: undefined
 				anchors.left: tileItemView.left
 			}
-			PropertyChanges { target: icon; anchors.leftMargin: 4 }
+			PropertyChanges { target: icon; anchors.leftMargin: tilePadding }
+			PropertyChanges { target: label
+				verticalAlignment: Text.AlignVCenter
+			}
 			AnchorChanges { target: label
-				anchors.verticalCenter: tileItemView.verticalCenter
 				anchors.left: icon.right
-				anchors.bottom: undefined
-				anchors.right: tileItemView.right
 			}
 		},
 		State {
-			when: modelData.w == 2 && modelData.h == 2
+			when: (modelData.w >= 2 && modelData.h == 2) || (modelData.w == 2 && modelData.h >= 2)
 			PropertyChanges { target: icon; size: mediumIconSize }
 		},
 		State {
-			when: modelData.w == 4 && modelData.h == 2
-			PropertyChanges { target: icon; size: mediumIconSize }
-		},
-		State {
-			when: modelData.w == 4 && modelData.h == 4
+			when: modelData.w >= 3 && modelData.h >= 3
 			PropertyChanges { target: icon; size: largeIconSize }
 		}
 	]
@@ -80,13 +77,15 @@ Rectangle {
 		id: label
 		visible: appObj.showLabel
 		text: appObj.labelText
-		anchors.leftMargin: 4
-		anchors.left: parent.left
+		anchors.top: parent.top
 		anchors.bottom: parent.bottom
+		anchors.leftMargin: tilePadding
+		anchors.rightMargin: tilePadding
+		anchors.left: parent.left
 		anchors.right: parent.right
-		anchors.rightMargin: 4
 		wrapMode: Text.Wrap
 		horizontalAlignment: tileLabelAlignment
+		verticalAlignment: Text.AlignBottom
 		width: parent.width
 		font.pointSize: 10
 		renderType: Text.QtRendering // Fix pixelation when scaling. Plasma.Label uses NativeRendering.

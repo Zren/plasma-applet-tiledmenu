@@ -23,27 +23,7 @@ ListView {
 	property bool showDesktopFileUrl: false
 	property int iconSize: 36 * units.devicePixelRatio
 
-	section.delegate: Item {
-		id: sectionDelegate
-
-		width: parent.width
-		height: childrenRect.height
-
-		PlasmaComponents.Label {
-			id: sectionHeading
-			anchors {
-				left: parent.left
-				leftMargin: units.smallSpacing
-			}
-			text: section
-			font.bold: true
-			font.pointSize: 14
-
-			property bool centerOverIcon: sectionHeading.contentWidth <= listView.iconSize
-			width: centerOverIcon ? listView.iconSize : parent.width
-			horizontalAlignment: centerOverIcon ? Text.AlignHCenter : Text.AlignLeft
-		}
-	}
+	section.delegate: KickerSectionHeader {}
 
 	delegate: MenuListItem {}
 

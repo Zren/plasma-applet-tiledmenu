@@ -60,8 +60,7 @@ ColumnLayout {
 	ScrollView {
 		id: scrollView
 		Layout.fillHeight: true
-		anchors.left: parent.left
-		anchors.right: parent.right
+		Layout.fillWidth: true
 
 		readonly property int viewportWidth: viewport ? viewport.width : 0
 

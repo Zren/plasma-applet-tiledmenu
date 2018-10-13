@@ -59,6 +59,7 @@ MouseArea {
 		width: launcherIcon.iconSize
 		height: launcherIcon.iconSize
 		active: launcherIcon.containsMouse
+		smooth: true
 	}
 	
 	// Debugging

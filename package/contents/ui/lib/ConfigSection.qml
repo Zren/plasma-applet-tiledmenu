@@ -1,3 +1,5 @@
+// Version 3
+
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
@@ -10,11 +12,11 @@ Rectangle {
 	property string label: ""
 
 	color: "#0c000000"
-	border.width: 2
+	border.width: 2 * units.devicePixelRatio
 	border.color: "#10000000"
-	// radius: 5
-	property int padding: 8
-	implicitHeight: childrenRect.height + padding + padding
+	// radius: 5 * units.devicePixelRatio
+	property int padding: 8 * units.devicePixelRatio
+	implicitHeight: title.height + padding + content.implicitHeight + padding
 	property alias spacing: content.spacing
 
 	Label {
@@ -22,13 +24,14 @@ Rectangle {
 		visible: control.label
 		text: control.label
 		font.bold: true
-		font.pointSize: 13
-		anchors.leftMargin: padding
-		// anchors.topMargin: padding
+		font.pointSize: 13 * units.devicePixelRatio
+		anchors.leftMargin: control.padding
+		anchors.rightMargin: control.padding
+		// anchors.topMargin: control.padding
 		anchors.left: parent.left
 		anchors.top: parent.top
 		anchors.right: parent.right
-		height: visible ? implicitHeight : padding
+		height: visible ? implicitHeight : 0
 	}
 
 	ColumnLayout {
@@ -36,9 +39,8 @@ Rectangle {
 		anchors.top: title.bottom
 		anchors.left: parent.left
 		anchors.right: parent.right
-		anchors.margins: padding
-		// spacing: 0
-		// height: childrenRect.height
+		anchors.margins: control.padding
+		spacing: 5 * units.devicePixelRatio
 
 		// Workaround for crash when using default on a Layout.
 		// https://bugreports.qt.io/browse/QTBUG-52490
@@ -49,4 +51,7 @@ Rectangle {
 			}
 		}
 	}
+
+	// Rectangle { anchors.fill: title; border.color: "#f00"; color: "transparent"; border.width: 1; }
+	// Rectangle { anchors.fill: content; border.color: "#ff0"; color: "transparent"; border.width: 1; }
 }

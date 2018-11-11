@@ -110,6 +110,9 @@ Item {
 		}
 	}
 
+	Plasmoid.toolTipMainText: ""
+	Plasmoid.toolTipSubText: ""
+
 	Plasmoid.compactRepresentation: LauncherIcon {
 		id: panelItem
 		iconSource: plasmoid.configuration.icon || "start-here-kde"

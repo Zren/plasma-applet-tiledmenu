@@ -196,7 +196,7 @@ Item {
 		id: searchField
 		// width: 430
 		height: config.searchFieldHeight
-		anchors.leftMargin: config.sidebarWidth
+		anchors.leftMargin: config.sidebarWidth + config.sidebarRightMargin
 		anchors.left: parent.left
 		anchors.right: parent.right
 

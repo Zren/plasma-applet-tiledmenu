@@ -14,8 +14,9 @@ Item {
 	readonly property int flatButtonIconSize: 30 * units.devicePixelRatio
 	readonly property int sidebarWidth: flatButtonSize
 	readonly property int sidebarOpenWidth: 200 * units.devicePixelRatio
+	readonly property int sidebarRightMargin: 4 * units.devicePixelRatio
 	readonly property int appListWidth: plasmoid.configuration.appListWidth * units.devicePixelRatio
-	readonly property int leftSectionWidth: sidebarWidth + appListWidth
+	readonly property int leftSectionWidth: sidebarWidth + sidebarRightMargin + appListWidth
 
 	readonly property real tileScale: plasmoid.configuration.tileScale
 	readonly property int cellBoxUnits: 80

@@ -19,7 +19,10 @@ PlasmaComponents.ToolButton {
 	text: ""
 	property string label: expanded ? text : ""
 	property bool labelVisible: text != ""
-	property color backgroundColor: Qt.rgba(theme.buttonBackgroundColor.r, theme.buttonBackgroundColor.g, theme.buttonBackgroundColor.b, 0)
+	property color backgroundColor: config.flatButtonBgColor
+	property color backgroundHoverColor: config.flatButtonBgHoverColor
+	property color backgroundPressedColor: config.flatButtonBgPressedColor
+	property color checkedColor: config.flatButtonCheckedColor
 	property bool zoomOnPush: true
 
 	// http://doc.qt.io/qt-5/qt.html#Edge-enum
@@ -67,7 +70,7 @@ PlasmaComponents.ToolButton {
 
 			Rectangle {
 				id: checkedOutline
-				color: theme.highlightColor
+				color: flatButton.checkedColor
 				visible: control.checked
 				anchors.left: parent.left
 				anchors.top: parent.top
@@ -81,7 +84,7 @@ PlasmaComponents.ToolButton {
 							target: checkedOutline
 							anchors.fill: checkedOutline.parent
 							color: "transparent"
-							border.color: theme.highlightColor
+							border.color: flatButton.checkedColor
 						}
 					},
 					State {
@@ -125,7 +128,7 @@ PlasmaComponents.ToolButton {
 					when: !control.pressed && control.hovered
 					PropertyChanges {
 						target: background
-						color: theme.buttonBackgroundColor
+						color: flatButton.backgroundHoverColor
 					}
 				},
 				State {
@@ -133,7 +136,7 @@ PlasmaComponents.ToolButton {
 					when: control.pressed
 					PropertyChanges {
 						target: background
-						color: theme.highlightColor
+						color: flatButton.backgroundPressedColor
 					}
 				}
 			]

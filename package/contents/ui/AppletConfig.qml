@@ -67,10 +67,21 @@ Item {
 	}
 
 	//--- Colors
-	readonly property color defaultTileColor: plasmoid.configuration.defaultTileColor || theme.buttonBackgroundColor
+	readonly property color themeButtonBgColor: {
+		if (theme.themeName == "oxygen") {
+			return "#20FFFFFF"
+		} else {
+			return theme.buttonBackgroundColor
+		}
+	}
+	readonly property color defaultTileColor: plasmoid.configuration.defaultTileColor || themeButtonBgColor
 	readonly property color sidebarBackgroundColor: plasmoid.configuration.sidebarBackgroundColor || theme.backgroundColor
 	readonly property color menuItemTextColor2: setAlpha(theme.textColor, 0.6)
 	readonly property color favHoverOutlineColor: setAlpha(theme.textColor, 0.8)
+	readonly property color flatButtonBgHoverColor: themeButtonBgColor
+	readonly property color flatButtonBgColor: Qt.rgba(flatButtonBgHoverColor.r, flatButtonBgHoverColor.g, flatButtonBgHoverColor.b, 0)
+	readonly property color flatButtonBgPressedColor: theme.highlightColor
+	readonly property color flatButtonCheckedColor: theme.highlightColor
 
 	//--- Style
 	// Tiles

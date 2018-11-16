@@ -1,3 +1,13 @@
+## v25 - November 16 2018
+
+* Update Dutch translations by @Vistaus (Pull Request #23)
+* Add Russian translations by @Niksn404 (Pull Request #25)
+* Add European Portuguese translations by @nyxerys (Pull Request #26)
+* Scale config section rectangles by the dpi.
+* Hide tooltip when hovering the panel icon.
+* Add 4px spacing between sidebar and app list.
+* Hardcode Oxygen theme tile color to 12.5% transparent white.
+
 ## v24 - September 22 2018
 
 * Hide the solid sidebar background color. "Desktop theme" styled sidebars remain the same.

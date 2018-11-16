@@ -38,6 +38,8 @@ Or if you know how to make a pull request
 | de       |   44/95 |   46% |
 | es       |   78/95 |   82% |
 | fr       |   25/95 |   26% |
-| nl_NL    |   91/95 |   95% |
+| nl_NL    |   95/95 |  100% |
 | pl       |    1/95 |    1% |
+| pt_PT    |   92/95 |   96% |
+| ru       |   95/95 |  100% |
 | zh_CN    |   91/95 |   95% |

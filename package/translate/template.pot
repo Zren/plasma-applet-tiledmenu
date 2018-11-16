@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-09-22 12:20-0400\n"
+"POT-Creation-Date: 2018-11-16 17:26-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -201,27 +201,27 @@ msgstr ""
 msgid "<b>Version:</b> %1"
 msgstr ""
 
-#: ../contents/ui/Main.qml:215
+#: ../contents/ui/Main.qml:218
 msgid "System Info"
 msgstr ""
 
-#: ../contents/ui/Main.qml:216
+#: ../contents/ui/Main.qml:219
 msgid "Terminal"
 msgstr ""
 
-#: ../contents/ui/Main.qml:218
+#: ../contents/ui/Main.qml:221
 msgid "Task Manager"
 msgstr ""
 
-#: ../contents/ui/Main.qml:219
+#: ../contents/ui/Main.qml:222
 msgid "System Settings"
 msgstr ""
 
-#: ../contents/ui/Main.qml:220
+#: ../contents/ui/Main.qml:223
 msgid "File Manager"
 msgstr ""
 
-#: ../contents/ui/Main.qml:222
+#: ../contents/ui/Main.qml:225
 msgid "Edit Applications..."
 msgstr ""
 

@@ -65,13 +65,16 @@ DragAndDrop.DropArea {
 		cellRepeater.dropping = true
 	}
 
+	function moveTile(tile, cellX, cellY) {
+		tile.x = cellX
+		tile.y = cellY
+		tileGrid.tileModelChanged()
+	}
 
 	onDrop: {
 		// console.log('onDrop', JSON.stringify(draggedItem))
 		if (draggedItem) {
-			draggedItem.x = dropHoverX
-			draggedItem.y = dropHoverY
-			tileGrid.tileModelChanged()
+			tileGrid.moveTile(draggedItem, dropHoverX, dropHoverY)
 			tileGrid.resetDrag()
 			// event.accept(Qt.MoveAction)
 		} else if (addedItem) {

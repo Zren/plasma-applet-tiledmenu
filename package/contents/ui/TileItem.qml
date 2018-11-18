@@ -36,6 +36,7 @@ Item {
 		width: modelData.w * cellBoxSize
 		height: modelData.h * cellBoxSize
 		readonly property int minSize: Math.min(width, height)
+		readonly property int maxSize: Math.max(width, height)
 		hovered: tileMouseArea.containsMouse
 	}
 
@@ -43,7 +44,13 @@ Item {
 		id: hoverOutlineEffect
 		anchors.fill: parent
 		anchors.margins: cellMargin
-		hoverRadius: tileItemView.minSize
+		hoverRadius: {
+			if (appObj.isGroup) {
+				return tileItemView.maxSize
+			} else {
+				return tileItemView.minSize
+			}
+		}
 		hoverOutlineSize: tileGrid.hoverOutlineSize
 		property alias control: tileMouseArea
 	}

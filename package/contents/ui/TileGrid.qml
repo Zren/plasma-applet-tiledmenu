@@ -65,7 +65,62 @@ DragAndDrop.DropArea {
 		cellRepeater.dropping = true
 	}
 
+	function tileWithin(tile, x1, y1, x2, y2) {
+		var tileX2 = tile.x + tile.w - 1
+		var tileY2 = tile.y + tile.h - 1
+		return (x1 <= tileX2
+			&& tile.x <= x2
+			&& y1 <= tileY2
+			&& tile.y <= y2
+		)
+	}
+
+	function getGroupAreaRect(groupTile) {
+		var x1 = groupTile.x
+		var x2 = groupTile.x + groupTile.w - 1
+		var y1 = groupTile.y + groupTile.h
+		var y2 = 2000000 // maxint
+
+		// Scan for other groups below this group
+		// and adjust y2 to above that group.
+		for (var i = 0; i < tileModel.length; i++) {
+			var tile = tileModel[i]
+			if (tile.tileType == "group"
+				&& tileWithin(tile, x1, y1, x2, y2)
+			) {
+				y2 = tile.y - 1
+				// console.log('group found at y =', tile.y, 'y2 set to', y2)
+			}
+		}
+
+		return {
+			x1: x1,
+			y1: y1,
+			x2: x2,
+			y2: y2,
+		}
+	}
+
+	function moveGroup(groupTile, deltaX, deltaY) {
+		var area = getGroupAreaRect(groupTile)
+
+		// Move tiles below group label
+		for (var i = 0; i < tileModel.length; i++) {
+			var tile = tileModel[i]
+			if (tileWithin(tile, area.x1, area.y1, area.x2, area.y2)) {
+				tile.x += deltaX
+				tile.y += deltaY
+			}
+		}
+
+		// We call this in moveTile so no need to duplicate work.
+		// tileGrid.tileModelChanged()
+	}
+
 	function moveTile(tile, cellX, cellY) {
+		if (tile.tileType == "group") {
+			moveGroup(tile, cellX - tile.x, cellY - tile.y)
+		}
 		tile.x = cellX
 		tile.y = cellY
 		tileGrid.tileModelChanged()
@@ -275,9 +330,18 @@ DragAndDrop.DropArea {
 					width: cellBoxSize
 					height: cellBoxSize
 
-					property bool hovered: {
-						if (tileGrid.editing && dropHoverX >= 0 && dropHoverY >= 0) {
-							return dropHoverX <= modelX && modelX < dropHoverX + dropWidth && dropHoverY <= modelY && modelY < dropHoverY + dropHeight
+					readonly property bool hasDrag: tileGrid.editing && dropHoverX >= 0 && dropHoverY >= 0
+					readonly property bool tileHovered: (hasDrag
+						&& dropHoverX <= modelX && modelX < dropHoverX + dropWidth
+						&& dropHoverY <= modelY && modelY < dropHoverY + dropHeight
+					)
+
+					readonly property bool isDraggingGroup: hasDrag && draggedItem && draggedItem.tileType == "group"
+					readonly property bool groupAreaHovered: {
+						if (isDraggingGroup) {
+							var groupArea = getGroupAreaRect(draggedItem)
+							return groupArea.x1 <= modelX && modelX <= groupArea.x2
+								&& groupArea.y1 <= modelY && modelY <= groupArea.y2
 						} else {
 							return false
 						}
@@ -287,12 +351,14 @@ DragAndDrop.DropArea {
 						anchors.fill: parent
 						anchors.margins: cellMargin
 						color: {
-							if (cellItem.hovered) {
+							if (cellItem.tileHovered) {
 								if (canDrop) {
 									return "#88336699"
 								} else {
 									return "#88880000"
 								}
+							} else if (cellItem.groupAreaHovered) {
+								return "#8848395d" // purple
 							} else {
 								return "transparent"
 							}

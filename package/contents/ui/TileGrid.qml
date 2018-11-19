@@ -276,6 +276,81 @@ DragAndDrop.DropArea {
 		return false
 	}
 
+	function getTileAt(cellX, cellY) {
+		for (var i = 0; i < tileModel.length; i++) {
+			var tile = tileModel[i]
+			if (tileWithin(tile, cellX, cellY, cellX, cellY)) {
+				return tile
+			}
+		}
+		return null
+	}
+
+	function getTilesInArea(area) {
+		var tileList = []
+
+		// Move tiles below group label
+		for (var i = 0; i < tileModel.length; i++) {
+			var tile = tileModel[i]
+			if (tileWithin(tile, area.x1, area.y1, area.x2, area.y2)) {
+				tileList.push(tile)
+			}
+		}
+
+		// Sort results by y, then by x
+		// tileList.sort(function(a, b) {
+		// 	if (a.y == b.y) {
+		// 		return b.x - a.x
+		// 	} else {
+		// 		return b.y - a.y
+		// 	}
+		// })
+
+		return tileList
+	}
+
+	function getTileLabel(tile) {
+		if (tile.url) {
+			var app = appsModel.tileGridModel.getApp(tile.url)
+			var labelText = tile.label || app.display || app.url || ""
+			return labelText
+		} else {
+			return ""
+		}
+	}
+	function sortGroupTiles(groupTile) {
+		var area = getGroupAreaRect(groupTile)
+		var tileList = getTilesInArea(area)
+
+		var cursorX = groupTile.x
+		var cursorY = groupTile.y + groupTile.h
+		var rowH = 0
+		tileList.sort(function(a, b) {
+			var aLabel = getTileLabel(a)
+			var bLabel = getTileLabel(b)
+			return aLabel.localeCompare(bLabel)
+		})
+
+		for (var i = 0; i < tileList.length; i++) {
+			var tile = tileList[i]
+			var tileX2 = cursorX + tile.w - 1
+
+			// If there's not enough room on this row
+			if (tileX2 > area.x2) {
+				// Move to the next row
+				cursorX = groupTile.x
+				cursorY += rowH
+			}
+
+			tile.x = cursorX
+			tile.y = cursorY
+			rowH = Math.max(rowH, tile.h)
+			cursorX += tile.w
+		}
+
+		// We call this in moveTile so no need to duplicate work.
+		tileGrid.tileModelChanged()
+	}
 
 	ScrollView {
 		id: scrollView

@@ -108,6 +108,15 @@ Item {
 			
 			appObj.addActionList(menu)
 
+			if (modelData.tileType == "group") {
+				var menuItem = menu.newMenuItem()
+				menuItem.text = i18n("Sort Tiles")
+				menuItem.icon = 'sort-name'
+				menuItem.onClicked.connect(function(){
+					tileGrid.sortGroupTiles(modelData)
+				})
+			}
+
 			if (!plasmoid.configuration.tilesLocked) {
 				var menuItem = menu.newMenuItem()
 				menuItem.text = i18n("Edit Tile")

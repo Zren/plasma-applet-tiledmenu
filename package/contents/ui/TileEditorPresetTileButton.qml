@@ -6,6 +6,7 @@ Item {
 	Layout.fillWidth: parent.width
 	Layout.preferredHeight: image.paintedHeight
 
+	visible: source
 	property alias source: image.source
 	property string filename: 'temp.jpg'
 	property int w: 0
@@ -49,8 +50,10 @@ Item {
 		// Requires: import Qt.labs.platform 1.0
 		// ~/.local/share/
 		// var localDownloadDir = StandardPaths.writableLocation(StandardPaths.GenericDataLocation)
-		// var localDownloadDir = StandardPaths.writableLocation(StandardPaths.GenericDataLocation)
 		// console.log('localDownloadDir', localDownloadDir)
+
+		// Remove file:// URL scheme
+		// localFilepath = localDownloadDir.substr('file://'.length)
 
 		// ~/.local/share/plasma_com.github.zren.tiledmenu
 		// var tiledMenuDir = localDownloadDir + '/' + 'plasma_' + plasmoid.pluginName
@@ -75,7 +78,7 @@ Item {
 	}
 
 	function setTileBackgroundImage(filepath) {
-		backgroundImageField.text = localFilepath
+		backgroundImageField.text = filepath
 		labelField.checked = false
 		iconField.checked = false
 	}
@@ -84,8 +87,7 @@ Item {
 		logger.debug('select', source)
 
 		var tiledMenuDir = getDownloadDir()
-		var localFilepath = tiledMenuDir + '/' + filename
-		localFilepath = localFilepath.substr('file://'.length)
+		var localFilepath = tiledMenuDir + filename
 		logger.debug('localFilepath', localFilepath)
 
 		// Save tile image to file
@@ -94,6 +96,7 @@ Item {
 			logger.debug('grabToImage.done', result, result.url)
 			result.saveToFile(localFilepath)
 			presetTileButton.setTileBackgroundImage(localFilepath)
+			presetTileButton.resizeTile()
 		}, image.sourceSize)
 	}
 

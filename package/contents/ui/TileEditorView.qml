@@ -131,6 +131,10 @@ ColumnLayout {
 				}
 			}
 
+			TileEditorPresetTiles {
+				title: i18n("Preset Tiles")
+			}
+
 			TileEditorColorField {
 				title: i18n("Background Color")
 				placeholderText: config.defaultTileColor

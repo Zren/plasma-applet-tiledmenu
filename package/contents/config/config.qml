@@ -14,4 +14,9 @@ ConfigModel {
 		source: "lib/ConfigAdvanced.qml"
 		visible: false
 	}
+	ConfigCategory {
+		name: i18nd("plasma_shell_org.kde.plasma.desktop", "Keyboard shortcuts")
+		icon: "preferences-desktop-keyboard"
+		source: "config/ConfigurationShortcuts.qml"
+	}
 }

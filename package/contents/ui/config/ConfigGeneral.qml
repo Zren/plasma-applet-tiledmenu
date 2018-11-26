@@ -12,6 +12,15 @@ import "../lib"
 ConfigPage {
 	id: page
 	showAppletVersion: true
+	
+	Component.onCompleted: {
+		// https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/configuration/AppletConfiguration.qml
+		var appletConfiguration = mainColumn.parent
+
+		// Remove default Global Keyboard Shortcut config tab.
+		var keyboardShortcuts = appletConfiguration.globalConfigModel.get(0)
+		appletConfiguration.globalConfigModel.removeCategoryAt(0)
+	}
 
 	AppletConfig {
 		id: config

@@ -33,7 +33,15 @@ Item {
 		}
 	}
 
+	readonly property string recentAppsSectionLabel: {
+		if (rootModel.recentOrdering == 0) {
+			return i18n("Recent Apps")
+		} else { // == 1
+			return i18n("Most Used")
+		}
+	}
 	readonly property string recentAppsSectionKey: 'RECENT_APPS'
+
 	Kicker.RootModel {
 		id: rootModel
 		appNameFormat: 0 // plasmoid.configuration.appNameFormat

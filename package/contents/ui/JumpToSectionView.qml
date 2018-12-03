@@ -64,8 +64,12 @@ GridView {
 			}
 		}
 		text: {
-			if (jumpToLetterView.squareView && isRecentApps) {
-				return  '' // Use '◷' icon
+			if (isRecentApps) {
+				if (jumpToLetterView.squareView) {
+					return  '' // Use '◷' icon
+				} else {
+					return appsModel.recentAppsSectionLabel
+				}
 			} else if (jumpToLetterView.squareView && section == '0-9') {
 				return '#'
 			} else {

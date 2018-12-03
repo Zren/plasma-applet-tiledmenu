@@ -21,11 +21,7 @@ MouseArea {
 		}
 		text: {
 			if (section == appsModel.recentAppsSectionKey) {
-				if (rootModel.recentOrdering == 0) {
-					return i18n("Recent Apps")
-				} else { // == 1
-					return i18n("Most Used")
-				}
+				return appsModel.recentAppsSectionLabel
 			} else {
 				return section
 			}

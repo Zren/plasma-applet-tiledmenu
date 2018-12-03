@@ -33,6 +33,10 @@
       <label>Whether to show the "Recent Applications" category.</label>
       <default>true</default>
     </entry>
+    <entry name="recentOrdering" type="Int">
+      <label>How should the previously used apps/docs/contacts be ordered: 0 = RecentFirst, 1 = PopularFirst</label>
+      <default>0</default>
+    </entry>
     <entry name="sidebarShortcuts" type="StringList">
       <label>Same as favoriteApps except "xdg:DOCUMENTS", etc are constants to ~/Documents.</label>
       <default>xdg:DOCUMENTS,xdg:PICTURES,org.kde.dolphin.desktop,systemsettings.desktop</default>

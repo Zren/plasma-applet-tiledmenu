@@ -45,6 +45,7 @@ Item {
 		showRecentApps: true //plasmoid.configuration.showRecentApps
 		showRecentDocs: false //plasmoid.configuration.showRecentDocs
 		showRecentContacts: false //plasmoid.configuration.showRecentContacts
+		recentOrdering: plasmoid.configuration.recentOrdering
 
 		autoPopulate: false // (KDE 5.9+) defaulted to true
 		// paginate: false // (KDE 5.9+)

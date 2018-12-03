@@ -302,9 +302,20 @@ ConfigPage {
 			}
 		}
 
-		ConfigCheckBox {
-			text: i18n("Show recent applications")
-			configKey: 'showRecentApps'
+		RowLayout {
+			ConfigCheckBox {
+				text: i18nd("plasma_applet_org.kde.plasma.kicker", "Show:")
+				configKey: 'showRecentApps'
+			}
+
+			ConfigComboBox {
+				configKey: 'recentOrdering'
+				label: ""
+				model: [
+					{ value: 0, text: i18nd("plasma_applet_org.kde.plasma.kicker", "Show recent applications") },
+					{ value: 1, text: i18nd("plasma_applet_org.kde.plasma.kicker", "Show often used applications") },
+				]
+			}
 		}
 
 		ConfigSpinBox {

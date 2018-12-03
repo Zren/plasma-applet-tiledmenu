@@ -33,6 +33,7 @@ Item {
 		}
 	}
 
+	readonly property string recentAppsSectionKey: 'RECENT_APPS'
 	Kicker.RootModel {
 		id: rootModel
 		appNameFormat: 0 // plasmoid.configuration.appNameFormat
@@ -297,7 +298,7 @@ Item {
 			//--- section
 			for (var i = 0; i < recentAppList.length; i++) {
 				var item = recentAppList[i];
-				item.sectionKey = i18n("Recent Apps");
+				item.sectionKey = recentAppsSectionKey
 			}
 
 			return recentAppList;

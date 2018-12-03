@@ -37,7 +37,7 @@ JumpToSectionView {
 	}
 
 	presetSections: [
-		i18n("Recent Apps"),
+		appsModel.recentAppsSectionKey,
 		'&',
 		'0-9',
 		'A', 'B', 'C', 'D', 'E', 'F',

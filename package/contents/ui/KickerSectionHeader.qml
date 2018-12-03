@@ -19,7 +19,17 @@ MouseArea {
 			leftMargin: units.smallSpacing
 			verticalCenter:  parent.verticalCenter
 		}
-		text: section
+		text: {
+			if (section == appsModel.recentAppsSectionKey) {
+				if (rootModel.recentOrdering == 0) {
+					return i18n("Recent Apps")
+				} else { // == 1
+					return i18n("Most Used")
+				}
+			} else {
+				return section
+			}
+		}
 		font.bold: true
 		font.pointSize: 14 * units.devicePixelRatio
 

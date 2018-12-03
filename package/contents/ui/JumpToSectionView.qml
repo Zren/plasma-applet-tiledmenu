@@ -47,7 +47,7 @@ GridView {
 		height: jumpToLetterView.cellHeight
 
 		readonly property string section: modelData || ''
-		readonly property bool isRecentApps: section == i18n("Recent Apps")
+		readonly property bool isRecentApps: section == appsModel.recentAppsSectionKey
 		readonly property var sectionIcon: appsModel.allAppsModel.sectionIcons[section] || null
 
 		enabled: availableSections.indexOf(section) >= 0

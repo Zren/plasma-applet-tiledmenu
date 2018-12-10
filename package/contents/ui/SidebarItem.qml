@@ -10,6 +10,7 @@ import QtQuick.Controls.Private 1.0 as QtQuickControlsPrivate
 import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
 
 FlatButton {
+	id: sidebarItem
 	width: parent.width
 	height: config.flatButtonSize
 	property var sidebarMenu: parent.parent // Column.SidebarMenu

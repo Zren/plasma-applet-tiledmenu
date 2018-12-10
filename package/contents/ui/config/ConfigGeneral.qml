@@ -35,6 +35,11 @@ ConfigPage {
 			text: i18n("Fullscreen")
 			configKey: 'fullscreen'
 		}
+
+		ConfigSpinBox {
+			configKey: 'favGridCols'
+			before: i18n("Grid Columns")
+		}
 	}
 
 	ConfigSection {

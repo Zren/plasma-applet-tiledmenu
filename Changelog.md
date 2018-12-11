@@ -5,6 +5,7 @@
 * Add ability to sort all tiles by name in a tile group.
 * Add a tile preset selector for steam game launchers.
 * Add a grid column spinbox in the config just in case the user does not notice they can resize with Alt+RightClick.
+* Hide the default Global Shortcut config tab, and replace it with a tab mentioning you need `Alt+F1` set for just pressing the `Meta` key to work.
 
 ## v25 - November 16 2018
 

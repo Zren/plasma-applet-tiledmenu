@@ -1,3 +1,11 @@
+## v26 - December 10 2018
+
+* Default to "Most Used" apps instead of "Most Recent" which can be changed back in the config.
+* Add ability to move all tiles below a group label when a label is moved.
+* Add ability to sort all tiles by name in a tile group.
+* Add a tile preset selector for steam game launchers.
+* Add a grid column spinbox in the config just in case the user does not notice they can resize with Alt+RightClick.
+
 ## v25 - November 16 2018
 
 * Update Dutch translations by @Vistaus (Pull Request #23)

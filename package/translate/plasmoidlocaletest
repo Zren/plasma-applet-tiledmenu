@@ -71,7 +71,10 @@ checkIfLangInstalled "$languagePack" || exit 1
 echo "LANGUAGE=\"${lang}\""
 echo "LANG=\"${l1}\""
 
-# Build local translations for plasmoidviewer
-sh ./build
+scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+packageDir="${scriptDir}/.."
 
-LANGUAGE="${lang}" LANG="${l1}" QML_DISABLE_DISK_CACHE=true plasmoidviewer -a .. -l topedge -f horizontal -x 0 -y 0
+# Build local translations for plasmoidviewer
+sh "${scriptDir}/build"
+
+LANGUAGE="${lang}" LANG="${l1}" QML_DISABLE_DISK_CACHE=true plasmoidviewer -a "$packageDir" -l topedge -f horizontal -x 0 -y 0

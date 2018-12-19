@@ -1,5 +1,5 @@
 #!/bin/bash
-# Version 1
+# Version 2
 # Requires plasmoidviewer v5.13.0
 
 function checkIfLangInstalled {
@@ -28,6 +28,8 @@ elif [ "$lang" == "es" ]; then # Spanish (Mexico)
 	lang="es_MX:es"
 elif [ "$lang" == "fr" ]; then # French (Canada)
 	lang="fr_CA:fr"
+elif [ "$lang" == "ko" ]; then # Korean (South Korea)
+	lang="ko_KR:ko"
 elif [ "$lang" == "nl" ]; then # Dutch (Netherlands)
 	lang="nl_NL:nl"
 elif [ "$lang" == "pl" ]; then # Polish (Poland)
@@ -50,6 +52,7 @@ else
 	echo "    $scriptcmd el     | Greek (Greece)"
 	echo "    $scriptcmd es     | Spanish (Mexico)"
 	echo "    $scriptcmd fr     | French (Canada)"
+	echo "    $scriptcmd ko     | Korean (South Korea)"
 	echo "    $scriptcmd nl     | Dutch (Netherlands)"
 	echo "    $scriptcmd pl     | Polish (Poland)"
 	echo "    $scriptcmd pt     | Portuguese (Brazil)"

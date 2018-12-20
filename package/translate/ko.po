@@ -90,7 +90,7 @@ msgstr "화소"
 
 #: ../contents/ui/config/ConfigGeneral.qml:85 ../contents/ui/config/ConfigGeneral.qml:132 ../contents/ui/config/ConfigGeneral.qml:256
 msgid "Desktop Theme (%1)"
-msgstr "데스크탑 테마"
+msgstr "데스크탑 테마 (%1)"
 
 #: ../contents/ui/config/ConfigGeneral.qml:93 ../contents/ui/config/ConfigGeneral.qml:139
 msgid "Custom Color"

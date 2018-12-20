@@ -33,28 +33,17 @@ languagePack="language-pack-$lang"
 
 if [ "$lang" == *":"* ]; then # String contains a colon so assume it's a locale code.
 	IFS=: read -r l1 l2 <<< "${lang}"
-elif [ "$lang" == "bg" ]; then # Bulgarian (Bulgaria)
-	lang="bg_BG:bg"
-elif [ "$lang" == "de" ]; then # German (Germany)
-	lang="de_DE:de"
-elif [ "$lang" == "el" ]; then # Greek (Greece)
-	lang="el_GR:el"
-elif [ "$lang" == "es" ]; then # Spanish (Mexico)
-	lang="es_MX:es"
-elif [ "$lang" == "fr" ]; then # French (Canada)
-	lang="fr_CA:fr"
-elif [ "$lang" == "ko" ]; then # Korean (South Korea)
-	lang="ko_KR:ko"
-elif [ "$lang" == "nl" ]; then # Dutch (Netherlands)
-	lang="nl_NL:nl"
-elif [ "$lang" == "pl" ]; then # Polish (Poland)
-	lang="pl_PL:pl"
-elif [ "$lang" == "pt" ]; then # Portuguese (Brazil)
-	lang="pt_BR:pt"
-elif [ "$lang" == "ru" ]; then # Russian (Russia)
-	lang="ru_RU:ru"
-elif [ "$lang" == "uk" ]; then # Ukrainian (Ukraine)
-	lang="uk_UA:uk"
+elif [ "$lang" == "bg" ]; then lang="bg_BG:bg" # Bulgarian (Bulgaria)
+elif [ "$lang" == "de" ]; then lang="de_DE:de" # German (Germany)
+elif [ "$lang" == "el" ]; then lang="el_GR:el" # Greek (Greece)
+elif [ "$lang" == "es" ]; then lang="es_MX:es" # Spanish (Mexico)
+elif [ "$lang" == "fr" ]; then lang="fr_CA:fr" # French (Canada)
+elif [ "$lang" == "ko" ]; then lang="ko_KR:ko" # Korean (South Korea)
+elif [ "$lang" == "nl" ]; then lang="nl_NL:nl" # Dutch (Netherlands)
+elif [ "$lang" == "pl" ]; then lang="pl_PL:pl" # Polish (Poland)
+elif [ "$lang" == "pt" ]; then lang="pt_BR:pt" # Portuguese (Brazil)
+elif [ "$lang" == "ru" ]; then lang="ru_RU:ru" # Russian (Russia)
+elif [ "$lang" == "uk" ]; then lang="uk_UA:uk" # Ukrainian (Ukraine)
 elif [ "$lang" == "zh_CN" ]; then # Chinese (China)
 	lang="zh_CN:zh"
 	languagePack="language-pack-zh-hans"

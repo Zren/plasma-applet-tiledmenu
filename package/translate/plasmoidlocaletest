@@ -3,13 +3,28 @@
 # Requires plasmoidviewer v5.13.0
 
 function checkIfLangInstalled {
-	dpkg -l ${1} >/dev/null 2>&1 || ( \
-		echo -e "${1} not installed.\nInstalling now before continuing.\n" \
-		; sudo apt install ${1} \
-	) || ( \
-		echo -e "\nError trying to install ${1}\nPlease run 'sudo apt install ${1}'\n" \
-		; exit 1 \
-	)
+	if [ -x "$(command -v dpkg)" ]; then
+		dpkg -l ${1} >/dev/null 2>&1 || ( \
+			echo -e "${1} not installed.\nInstalling now before continuing.\n" \
+			; sudo apt install ${1} \
+		) || ( \
+			echo -e "\nError trying to install ${1}\nPlease run 'sudo apt install ${1}'\n" \
+			; exit 1 \
+		)
+	elif [ -x "$(command -v pacman)" ]; then
+		# TODO: run `locale -a` and check if the locale is enabled.
+		if false; then
+			# https://wiki.archlinux.org/index.php/Locale
+			# Uncomment the locale in /etc/locale.gen
+			# Then run `locale-gen`
+			echo -e "\nPlease install this locale in System Settings first.\n"
+			exit 1
+		else
+			echo ""
+		fi
+	else
+		echo -e "\nPackage manager not recognized. If the widget is not translated, please install the package '${1}'\n"
+	fi
 }
 
 lang="${1}"

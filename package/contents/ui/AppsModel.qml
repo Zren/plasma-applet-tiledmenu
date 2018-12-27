@@ -223,6 +223,7 @@ Item {
 		Connections {
 			target: plasmoid.configuration
 			onShowRecentAppsChanged: debouncedRefresh.restart()
+			onNumRecentAppsChanged: debouncedRefresh.restart()
 		}
 	}
 
@@ -301,7 +302,7 @@ Item {
 			});
 
 			//--- first 5 items
-			recentAppList = recentAppList.slice(0, 5);
+			recentAppList = recentAppList.slice(0, plasmoid.configuration.numRecentApps)
 
 			//--- section
 			for (var i = 0; i < recentAppList.length; i++) {

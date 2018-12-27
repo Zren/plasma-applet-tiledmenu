@@ -309,8 +309,17 @@ ConfigPage {
 
 		RowLayout {
 			ConfigCheckBox {
+				id: showRecentAppsCheckBox
 				text: i18nd("plasma_applet_org.kde.plasma.kicker", "Show:")
 				configKey: 'showRecentApps'
+			}
+			ConfigSpinBox {
+				configKey: 'numRecentApps'
+				enabled: showRecentAppsCheckBox.checked
+				// Kicker's RecentUsageModel limits to 15 apps.
+				// https://github.com/KDE/plasma-desktop/blob/master/applets/kicker/plugin/recentusagemodel.cpp#L449
+				minimumValue: 1
+				maximumValue: 15
 			}
 
 			ConfigComboBox {

@@ -44,7 +44,7 @@ msgstr "Recente apps"
 
 #: ../contents/ui/AppsModel.qml:40
 msgid "Most Used"
-msgstr ""
+msgstr "Meest gebruikt"
 
 #: ../contents/ui/config/ConfigGeneral.qml:32
 msgid "Popup"
@@ -56,7 +56,7 @@ msgstr "Volledig scherm"
 
 #: ../contents/ui/config/ConfigGeneral.qml:41
 msgid "Grid Columns"
-msgstr ""
+msgstr "Rasterkolommen"
 
 #: ../contents/ui/config/ConfigGeneral.qml:46
 msgid "Panel Icon"
@@ -128,7 +128,7 @@ msgstr "Snelkoppelingen in zijbalk"
 
 #: ../contents/ui/config/ConfigGeneral.qml:199
 msgid "Add Default"
-msgstr "Standaard:"
+msgstr "Standaard toevoegen"
 
 #: ../contents/ui/config/ConfigGeneral.qml:246
 msgid "Search Box"
@@ -204,7 +204,7 @@ msgstr "Opgesplitst in categorieën (applicatiemenu/dashboard)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml:58
 msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr ""
+msgstr "Als er voor deze widget een globale sneltoets is ingesteld, bijv. 'Alt+F1', dan open Plasma dit menu alleen met de ⊞ Windows/Meta-toets."
 
 #: ../contents/ui/lib/AppletVersion.qml:41
 msgid "<b>Version:</b> %1"
@@ -385,7 +385,7 @@ msgstr "Afbeeldingsbestanden (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml:135
 msgid "Preset Tiles"
-msgstr ""
+msgstr "Voorinstellingen van tegels"
 
 #: ../contents/ui/TileEditorView.qml:139
 msgid "Background Color"
@@ -414,7 +414,7 @@ msgstr "Groep"
 
 #: ../contents/ui/TileItem.qml:114
 msgid "Sort Tiles"
-msgstr ""
+msgstr "Tegels sorteren"
 
 #~ msgid "Show recent applications"
 #~ msgstr "Recente applicaties tonen"

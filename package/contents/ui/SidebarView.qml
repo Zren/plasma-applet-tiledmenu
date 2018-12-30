@@ -85,7 +85,7 @@ Item {
 			SidebarItem {
 				iconName: kuser.faceIconUrl ? kuser.faceIconUrl : 'user-identity'
 				text: kuser.fullName
-				onClicked: userMenu.open = !userMenu.open
+				submenu: userMenu
 
 				SidebarContextMenu {
 					id: userMenu
@@ -111,7 +111,7 @@ Item {
 			SidebarItem {
 				iconName: 'system-shutdown-symbolic'
 				text: i18n("Power")
-				onClicked: powerMenu.open = !powerMenu.open
+				submenu: powerMenu
 
 				SidebarContextMenu {
 					id: powerMenu

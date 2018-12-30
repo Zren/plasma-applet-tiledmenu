@@ -39,7 +39,7 @@ Or if you know how to make a pull request
 | es       |   77/99 |   77% |
 | fr       |   24/99 |   24% |
 | ko       |   99/99 |  100% |
-| nl_NL    |   94/99 |   94% |
+| nl_NL    |   99/99 |  100% |
 | pl       |    1/99 |    1% |
 | pt_PT    |   91/99 |   91% |
 | ru       |   94/99 |   94% |

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-12-10 21:00-0500\n"
+"POT-Creation-Date: 2018-12-29 22:50-0500\n"
 "PO-Revision-Date: 2018-12-19 11:26+0900\n"
 "Last-Translator: Hakyong Do <crazyraven@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -84,7 +84,7 @@ msgstr "%1 화소"
 msgid "Tile Margin"
 msgstr "타일 계선"
 
-#: ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:251 ../contents/ui/config/ConfigGeneral.qml:276 ../contents/ui/config/ConfigGeneral.qml:330
+#: ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:251 ../contents/ui/config/ConfigGeneral.qml:276 ../contents/ui/config/ConfigGeneral.qml:339
 msgid "px"
 msgstr "화소"
 
@@ -184,19 +184,19 @@ msgstr "다음"
 msgid "Below"
 msgstr "아래"
 
-#: ../contents/ui/config/ConfigGeneral.qml:329
+#: ../contents/ui/config/ConfigGeneral.qml:338
 msgid "Icon Size"
 msgstr "아이콘 크기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:345
+#: ../contents/ui/config/ConfigGeneral.qml:354
 msgid "Search Results"
 msgstr "검색 결과"
 
-#: ../contents/ui/config/ConfigGeneral.qml:349
+#: ../contents/ui/config/ConfigGeneral.qml:358
 msgid "Merged (Application Launcher)"
 msgstr "병합 (어플리케이션 실행)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:358
+#: ../contents/ui/config/ConfigGeneral.qml:367
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "분할 (어플리케이션 메뉴 / 대시보드)"
 

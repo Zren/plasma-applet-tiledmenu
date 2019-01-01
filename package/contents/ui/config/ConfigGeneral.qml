@@ -82,6 +82,7 @@ ConfigPage {
 			maximumValue: config.cellBoxUnits/2
 		}
 		RadioButton {
+			visible: false
 			text: i18n("Desktop Theme (%1)", theme.themeName)
 			exclusiveGroup: tilesThemeGroup
 			checked: false

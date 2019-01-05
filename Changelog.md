@@ -1,3 +1,10 @@
+## v27 - January 5 2019
+
+* Add Korean translations by @crazyraven (Pull Request #31)
+* Updated Dutch translations by @Vistaus (Pull Request #32)
+* Add ability to set the number of recent apps (Min=1 / Max=15).
+* Show the sidebar item label in a tooltip when hovering it.
+
 ## v26 - December 10 2018
 
 * Default to "Most Used" apps instead of "Most Recent" which can be changed back in the config.

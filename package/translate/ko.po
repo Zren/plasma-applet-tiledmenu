@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-12-29 22:50-0500\n"
+"POT-Creation-Date: 2019-01-05 01:57-0500\n"
 "PO-Revision-Date: 2018-12-19 11:26+0900\n"
 "Last-Translator: Hakyong Do <crazyraven@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -84,119 +84,119 @@ msgstr "%1 화소"
 msgid "Tile Margin"
 msgstr "타일 계선"
 
-#: ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:251 ../contents/ui/config/ConfigGeneral.qml:276 ../contents/ui/config/ConfigGeneral.qml:339
+#: ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:340
 msgid "px"
 msgstr "화소"
 
-#: ../contents/ui/config/ConfigGeneral.qml:85 ../contents/ui/config/ConfigGeneral.qml:132 ../contents/ui/config/ConfigGeneral.qml:256
+#: ../contents/ui/config/ConfigGeneral.qml:86 ../contents/ui/config/ConfigGeneral.qml:133 ../contents/ui/config/ConfigGeneral.qml:257
 msgid "Desktop Theme (%1)"
 msgstr "데스크탑 테마 (%1)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:93 ../contents/ui/config/ConfigGeneral.qml:139
+#: ../contents/ui/config/ConfigGeneral.qml:94 ../contents/ui/config/ConfigGeneral.qml:140
 msgid "Custom Color"
 msgstr "커스텀 컬러"
 
-#: ../contents/ui/config/ConfigGeneral.qml:104
+#: ../contents/ui/config/ConfigGeneral.qml:105
 msgid "Transparent"
 msgstr "투명"
 
-#: ../contents/ui/config/ConfigGeneral.qml:113
+#: ../contents/ui/config/ConfigGeneral.qml:114
 msgid "Text Alignment"
 msgstr "텍스트 정렬"
 
-#: ../contents/ui/config/ConfigGeneral.qml:115
+#: ../contents/ui/config/ConfigGeneral.qml:116
 msgid "Left"
 msgstr "왼쪽"
 
-#: ../contents/ui/config/ConfigGeneral.qml:116
+#: ../contents/ui/config/ConfigGeneral.qml:117
 msgid "Center"
 msgstr "중앙"
 
-#: ../contents/ui/config/ConfigGeneral.qml:117
+#: ../contents/ui/config/ConfigGeneral.qml:118
 msgid "Right"
 msgstr "오른쪽"
 
-#: ../contents/ui/config/ConfigGeneral.qml:129
+#: ../contents/ui/config/ConfigGeneral.qml:130
 msgid "Sidebar"
 msgstr "사이드바"
 
-#: ../contents/ui/config/ConfigGeneral.qml:153
+#: ../contents/ui/config/ConfigGeneral.qml:154
 msgid "Sidebar Shortcuts"
 msgstr "사이드바 바로가기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:199
+#: ../contents/ui/config/ConfigGeneral.qml:200
 msgid "Add Default"
 msgstr "기본값 추가"
 
-#: ../contents/ui/config/ConfigGeneral.qml:246
+#: ../contents/ui/config/ConfigGeneral.qml:247
 msgid "Search Box"
 msgstr "검색 상자"
 
-#: ../contents/ui/config/ConfigGeneral.qml:250
+#: ../contents/ui/config/ConfigGeneral.qml:251
 msgid "Search Field Height"
 msgstr "검색 창 높이"
 
-#: ../contents/ui/config/ConfigGeneral.qml:262
+#: ../contents/ui/config/ConfigGeneral.qml:263
 msgid "Windows (White)"
 msgstr "Windows (흰색)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:270
+#: ../contents/ui/config/ConfigGeneral.qml:271
 msgid "App List"
 msgstr "앱 목록"
 
-#: ../contents/ui/config/ConfigGeneral.qml:275
+#: ../contents/ui/config/ConfigGeneral.qml:276
 msgid "App List Area Width"
 msgstr "앱 목록 창 넓이"
 
-#: ../contents/ui/config/ConfigGeneral.qml:283
+#: ../contents/ui/config/ConfigGeneral.qml:284
 msgid "Default View"
 msgstr "기본 보기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:285
+#: ../contents/ui/config/ConfigGeneral.qml:286
 msgid "Alphabetical"
 msgstr "알파벳순"
 
-#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:65
+#: ../contents/ui/config/ConfigGeneral.qml:287 ../contents/ui/SidebarView.qml:65
 msgid "Categories"
 msgstr "범주"
 
-#: ../contents/ui/config/ConfigGeneral.qml:287
+#: ../contents/ui/config/ConfigGeneral.qml:288
 msgid "Jump To Letter"
 msgstr "글자로 이동"
 
-#: ../contents/ui/config/ConfigGeneral.qml:288
+#: ../contents/ui/config/ConfigGeneral.qml:289
 msgid "Jump To Category"
 msgstr "범주로 이동"
 
-#: ../contents/ui/config/ConfigGeneral.qml:295
+#: ../contents/ui/config/ConfigGeneral.qml:296
 msgid "App Description"
 msgstr "앱 설명"
 
-#: ../contents/ui/config/ConfigGeneral.qml:297
+#: ../contents/ui/config/ConfigGeneral.qml:298
 msgid "Hidden"
 msgstr "숨김"
 
-#: ../contents/ui/config/ConfigGeneral.qml:298
+#: ../contents/ui/config/ConfigGeneral.qml:299
 msgid "After"
 msgstr "다음"
 
-#: ../contents/ui/config/ConfigGeneral.qml:299
+#: ../contents/ui/config/ConfigGeneral.qml:300
 msgid "Below"
 msgstr "아래"
 
-#: ../contents/ui/config/ConfigGeneral.qml:338
+#: ../contents/ui/config/ConfigGeneral.qml:339
 msgid "Icon Size"
 msgstr "아이콘 크기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:354
+#: ../contents/ui/config/ConfigGeneral.qml:355
 msgid "Search Results"
 msgstr "검색 결과"
 
-#: ../contents/ui/config/ConfigGeneral.qml:358
+#: ../contents/ui/config/ConfigGeneral.qml:359
 msgid "Merged (Application Launcher)"
 msgstr "병합 (어플리케이션 실행)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:367
+#: ../contents/ui/config/ConfigGeneral.qml:368
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "분할 (어플리케이션 메뉴 / 대시보드)"
 

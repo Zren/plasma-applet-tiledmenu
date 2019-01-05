@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2018-12-29 22:50-0500\n"
+"POT-Creation-Date: 2019-01-05 01:57-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Senkin Nikita <niksnbfmail@gmail.com>\n"
 "Language-Team: Niksn <LL@li.org>\n"
@@ -85,119 +85,119 @@ msgstr "%1 px"
 msgid "Tile Margin"
 msgstr "Край плитки"
 
-#: ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:251 ../contents/ui/config/ConfigGeneral.qml:276 ../contents/ui/config/ConfigGeneral.qml:339
+#: ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:340
 msgid "px"
 msgstr "px"
 
-#: ../contents/ui/config/ConfigGeneral.qml:85 ../contents/ui/config/ConfigGeneral.qml:132 ../contents/ui/config/ConfigGeneral.qml:256
+#: ../contents/ui/config/ConfigGeneral.qml:86 ../contents/ui/config/ConfigGeneral.qml:133 ../contents/ui/config/ConfigGeneral.qml:257
 msgid "Desktop Theme (%1)"
 msgstr "Тема Рабочего Стола (%1)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:93 ../contents/ui/config/ConfigGeneral.qml:139
+#: ../contents/ui/config/ConfigGeneral.qml:94 ../contents/ui/config/ConfigGeneral.qml:140
 msgid "Custom Color"
 msgstr "Пользовательский Цвет"
 
-#: ../contents/ui/config/ConfigGeneral.qml:104
+#: ../contents/ui/config/ConfigGeneral.qml:105
 msgid "Transparent"
 msgstr "Прозрачный"
 
-#: ../contents/ui/config/ConfigGeneral.qml:113
+#: ../contents/ui/config/ConfigGeneral.qml:114
 msgid "Text Alignment"
 msgstr "Выравнивание Текста"
 
-#: ../contents/ui/config/ConfigGeneral.qml:115
+#: ../contents/ui/config/ConfigGeneral.qml:116
 msgid "Left"
 msgstr "Слева"
 
-#: ../contents/ui/config/ConfigGeneral.qml:116
+#: ../contents/ui/config/ConfigGeneral.qml:117
 msgid "Center"
 msgstr "По Центру"
 
-#: ../contents/ui/config/ConfigGeneral.qml:117
+#: ../contents/ui/config/ConfigGeneral.qml:118
 msgid "Right"
 msgstr "Справа"
 
-#: ../contents/ui/config/ConfigGeneral.qml:129
+#: ../contents/ui/config/ConfigGeneral.qml:130
 msgid "Sidebar"
 msgstr "Боковая панель"
 
-#: ../contents/ui/config/ConfigGeneral.qml:153
+#: ../contents/ui/config/ConfigGeneral.qml:154
 msgid "Sidebar Shortcuts"
 msgstr "Ярлыки на Боковой панели"
 
-#: ../contents/ui/config/ConfigGeneral.qml:199
+#: ../contents/ui/config/ConfigGeneral.qml:200
 msgid "Add Default"
 msgstr "Добавить Значение по умолчанию"
 
-#: ../contents/ui/config/ConfigGeneral.qml:246
+#: ../contents/ui/config/ConfigGeneral.qml:247
 msgid "Search Box"
 msgstr "Поле Поиска"
 
-#: ../contents/ui/config/ConfigGeneral.qml:250
+#: ../contents/ui/config/ConfigGeneral.qml:251
 msgid "Search Field Height"
 msgstr "Высота Поля Поиска"
 
-#: ../contents/ui/config/ConfigGeneral.qml:262
+#: ../contents/ui/config/ConfigGeneral.qml:263
 msgid "Windows (White)"
 msgstr "Windows (Белый)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:270
+#: ../contents/ui/config/ConfigGeneral.qml:271
 msgid "App List"
 msgstr "Список Приложений"
 
-#: ../contents/ui/config/ConfigGeneral.qml:275
+#: ../contents/ui/config/ConfigGeneral.qml:276
 msgid "App List Area Width"
 msgstr "Ширина Списка Приложений"
 
-#: ../contents/ui/config/ConfigGeneral.qml:283
+#: ../contents/ui/config/ConfigGeneral.qml:284
 msgid "Default View"
 msgstr "Вид по умолчанию"
 
-#: ../contents/ui/config/ConfigGeneral.qml:285
+#: ../contents/ui/config/ConfigGeneral.qml:286
 msgid "Alphabetical"
 msgstr "По Алфавиту"
 
-#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:65
+#: ../contents/ui/config/ConfigGeneral.qml:287 ../contents/ui/SidebarView.qml:65
 msgid "Categories"
 msgstr "Категории"
 
-#: ../contents/ui/config/ConfigGeneral.qml:287
+#: ../contents/ui/config/ConfigGeneral.qml:288
 msgid "Jump To Letter"
 msgstr "Перейти к Букве"
 
-#: ../contents/ui/config/ConfigGeneral.qml:288
+#: ../contents/ui/config/ConfigGeneral.qml:289
 msgid "Jump To Category"
 msgstr "Перейти к Категории"
 
-#: ../contents/ui/config/ConfigGeneral.qml:295
+#: ../contents/ui/config/ConfigGeneral.qml:296
 msgid "App Description"
 msgstr "Описание Приложения"
 
-#: ../contents/ui/config/ConfigGeneral.qml:297
+#: ../contents/ui/config/ConfigGeneral.qml:298
 msgid "Hidden"
 msgstr "Скрыто"
 
-#: ../contents/ui/config/ConfigGeneral.qml:298
+#: ../contents/ui/config/ConfigGeneral.qml:299
 msgid "After"
 msgstr "После"
 
-#: ../contents/ui/config/ConfigGeneral.qml:299
+#: ../contents/ui/config/ConfigGeneral.qml:300
 msgid "Below"
 msgstr "Ниже"
 
-#: ../contents/ui/config/ConfigGeneral.qml:338
+#: ../contents/ui/config/ConfigGeneral.qml:339
 msgid "Icon Size"
 msgstr "Размер Иконки"
 
-#: ../contents/ui/config/ConfigGeneral.qml:354
+#: ../contents/ui/config/ConfigGeneral.qml:355
 msgid "Search Results"
 msgstr "Результаты Поиска"
 
-#: ../contents/ui/config/ConfigGeneral.qml:358
+#: ../contents/ui/config/ConfigGeneral.qml:359
 msgid "Merged (Application Launcher)"
 msgstr "Объединённые (Меню запуска приложений)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:367
+#: ../contents/ui/config/ConfigGeneral.qml:368
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Разделённые по Категориям (Меню приложений / Доска приложений)"
 

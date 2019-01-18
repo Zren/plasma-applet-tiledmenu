@@ -54,7 +54,7 @@ Item {
 			}
 			SidebarItem {
 				iconName: 'view-sort-ascending-symbolic'
-				text: i18n("Apps")
+				text: i18n("Alphabetical")
 				onClicked: appsView.showAppsAlphabetically()
 				// checked: stackView.currentItem == appsView
 				// checkedEdge: Qt.RightEdge

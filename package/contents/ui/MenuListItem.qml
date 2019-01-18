@@ -152,6 +152,7 @@ AppToolButton {
 	acceptedButtons: Qt.LeftButton | Qt.RightButton
 	onClicked: {
 		mouse.accepted = true
+		resetDragState()
 		logger.debug('MenuListItem.onClicked', mouse.button, Qt.LeftButton, Qt.RightButton)
 		if (mouse.button == Qt.LeftButton) {
 			trigger()

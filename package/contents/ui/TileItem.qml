@@ -85,6 +85,7 @@ Item {
 			// but there's no other way of having a clickable drag area.
 			onClicked: {
 				mouse.accepted = true
+				tileGrid.resetDrag()
 				if (mouse.button == Qt.LeftButton) {
 					if (tileEditorView && tileEditorView.tile) {
 						openTileEditor()

@@ -56,7 +56,7 @@ Item {
 				iconName: 'view-sort-ascending-symbolic'
 				text: i18n("Alphabetical")
 				onClicked: appsView.showAppsAlphabetically()
-				// checked: stackView.currentItem == appsView
+				// checked: stackView.currentItem == appsView && appsModel.order == "alphabetical"
 				// checkedEdge: Qt.RightEdge
 				// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			}
@@ -64,7 +64,7 @@ Item {
 				iconName: 'view-list-tree'
 				text: i18n("Categories")
 				onClicked: appsView.showAppsCategorically()
-				// checked: stackView.currentItem == appsView
+				// checked: stackView.currentItem == appsView && appsModel.order == "categories"
 				// checkedEdge: Qt.RightEdge
 				// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			}

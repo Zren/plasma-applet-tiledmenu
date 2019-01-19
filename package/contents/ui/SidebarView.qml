@@ -45,28 +45,44 @@ Item {
 			width: parent.width
 			height: childrenRect.height
 
+			// SidebarItem {
+			// 	iconName: 'open-menu-symbolic'
+			// 	text: i18n("Menu")
+			// 	closeOnClick: false
+			// 	onClicked: sidebarMenu.open = !sidebarMenu.open
+			// 	zoomOnPush: expanded
+			// }
 			SidebarItem {
-				iconName: 'open-menu-symbolic'
-				text: i18n("Menu")
-				closeOnClick: false
-				onClicked: sidebarMenu.open = !sidebarMenu.open
-				zoomOnPush: expanded
+				iconName: 'grid-rectangular'
+				text: i18n("Tiles Only")
+				onClicked: {
+					config.showSearch = false
+				}
+				checked: searchView.showingOnlyTiles
+				// checkedEdge: Qt.LeftEdge
+				checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			}
 			SidebarItem {
 				iconName: 'view-sort-ascending-symbolic'
 				text: i18n("Alphabetical")
-				onClicked: appsView.showAppsAlphabetically()
-				// checked: stackView.currentItem == appsView && appsModel.order == "alphabetical"
-				// checkedEdge: Qt.RightEdge
-				// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
+				onClicked: {
+					config.showSearch = true
+					appsView.showAppsAlphabetically()
+				}
+				checked: searchView.showingAppsAlphabetically
+				// checkedEdge: Qt.LeftEdge
+				checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			}
 			SidebarItem {
 				iconName: 'view-list-tree'
 				text: i18n("Categories")
-				onClicked: appsView.showAppsCategorically()
-				// checked: stackView.currentItem == appsView && appsModel.order == "categories"
-				// checkedEdge: Qt.RightEdge
-				// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
+				onClicked: {
+					config.showSearch = true
+					appsView.showAppsCategorically()
+				}
+				checked: searchView.showingAppsCategorically
+				// checkedEdge: Qt.LeftEdge
+				checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			}
 			// SidebarItem {
 			// 	iconName: 'system-search-symbolic'

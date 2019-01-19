@@ -124,6 +124,7 @@ Item {
 		if (expanded) {
 			search.query = ""
 			search.applyDefaultFilters()
+			config.showSearch = false
 			popup.searchView.searchField.forceActiveFocus()
 			popup.searchView.showDefaultView()
 			// popup.searchView.tileEditorView.open('preferred://browser')

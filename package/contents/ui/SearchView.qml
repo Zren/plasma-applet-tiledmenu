@@ -37,8 +37,9 @@ Item {
 	property alias jumpToLetterView: jumpToLetterView
 
 	readonly property bool showingOnlyTiles: !config.showSearch
-	readonly property bool showingAppsAlphabetically: config.showSearch && stackView.currentItem == appsView && appsModel.order == "alphabetical"
-	readonly property bool showingAppsCategorically: config.showSearch && stackView.currentItem == appsView && appsModel.order == "categories"
+	readonly property bool showingAppList: stackView.currentItem == appsView || stackView.currentItem == jumpToLetterView
+	readonly property bool showingAppsAlphabetically: config.showSearch && appsModel.order == "alphabetical" && showingAppList
+	readonly property bool showingAppsCategorically: config.showSearch && appsModel.order == "categories" && showingAppList
 
 	property bool searchOnTop: false
 

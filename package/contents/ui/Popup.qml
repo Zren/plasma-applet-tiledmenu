@@ -8,6 +8,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 MouseArea {
 	property alias searchView: searchView
+	property alias appsView: searchView.appsView
 	property alias tileEditorView: searchView.tileEditorView
 	property alias tileEditorViewLoader: searchView.tileEditorViewLoader
 	property alias tileGrid: tileGrid
@@ -18,8 +19,8 @@ MouseArea {
 
 		SearchView {
 			id: searchView
-			Layout.minimumWidth: config.leftSectionWidth
-			Layout.maximumWidth: config.leftSectionWidth
+			// Layout.minimumWidth: config.leftSectionWidth
+			// Layout.maximumWidth: config.leftSectionWidth
 			Layout.fillHeight: true
 		}
 
@@ -44,6 +45,10 @@ MouseArea {
 			}
 		}
 		
+	}
+
+	SidebarView {
+		id: sidebarView
 	}
 
 	MouseArea {

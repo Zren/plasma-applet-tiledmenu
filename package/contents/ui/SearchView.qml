@@ -13,7 +13,21 @@ import "Utils.js" as Utils
 
 Item {
 	id: searchView
-	width: config.leftSectionWidth
+	implicitWidth: config.leftSectionWidth
+	// Behavior on implicitWidth {
+	// 	NumberAnimation { duration: 400 }
+	// }
+	Connections {
+		target: search
+		onIsSearchingChanged: {
+			if (search.isSearching) {
+				config.showSearch = true
+			}
+		}
+	}
+	clip: true
+
+	// width: config.leftSectionWidth
 	height: config.popupHeight
 	property alias searchResultsView: searchResultsView
 	property alias appsView: appsView
@@ -21,6 +35,10 @@ Item {
 	property alias tileEditorViewLoader: tileEditorViewLoader
 	property alias searchField: searchField
 	property alias jumpToLetterView: jumpToLetterView
+
+	readonly property bool showingOnlyTiles: !config.showSearch
+	readonly property bool showingAppsAlphabetically: config.showSearch && stackView.currentItem == appsView && appsModel.order == "alphabetical"
+	readonly property bool showingAppsCategorically: config.showSearch && stackView.currentItem == appsView && appsModel.order == "categories"
 
 	property bool searchOnTop: false
 
@@ -63,10 +81,6 @@ Item {
 			}
 		}
 	]
-
-	SidebarView {
-		id: sidebarView
-	}
 
 
 	Item {
@@ -183,11 +197,17 @@ Item {
 
 		SearchStackView {
 			id: stackView
-			width: config.appListWidth
+			width: config.appAreaWidth
 			anchors.top: parent.top
 			anchors.right: parent.right
 			anchors.bottom: parent.bottom
 			initialItem: appsView
+
+			visible: opacity > 0
+			opacity: config.showSearch ? 1 : 0
+			// Behavior on opacity {
+			// 	NumberAnimation { duration: 400 }
+			// }
 		}
 	}
 

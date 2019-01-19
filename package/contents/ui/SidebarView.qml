@@ -52,37 +52,32 @@ Item {
 			// 	onClicked: sidebarMenu.open = !sidebarMenu.open
 			// 	zoomOnPush: expanded
 			// }
-			SidebarItem {
-				iconName: 'grid-rectangular'
+
+			SidebarViewButton {
+				appletIconName: "view-tilesonly"
 				text: i18n("Tiles Only")
 				onClicked: {
 					config.showSearch = false
 				}
 				checked: searchView.showingOnlyTiles
-				// checkedEdge: Qt.LeftEdge
-				checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			}
-			SidebarItem {
-				iconName: 'view-sort-ascending-symbolic'
+			SidebarViewButton {
+				appletIconName: "view-list-alphabetically"
 				text: i18n("Alphabetical")
 				onClicked: {
 					config.showSearch = true
 					appsView.showAppsAlphabetically()
 				}
 				checked: searchView.showingAppsAlphabetically
-				// checkedEdge: Qt.LeftEdge
-				checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			}
-			SidebarItem {
-				iconName: 'view-list-tree'
+			SidebarViewButton {
+				appletIconName: 'view-list-categorically'
 				text: i18n("Categories")
 				onClicked: {
 					config.showSearch = true
 					appsView.showAppsCategorically()
 				}
 				checked: searchView.showingAppsCategorically
-				// checkedEdge: Qt.LeftEdge
-				checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			}
 			// SidebarItem {
 			// 	iconName: 'system-search-symbolic'

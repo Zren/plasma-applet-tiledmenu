@@ -21,7 +21,7 @@ Item {
 		target: search
 		onIsSearchingChanged: {
 			if (search.isSearching) {
-				searchView.showTilesOnly()
+				searchView.showSearchView()
 			}
 		}
 	}
@@ -60,6 +60,10 @@ Item {
 
 	function showTilesOnly() {
 		config.showSearch = false
+	}
+
+	function showSearchView() {
+		config.showSearch = true
 	}
 
 	states: [

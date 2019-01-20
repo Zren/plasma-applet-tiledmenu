@@ -18,11 +18,13 @@ SidebarItem {
 			imagePath: control.appletIconFilename
 		}
 
-		// From FlatButton.qml
-		width: config.flatButtonIconSize
-		height: config.flatButtonIconSize
+		// From FlatButton.qml, modifed so icon is also 16px
+		property int iconSize: units.roundToIconSize(config.flatButtonIconSize)
+		width: iconSize
+		height: iconSize
 		anchors.centerIn: parent
 		
+		// From FlatButton.qml
 		scale: control.zoomOnPush && control.pressed ? (control.height-5) / control.height : 1
 		Behavior on scale { NumberAnimation { duration: 200 } }
 	}

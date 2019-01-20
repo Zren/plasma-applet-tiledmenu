@@ -287,6 +287,7 @@ ConfigPage {
 				{ value: "Categories", text: i18n("Categories") },
 				{ value: "JumpToLetter", text: i18n("Jump To Letter") },
 				{ value: "JumpToCategory", text: i18n("Jump To Category") },
+				{ value: "TilesOnly", text: i18n("Tiles Only") },
 			]
 		}
 

@@ -56,27 +56,19 @@ Item {
 			SidebarViewButton {
 				appletIconName: "view-tilesonly"
 				text: i18n("Tiles Only")
-				onClicked: {
-					config.showSearch = false
-				}
+				onClicked: searchView.showTilesOnly()
 				checked: searchView.showingOnlyTiles
 			}
 			SidebarViewButton {
 				appletIconName: "view-list-alphabetically"
 				text: i18n("Alphabetical")
-				onClicked: {
-					config.showSearch = true
-					appsView.showAppsAlphabetically()
-				}
+				onClicked: appsView.showAppsAlphabetically()
 				checked: searchView.showingAppsAlphabetically
 			}
 			SidebarViewButton {
 				appletIconName: 'view-list-categorically'
 				text: i18n("Categories")
-				onClicked: {
-					config.showSearch = true
-					appsView.showAppsCategorically()
-				}
+				onClicked:  appsView.showAppsCategorically()
 				checked: searchView.showingAppsCategorically
 			}
 			// SidebarItem {

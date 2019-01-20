@@ -45,7 +45,7 @@
       <default>xdg:DOCUMENTS,xdg:PICTURES,org.kde.dolphin.desktop,systemsettings.desktop</default>
     </entry>
     <entry name="defaultAppListView" type="string">
-      <!-- enum: Alphabetical, Categories, JumpToLetter, JumpToCategory -->
+      <!-- enum: Alphabetical, Categories, JumpToLetter, JumpToCategory, TilesOnly -->
       <default>Alphabetical</default>
     </entry>
 

@@ -21,7 +21,7 @@ Item {
 		target: search
 		onIsSearchingChanged: {
 			if (search.isSearching) {
-				config.showSearch = true
+				searchView.showTilesOnly()
 			}
 		}
 	}
@@ -53,7 +53,13 @@ Item {
 			jumpToLetterView.showLetters()
 		} else if (defView == 'JumpToCategory') {
 			jumpToLetterView.showCategories()
+		} else if (defView == 'TilesOnly') {
+			searchView.showTilesOnly()
 		}
+	}
+
+	function showTilesOnly() {
+		config.showSearch = false
 	}
 
 	states: [
@@ -131,6 +137,7 @@ Item {
 			}
 
 			function show(animation) {
+				config.showSearch = true
 				if (stackView.currentItem != appsView) {
 					stackView.delegate = animation || stackView.panUp
 					stackView.push({
@@ -157,6 +164,7 @@ Item {
 			}
 
 			function show() {
+				config.showSearch = true
 				if (stackView.currentItem != jumpToLetterView) {
 					stackView.delegate = stackView.zoomOut
 					stackView.push({

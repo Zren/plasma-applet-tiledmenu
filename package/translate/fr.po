@@ -6,7 +6,6 @@
 # Various translations taken from:
 # https://websvn.kde.org/trunk/l10n-kf5/fr/messages/kde-workspace/
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"

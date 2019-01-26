@@ -3,7 +3,6 @@
 # This file is distributed under the same license as the tiledmenu package.
 # Senkin Nikita <niksnbfmail@gmail.com>, YEAR.
 #
-#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"

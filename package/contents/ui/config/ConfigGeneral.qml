@@ -65,13 +65,13 @@ ConfigPage {
 			ConfigSpinBox {
 				configKey: 'tileScale'
 				before: i18n("Tile Size")
-				suffix: i18n("x")
+				suffix: 'x'
 				minimumValue: 0.1
 				maximumValue: 4
 				decimals: 1
 			}
 			Label {
-				text: i18n("%1 px", config.cellBoxSize)
+				text: '' + config.cellBoxSize + i18n("px")
 			}
 		}
 		ConfigSpinBox {

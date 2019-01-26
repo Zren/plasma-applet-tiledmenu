@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-01-25 23:00-0500\n"
+"POT-Creation-Date: 2019-01-25 23:23-0500\n"
 "PO-Revision-Date: 2018-12-19 11:26+0900\n"
 "Last-Translator: Hakyong Do <crazyraven@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -72,21 +72,13 @@ msgstr "타일"
 msgid "Tile Size"
 msgstr "타일 크기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:68
-msgid "x"
-msgstr "x"
-
-#: ../contents/ui/config/ConfigGeneral.qml:74
-msgid "%1 px"
-msgstr "%1 화소"
+#: ../contents/ui/config/ConfigGeneral.qml:74 ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:340
+msgid "px"
+msgstr "화소"
 
 #: ../contents/ui/config/ConfigGeneral.qml:79
 msgid "Tile Margin"
 msgstr "타일 계선"
-
-#: ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:340
-msgid "px"
-msgstr "화소"
 
 #: ../contents/ui/config/ConfigGeneral.qml:86 ../contents/ui/config/ConfigGeneral.qml:133 ../contents/ui/config/ConfigGeneral.qml:257
 msgid "Desktop Theme (%1)"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-01-25 23:23-0500\n"
+"POT-Creation-Date: 2019-01-26 02:25-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: pl\n"
@@ -21,6 +21,10 @@ msgid "General"
 msgstr ""
 
 #: ../contents/config/config.qml:12
+msgid "Import/Export Layout"
+msgstr ""
+
+#: ../contents/config/config.qml:17
 msgid "Advanced"
 msgstr ""
 
@@ -72,7 +76,7 @@ msgstr ""
 msgid "Tile Size"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:74 ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:340
+#: ../contents/ui/config/ConfigGeneral.qml:74 ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:341
 msgid "px"
 msgstr ""
 
@@ -144,11 +148,11 @@ msgstr ""
 msgid "Default View"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:57
+#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:64
 msgid "Alphabetical"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:287 ../contents/ui/SidebarView.qml:65
+#: ../contents/ui/config/ConfigGeneral.qml:287 ../contents/ui/SidebarView.qml:70
 msgid "Categories"
 msgstr ""
 
@@ -160,35 +164,39 @@ msgstr ""
 msgid "Jump To Category"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:296
+#: ../contents/ui/config/ConfigGeneral.qml:290 ../contents/ui/SidebarView.qml:58
+msgid "Tiles Only"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:297
 msgid "App Description"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:298
+#: ../contents/ui/config/ConfigGeneral.qml:299
 msgid "Hidden"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:299
+#: ../contents/ui/config/ConfigGeneral.qml:300
 msgid "After"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:300
+#: ../contents/ui/config/ConfigGeneral.qml:301
 msgid "Below"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:339
+#: ../contents/ui/config/ConfigGeneral.qml:340
 msgid "Icon Size"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:355
+#: ../contents/ui/config/ConfigGeneral.qml:356
 msgid "Search Results"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:359
+#: ../contents/ui/config/ConfigGeneral.qml:360
 msgid "Merged (Application Launcher)"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:368
+#: ../contents/ui/config/ConfigGeneral.qml:369
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr ""
 
@@ -200,35 +208,35 @@ msgstr ""
 msgid "<b>Version:</b> %1"
 msgstr ""
 
-#: ../contents/ui/Main.qml:218
+#: ../contents/ui/Main.qml:219
 msgid "System Info"
 msgstr ""
 
-#: ../contents/ui/Main.qml:219
+#: ../contents/ui/Main.qml:220
 msgid "Terminal"
 msgstr ""
 
-#: ../contents/ui/Main.qml:221
+#: ../contents/ui/Main.qml:222
 msgid "Task Manager"
 msgstr ""
 
-#: ../contents/ui/Main.qml:222
+#: ../contents/ui/Main.qml:223
 msgid "System Settings"
 msgstr ""
 
-#: ../contents/ui/Main.qml:223
+#: ../contents/ui/Main.qml:224
 msgid "File Manager"
 msgstr ""
 
-#: ../contents/ui/Main.qml:225
+#: ../contents/ui/Main.qml:226
 msgid "Edit Applications..."
 msgstr ""
 
-#: ../contents/ui/Popup.qml:60 ../contents/ui/Popup.qml:76
+#: ../contents/ui/Popup.qml:65 ../contents/ui/Popup.qml:81
 msgid "Resize?"
 msgstr ""
 
-#: ../contents/ui/Popup.qml:61 ../contents/ui/Popup.qml:77
+#: ../contents/ui/Popup.qml:66 ../contents/ui/Popup.qml:82
 msgid "Alt + Right Click to resize the menu."
 msgstr ""
 
@@ -321,15 +329,11 @@ msgstr ""
 msgid "Filters"
 msgstr ""
 
-#: ../contents/ui/SidebarView.qml:50
-msgid "Menu"
-msgstr ""
-
-#: ../contents/ui/SidebarView.qml:95
+#: ../contents/ui/SidebarView.qml:98
 msgid "User Manager"
 msgstr ""
 
-#: ../contents/ui/SidebarView.qml:113
+#: ../contents/ui/SidebarView.qml:116
 msgid "Power"
 msgstr ""
 

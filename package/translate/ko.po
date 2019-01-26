@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-01-25 23:23-0500\n"
+"POT-Creation-Date: 2019-01-26 02:25-0500\n"
 "PO-Revision-Date: 2018-12-19 11:26+0900\n"
 "Last-Translator: Hakyong Do <crazyraven@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -21,6 +21,10 @@ msgid "General"
 msgstr "일반"
 
 #: ../contents/config/config.qml:12
+msgid "Import/Export Layout"
+msgstr ""
+
+#: ../contents/config/config.qml:17
 msgid "Advanced"
 msgstr "고급"
 
@@ -72,7 +76,7 @@ msgstr "타일"
 msgid "Tile Size"
 msgstr "타일 크기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:74 ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:340
+#: ../contents/ui/config/ConfigGeneral.qml:74 ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:341
 msgid "px"
 msgstr "화소"
 
@@ -144,11 +148,11 @@ msgstr "앱 목록 창 넓이"
 msgid "Default View"
 msgstr "기본 보기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:57
+#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:64
 msgid "Alphabetical"
 msgstr "알파벳순"
 
-#: ../contents/ui/config/ConfigGeneral.qml:287 ../contents/ui/SidebarView.qml:65
+#: ../contents/ui/config/ConfigGeneral.qml:287 ../contents/ui/SidebarView.qml:70
 msgid "Categories"
 msgstr "범주"
 
@@ -160,35 +164,39 @@ msgstr "글자로 이동"
 msgid "Jump To Category"
 msgstr "범주로 이동"
 
-#: ../contents/ui/config/ConfigGeneral.qml:296
+#: ../contents/ui/config/ConfigGeneral.qml:290 ../contents/ui/SidebarView.qml:58
+msgid "Tiles Only"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:297
 msgid "App Description"
 msgstr "앱 설명"
 
-#: ../contents/ui/config/ConfigGeneral.qml:298
+#: ../contents/ui/config/ConfigGeneral.qml:299
 msgid "Hidden"
 msgstr "숨김"
 
-#: ../contents/ui/config/ConfigGeneral.qml:299
+#: ../contents/ui/config/ConfigGeneral.qml:300
 msgid "After"
 msgstr "다음"
 
-#: ../contents/ui/config/ConfigGeneral.qml:300
+#: ../contents/ui/config/ConfigGeneral.qml:301
 msgid "Below"
 msgstr "아래"
 
-#: ../contents/ui/config/ConfigGeneral.qml:339
+#: ../contents/ui/config/ConfigGeneral.qml:340
 msgid "Icon Size"
 msgstr "아이콘 크기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:355
+#: ../contents/ui/config/ConfigGeneral.qml:356
 msgid "Search Results"
 msgstr "검색 결과"
 
-#: ../contents/ui/config/ConfigGeneral.qml:359
+#: ../contents/ui/config/ConfigGeneral.qml:360
 msgid "Merged (Application Launcher)"
 msgstr "병합 (어플리케이션 실행)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:368
+#: ../contents/ui/config/ConfigGeneral.qml:369
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "분할 (어플리케이션 메뉴 / 대시보드)"
 
@@ -200,35 +208,35 @@ msgstr "이 위젯에 'Alt+F1' 와 같은 전역 단축키가 설정되어 있�
 msgid "<b>Version:</b> %1"
 msgstr "<b>버전:</b> %1"
 
-#: ../contents/ui/Main.qml:218
+#: ../contents/ui/Main.qml:219
 msgid "System Info"
 msgstr "시스템 정보"
 
-#: ../contents/ui/Main.qml:219
+#: ../contents/ui/Main.qml:220
 msgid "Terminal"
 msgstr "터미널"
 
-#: ../contents/ui/Main.qml:221
+#: ../contents/ui/Main.qml:222
 msgid "Task Manager"
 msgstr "작업 관리자"
 
-#: ../contents/ui/Main.qml:222
+#: ../contents/ui/Main.qml:223
 msgid "System Settings"
 msgstr "시스템 설정"
 
-#: ../contents/ui/Main.qml:223
+#: ../contents/ui/Main.qml:224
 msgid "File Manager"
 msgstr "파일 관리자"
 
-#: ../contents/ui/Main.qml:225
+#: ../contents/ui/Main.qml:226
 msgid "Edit Applications..."
 msgstr "어플리케이션 편진"
 
-#: ../contents/ui/Popup.qml:60 ../contents/ui/Popup.qml:76
+#: ../contents/ui/Popup.qml:65 ../contents/ui/Popup.qml:81
 msgid "Resize?"
 msgstr "크기변경?"
 
-#: ../contents/ui/Popup.qml:61 ../contents/ui/Popup.qml:77
+#: ../contents/ui/Popup.qml:66 ../contents/ui/Popup.qml:82
 msgid "Alt + Right Click to resize the menu."
 msgstr "메뉴 크기 변경을 위해 Alt + 마우스 오른쪽 클릭."
 
@@ -321,15 +329,11 @@ msgstr "유닛 변환기"
 msgid "Filters"
 msgstr "필터"
 
-#: ../contents/ui/SidebarView.qml:50
-msgid "Menu"
-msgstr "메뉴"
-
-#: ../contents/ui/SidebarView.qml:95
+#: ../contents/ui/SidebarView.qml:98
 msgid "User Manager"
 msgstr "사용자 관리자"
 
-#: ../contents/ui/SidebarView.qml:113
+#: ../contents/ui/SidebarView.qml:116
 msgid "Power"
 msgstr "전원"
 
@@ -401,6 +405,9 @@ msgstr "그룹"
 #: ../contents/ui/TileItem.qml:115
 msgid "Sort Tiles"
 msgstr "타일 정렬"
+
+#~ msgid "Menu"
+#~ msgstr "메뉴"
 
 #~ msgid "Apps"
 #~ msgstr "앱"

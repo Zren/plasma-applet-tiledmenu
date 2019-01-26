@@ -33,13 +33,17 @@ ColumnLayout {
 			var configKeyList = plasmoid.configuration.keys()
 			for (var i = 0; i < configKeyList.length; i++) {
 				var configKey = configKeyList[i]
+				var configValue = plasmoid.configuration[configKey]
+				if (typeof configValue === "undefined") {
+					continue
+				}
 				if (ignoredKeys.indexOf(configKey) >= 0) {
 					continue
 				}
 				if (configKey == 'tileModel') {
 					data.tileModel = configTileModel.value
 				} else {
-					data[configKey] = plasmoid.configuration[configKey]
+					data[configKey] = configValue
 				}
 			}
 			return data
@@ -51,6 +55,9 @@ ColumnLayout {
 			for (var i = 0; i < configKeyList.length; i++) {
 				var configKey = configKeyList[i]
 				var propValue = newValue[configKey]
+				if (typeof propValue === "undefined") {
+					continue
+				}
 				if (ignoredKeys.indexOf(configKey) >= 0) {
 					continue
 				}

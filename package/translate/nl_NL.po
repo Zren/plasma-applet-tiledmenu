@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-01-05 01:57-0500\n"
+"POT-Creation-Date: 2019-01-25 23:00-0500\n"
 "PO-Revision-Date: 2018-10-13 21:48+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -154,7 +154,7 @@ msgstr "Breedte"
 msgid "Default View"
 msgstr "Standaardweergave"
 
-#: ../contents/ui/config/ConfigGeneral.qml:286
+#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:57
 msgid "Alphabetical"
 msgstr "Alfabetisch"
 
@@ -335,10 +335,6 @@ msgstr "Filters"
 msgid "Menu"
 msgstr "Menu"
 
-#: ../contents/ui/SidebarView.qml:57
-msgid "Apps"
-msgstr "Apps"
-
 #: ../contents/ui/SidebarView.qml:95
 msgid "User Manager"
 msgstr "Gebruikersbeheer"
@@ -347,7 +343,7 @@ msgstr "Gebruikersbeheer"
 msgid "Power"
 msgstr "Afsluitmenu"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:121
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:122
 msgid "Edit Tile"
 msgstr "Tegel bewerken"
 
@@ -412,9 +408,12 @@ msgctxt "default group label"
 msgid "Group"
 msgstr "Groep"
 
-#: ../contents/ui/TileItem.qml:114
+#: ../contents/ui/TileItem.qml:115
 msgid "Sort Tiles"
 msgstr "Tegels sorteren"
+
+#~ msgid "Apps"
+#~ msgstr "Apps"
 
 #~ msgid "Show recent applications"
 #~ msgstr "Recente applicaties tonen"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-01-05 01:57-0500\n"
+"POT-Creation-Date: 2019-01-25 23:00-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Senkin Nikita <niksnbfmail@gmail.com>\n"
 "Language-Team: Niksn <LL@li.org>\n"
@@ -153,7 +153,7 @@ msgstr "Ширина Списка Приложений"
 msgid "Default View"
 msgstr "Вид по умолчанию"
 
-#: ../contents/ui/config/ConfigGeneral.qml:286
+#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:57
 msgid "Alphabetical"
 msgstr "По Алфавиту"
 
@@ -334,10 +334,6 @@ msgstr "Фильтры"
 msgid "Menu"
 msgstr "Меню"
 
-#: ../contents/ui/SidebarView.qml:57
-msgid "Apps"
-msgstr "Программы"
-
 #: ../contents/ui/SidebarView.qml:95
 msgid "User Manager"
 msgstr "Управление пользователями"
@@ -346,7 +342,7 @@ msgstr "Управление пользователями"
 msgid "Power"
 msgstr "Выход"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:121
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:122
 msgid "Edit Tile"
 msgstr "Изменить плитку"
 
@@ -411,9 +407,12 @@ msgctxt "default group label"
 msgid "Group"
 msgstr "Группа"
 
-#: ../contents/ui/TileItem.qml:114
+#: ../contents/ui/TileItem.qml:115
 msgid "Sort Tiles"
 msgstr ""
+
+#~ msgid "Apps"
+#~ msgstr "Программы"
 
 #~ msgid "Show recent applications"
 #~ msgstr "Показать недавние приложения"

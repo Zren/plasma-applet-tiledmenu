@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-01-05 01:57-0500\n"
+"POT-Creation-Date: 2019-01-25 23:00-0500\n"
 "PO-Revision-Date: 2018-12-19 11:26+0900\n"
 "Last-Translator: Hakyong Do <crazyraven@gmail.com>\n"
 "Language-Team: Korean\n"
@@ -152,7 +152,7 @@ msgstr "앱 목록 창 넓이"
 msgid "Default View"
 msgstr "기본 보기"
 
-#: ../contents/ui/config/ConfigGeneral.qml:286
+#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:57
 msgid "Alphabetical"
 msgstr "알파벳순"
 
@@ -333,10 +333,6 @@ msgstr "필터"
 msgid "Menu"
 msgstr "메뉴"
 
-#: ../contents/ui/SidebarView.qml:57
-msgid "Apps"
-msgstr "앱"
-
 #: ../contents/ui/SidebarView.qml:95
 msgid "User Manager"
 msgstr "사용자 관리자"
@@ -345,7 +341,7 @@ msgstr "사용자 관리자"
 msgid "Power"
 msgstr "전원"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:121
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:122
 msgid "Edit Tile"
 msgstr "타일 편집"
 
@@ -410,6 +406,9 @@ msgctxt "default group label"
 msgid "Group"
 msgstr "그룹"
 
-#: ../contents/ui/TileItem.qml:114
+#: ../contents/ui/TileItem.qml:115
 msgid "Sort Tiles"
 msgstr "타일 정렬"
+
+#~ msgid "Apps"
+#~ msgstr "앱"

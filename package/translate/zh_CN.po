@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-01-05 01:57-0500\n"
+"POT-Creation-Date: 2019-01-25 23:00-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lin Mu <linmu789632@gmail.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -153,7 +153,7 @@ msgstr "应用列表区域宽度"
 msgid "Default View"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:286
+#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:57
 msgid "Alphabetical"
 msgstr "字母顺序"
 
@@ -334,10 +334,6 @@ msgstr "过滤器"
 msgid "Menu"
 msgstr "菜单"
 
-#: ../contents/ui/SidebarView.qml:57
-msgid "Apps"
-msgstr "应用"
-
 #: ../contents/ui/SidebarView.qml:95
 #, fuzzy
 msgid "User Manager"
@@ -347,7 +343,7 @@ msgstr "用户管理程序"
 msgid "Power"
 msgstr "电源"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:121
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:122
 msgid "Edit Tile"
 msgstr "编辑磁贴"
 
@@ -412,9 +408,12 @@ msgctxt "default group label"
 msgid "Group"
 msgstr "群组"
 
-#: ../contents/ui/TileItem.qml:114
+#: ../contents/ui/TileItem.qml:115
 msgid "Sort Tiles"
 msgstr ""
+
+#~ msgid "Apps"
+#~ msgstr "应用"
 
 #~ msgid "Show recent applications"
 #~ msgstr "显示最近运行应用"

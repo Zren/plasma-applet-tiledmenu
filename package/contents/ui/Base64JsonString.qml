@@ -1,8 +1,10 @@
+// Version 2
+
 import QtQuick 2.0
 
 QtObject {
 	property string configKey
-	property string configValue: plasmoid.configuration[configKey]
+	readonly property string configValue: plasmoid.configuration[configKey]
 	property variant value: { return {} }
 	property variant defaultValue: { return {} }
 	property bool writing: false
@@ -14,7 +16,7 @@ QtObject {
 	}
 
 	onConfigValueChanged: {
-		if (loadOnConfigChange) {
+		if (loadOnConfigChange && !writing) {
 			load()
 		}
 	}
@@ -32,13 +34,13 @@ QtObject {
 	function setBase64Json(key, data) {
 		var val = JSON.stringify(data)
 		val = Qt.btoa(val)
+		writing = true
 		plasmoid.configuration[key] = val
+		writing = false
 	}
 
 	function set(obj) {
-		writing = true
 		setBase64Json(configKey, obj)
-		writing = false
 	}
 
 	function setItemProperty(key1, key2, val) {

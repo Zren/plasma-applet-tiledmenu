@@ -115,12 +115,11 @@ Item {
 			id: favoritesModel
 
 			Component.onCompleted: {
-				// favorites = 'systemsettings.desktop,sublime-text.desktop,clementine.desktop,hexchat.desktop,virtualbox.desktop'.split(',')
-				favorites = plasmoid.configuration.favoriteApps
-			}
+				// TODO:
+				// Populate this model with all the 'tileModel' urls so that the Search Runner
+				// will prioritize the "favorited" apps.
 
-			onFavoritesChanged: {
-				plasmoid.configuration.favoriteApps = favorites
+				// favorites = 'systemsettings.desktop,sublime-text.desktop'.split(',')
 			}
 		}
 
@@ -152,16 +151,6 @@ Item {
 				if (count > 0) {
 					openModel.trigger(0, "", null)
 				}
-			}
-		}
-	}
-
-	Connections {
-		target: plasmoid.configuration
-
-		onFavoriteAppsChanged: {
-			if (favoritesModel.favorites != plasmoid.configuration.favoriteApps) {
-				favoritesModel.favorites = plasmoid.configuration.favoriteApps
 			}
 		}
 	}

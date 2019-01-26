@@ -178,4 +178,18 @@ ColumnLayout {
 		}
 	}
 
+
+	Connections {
+		target: config.tileModel
+
+		onLoaded: {
+			// Base64JsonString.save() will create a new JavaScript array [],
+			// and our current tile {} reference will be incorrect, which breaks the tile editor.
+			// We could keep a reference to the tile's index in the array, and make sure
+			// the tile's url did not change, but there's no guarantee we won't overwrite data
+			// during an Import, so just close the view.
+			tileEditorView.close()
+		}
+	}
+
 }

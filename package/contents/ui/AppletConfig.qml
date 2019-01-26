@@ -114,12 +114,6 @@ Item {
 		configKey: 'tileModel'
 		defaultValue: []
 
-		onLoaded: {
-			// Only load on change at start.
-			// Otherwise .save() will create a new [] breaking the tile editor.
-			loadOnConfigChange = false
-		}
-
 		// defaultValue: [
 		// 	{
 		// 		"x": 0,

@@ -1,10 +1,10 @@
-// Version 2
+// Version 3
 
 import QtQuick 2.0
 
 QtObject {
 	property string configKey
-	readonly property string configValue: plasmoid.configuration[configKey]
+	readonly property string configValue: configKey ? plasmoid.configuration[configKey] : ""
 	property variant value: { return {} }
 	property variant defaultValue: { return {} }
 	property bool writing: false
@@ -21,12 +21,17 @@ QtObject {
 		}
 	}
 
+	onDefaultValueChanged: {
+		if (configValue === '') { // Optimization
+			load()
+		}
+	}
+
 	function getBase64Json(key, defaultValue) {
-		var val = plasmoid.configuration[key]
-		if (val === '') {
+		if (configValue === '') {
 			return defaultValue
 		}
-		val = Qt.atob(val) // decode base64
+		var val = Qt.atob(configValue) // decode base64
 		val = JSON.parse(val)
 		return val
 	}

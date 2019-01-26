@@ -12,9 +12,57 @@ ColumnLayout {
 	id: page
 
 	ConfigBase64JsonString {
+		id: exportData
 		Layout.fillHeight: true
-		configKey: 'tileModel'
-		defaultValue: []
+
+		Base64JsonString {
+			id: configTileModel
+			configKey: 'tileModel'
+			writing: exportData.base64JsonString.writing
+			defaultValue: []
+		}
+
+		property var ignoredKeys: [
+			'tileScale',
+			'searchResultsReversed',
+			'searchResultsCustomSort',
+		]
+		
+		defaultValue: {
+			var data = {}
+			var configKeyList = plasmoid.configuration.keys()
+			for (var i = 0; i < configKeyList.length; i++) {
+				var configKey = configKeyList[i]
+				if (ignoredKeys.indexOf(configKey) >= 0) {
+					continue
+				}
+				if (configKey == 'tileModel') {
+					data.tileModel = configTileModel.value
+				} else {
+					data[configKey] = plasmoid.configuration[configKey]
+				}
+			}
+			return data
+		}
+
+		function serialize() {
+			var newValue = parseText(textArea.text)
+			var configKeyList = plasmoid.configuration.keys()
+			for (var i = 0; i < configKeyList.length; i++) {
+				var configKey = configKeyList[i]
+				var propValue = newValue[configKey]
+				if (ignoredKeys.indexOf(configKey) >= 0) {
+					continue
+				}
+				if (configKey == 'tileModel') {
+					configTileModel.set(propValue)
+				} else {
+					if (plasmoid.configuration[configKey] != propValue) {
+						plasmoid.configuration[configKey] = propValue
+					}
+				}
+			}
+		}
 	}
 
 }

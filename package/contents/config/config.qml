@@ -9,6 +9,11 @@ ConfigModel {
 		source: "config/ConfigGeneral.qml"
 	}
 	ConfigCategory {
+		name: i18n("Import/Export Layout")
+		icon: "grid-rectangular"
+		source: "config/ConfigExportLayout.qml"
+	}
+	ConfigCategory {
 		name: i18n("Advanced")
 		icon: "applications-development"
 		source: "lib/ConfigAdvanced.qml"

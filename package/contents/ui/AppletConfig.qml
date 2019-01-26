@@ -109,10 +109,6 @@ Item {
 	readonly property int searchResultsDirection: plasmoid.configuration.searchResultsReversed ? ListView.BottomToTop : ListView.TopToBottom
 	
 	//--- Tile Data
-	property var tileData: Base64JsonString {
-		configKey: 'tileData'
-	}
-
 	property var tileModel: Base64JsonString {
 		configKey: 'tileModel'
 		defaultValue: []

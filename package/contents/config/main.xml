@@ -50,10 +50,6 @@
     </entry>
 
     <!-- Base64 encoded JSON -->
-    <entry name="tileData" type="string" stringType="base64json">
-      <!-- Schema: { "konsole.desktop": { size: "1x1", x: 3, y: 0, label: "Terminal" }, ...} -->
-      <default></default>
-    </entry>
     <entry name="tileModel" type="string" stringType="base64json">
       <!-- Schema: [{ url: "konsole.desktop", x: 3, y: 0, w: 2, h: 2, label: "Terminal" }, ...] -->
       <!-- For Testing: W3siaCI6MiwidXJsIjoib3JnLmtkZS5hcmsuZGVza3RvcCIsInciOjIsIngiOjQsInkiOjB9LHsiaCI6NCwidXJsIjoib3JnLmtkZS5kaXNjb3Zlci5kZXNrdG9wIiwidyI6NCwieCI6MCwieSI6MH0seyJoIjoyLCJ1cmwiOiJvcmcua2RlLmRvbHBoaW4uZGVza3RvcCIsInciOjIsIngiOjQsInkiOjJ9LHsiaCI6MiwidXJsIjoib3JnLmtkZS5rc3lzZ3VhcmQuZGVza3RvcCIsInciOjQsIngiOjAsInkiOjR9LHsiaCI6MSwidXJsIjoib3JnLmtkZS5rb25zb2xlLmRlc2t0b3AiLCJ3IjoyLCJ4IjowLCJ5Ijo2fSx7ImgiOjEsInVybCI6Im9yZy5rZGUua2F0ZS5kZXNrdG9wIiwidyI6MSwieCI6MywieSI6Nn0seyJoIjozLCJ1cmwiOiJmaXJlZm94LmRlc2t0b3AiLCJ3IjoxLCJ4Ijo0LCJ5Ijo0fV0= -->
@@ -109,6 +105,12 @@
       <default>620</default>
     </entry>
 
+    <!-- Removed v28
+    Schema: { "konsole.desktop": { size: "1x1", x: 3, y: 0, label: "Terminal" }, ...}
+    <entry name="tileData" type="string" stringType="base64json">
+      <default></default>
+    </entry>
+    -->
     
     <!-- Removed v24
     <entry name="defaultAppListOrder" type="string">

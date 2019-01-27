@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
 "POT-Creation-Date: 2019-01-26 02:25-0500\n"
-"PO-Revision-Date: 2018-10-13 21:48+0200\n"
+"PO-Revision-Date: 2019-01-27 12:01+0100\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
 "Language: nl_NL\n"
@@ -24,7 +24,7 @@ msgstr "Algemeen"
 
 #: ../contents/config/config.qml:12
 msgid "Import/Export Layout"
-msgstr ""
+msgstr "Indeling importeren/exporteren"
 
 #: ../contents/config/config.qml:17
 msgid "Advanced"
@@ -78,7 +78,11 @@ msgstr "Tegels"
 msgid "Tile Size"
 msgstr "Tegelgrootte"
 
-#: ../contents/ui/config/ConfigGeneral.qml:74 ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:252 ../contents/ui/config/ConfigGeneral.qml:277 ../contents/ui/config/ConfigGeneral.qml:341
+#: ../contents/ui/config/ConfigGeneral.qml:74
+#: ../contents/ui/config/ConfigGeneral.qml:80
+#: ../contents/ui/config/ConfigGeneral.qml:252
+#: ../contents/ui/config/ConfigGeneral.qml:277
+#: ../contents/ui/config/ConfigGeneral.qml:341
 msgid "px"
 msgstr "px"
 
@@ -86,11 +90,14 @@ msgstr "px"
 msgid "Tile Margin"
 msgstr "Tegelruimte"
 
-#: ../contents/ui/config/ConfigGeneral.qml:86 ../contents/ui/config/ConfigGeneral.qml:133 ../contents/ui/config/ConfigGeneral.qml:257
+#: ../contents/ui/config/ConfigGeneral.qml:86
+#: ../contents/ui/config/ConfigGeneral.qml:133
+#: ../contents/ui/config/ConfigGeneral.qml:257
 msgid "Desktop Theme (%1)"
 msgstr "Bureaubladthema (%1)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:94 ../contents/ui/config/ConfigGeneral.qml:140
+#: ../contents/ui/config/ConfigGeneral.qml:94
+#: ../contents/ui/config/ConfigGeneral.qml:140
 msgid "Custom Color"
 msgstr "Aangepaste kleur"
 
@@ -150,11 +157,13 @@ msgstr "Breedte"
 msgid "Default View"
 msgstr "Standaardweergave"
 
-#: ../contents/ui/config/ConfigGeneral.qml:286 ../contents/ui/SidebarView.qml:64
+#: ../contents/ui/config/ConfigGeneral.qml:286
+#: ../contents/ui/SidebarView.qml:64
 msgid "Alphabetical"
 msgstr "Alfabetisch"
 
-#: ../contents/ui/config/ConfigGeneral.qml:287 ../contents/ui/SidebarView.qml:70
+#: ../contents/ui/config/ConfigGeneral.qml:287
+#: ../contents/ui/SidebarView.qml:70
 msgid "Categories"
 msgstr "Categorieën"
 
@@ -166,9 +175,10 @@ msgstr "Spring naar letter"
 msgid "Jump To Category"
 msgstr "Spring naar categorie"
 
-#: ../contents/ui/config/ConfigGeneral.qml:290 ../contents/ui/SidebarView.qml:58
+#: ../contents/ui/config/ConfigGeneral.qml:290
+#: ../contents/ui/SidebarView.qml:58
 msgid "Tiles Only"
-msgstr ""
+msgstr "Alleen tegels"
 
 #: ../contents/ui/config/ConfigGeneral.qml:297
 msgid "App Description"
@@ -203,8 +213,12 @@ msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Opgesplitst in categorieën (applicatiemenu/dashboard)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml:58
-msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr "Als er voor deze widget een globale sneltoets is ingesteld, bijv. 'Alt+F1', dan open Plasma dit menu alleen met de ⊞ Windows/Meta-toets."
+msgid ""
+"When this widget has a global shortcut set, like 'Alt+F1', Plasma will open "
+"this menu with just the ⊞ Windows / Meta key."
+msgstr ""
+"Als er voor deze widget een globale sneltoets is ingesteld, bijv. 'Alt+F1', "
+"dan open Plasma dit menu alleen met de ⊞ Windows/Meta-toets."
 
 #: ../contents/ui/lib/AppletVersion.qml:41
 msgid "<b>Version:</b> %1"
@@ -240,7 +254,8 @@ msgstr "Grootte aanpassen?"
 
 #: ../contents/ui/Popup.qml:66 ../contents/ui/Popup.qml:82
 msgid "Alt + Right Click to resize the menu."
-msgstr "Gebruik Alt + rechtermuisklik om de grootte van het menu aan te passen."
+msgstr ""
+"Gebruik Alt + rechtermuisklik om de grootte van het menu aan te passen."
 
 #: ../contents/ui/SearchField.qml:15
 msgid "Search"
@@ -263,7 +278,8 @@ msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
 msgstr "%1 zoeken"
 
-#: ../contents/ui/SearchFiltersViewItem.qml:115 ../contents/ui/SearchFiltersView.qml:30
+#: ../contents/ui/SearchFiltersViewItem.qml:115
+#: ../contents/ui/SearchFiltersView.qml:30
 msgid "Default"
 msgstr "Standaard"
 

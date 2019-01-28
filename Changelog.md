@@ -1,6 +1,7 @@
 ## v28 - January 28 2019
 
 * Add Indonesian translations by @ardumpl (Issue #34)
+* Updated Dutch translations by @Vistaus (Pull Request #36)
 * You can now easily import/export a tile layout (Issue #19).
 * Can be configured to start in "Tiles Only" mode, revealing the app list after a search.
 * The "menu" button showing all the labels has been removed, since you can now hover a button and instantly see the tooltip.

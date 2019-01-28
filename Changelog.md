@@ -1,8 +1,18 @@
+## v28 - January 28 2019
+
+* Add Indonesian translations by @ardumpl (Issue #34)
+* You can now easily import/export a tile layout (Issue #19).
+* Can be configured to start in "Tiles Only" mode, revealing the app list after a search.
+* The "menu" button showing all the labels has been removed, since you can now hover a button and instantly see the tooltip.
+* The "Apps" sidebar tooltip now shows "Alphabetically".
+* Sorting Apps Alphabetically and Categorically now have use a bundled icon that better represents them. The icons (including Tiles Only) are highlighted when they are "selected".
+* Failed attempt at cancelling a drag event that starts after an app is launched.
+
 ## v27 - January 5 2019
 
 * Add Korean translations by @crazyraven (Pull Request #31)
 * Updated Dutch translations by @Vistaus (Pull Request #32)
-* Add ability to set the number of recent apps (Min=1 / Max=15).
+* Add ability to set the number of recent apps (Max=15).
 * Show the sidebar item label in a tooltip when hovering it.
 
 ## v26 - December 10 2018

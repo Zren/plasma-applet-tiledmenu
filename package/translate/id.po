@@ -166,7 +166,7 @@ msgstr "Lompat ke Kategori"
 
 #: ../contents/ui/config/ConfigGeneral.qml:285 ../contents/ui/SidebarView.qml:58
 msgid "Tiles Only"
-msgstr "Tampilkan ubin saja"
+msgstr "Tampilkan Ubin Saja"
 
 #: ../contents/ui/config/ConfigGeneral.qml:292
 msgid "App Description"

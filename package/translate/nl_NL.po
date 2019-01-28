@@ -24,7 +24,7 @@ msgstr "Algemeen"
 
 #: ../contents/config/config.qml:12
 msgid "Import/Export Layout"
-msgstr ""
+msgstr "Indeling importeren/exporteren"
 
 #: ../contents/config/config.qml:17
 msgid "Advanced"
@@ -168,7 +168,7 @@ msgstr "Spring naar categorie"
 
 #: ../contents/ui/config/ConfigGeneral.qml:290 ../contents/ui/SidebarView.qml:58
 msgid "Tiles Only"
-msgstr ""
+msgstr "Alleen tegels"
 
 #: ../contents/ui/config/ConfigGeneral.qml:297
 msgid "App Description"

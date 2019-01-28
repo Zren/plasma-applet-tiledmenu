@@ -38,7 +38,7 @@ Or if you know how to make a pull request
 | de       |   41/97 |   42% |
 | es       |   75/97 |   77% |
 | fr       |   22/97 |   22% |
-| id       |   94/97 |   96% |
+| id       |   97/97 |  100% |
 | ko       |   95/97 |   97% |
 | nl_NL    |   97/97 |  100% |
 | pl       |    1/97 |    1% |

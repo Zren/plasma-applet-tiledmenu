@@ -166,7 +166,7 @@ msgstr "Lompat ke Kategori"
 
 #: ../contents/ui/config/ConfigGeneral.qml:285 ../contents/ui/SidebarView.qml:58
 msgid "Tiles Only"
-msgstr ""
+msgstr "Tampilkan ubin saja"
 
 #: ../contents/ui/config/ConfigGeneral.qml:292
 msgid "App Description"
@@ -259,11 +259,11 @@ msgstr "Cari Penanda"
 #: ../contents/ui/SearchField.qml:23
 msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
-msgstr ""
+msgstr "Cari %1"
 
 #: ../contents/ui/SearchFiltersViewItem.qml:115 ../contents/ui/SearchFiltersView.qml:30
 msgid "Default"
-msgstr ""
+msgstr "Default"
 
 #: ../contents/ui/SearchFiltersView.qml:19
 msgid "All"

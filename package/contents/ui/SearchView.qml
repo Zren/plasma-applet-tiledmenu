@@ -203,6 +203,7 @@ Item {
 			active: false
 			// asynchronous: true
 			function open(tile) {
+				config.showSearch = true
 				active = true
 				item.open(tile)
 			}

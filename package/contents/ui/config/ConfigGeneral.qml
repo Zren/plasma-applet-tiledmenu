@@ -124,7 +124,7 @@ ConfigPage {
 	ConfigSection {
 		label: i18n("Sidebar")
 
-        RadioButton {
+		RadioButton {
 			text: i18n("Desktop Theme (%1)", theme.themeName)
 			exclusiveGroup: sidebarThemeGroup
 			checked: plasmoid.configuration.sidebarFollowsTheme

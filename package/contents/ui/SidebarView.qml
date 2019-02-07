@@ -50,9 +50,9 @@ Item {
 					}
 					
 					Label {
-                        anchors.top: parent.top
-                        text: i18n("user-identity")
-                    }
+						anchors.top: parent.top
+						text: i18n("user-identity")
+					}
 
 					SidebarItemRepeater {
 						model: appsModel.sessionActionsModel

@@ -44,11 +44,13 @@ ColumnLayout {
 		}
 
 		PlasmaComponents.Button {
+			implicitWidth: minimumWidth
 			text: i18n("Reset Tile")
 			onClicked: resetTile()
 		}
 
 		PlasmaComponents.Button {
+			implicitWidth: minimumWidth
 			text: i18n("Close")
 			onClicked: {
 				tileEditorView.close()

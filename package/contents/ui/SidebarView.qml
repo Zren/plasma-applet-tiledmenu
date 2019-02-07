@@ -46,7 +46,8 @@ Item {
 						iconName: 'system-users'
 						text: i18n("User Manager")
 						onClicked: KCMShell.open('user_manager')
-						visible: KCMShell.authorize('user_manager.desktop').length > 64
+						// visible: KCMShell.authorize('user_manager.desktop').length > 0
+						visible: false
 					}
 					
 					Label {

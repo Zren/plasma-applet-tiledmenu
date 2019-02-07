@@ -27,7 +27,7 @@
     </entry>
     <entry name="showRecentApps" type="bool">
       <label>Whether to show the "Recent Applications" category.</label>
-      <default>true</default>
+      <default>false</default>
     </entry>
     <entry name="recentOrdering" type="int">
       <label>How should the previously used apps/docs/contacts be ordered: 0 = RecentFirst, 1 = PopularFirst</label>
@@ -42,7 +42,7 @@
     </entry>
     <entry name="defaultAppListView" type="string">
       <!-- enum: Alphabetical, Categories, JumpToLetter, JumpToCategory, TilesOnly -->
-      <default>Alphabetical</default>
+      <default>JumpToCategory</default>
     </entry>
 
     <!-- Base64 encoded JSON -->
@@ -92,10 +92,10 @@
       <default>50</default>
     </entry>
     <entry name="appListWidth" type="int">
-      <default>350</default>
+      <default>262</default>
     </entry>
     <entry name="favGridCols" type="int">
-      <default>6</default>
+      <default>8</default>
     </entry>
     <entry name="popupHeight" type="int">
       <default>620</default>

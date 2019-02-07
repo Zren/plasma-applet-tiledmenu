@@ -49,11 +49,6 @@ Item {
 						// visible: KCMShell.authorize('user_manager.desktop').length > 0
 						visible: false
 					}
-					
-					Label {
-						anchors.top: parent.top
-						text: i18n("user-identity")
-					}
 
 					SidebarItemRepeater {
 						model: appsModel.sessionActionsModel

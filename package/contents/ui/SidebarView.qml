@@ -32,6 +32,7 @@ Item {
 				text: kuser.fullName
 				submenu: userMenu
 				sidebarMenu: null // Parent SidebarMenu
+				expanded: true
 				zoomOnPush: false
 				Layout.fillWidth: true
 				Layout.fillHeight: true

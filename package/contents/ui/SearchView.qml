@@ -17,6 +17,14 @@ Item {
 	// Behavior on implicitWidth {
 	// 	NumberAnimation { duration: 400 }
 	// }
+	
+	SidebarView {
+		id: sidebarView
+		anchors.topMargin: parent.top
+		anchors.leftMargin: config.sidebarRightMargin
+		anchors.left: parent.left
+	}
+		
 	Connections {
 		target: search
 		onIsSearchingChanged: {
@@ -84,7 +92,7 @@ Item {
 			when: !searchOnTop
 			PropertyChanges {
 				target: stackViewContainer
-				anchors.bottomMargin: searchField.height
+				anchors.bottomMargin: 7 + searchField.height
 			}
 			PropertyChanges {
 				target: searchField
@@ -97,6 +105,7 @@ Item {
 	Item {
 		id: stackViewContainer
 		anchors.fill: parent
+		anchors.rightMargin: parent.right
 
 		SearchResultsView {
 			id: searchResultsView
@@ -203,7 +212,6 @@ Item {
 			active: false
 			// asynchronous: true
 			function open(tile) {
-				config.showSearch = true
 				active = true
 				item.open(tile)
 			}
@@ -212,11 +220,11 @@ Item {
 		SearchStackView {
 			id: stackView
 			width: config.appAreaWidth
+			anchors.topMargin: sidebarView.y + 40
 			anchors.top: parent.top
 			anchors.right: parent.right
 			anchors.bottom: parent.bottom
 			initialItem: appsView
-
 			visible: opacity > 0
 			opacity: config.showSearch ? 1 : 0
 			// Behavior on opacity {
@@ -230,7 +238,6 @@ Item {
 		id: searchField
 		// width: 430
 		height: config.searchFieldHeight
-		anchors.leftMargin: config.sidebarWidth + config.sidebarRightMargin
 		anchors.left: parent.left
 		anchors.right: parent.right
 

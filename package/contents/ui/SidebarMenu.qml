@@ -8,11 +8,12 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 
 MouseArea {
 	id: sidebarMenu
-	hoverEnabled: true
+	hoverEnabled: false
 	z: 1
-	// clip: true
-	width: open ? config.sidebarOpenWidth : config.sidebarWidth
-	property bool open: false
+	clip: true
+	implicitWidth: 480
+	implicitHeight: 128
+	property bool open: true
 
 	onOpenChanged: {
 		if (open) {
@@ -23,20 +24,17 @@ MouseArea {
 	}
 
 	Rectangle {
-		anchors.fill: parent
 		visible: !plasmoid.configuration.sidebarFollowsTheme
 		color: config.sidebarBackgroundColor
 		opacity: parent.open ? 1 : 0
 	}
 
 	Rectangle {
-		anchors.fill: parent
 		visible: plasmoid.configuration.sidebarFollowsTheme
 		color: theme.backgroundColor
 		opacity: parent.open ? 1 : 0
 	}
 	PlasmaCore.FrameSvgItem {
-		anchors.fill: parent
 		visible: plasmoid.configuration.sidebarFollowsTheme
 		imagePath: "widgets/frame"
 		prefix: "raised"
@@ -45,7 +43,6 @@ MouseArea {
 	property alias showDropShadow: sidebarMenuShadows.visible
 	SidebarMenuShadows {
 		id: sidebarMenuShadows
-		anchors.fill: parent
 		visible: !plasmoid.configuration.sidebarFollowsTheme && sidebarMenu.open
 	}
 }

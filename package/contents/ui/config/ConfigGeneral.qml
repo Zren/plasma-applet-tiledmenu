@@ -124,7 +124,7 @@ ConfigPage {
 	ConfigSection {
 		label: i18n("Sidebar")
 
-		RadioButton {
+        RadioButton {
 			text: i18n("Desktop Theme (%1)", theme.themeName)
 			exclusiveGroup: sidebarThemeGroup
 			checked: plasmoid.configuration.sidebarFollowsTheme
@@ -144,98 +144,6 @@ ConfigPage {
 		}
 		
 	}
-
-	ConfigSection {
-		label: i18n("Sidebar Shortcuts")
-
-		RowLayout {
-			ConfigStringList {
-				id: sidebarShortcuts
-				configKey: 'sidebarShortcuts'
-				Layout.fillHeight: true
-
-				KCoreAddons.KUser {
-					id: kuser
-				}
-
-				function startsWith(a, b) {
-					return a.substr(0, b.length) === b
-				}
-
-				function parseText(text) {
-					var urls = text.split("\n")
-					for (var i = 0; i < urls.length; i++) {
-						if (startsWith(urls[i], '~/')) { // Starts with '~/' (home dir)
-							if (kuser.loginName) {
-								urls[i] = '/home/' + kuser.loginName + urls[i].substr(1)
-							}
-						}
-						if (startsWith(urls[i], '/')) { // Starts with '/' (root)
-							urls[i] = 'file://' + urls[i] // Prefix URL file scheme when serializing.
-						}
-					}
-					return urls
-				}
-
-				function addUrl(str) {
-					if (hasItem(str)) {
-						// Skip. Kicker.FavoritesModel will remove it anyways,
-						// and can cause a serialize + deserialize loop.
-					} else {
-						prepend(str)
-					}
-					selectItem(str) // Select the existing text to highlight it's existence.
-				}
-			}
-
-			ColumnLayout {
-				id: sidebarDefaultsColumn
-
-				Label {
-					text: i18n("Add Default")
-				}
-
-				ConfigIconButton {
-					iconName: "folder-documents-symbolic"
-					text: xdgPathsLoader.displayName('DOCUMENTS')
-					onClicked: sidebarShortcuts.addUrl('xdg:DOCUMENTS')
-				}
-				ConfigIconButton {
-					iconName: "folder-download-symbolic"
-					// Component.onCompleted: contentItem.alignment = Qt.AlignLeft
-					text: xdgPathsLoader.displayName('DOWNLOAD')
-					onClicked: sidebarShortcuts.addUrl('xdg:DOWNLOAD')
-				}
-				ConfigIconButton {
-					iconName: "folder-music-symbolic"
-					text: xdgPathsLoader.displayName('MUSIC')
-					onClicked: sidebarShortcuts.addUrl('xdg:MUSIC')
-				}
-				ConfigIconButton {
-					iconName: "folder-pictures-symbolic"
-					text: xdgPathsLoader.displayName('PICTURES')
-					onClicked: sidebarShortcuts.addUrl('xdg:PICTURES')
-				}
-				ConfigIconButton {
-					iconName: "folder-videos-symbolic"
-					text: xdgPathsLoader.displayName('VIDEOS') // Uhg, it's displayed 'Movies' instead of 'Videos'...
-					onClicked: sidebarShortcuts.addUrl('xdg:VIDEOS')
-				}
-				ConfigIconButton {
-					iconName: "folder-open-symbolic"
-					text: i18nd("dolphin", "Dolphin")
-					onClicked: sidebarShortcuts.addUrl('org.kde.dolphin.desktop')
-				}
-				ConfigIconButton {
-					iconName: "configure"
-					text: i18nd("systemsettings", "System Settings")
-					onClicked: sidebarShortcuts.addUrl('systemsettings.desktop')
-				}
-				Item { Layout.fillHeight: true }
-			}
-		}
-	}
-
 
 	ExclusiveGroup { id: searchBoxThemeGroup }
 	ConfigSection {
@@ -282,7 +190,6 @@ ConfigPage {
 				{ value: "Categories", text: i18n("Categories") },
 				{ value: "JumpToLetter", text: i18n("Jump To Letter") },
 				{ value: "JumpToCategory", text: i18n("Jump To Category") },
-				{ value: "TilesOnly", text: i18n("Tiles Only") },
 			]
 		}
 

@@ -30,13 +30,4 @@ FlatButton {
 			submenu.open = !submenu.open
 		}
 	}
-
-	QQC2.ToolTip {
-		id: control
-		visible: sidebarItem.hovered && !(sidebarItem.expanded || sidebarItem.submenuOpen)
-		text: sidebarItem.text
-		delay: 0
-		x: parent.width + rightPadding
-		y: (parent.height - height) / 2
-	}
 }

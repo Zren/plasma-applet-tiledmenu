@@ -43,8 +43,8 @@ PlasmaComponents.ToolButton {
 				PlasmaCore.IconItem {
 					id: icon
 					source: control.iconName || control.iconSource || control.icon
-					width: config.flatButtonIconSize
-					height: config.flatButtonIconSize
+					width: 30
+					height: 30
 					anchors.centerIn: parent
 					// colorGroup: PlasmaCore.Theme.ButtonColorGroup
 				}

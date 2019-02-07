@@ -15,23 +15,11 @@ Item {
 	id: sidebarView
 	anchors.left: parent.left
 	anchors.top: parent.top
-	anchors.bottom: parent.bottom
+	height: 32
 	z: 1
 
-	width: sidebarMenu.width
+	width: 480
 	Behavior on width { NumberAnimation { duration: 100 } }
-
-	DragAndDrop.DropArea {
-		anchors.fill: sidebarMenu
-
-		onDrop: {
-			if (event && event.mimeData && event.mimeData.url) {
-				var url = event.mimeData.url.toString()
-				url = Utils.parseDropUrl(url)
-				appsModel.sidebarModel.addFavorite(url, 0)
-			}
-		}
-	}
 
 	SidebarMenu {
 		id: sidebarMenu
@@ -40,55 +28,16 @@ Item {
 		anchors.bottom: parent.bottom
 
 
-		Column {
-			id: sidebarMenuTop
+		Row {
 			width: parent.width
-			height: childrenRect.height
-
-			// SidebarItem {
-			// 	iconName: 'open-menu-symbolic'
-			// 	text: i18n("Menu")
-			// 	closeOnClick: false
-			// 	onClicked: sidebarMenu.open = !sidebarMenu.open
-			// 	zoomOnPush: expanded
-			// }
-
-			SidebarViewButton {
-				appletIconName: "view-tilesonly"
-				text: i18n("Tiles Only")
-				onClicked: searchView.showTilesOnly()
-				checked: searchView.showingOnlyTiles
-			}
-			SidebarViewButton {
-				appletIconName: "view-list-alphabetically"
-				text: i18n("Alphabetical")
-				onClicked: appsView.showAppsAlphabetically()
-				checked: searchView.showingAppsAlphabetically
-			}
-			SidebarViewButton {
-				appletIconName: 'view-list-categorically'
-				text: i18n("Categories")
-				onClicked:  appsView.showAppsCategorically()
-				checked: searchView.showingAppsCategorically
-			}
-			// SidebarItem {
-			// 	iconName: 'system-search-symbolic'
-			// 	text: i18n("Search")
-			// 	onClicked: searchResultsView.showDefaultSearch()
-			// 	// checked: stackView.currentItem == searchResultsView
-			// 	// checkedEdge: Qt.RightEdge
-			// 	// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
-			// }
-		}
-		Column {
-			width: parent.width
-			height: childrenRect.height
-			anchors.bottom: parent.bottom
+			height: 480
+			anchors.top: parent.top
 
 			SidebarItem {
 				iconName: kuser.faceIconUrl ? kuser.faceIconUrl : 'user-identity'
 				text: kuser.fullName
 				submenu: userMenu
+				width: 230
 
 				SidebarContextMenu {
 					id: userMenu
@@ -97,8 +46,13 @@ Item {
 						iconName: 'system-users'
 						text: i18n("User Manager")
 						onClicked: KCMShell.open('user_manager')
-						visible: KCMShell.authorize('user_manager.desktop').length > 0
+						visible: KCMShell.authorize('user_manager.desktop').length > 64
 					}
+					
+					Label {
+                        anchors.top: parent.top
+                        text: i18n("user-identity")
+                    }
 
 					SidebarItemRepeater {
 						model: appsModel.sessionActionsModel
@@ -106,15 +60,10 @@ Item {
 				}
 			}
 
-			SidebarFavouritesView {
-				model: appsModel.sidebarModel
-				maxHeight: sidebarMenu.height - sidebarMenuTop.height - 2 * config.flatButtonSize
-			}
-
 			SidebarItem {
 				iconName: 'system-shutdown-symbolic'
-				text: i18n("Power")
 				submenu: powerMenu
+				width: 32
 
 				SidebarContextMenu {
 					id: powerMenu

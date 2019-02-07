@@ -15,7 +15,7 @@ MouseArea {
 
 	RowLayout {
 		anchors.fill: parent
-		spacing: 0
+		spacing: 5
 
 		SearchView {
 			id: searchView
@@ -45,10 +45,6 @@ MouseArea {
 			}
 		}
 		
-	}
-
-	SidebarView {
-		id: sidebarView
 	}
 
 	MouseArea {

@@ -3,7 +3,7 @@ import QtQuick 2.0
 Repeater {
 	id: repeater
 	property int maxHeight: 1000000
-	property int numAvailable: maxHeight / config.flatButtonSize
+	property int numAvailable: 0
 	property int minVisibleIndex: count - numAvailable // Hide items with an index smaller than this
 
 	delegate: SidebarItem {

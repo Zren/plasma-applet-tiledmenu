@@ -10,16 +10,16 @@ Item {
 
 	//--- Sizes
 	readonly property int panelIconSize: 24 * units.devicePixelRatio
-	readonly property int flatButtonSize: 60 * units.devicePixelRatio
-	readonly property int flatButtonIconSize: 30 * units.devicePixelRatio
-	readonly property int sidebarWidth: flatButtonSize
+	readonly property int flatButtonSize: 32 * units.devicePixelRatio
+	readonly property int flatButtonIconSize: 0 * units.devicePixelRatio
+	readonly property int sidebarWidth: 0
 	readonly property int sidebarOpenWidth: 200 * units.devicePixelRatio
 	readonly property int sidebarRightMargin: 4 * units.devicePixelRatio
 	readonly property int appListWidth: plasmoid.configuration.appListWidth * units.devicePixelRatio
 
 	property bool showSearch: false
 	readonly property int appAreaWidth: (showSearch ? appListWidth : 0)
-	readonly property int leftSectionWidth: sidebarWidth + sidebarRightMargin + appAreaWidth
+	readonly property int leftSectionWidth: 0 + sidebarRightMargin + appAreaWidth
 
 	readonly property real tileScale: plasmoid.configuration.tileScale
 	readonly property int cellBoxUnits: 80
@@ -61,11 +61,11 @@ Item {
 	
 	readonly property int searchFilterRowHeight: {
 		if (plasmoid.configuration.appListWidth >= 310) {
-			return flatButtonSize // 60px
+			return 30 // 60px
 		} else if (plasmoid.configuration.appListWidth >= 250) {
-			return flatButtonSize*3/4 // 45px
+			return 30 // 45px
 		} else {
-			return flatButtonSize/2 // 30px
+			return 30 // 30px
 		}
 	}
 

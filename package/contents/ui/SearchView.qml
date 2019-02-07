@@ -21,10 +21,12 @@ Item {
 	SidebarView {
 		id: sidebarView
 		anchors.topMargin: parent.top
-		anchors.leftMargin: config.sidebarRightMargin
 		anchors.left: parent.left
+		anchors.leftMargin: config.sidebarRightMargin
+		anchors.right: parent.right
+		anchors.rightMargin: config.sidebarRightMargin
 	}
-		
+	
 	Connections {
 		target: search
 		onIsSearchingChanged: {

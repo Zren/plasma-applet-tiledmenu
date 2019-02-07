@@ -15,29 +15,26 @@ Item {
 	id: sidebarView
 	anchors.left: parent.left
 	anchors.top: parent.top
-	height: 32
+	height: 32 * units.devicePixelRatio
 	z: 1
 
-	width: 480
-	Behavior on width { NumberAnimation { duration: 100 } }
-
-	SidebarMenu {
-		id: sidebarMenu
-		anchors.left: parent.left
-		anchors.top: parent.top
-		anchors.bottom: parent.bottom
-
-
-		Row {
-			width: parent.width
-			height: 480
+		RowLayout {
+			id: layout
+			spacing: 0
+			// height: 480
+			anchors.left: parent.left
+			anchors.right: parent.right
 			anchors.top: parent.top
+			height: parent.height
 
 			SidebarItem {
 				iconName: kuser.faceIconUrl ? kuser.faceIconUrl : 'user-identity'
 				text: kuser.fullName
 				submenu: userMenu
-				width: 230
+				sidebarMenu: null // Parent SidebarMenu
+				zoomOnPush: false
+				Layout.fillWidth: true
+				Layout.fillHeight: true
 
 				SidebarContextMenu {
 					id: userMenu
@@ -59,10 +56,18 @@ Item {
 			SidebarItem {
 				iconName: 'system-shutdown-symbolic'
 				submenu: powerMenu
-				width: 32
+				sidebarMenu: null // Parent SidebarMenu
+
+				Layout.minimumWidth: 32 * units.devicePixelRatio
+				Layout.preferredWidth: Layout.preferredWidth
+				Layout.fillHeight: true
 
 				SidebarContextMenu {
 					id: powerMenu
+
+					// Align popup to bottom right
+					anchors.left: undefined
+					anchors.right: parent.right
 					
 					SidebarItemRepeater {
 						model: appsModel.powerActionsModel
@@ -70,14 +75,5 @@ Item {
 				}
 			}
 		}
-
-		onFocusChanged: {
-			logger.debug('searchView.onFocusChanged', focus)
-			if (!focus) {
-				open = false
-			}
-		}
-	}
-
 
 }

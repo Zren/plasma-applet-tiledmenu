@@ -23,7 +23,7 @@ FlatButton {
 	readonly property bool submenuOpen: submenu ? submenu.open : false
 
 	onClicked: {
-		if (sidebarMenu.open && closeOnClick) {
+		if (sidebarMenu && sidebarMenu.open && closeOnClick) {
 			sidebarMenu.open = false
 		}
 		if (submenu) {

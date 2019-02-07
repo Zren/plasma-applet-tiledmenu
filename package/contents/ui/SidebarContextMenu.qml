@@ -10,8 +10,8 @@ SidebarMenu {
 	id: sidebarContextMenu
 	visible: open
 	open: false
-	anchors.left: parent.right
-	anchors.bottom: parent.bottom
+	anchors.left: parent.left
+	anchors.top: parent.bottom
 	width: config.sidebarOpenWidth
 	height: childrenRect.height
 	z: 2

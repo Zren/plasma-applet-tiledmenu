@@ -17,6 +17,13 @@ Item {
 	// Behavior on implicitWidth {
 	// 	NumberAnimation { duration: 400 }
 	// }
+
+	visible: opacity > 0
+	opacity: config.showSearch ? 1 : 0
+	// Behavior on opacity {
+	// 	NumberAnimation { duration: 400 }
+	// }
+
 	Connections {
 		target: search
 		onIsSearchingChanged: {
@@ -216,12 +223,6 @@ Item {
 			anchors.right: parent.right
 			anchors.bottom: parent.bottom
 			initialItem: appsView
-
-			visible: opacity > 0
-			opacity: config.showSearch ? 1 : 0
-			// Behavior on opacity {
-			// 	NumberAnimation { duration: 400 }
-			// }
 		}
 	}
 

@@ -335,7 +335,7 @@ Item {
 			var modelIndex = rootModel.index(rootIndex, 0)
 			var categoryLabel = rootModel.data(modelIndex, Qt.DisplayRole)
 			var categoryIcon = rootModel.data(modelIndex, Qt.DecorationRole)
-			console.log('categoryLabel', categoryLabel, categoryIcon)
+			// console.log('categoryLabel', categoryLabel, categoryIcon)
 			var categoryModel = rootModel.modelForRow(rootIndex)
 			var appList = []
 			if (categoryModel) {

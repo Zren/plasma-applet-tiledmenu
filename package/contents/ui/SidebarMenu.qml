@@ -18,7 +18,7 @@ MouseArea {
 		if (open) {
 			forceActiveFocus()
 		} else {
-			searchField.forceActiveFocus()
+			searchView.searchField.forceActiveFocus()
 		}
 	}
 

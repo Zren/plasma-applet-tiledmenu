@@ -1,134 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0
-      http://www.kde.org/standards/kcfg/1.0/kcfg.xsd" >
-  <kcfgfile name=""/>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+	<kcfgfile name=""/>
 
-  <group name="General">
-    <entry name="fullscreen" type="bool"> 
-      <default>false</default>
-    </entry>
-    <entry name="icon" type="String">
-      <label>The name of the icon used in the compact representation (e.g. on a small panel).</label>
-      <default>start-here-kde</default>
-    </entry>
-    <entry name="fixedPanelIcon" type="bool">
-      <default>true</default>
-    </entry>
-    <entry name="searchResultsMerged" type="bool">
-      <default>true</default>
-    </entry>
-    <entry name="searchResultsCustomSort" type="bool">
-      <default>false</default>
-    </entry>
-    <entry name="searchResultsReversed" type="bool">
-      <default>false</default>
-    </entry>
-    <entry name="showRecentApps" type="bool">
-      <label>Whether to show the "Recent Applications" category.</label>
-      <default>true</default>
-    </entry>
-    <entry name="recentOrdering" type="int">
-      <label>How should the previously used apps/docs/contacts be ordered: 0 = RecentFirst, 1 = PopularFirst</label>
-      <default>1</default>
-    </entry>
-    <entry name="numRecentApps" type="int">
-      <default>5</default>
-    </entry>
-    <entry name="sidebarShortcuts" type="StringList">
-      <label>Same as favoriteApps except "xdg:DOCUMENTS", etc are constants to ~/Documents.</label>
-      <default>xdg:DOCUMENTS,xdg:PICTURES,org.kde.dolphin.desktop,systemsettings.desktop</default>
-    </entry>
-    <entry name="defaultAppListView" type="string">
-      <!-- enum: Alphabetical, Categories, JumpToLetter, JumpToCategory, TilesOnly -->
-      <default>Alphabetical</default>
-    </entry>
+	<group name="General">
+		<entry name="fullscreen" type="bool"> 
+			<default>false</default>
+		</entry>
+		<entry name="icon" type="String">
+			<label>The name of the icon used in the compact representation (e.g. on a small panel).</label>
+			<default>start-here-kde</default>
+		</entry>
+		<entry name="fixedPanelIcon" type="bool">
+			<default>true</default>
+		</entry>
+		<entry name="searchResultsMerged" type="bool">
+			<default>true</default>
+		</entry>
+		<entry name="searchResultsCustomSort" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="searchResultsReversed" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="showRecentApps" type="bool">
+			<label>Whether to show the "Recent Applications" category.</label>
+			<default>true</default>
+		</entry>
+		<entry name="recentOrdering" type="int">
+			<label>How should the previously used apps/docs/contacts be ordered: 0 = RecentFirst, 1 = PopularFirst</label>
+			<default>1</default>
+		</entry>
+		<entry name="numRecentApps" type="int">
+			<default>5</default>
+		</entry>
+		<entry name="sidebarShortcuts" type="StringList">
+			<label>Same as favoriteApps except "xdg:DOCUMENTS", etc are constants to ~/Documents.</label>
+			<default>xdg:DOCUMENTS,xdg:PICTURES,org.kde.dolphin.desktop,systemsettings.desktop</default>
+		</entry>
+		<entry name="defaultAppListView" type="string">
+			<!-- enum: Alphabetical, Categories, JumpToLetter, JumpToCategory, TilesOnly -->
+			<default>Alphabetical</default>
+		</entry>
 
-    <!-- Base64 encoded JSON -->
-    <entry name="tileModel" type="string" stringType="base64json">
-      <!-- Schema: [{ url: "konsole.desktop", x: 3, y: 0, w: 2, h: 2, label: "Terminal" }, ...] -->
-      <!-- For Testing: W3siaCI6MiwidXJsIjoib3JnLmtkZS5hcmsuZGVza3RvcCIsInciOjIsIngiOjQsInkiOjB9LHsiaCI6NCwidXJsIjoib3JnLmtkZS5kaXNjb3Zlci5kZXNrdG9wIiwidyI6NCwieCI6MCwieSI6MH0seyJoIjoyLCJ1cmwiOiJvcmcua2RlLmRvbHBoaW4uZGVza3RvcCIsInciOjIsIngiOjQsInkiOjJ9LHsiaCI6MiwidXJsIjoib3JnLmtkZS5rc3lzZ3VhcmQuZGVza3RvcCIsInciOjQsIngiOjAsInkiOjR9LHsiaCI6MSwidXJsIjoib3JnLmtkZS5rb25zb2xlLmRlc2t0b3AiLCJ3IjoyLCJ4IjowLCJ5Ijo2fSx7ImgiOjEsInVybCI6Im9yZy5rZGUua2F0ZS5kZXNrdG9wIiwidyI6MSwieCI6MywieSI6Nn0seyJoIjozLCJ1cmwiOiJmaXJlZm94LmRlc2t0b3AiLCJ3IjoxLCJ4Ijo0LCJ5Ijo0fV0= -->
-      <default></default>
-    </entry>
-    <entry name="tileScale" type="double">
-      <default>0.8</default>
-    </entry>
-    <entry name="tileMargin" type="double">
-      <default>5</default>
-    </entry>
-    <entry name="tilesLocked" type="bool">
-      <default>false</default>
-    </entry>
+		<!-- Base64 encoded JSON -->
+		<entry name="tileModel" type="string" stringType="base64json">
+			<!-- Schema: [{ url: "konsole.desktop", x: 3, y: 0, w: 2, h: 2, label: "Terminal" }, ...] -->
+			<!-- For Testing: W3siaCI6MiwidXJsIjoib3JnLmtkZS5hcmsuZGVza3RvcCIsInciOjIsIngiOjQsInkiOjB9LHsiaCI6NCwidXJsIjoib3JnLmtkZS5kaXNjb3Zlci5kZXNrdG9wIiwidyI6NCwieCI6MCwieSI6MH0seyJoIjoyLCJ1cmwiOiJvcmcua2RlLmRvbHBoaW4uZGVza3RvcCIsInciOjIsIngiOjQsInkiOjJ9LHsiaCI6MiwidXJsIjoib3JnLmtkZS5rc3lzZ3VhcmQuZGVza3RvcCIsInciOjQsIngiOjAsInkiOjR9LHsiaCI6MSwidXJsIjoib3JnLmtkZS5rb25zb2xlLmRlc2t0b3AiLCJ3IjoyLCJ4IjowLCJ5Ijo2fSx7ImgiOjEsInVybCI6Im9yZy5rZGUua2F0ZS5kZXNrdG9wIiwidyI6MSwieCI6MywieSI6Nn0seyJoIjozLCJ1cmwiOiJmaXJlZm94LmRlc2t0b3AiLCJ3IjoxLCJ4Ijo0LCJ5Ijo0fV0= -->
+			<default></default>
+		</entry>
+		<entry name="tileScale" type="double">
+			<default>0.8</default>
+		</entry>
+		<entry name="tileMargin" type="double">
+			<default>5</default>
+		</entry>
+		<entry name="tilesLocked" type="bool">
+			<default>false</default>
+		</entry>
 
-    <!-- Colors -->
-    <!-- Use empty string instead of color type so that we can use default colors from the color scheme. -->
-    <entry name="defaultTileColor" type="string">
-      <default></default>
-    </entry>
-    <entry name="sidebarBackgroundColor" type="string">
-      <default></default>
-    </entry>
+		<!-- Colors -->
+		<!-- Use empty string instead of color type so that we can use default colors from the color scheme. -->
+		<entry name="defaultTileColor" type="string">
+			<default></default>
+		</entry>
+		<entry name="sidebarBackgroundColor" type="string">
+			<default></default>
+		</entry>
 
-    <!-- Style -->
-    <entry name="searchFieldFollowsTheme" type="bool">
-      <default>false</default>
-    </entry>
-    <entry name="sidebarFollowsTheme" type="bool">
-      <default>false</default>
-    </entry>
-    <entry name="tileLabelAlignment" type="string">
-      <!-- enum: left, center, right -->
-      <default>left</default>
-    </entry>
-    <entry name="appDescription" type="string">
-      <!-- enum: hidden, after, below -->
-      <default>after</default>
-    </entry>
-    <entry name="menuItemHeight" type="int">
-      <default>36</default>
-    </entry>
-    <entry name="searchFieldHeight" type="int">
-      <default>50</default>
-    </entry>
-    <entry name="appListWidth" type="int">
-      <default>350</default>
-    </entry>
-    <entry name="favGridCols" type="int">
-      <default>6</default>
-    </entry>
-    <entry name="popupHeight" type="int">
-      <default>620</default>
-    </entry>
+		<!-- Style -->
+		<entry name="searchFieldFollowsTheme" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="sidebarFollowsTheme" type="bool">
+			<default>false</default>
+		</entry>
+		<entry name="tileLabelAlignment" type="string">
+			<!-- enum: left, center, right -->
+			<default>left</default>
+		</entry>
+		<entry name="appDescription" type="string">
+			<!-- enum: hidden, after, below -->
+			<default>after</default>
+		</entry>
+		<entry name="menuItemHeight" type="int">
+			<default>36</default>
+		</entry>
+		<entry name="searchFieldHeight" type="int">
+			<default>50</default>
+		</entry>
+		<entry name="appListWidth" type="int">
+			<default>350</default>
+		</entry>
+		<entry name="favGridCols" type="int">
+			<default>6</default>
+		</entry>
+		<entry name="popupHeight" type="int">
+			<default>620</default>
+		</entry>
 
-    <!-- Removed v28
-    <entry name="favoriteApps" type="StringList">
-      <label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
-      <default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover</default>
-    </entry>
-    <entry name="tileData" type="string" stringType="base64json">
-      <label>Schema: { "konsole.desktop": { size: "1x1", x: 3, y: 0, label: "Terminal" }, ...}</label>
-      <default></default>
-    </entry>
-    -->
-    
-    <!-- Removed v24
-    <entry name="defaultAppListOrder" type="string">
-      < enum: alphabetical, categories >
-      <default>alphabetical</default>
-    </entry>
-    -->
-    
-    <!-- Removed v14
-    Both were serialized in pixels rather than dpi units
-    <entry name="width" type="int">
-      <default>0</default>
-    </entry>
-    <entry name="height" type="int"> 
-      <default>0</default>
-    </entry>
-    -->
-  </group>
+		<!-- Removed v28
+		<entry name="favoriteApps" type="StringList">
+			<label>List of general favorites. Supported values are menu id's (usually .desktop file names), special URLs that expand into default applications (e.g. preferred://browser), document URLs and KPeople contact URIs.</label>
+			<default>preferred://browser,kontact.desktop,systemsettings.desktop,org.kde.dolphin.desktop,ktp-contactlist.desktop,org.kde.kate.desktop,org.kde.discover</default>
+		</entry>
+		<entry name="tileData" type="string" stringType="base64json">
+			<label>Schema: { "konsole.desktop": { size: "1x1", x: 3, y: 0, label: "Terminal" }, ...}</label>
+			<default></default>
+		</entry>
+		-->
+		
+		<!-- Removed v24
+		<entry name="defaultAppListOrder" type="string">
+			< enum: alphabetical, categories >
+			<default>alphabetical</default>
+		</entry>
+		-->
+		
+		<!-- Removed v14
+		Both were serialized in pixels rather than dpi units
+		<entry name="width" type="int">
+			<default>0</default>
+		</entry>
+		<entry name="height" type="int"> 
+			<default>0</default>
+		</entry>
+		-->
+	</group>
 
 </kcfg>
 

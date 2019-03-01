@@ -66,6 +66,9 @@ Item {
 	}
 
 	function showTilesOnly() {
+		if (!showingAppList) {
+			appsView.show(stackView.noTransition)
+		}
 		config.showSearch = false
 	}
 

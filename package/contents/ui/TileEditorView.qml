@@ -164,7 +164,7 @@ ColumnLayout {
 	}
 
 	function close() {
-		appsView.show()
+		searchView.showDefaultView()
 	}
 
 

@@ -48,7 +48,7 @@ GroupBox {
 
 		Requests.getFile(appObj.appUrl, function(err, data) {
 			if (err) {
-				return callback(err)
+				return
 			}
 
 			var desktopFile = Requests.parseMetadata(data)

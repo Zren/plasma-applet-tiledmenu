@@ -1,3 +1,9 @@
+## v29 - February 28 2019
+
+* Make sure the AppList area (and TileEditor) is visible when opened from TilesOnly view, and return to TilesOnly view when TileEditor is closed.
+* Fix the "desktop theme" search view being slightly visible in TilesOnly view (Issue #40)
+* Fix double "Keyboard Shortcut" tab in Plasma 5.15
+
 ## v28 - January 28 2019
 
 * Add Indonesian translations by @ardumpl (Issue #34)

@@ -13,13 +13,7 @@ ConfigPage {
 	id: page
 	showAppletVersion: true
 
-	function exists(obj) {
-		return typeof mainColumn !== "undefined" && mainColumn !== null
-	}
 	function getTopItem(item) {
-		if (!item.parent) {
-			return null
-		}
 		var curItem = item
 		while (curItem.parent) {
 			curItem = curItem.parent
@@ -27,17 +21,22 @@ ConfigPage {
 		return curItem
 	}
 	function hideKeyboardShortcutTab() {
+		// console.log('root', root)
+		// console.log('root.parent', root.parent)
+		// console.log('getTopItem(root)', getTopItem(root))
+		
 		// https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/configuration/AppletConfiguration.qml
-		// The "root" id can't be referenced here, so use one of the child id's and get it's parent.
-		var appletConfiguration = null
-		if (exists(mainColumn)) { // Plasma 5.14 and below
+		// The "root" id can't always be referenced here, so use one of the child id's and get it's parent.
+		var appletConfiguration
+		if (typeof mainColumn !== "undefined") { // Plasma 5.14 and below
 			appletConfiguration = mainColumn.parent
-		} else if (exists(root)) { // Plasma 5.15 and above
-			// root is the StackView { id: pageStack }
+		} else if (typeof root !== "undefined") { // Plasma 5.15 and above
+			// root is the StackView { id: pageStack } in plasmoidviewer
 			// walk up to the top node of the "DOM" for AppletConfiguration
+			// However root in plasmashell is AppletConfiguration for some reason...
 			appletConfiguration = getTopItem(root)
 		}
-		if (exists(appletConfiguration) && exists(appletConfiguration.globalConfigModel)) {
+		if (typeof appletConfiguration !== "undefined" && typeof appletConfiguration.globalConfigModel !== "undefined") {
 			// Remove default Global Keyboard Shortcut config tab.
 			var keyboardShortcuts = appletConfiguration.globalConfigModel.get(0)
 			appletConfiguration.globalConfigModel.removeCategoryAt(0)

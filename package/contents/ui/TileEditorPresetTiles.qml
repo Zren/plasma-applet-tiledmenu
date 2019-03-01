@@ -42,6 +42,10 @@ GroupBox {
 	}
 
 	function checkIfSteamLauncher() {
+		if (!appObj.appUrl) {
+			return
+		}
+
 		Requests.getFile(appObj.appUrl, function(err, data) {
 			if (err) {
 				return callback(err)

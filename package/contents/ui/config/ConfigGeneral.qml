@@ -12,14 +12,40 @@ import "../lib"
 ConfigPage {
 	id: page
 	showAppletVersion: true
-	
-	Component.onCompleted: {
-		// https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/configuration/AppletConfiguration.qml
-		var appletConfiguration = mainColumn.parent
 
-		// Remove default Global Keyboard Shortcut config tab.
-		var keyboardShortcuts = appletConfiguration.globalConfigModel.get(0)
-		appletConfiguration.globalConfigModel.removeCategoryAt(0)
+	function exists(obj) {
+		return typeof mainColumn !== "undefined" && mainColumn !== null
+	}
+	function getTopItem(item) {
+		if (!item.parent) {
+			return null
+		}
+		var curItem = item
+		while (curItem.parent) {
+			curItem = curItem.parent
+		}
+		return curItem
+	}
+	function hideKeyboardShortcutTab() {
+		// https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/configuration/AppletConfiguration.qml
+		// The "root" id can't be referenced here, so use one of the child id's and get it's parent.
+		var appletConfiguration = null
+		if (exists(mainColumn)) { // Plasma 5.14 and below
+			appletConfiguration = mainColumn.parent
+		} else if (exists(root)) { // Plasma 5.15 and above
+			// root is the StackView { id: pageStack }
+			// walk up to the top node of the "DOM" for AppletConfiguration
+			appletConfiguration = getTopItem(root)
+		}
+		if (exists(appletConfiguration) && exists(appletConfiguration.globalConfigModel)) {
+			// Remove default Global Keyboard Shortcut config tab.
+			var keyboardShortcuts = appletConfiguration.globalConfigModel.get(0)
+			appletConfiguration.globalConfigModel.removeCategoryAt(0)
+		}
+	}
+
+	Component.onCompleted: {
+		hideKeyboardShortcutTab()
 	}
 
 	AppletConfig {

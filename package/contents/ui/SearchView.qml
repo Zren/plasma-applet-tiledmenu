@@ -13,7 +13,7 @@ import "Utils.js" as Utils
 
 Item {
 	id: searchView
-	implicitWidth: config.leftSectionWidth
+	implicitWidth: config.appAreaWidth
 	// Behavior on implicitWidth {
 	// 	NumberAnimation { duration: 400 }
 	// }
@@ -231,7 +231,6 @@ Item {
 		id: searchField
 		// width: 430
 		height: config.searchFieldHeight
-		anchors.leftMargin: config.sidebarWidth + config.sidebarRightMargin
 		anchors.left: parent.left
 		anchors.right: parent.right
 

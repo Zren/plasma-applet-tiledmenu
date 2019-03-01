@@ -17,10 +17,14 @@ MouseArea {
 		anchors.fill: parent
 		spacing: 0
 
+		Item {
+			id: sidebarPlaceholder
+			implicitWidth: config.sidebarWidth + config.sidebarRightMargin
+			Layout.fillHeight: true
+		}
+
 		SearchView {
 			id: searchView
-			// Layout.minimumWidth: config.leftSectionWidth
-			// Layout.maximumWidth: config.leftSectionWidth
 			Layout.fillHeight: true
 		}
 

@@ -41,7 +41,7 @@ Or if you know how to make a pull request
 | id       |   97/97 |  100% |
 | ko       |   95/97 |   97% |
 | nl_NL    |   97/97 |  100% |
-| pl       |    1/97 |    1% |
+| pl       |    0/97 |    0% |
 | pt_PT    |   87/97 |   89% |
 | ru       |   90/97 |   92% |
 | zh_CN    |   86/97 |   88% |

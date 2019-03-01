@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-01-27 20:12-0500\n"
+"POT-Creation-Date: 2019-02-28 22:09-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Dika Muhamad A. <ardumpl@gmail.com>\n"
 "Language-Team: Indonesia <LL@li.org>\n"
@@ -48,155 +48,155 @@ msgstr "Aplikasi Terkini"
 msgid "Most Used"
 msgstr "Paling Banyak Dipakai"
 
-#: ../contents/ui/config/ConfigGeneral.qml:32
+#: ../contents/ui/config/ConfigGeneral.qml:57
 msgid "Popup"
 msgstr "Popup"
 
-#: ../contents/ui/config/ConfigGeneral.qml:35
+#: ../contents/ui/config/ConfigGeneral.qml:60
 msgid "Fullscreen"
 msgstr "Tampilkan Layar Penuh"
 
-#: ../contents/ui/config/ConfigGeneral.qml:41
+#: ../contents/ui/config/ConfigGeneral.qml:66
 msgid "Grid Columns"
 msgstr "Kolom Grid"
 
-#: ../contents/ui/config/ConfigGeneral.qml:46
+#: ../contents/ui/config/ConfigGeneral.qml:71
 msgid "Panel Icon"
 msgstr "Ikon Panel"
 
-#: ../contents/ui/config/ConfigGeneral.qml:53
+#: ../contents/ui/config/ConfigGeneral.qml:78
 msgid "Fixed Size"
 msgstr "Kunci Ukuran Ikon Panel"
 
-#: ../contents/ui/config/ConfigGeneral.qml:61
+#: ../contents/ui/config/ConfigGeneral.qml:86
 msgid "Tiles"
 msgstr "Ubin"
 
-#: ../contents/ui/config/ConfigGeneral.qml:67
+#: ../contents/ui/config/ConfigGeneral.qml:92
 msgid "Tile Size"
 msgstr "Ukuran Ubin"
 
-#: ../contents/ui/config/ConfigGeneral.qml:74 ../contents/ui/config/ConfigGeneral.qml:80 ../contents/ui/config/ConfigGeneral.qml:247 ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/config/ConfigGeneral.qml:336
+#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/config/ConfigGeneral.qml:297 ../contents/ui/config/ConfigGeneral.qml:361
 msgid "px"
 msgstr " piksel"
 
-#: ../contents/ui/config/ConfigGeneral.qml:79
+#: ../contents/ui/config/ConfigGeneral.qml:104
 msgid "Tile Margin"
 msgstr "Margin Ubin"
 
-#: ../contents/ui/config/ConfigGeneral.qml:86 ../contents/ui/config/ConfigGeneral.qml:128 ../contents/ui/config/ConfigGeneral.qml:252
+#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:153 ../contents/ui/config/ConfigGeneral.qml:277
 msgid "Desktop Theme (%1)"
 msgstr "Sesuaikan Warna dengan Tema Desktop (%1)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:94 ../contents/ui/config/ConfigGeneral.qml:135
+#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:160
 msgid "Custom Color"
 msgstr "Warna Kustom"
 
-#: ../contents/ui/config/ConfigGeneral.qml:105
+#: ../contents/ui/config/ConfigGeneral.qml:130
 msgid "Transparent"
 msgstr "Transparan"
 
-#: ../contents/ui/config/ConfigGeneral.qml:114
+#: ../contents/ui/config/ConfigGeneral.qml:139
 msgid "Text Alignment"
 msgstr "Perataan Teks"
 
-#: ../contents/ui/config/ConfigGeneral.qml:116
+#: ../contents/ui/config/ConfigGeneral.qml:141
 msgid "Left"
 msgstr "Kiri"
 
-#: ../contents/ui/config/ConfigGeneral.qml:117
+#: ../contents/ui/config/ConfigGeneral.qml:142
 msgid "Center"
 msgstr "Tengah"
 
-#: ../contents/ui/config/ConfigGeneral.qml:118
+#: ../contents/ui/config/ConfigGeneral.qml:143
 msgid "Right"
 msgstr "Kanan"
 
-#: ../contents/ui/config/ConfigGeneral.qml:125
+#: ../contents/ui/config/ConfigGeneral.qml:150
 msgid "Sidebar"
 msgstr "Bilah Sisi"
 
-#: ../contents/ui/config/ConfigGeneral.qml:149
+#: ../contents/ui/config/ConfigGeneral.qml:174
 msgid "Sidebar Shortcuts"
 msgstr "Pintasan Bilah Sisi"
 
-#: ../contents/ui/config/ConfigGeneral.qml:195
+#: ../contents/ui/config/ConfigGeneral.qml:220
 msgid "Add Default"
 msgstr "Tambahkan Default"
 
-#: ../contents/ui/config/ConfigGeneral.qml:242
+#: ../contents/ui/config/ConfigGeneral.qml:267
 msgid "Search Box"
 msgstr "Kotak Pencarian"
 
-#: ../contents/ui/config/ConfigGeneral.qml:246
+#: ../contents/ui/config/ConfigGeneral.qml:271
 msgid "Search Field Height"
 msgstr "Tinggi Kotak Pencarian"
 
-#: ../contents/ui/config/ConfigGeneral.qml:258
+#: ../contents/ui/config/ConfigGeneral.qml:283
 msgid "Windows (White)"
 msgstr "Warna Putih"
 
-#: ../contents/ui/config/ConfigGeneral.qml:266
+#: ../contents/ui/config/ConfigGeneral.qml:291
 msgid "App List"
 msgstr "Daftar Aplikasi"
 
-#: ../contents/ui/config/ConfigGeneral.qml:271
+#: ../contents/ui/config/ConfigGeneral.qml:296
 msgid "App List Area Width"
 msgstr "Lebar Daftar Aplikasi"
 
-#: ../contents/ui/config/ConfigGeneral.qml:279
+#: ../contents/ui/config/ConfigGeneral.qml:304
 msgid "Default View"
 msgstr "Tampilan Awal"
 
-#: ../contents/ui/config/ConfigGeneral.qml:281 ../contents/ui/SidebarView.qml:64
+#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:64
 msgid "Alphabetical"
 msgstr "Urut Alfabet"
 
-#: ../contents/ui/config/ConfigGeneral.qml:282 ../contents/ui/SidebarView.qml:70
+#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:70
 msgid "Categories"
 msgstr "Kategori"
 
-#: ../contents/ui/config/ConfigGeneral.qml:283
+#: ../contents/ui/config/ConfigGeneral.qml:308
 msgid "Jump To Letter"
 msgstr "Lompat ke Huruf"
 
-#: ../contents/ui/config/ConfigGeneral.qml:284
+#: ../contents/ui/config/ConfigGeneral.qml:309
 msgid "Jump To Category"
 msgstr "Lompat ke Kategori"
 
-#: ../contents/ui/config/ConfigGeneral.qml:285 ../contents/ui/SidebarView.qml:58
+#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:58
 msgid "Tiles Only"
 msgstr "Tampilkan Ubin Saja"
 
-#: ../contents/ui/config/ConfigGeneral.qml:292
+#: ../contents/ui/config/ConfigGeneral.qml:317
 msgid "App Description"
 msgstr "Deskripsi Aplikasi"
 
-#: ../contents/ui/config/ConfigGeneral.qml:294
+#: ../contents/ui/config/ConfigGeneral.qml:319
 msgid "Hidden"
 msgstr "Sembunyikan Deskripsi"
 
-#: ../contents/ui/config/ConfigGeneral.qml:295
+#: ../contents/ui/config/ConfigGeneral.qml:320
 msgid "After"
 msgstr "Setelah Nama Aplikasi"
 
-#: ../contents/ui/config/ConfigGeneral.qml:296
+#: ../contents/ui/config/ConfigGeneral.qml:321
 msgid "Below"
 msgstr "Di bawah Nama Aplikasi"
 
-#: ../contents/ui/config/ConfigGeneral.qml:335
+#: ../contents/ui/config/ConfigGeneral.qml:360
 msgid "Icon Size"
 msgstr "Ukuran Ikon"
 
-#: ../contents/ui/config/ConfigGeneral.qml:351
+#: ../contents/ui/config/ConfigGeneral.qml:376
 msgid "Search Results"
 msgstr "Hasil Pencarian"
 
-#: ../contents/ui/config/ConfigGeneral.qml:355
+#: ../contents/ui/config/ConfigGeneral.qml:380
 msgid "Merged (Application Launcher)"
 msgstr "Digabung (Peluncur Aplikasi)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:364
+#: ../contents/ui/config/ConfigGeneral.qml:389
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Pisahkan dalam Kategori (Menu Aplikasi / Dasbor)"
 
@@ -232,11 +232,11 @@ msgstr "Manajer Berkas"
 msgid "Edit Applications..."
 msgstr "Sunting Aplikasi..."
 
-#: ../contents/ui/Popup.qml:65 ../contents/ui/Popup.qml:81
+#: ../contents/ui/Popup.qml:69 ../contents/ui/Popup.qml:85
 msgid "Resize?"
 msgstr "Ingin Ubah Ukuran?"
 
-#: ../contents/ui/Popup.qml:66 ../contents/ui/Popup.qml:82
+#: ../contents/ui/Popup.qml:70 ../contents/ui/Popup.qml:86
 msgid "Alt + Right Click to resize the menu."
 msgstr "Cukup dengan tombol Alt+Klik Kanan"
 

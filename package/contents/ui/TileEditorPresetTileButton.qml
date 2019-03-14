@@ -86,18 +86,25 @@ Item {
 	function select() {
 		logger.debug('select', source)
 
-		var tiledMenuDir = getDownloadDir()
-		var localFilepath = tiledMenuDir + filename
-		logger.debug('localFilepath', localFilepath)
-
-		// Save tile image to file
-		logger.debug('grabToImage.start')
-		image.grabToImage(function(result){
-			logger.debug('grabToImage.done', result, result.url)
-			result.saveToFile(localFilepath)
-			presetTileButton.setTileBackgroundImage(localFilepath)
+		var sourceFilepath = '' + source // cast to string
+		var isLocalFilepath = sourceFilepath.indexOf('file://') == 0 || sourceFilepath.indexOf('/') == 0
+		if (isLocalFilepath) {
+			presetTileButton.setTileBackgroundImage(source)
 			presetTileButton.resizeTile()
-		}, image.sourceSize)
+		} else {
+			var tiledMenuDir = getDownloadDir()
+			var localFilepath = tiledMenuDir + filename
+			logger.debug('localFilepath', localFilepath)
+
+			// Save tile image to file
+			logger.debug('grabToImage.start')
+			image.grabToImage(function(result){
+				logger.debug('grabToImage.done', result, result.url)
+				result.saveToFile(localFilepath)
+				presetTileButton.setTileBackgroundImage(localFilepath)
+				presetTileButton.resizeTile()
+			}, image.sourceSize)
+		}
 	}
 
 }

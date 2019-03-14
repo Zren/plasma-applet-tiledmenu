@@ -46,6 +46,10 @@ GroupBox {
 			return
 		}
 
+		if (!isDesktopFile) {
+			return
+		}
+
 		Requests.getFile(appObj.appUrl, function(err, data) {
 			if (err) {
 				console.log('[tiledmenu] checkIfSteamLauncher.err', err)

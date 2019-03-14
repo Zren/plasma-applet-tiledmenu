@@ -12,6 +12,8 @@ import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
 import "lib"
 import "lib/Requests.js" as Requests
 
+// Note: This references a global KCoreAddons.KUser { id: kuser }
+
 GroupBox {
 	id: tileEditorPresetTiles
 	title: "Label"

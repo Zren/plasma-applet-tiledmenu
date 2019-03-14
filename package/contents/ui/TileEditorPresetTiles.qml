@@ -36,12 +36,15 @@ GroupBox {
 	readonly property bool isDesktopFile: endsWith(appObj.appUrl, '.desktop')
 	property string steamGameId: ''
 	property bool isSteamGameLauncher: !!steamGameId
+	property string lutrisGameSlug: ''
+	property bool isLutrisGameLauncher: !!lutrisGameSlug
 
 	function endsWith(s, substr) {
 		return s.indexOf(substr) == s.length - substr.length
 	}
 
-	function checkIfSteamLauncher() {
+	function checkIfRecognizedLauncher() {
+		console.log('checkIfRecognizedLauncher', appObj.appUrl)
 		if (!appObj.appUrl) {
 			return
 		}
@@ -52,21 +55,38 @@ GroupBox {
 
 		Requests.getFile(appObj.appUrl, function(err, data) {
 			if (err) {
-				console.log('[tiledmenu] checkIfSteamLauncher.err', err)
+				console.log('[tiledmenu] checkIfRecognizedLauncher.err', err)
 				return
 			}
 
 			var desktopFile = Requests.parseMetadata(data)
-			var steamCommandRegex = /steam steam:\/\/rungameid\/(\d+)/
-			var m = steamCommandRegex.exec(desktopFile['Exec'])
-			if (m) {
-				tileEditorPresetTiles.steamGameId = m[1]
-			} else {
-				tileEditorPresetTiles.steamGameId = '' // Reset
-			}
+			checkIfSteamLauncher(desktopFile)
+			checkIfLutrisLauncher(desktopFile)
 
 			tileEditorPresetTiles.checkForPreset()
-		});
+		})
+	}
+
+	function checkIfSteamLauncher(desktopFile) {
+		var steamCommandRegex = /steam steam:\/\/rungameid\/(\d+)/
+		var m = steamCommandRegex.exec(desktopFile['Exec'])
+		if (m) {
+			tileEditorPresetTiles.steamGameId = m[1]
+		} else {
+			tileEditorPresetTiles.steamGameId = '' // Reset
+		}
+	}
+
+	function checkIfLutrisLauncher(desktopFile) {
+		var lutrisCommandRegex = /lutris lutris:rungameid\/(\d+)/
+		var m1 = lutrisCommandRegex.exec(desktopFile['Exec'])
+		var lutrisIconRegex = /^lutris_(.+)$/
+		var m2 = lutrisIconRegex.exec(desktopFile['Icon'])
+		if (m1 && m2) {
+			tileEditorPresetTiles.lutrisGameSlug = m2[1]
+		} else {
+			tileEditorPresetTiles.lutrisGameSlug = '' // Reset
+		}
 	}
 
 	Connections {
@@ -76,7 +96,7 @@ GroupBox {
 			logger.debug('onAppUrlChanged', appObj.appUrl)
 			tileEditorPresetTiles.steamGameId = ''
 			tileEditorPresetTiles.checkForPreset()
-			tileEditorPresetTiles.checkIfSteamLauncher()
+			tileEditorPresetTiles.checkIfRecognizedLauncher()
 		}
 	}
 
@@ -114,6 +134,15 @@ GroupBox {
 			source: isSteamGameLauncher ? tileImageUrl : ''
 			w: 3
 			h: 2
+		}
+
+		// 5x2 or 2x1
+		TileEditorPresetTileButton {
+			filename: 'lutris_' + lutrisGameSlug + '_2x1.jpg'
+			property string tileImageUrl: '/home/' + kuser.loginName + '/.local/share/lutris/banners/' + lutrisGameSlug + '.jpg'
+			source: (isLutrisGameLauncher && kuser.loginName) ? tileImageUrl : ''
+			w: 2
+			h: 1
 		}
 	}
 }

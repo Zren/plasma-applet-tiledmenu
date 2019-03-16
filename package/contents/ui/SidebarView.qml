@@ -40,10 +40,9 @@ Item {
 		anchors.bottom: parent.bottom
 
 
-		Column {
+		ColumnLayout {
 			id: sidebarMenuTop
-			width: parent.width
-			height: childrenRect.height
+			spacing: 0
 
 			// SidebarItem {
 			// 	iconName: 'open-menu-symbolic'
@@ -80,10 +79,9 @@ Item {
 			// 	// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
 			// }
 		}
-		Column {
-			width: parent.width
-			height: childrenRect.height
+		ColumnLayout {
 			anchors.bottom: parent.bottom
+			spacing: 0
 
 			SidebarItem {
 				iconName: kuser.faceIconUrl ? kuser.faceIconUrl : 'user-identity'

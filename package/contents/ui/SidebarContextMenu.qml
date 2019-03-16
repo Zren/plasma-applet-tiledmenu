@@ -12,28 +12,14 @@ SidebarMenu {
 	open: false
 	anchors.left: parent.right
 	anchors.bottom: parent.bottom
-	width: config.sidebarOpenWidth
-	height: childrenRect.height
+	implicitWidth: content.implicitWidth
+	implicitHeight: content.implicitHeight
 	z: 2
 
 	default property alias _contentChildren: content.data
 
-	Column {
+	ColumnLayout {
 		id: content
-		width: parent.width
-		height: childrenRect.height
-
-		// We're using Column instead of ColumnLayout, so this isn't needed.
-		// Keeping it here in case Layout is used in the future.
-
-		// Workaround for crash when using default on a Layout.
-		// https://bugreports.qt.io/browse/QTBUG-52490
-		// Still affecting Qt 5.7.0
-		// Component.onDestruction: {
-		// 	while (children.length > 0) {
-		// 		children[children.length - 1].parent = page;
-		// 	}
-		// }
 	}
 
 	// onVisibleChanged: {

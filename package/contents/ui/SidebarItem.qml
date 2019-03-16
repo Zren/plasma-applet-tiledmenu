@@ -13,8 +13,8 @@ import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
 
 FlatButton {
 	id: sidebarItem
-	width: parent.width
-	height: config.flatButtonSize
+	Layout.fillWidth: true
+	Layout.minimumWidth: expanded ? config.sidebarMinOpenWidth : implicitWidth
 	property var sidebarMenu: parent.parent // Column.SidebarMenu
 	property bool expanded: sidebarMenu ? sidebarMenu.open : false
 	labelVisible: expanded

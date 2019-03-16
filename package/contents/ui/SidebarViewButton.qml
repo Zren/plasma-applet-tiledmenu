@@ -4,6 +4,8 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 SidebarItem {
 	id: control
 
+	implicitWidth: config.flatButtonSize
+
 	property string appletIconName: ""
 	readonly property string internalIconName: control.checked ? (appletIconName + "-selected") : appletIconName
 	readonly property string appletIconFilename: appletIconName ? plasmoid.file("", "icons/" + internalIconName + ".svg") : ""

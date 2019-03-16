@@ -11,8 +11,7 @@ import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
 
 PlasmaComponents.ToolButton {
 	id: flatButton
-	width: parent.width
-	height: config.flatButtonSize
+	implicitHeight: config.flatButtonSize
 	property var icon: null
 	iconName: ""
 	property bool expanded: true
@@ -31,23 +30,28 @@ PlasmaComponents.ToolButton {
 
 	style: PlasmaStyles.ToolButtonStyle {
 		label: RowLayout {
-			spacing: units.smallSpacing
+			id: labelRowLayout
+			// spacing: units.smallSpacing
+			spacing: 0
 			scale: control.zoomOnPush && control.pressed ? (height-5) / height : 1
 			Behavior on scale { NumberAnimation { duration: 200 } }
 
 			Item {
+				id: iconContainer
 				Layout.fillHeight: true
-				Layout.preferredWidth: height
+				implicitWidth: height
 				visible: !!icon.source
 
 				PlasmaCore.IconItem {
 					id: icon
 					source: control.iconName || control.iconSource || control.icon
-					width: config.flatButtonIconSize
-					height: config.flatButtonIconSize
+					implicitWidth: config.flatButtonIconSize
+					implicitHeight: config.flatButtonIconSize
 					anchors.centerIn: parent
 					// colorGroup: PlasmaCore.Theme.ButtonColorGroup
 				}
+
+				// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
 			}
 
 			PlasmaComponents.Label {
@@ -58,6 +62,19 @@ PlasmaComponents.ToolButton {
 				horizontalAlignment: Text.AlignLeft
 				verticalAlignment: Text.AlignVCenter
 				Layout.fillWidth: true
+
+				// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
+			}
+
+			Item {
+				id: rightPaddingItem
+				Layout.fillHeight: true
+				property int iconMargin: (iconContainer.width - icon.width)/2
+				property int iconPadding: icon.width * (16-12)/16
+				implicitWidth: iconMargin + iconPadding
+				visible: control.labelVisible
+
+				// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
 			}
 		}
 

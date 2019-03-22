@@ -65,8 +65,8 @@ Item {
 			console.log('onDragStarted', JSON.stringify(modelData), index, tileModel.length)
 			// tileGrid.draggedItem = tileModel.splice(index, 1)[0]
 			tileGrid.startDrag(index)
-			tileGrid.dropOffsetX = Math.floor(tileMouseArea.mouseX / cellBoxSize) * cellBoxSize
-			tileGrid.dropOffsetY = Math.floor(tileMouseArea.mouseY / cellBoxSize) * cellBoxSize
+			tileGrid.dropOffsetX = Math.floor(tileMouseArea.pressX / cellBoxSize) * cellBoxSize
+			tileGrid.dropOffsetY = Math.floor(tileMouseArea.pressY / cellBoxSize) * cellBoxSize
 		}
 		onDrop: {
 			console.log('DragArea.onDrop', draggedItem)
@@ -80,7 +80,14 @@ Item {
 			acceptedButtons: Qt.LeftButton | Qt.RightButton
 			cursorShape: editing ? Qt.ClosedHandCursor : Qt.ArrowCursor
 			readonly property bool isLeftPressed: pressedButtons & Qt.LeftButton
-			
+
+			property int pressX: -1
+			property int pressY: -1
+			onPressed: {
+				pressX = mouse.x
+				pressY = mouse.y
+			}
+
 			// This MouseArea will spam "QQuickItem::ungrabMouse(): Item is not the mouse grabber."
 			// but there's no other way of having a clickable drag area.
 			onClicked: {

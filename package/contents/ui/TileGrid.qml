@@ -47,8 +47,6 @@ DragAndDrop.DropArea {
 	function resetDragHover() {
 		dropHoverX = -1
 		dropHoverY = -1
-		dropOffsetX = 0
-		dropOffsetY = 0
 		scrollUpArea.containsDrag = false
 		scrollDownArea.containsDrag = false
 		addedItem = null

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-02-28 22:09-0500\n"
+"POT-Creation-Date: 2019-03-24 11:36-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lin Mu <linmu789632@gmail.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -148,11 +148,11 @@ msgstr "应用列表区域宽度"
 msgid "Default View"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:64
+#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:63
 msgid "Alphabetical"
 msgstr "字母顺序"
 
-#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:70
+#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:69
 msgid "Categories"
 msgstr "分组"
 
@@ -164,7 +164,7 @@ msgstr ""
 msgid "Jump To Category"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:58
+#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
 msgid "Tiles Only"
 msgstr ""
 
@@ -329,16 +329,16 @@ msgstr "单位转换"
 msgid "Filters"
 msgstr "过滤器"
 
-#: ../contents/ui/SidebarView.qml:98
+#: ../contents/ui/SidebarView.qml:96
 #, fuzzy
 msgid "User Manager"
 msgstr "用户管理程序"
 
-#: ../contents/ui/SidebarView.qml:116
+#: ../contents/ui/SidebarView.qml:114
 msgid "Power"
 msgstr "电源"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:122
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:129
 msgid "Edit Tile"
 msgstr "编辑磁贴"
 
@@ -386,24 +386,24 @@ msgstr "背景颜色"
 msgid "Position / Size"
 msgstr "位置/大小"
 
-#: ../contents/ui/TileGrid.qml:467
+#: ../contents/ui/TileGrid.qml:465
 msgid "New Group"
 msgstr "新群组"
 
-#: ../contents/ui/TileGrid.qml:477
+#: ../contents/ui/TileGrid.qml:475
 msgid "Unlock Tiles"
 msgstr "解锁磁贴"
 
-#: ../contents/ui/TileGrid.qml:477
+#: ../contents/ui/TileGrid.qml:475
 msgid "Lock Tiles"
 msgstr "锁定磁贴"
 
-#: ../contents/ui/TileGrid.qml:662
+#: ../contents/ui/TileGrid.qml:660
 msgctxt "default group label"
 msgid "Group"
 msgstr "群组"
 
-#: ../contents/ui/TileItem.qml:115
+#: ../contents/ui/TileItem.qml:122
 msgid "Sort Tiles"
 msgstr ""
 

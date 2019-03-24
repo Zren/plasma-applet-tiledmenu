@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-02-28 22:09-0500\n"
+"POT-Creation-Date: 2019-03-24 11:36-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -148,11 +148,11 @@ msgstr "Comprimento da Área da Lista de Aplicações"
 msgid "Default View"
 msgstr "Vista predefinida"
 
-#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:64
+#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:63
 msgid "Alphabetical"
 msgstr "Alfabeticamente"
 
-#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:70
+#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:69
 msgid "Categories"
 msgstr "Categorias"
 
@@ -164,7 +164,7 @@ msgstr "Saltar Para Letra"
 msgid "Jump To Category"
 msgstr "Saltar Para Categoria"
 
-#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:58
+#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
 msgid "Tiles Only"
 msgstr ""
 
@@ -329,15 +329,15 @@ msgstr "Conversor de Unidades"
 msgid "Filters"
 msgstr "Filtros"
 
-#: ../contents/ui/SidebarView.qml:98
+#: ../contents/ui/SidebarView.qml:96
 msgid "User Manager"
 msgstr "Gestor de Utilizadores"
 
-#: ../contents/ui/SidebarView.qml:116
+#: ../contents/ui/SidebarView.qml:114
 msgid "Power"
 msgstr "Energia"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:122
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:129
 msgid "Edit Tile"
 msgstr "Editar painel"
 
@@ -385,24 +385,24 @@ msgstr "Cor de Fundo"
 msgid "Position / Size"
 msgstr "Posição / Tamanho"
 
-#: ../contents/ui/TileGrid.qml:467
+#: ../contents/ui/TileGrid.qml:465
 msgid "New Group"
 msgstr "Novo Grupo"
 
-#: ../contents/ui/TileGrid.qml:477
+#: ../contents/ui/TileGrid.qml:475
 msgid "Unlock Tiles"
 msgstr "Desbloquear Painéis"
 
-#: ../contents/ui/TileGrid.qml:477
+#: ../contents/ui/TileGrid.qml:475
 msgid "Lock Tiles"
 msgstr "Bloquear Painéis"
 
-#: ../contents/ui/TileGrid.qml:662
+#: ../contents/ui/TileGrid.qml:660
 msgctxt "default group label"
 msgid "Group"
 msgstr "Grupo"
 
-#: ../contents/ui/TileItem.qml:115
+#: ../contents/ui/TileItem.qml:122
 msgid "Sort Tiles"
 msgstr ""
 

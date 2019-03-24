@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-02-28 22:09-0500\n"
+"POT-Creation-Date: 2019-03-24 11:36-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Senkin Nikita <niksnbfmail@gmail.com>\n"
 "Language-Team: Niksn <LL@li.org>\n"
@@ -148,11 +148,11 @@ msgstr "Ширина Списка Приложений"
 msgid "Default View"
 msgstr "Вид по умолчанию"
 
-#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:64
+#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:63
 msgid "Alphabetical"
 msgstr "По Алфавиту"
 
-#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:70
+#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:69
 msgid "Categories"
 msgstr "Категории"
 
@@ -164,7 +164,7 @@ msgstr "Перейти к Букве"
 msgid "Jump To Category"
 msgstr "Перейти к Категории"
 
-#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:58
+#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
 msgid "Tiles Only"
 msgstr ""
 
@@ -329,15 +329,15 @@ msgstr "Преобразование величин"
 msgid "Filters"
 msgstr "Фильтры"
 
-#: ../contents/ui/SidebarView.qml:98
+#: ../contents/ui/SidebarView.qml:96
 msgid "User Manager"
 msgstr "Управление пользователями"
 
-#: ../contents/ui/SidebarView.qml:116
+#: ../contents/ui/SidebarView.qml:114
 msgid "Power"
 msgstr "Выход"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:122
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:129
 msgid "Edit Tile"
 msgstr "Изменить плитку"
 
@@ -385,24 +385,24 @@ msgstr "Цвет Фона"
 msgid "Position / Size"
 msgstr "Расположение / Размер"
 
-#: ../contents/ui/TileGrid.qml:467
+#: ../contents/ui/TileGrid.qml:465
 msgid "New Group"
 msgstr "Новая Группа"
 
-#: ../contents/ui/TileGrid.qml:477
+#: ../contents/ui/TileGrid.qml:475
 msgid "Unlock Tiles"
 msgstr "Разблокировать Плитки"
 
-#: ../contents/ui/TileGrid.qml:477
+#: ../contents/ui/TileGrid.qml:475
 msgid "Lock Tiles"
 msgstr "Заблокировать Плитки"
 
-#: ../contents/ui/TileGrid.qml:662
+#: ../contents/ui/TileGrid.qml:660
 msgctxt "default group label"
 msgid "Group"
 msgstr "Группа"
 
-#: ../contents/ui/TileItem.qml:115
+#: ../contents/ui/TileItem.qml:122
 msgid "Sort Tiles"
 msgstr ""
 

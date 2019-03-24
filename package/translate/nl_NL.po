@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-02-28 22:09-0500\n"
+"POT-Creation-Date: 2019-03-24 11:36-0400\n"
 "PO-Revision-Date: 2018-10-13 21:48+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -150,11 +150,11 @@ msgstr "Breedte"
 msgid "Default View"
 msgstr "Standaardweergave"
 
-#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:64
+#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:63
 msgid "Alphabetical"
 msgstr "Alfabetisch"
 
-#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:70
+#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:69
 msgid "Categories"
 msgstr "Categorieën"
 
@@ -166,7 +166,7 @@ msgstr "Spring naar letter"
 msgid "Jump To Category"
 msgstr "Spring naar categorie"
 
-#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:58
+#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
 msgid "Tiles Only"
 msgstr "Alleen tegels"
 
@@ -331,15 +331,15 @@ msgstr "Eenheden omzetten"
 msgid "Filters"
 msgstr "Filters"
 
-#: ../contents/ui/SidebarView.qml:98
+#: ../contents/ui/SidebarView.qml:96
 msgid "User Manager"
 msgstr "Gebruikersbeheer"
 
-#: ../contents/ui/SidebarView.qml:116
+#: ../contents/ui/SidebarView.qml:114
 msgid "Power"
 msgstr "Afsluitmenu"
 
-#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:122
+#: ../contents/ui/TileEditorView.qml:43 ../contents/ui/TileItem.qml:129
 msgid "Edit Tile"
 msgstr "Tegel bewerken"
 
@@ -387,24 +387,24 @@ msgstr "Achtergrondkleur"
 msgid "Position / Size"
 msgstr "Positie / Grootte"
 
-#: ../contents/ui/TileGrid.qml:467
+#: ../contents/ui/TileGrid.qml:465
 msgid "New Group"
 msgstr "Nieuwe groep"
 
-#: ../contents/ui/TileGrid.qml:477
+#: ../contents/ui/TileGrid.qml:475
 msgid "Unlock Tiles"
 msgstr "Tegels ontgrendelen"
 
-#: ../contents/ui/TileGrid.qml:477
+#: ../contents/ui/TileGrid.qml:475
 msgid "Lock Tiles"
 msgstr "Tegels vergrendelen"
 
-#: ../contents/ui/TileGrid.qml:662
+#: ../contents/ui/TileGrid.qml:660
 msgctxt "default group label"
 msgid "Group"
 msgstr "Groep"
 
-#: ../contents/ui/TileItem.qml:115
+#: ../contents/ui/TileItem.qml:122
 msgid "Sort Tiles"
 msgstr "Tegels sorteren"
 

@@ -1,3 +1,10 @@
+## v30 - April 4 2019
+
+* Fix sidebar menus not resizing to fix translated text (Issue #37).
+* Add support for a 2x1 Lutris game tile preset.
+* Don't "download" the linked file associated with a tile when opening the tile editor unless it's a `*.desktop` file.
+* Fix weird drag origins when moving tiles.
+
 ## v29 - February 28 2019
 
 * Make sure the AppList area (and TileEditor) is visible when opened from TilesOnly view, and return to TilesOnly view when TileEditor is closed.

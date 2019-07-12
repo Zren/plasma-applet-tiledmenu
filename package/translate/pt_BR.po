@@ -78,8 +78,7 @@ msgstr "Tiles"
 msgid "Tile Size"
 msgstr "Tamanho dos tiles"
 
-#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/config/ConfigGeneral.qml:297
-#: ../contents/ui/config/ConfigGeneral.qml:361
+#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/config/ConfigGeneral.qml:297 ../contents/ui/config/ConfigGeneral.qml:361
 msgid "px"
 msgstr "px"
 
@@ -204,12 +203,8 @@ msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Por categorias (Menu de aplicativos / Painel de aplicativos)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml:58
-msgid ""
-"When this widget has a global shortcut set, like 'Alt+F1', Plasma will open"
-" this menu with just the ⊞ Windows / Meta key."
-msgstr ""
-"Caso este widget tenha um atalho global configurado (como Alt+F1), o Plasma"
-" irá abrir este menu ao pressionar a tecla ⊞ Windows / Meta."
+msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
+msgstr "Caso este widget tenha um atalho global configurado (como Alt+F1), o Plasma irá abrir este menu ao pressionar a tecla ⊞ Windows / Meta."
 
 #: ../contents/ui/lib/AppletVersion.qml:41
 msgid "<b>Version:</b> %1"

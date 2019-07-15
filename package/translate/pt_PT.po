@@ -22,7 +22,7 @@ msgstr "Geral"
 
 #: ../contents/config/config.qml:12
 msgid "Import/Export Layout"
-msgstr ""
+msgstr "Importar/Exportar layout"
 
 #: ../contents/config/config.qml:17
 msgid "Advanced"
@@ -46,7 +46,7 @@ msgstr "Aplicações recentes"
 
 #: ../contents/ui/AppsModel.qml:40
 msgid "Most Used"
-msgstr ""
+msgstr "Mais usados"
 
 #: ../contents/ui/config/ConfigGeneral.qml:57
 msgid "Popup"
@@ -58,7 +58,7 @@ msgstr "Ecrã inteiro"
 
 #: ../contents/ui/config/ConfigGeneral.qml:66
 msgid "Grid Columns"
-msgstr ""
+msgstr "Colunas da grelha"
 
 #: ../contents/ui/config/ConfigGeneral.qml:71
 msgid "Panel Icon"
@@ -126,7 +126,7 @@ msgstr "Adicionar predefinição"
 
 #: ../contents/ui/config/ConfigGeneral.qml:267
 msgid "Search Box"
-msgstr "Barra depesquisa"
+msgstr "Barra de pesquisa"
 
 #: ../contents/ui/config/ConfigGeneral.qml:271
 msgid "Search Field Height"
@@ -166,7 +166,7 @@ msgstr "Saltar Para Categoria"
 
 #: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
 msgid "Tiles Only"
-msgstr ""
+msgstr "Apenas Painéis"
 
 #: ../contents/ui/config/ConfigGeneral.qml:317
 msgid "App Description"
@@ -307,7 +307,7 @@ msgstr "Dicionário"
 
 #: ../contents/ui/SearchFiltersView.qml:99
 msgid "Shell"
-msgstr ""
+msgstr "Shell"
 
 #: ../contents/ui/SearchFiltersView.qml:106
 msgid "Calculator"
@@ -375,7 +375,7 @@ msgstr "Ficheiros de Imagem (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml:135
 msgid "Preset Tiles"
-msgstr ""
+msgstr "Painéis predefinidos"
 
 #: ../contents/ui/TileEditorView.qml:139
 msgid "Background Color"
@@ -404,7 +404,7 @@ msgstr "Grupo"
 
 #: ../contents/ui/TileItem.qml:122
 msgid "Sort Tiles"
-msgstr ""
+msgstr "Ordenar Painéis"
 
 #~ msgid "Menu"
 #~ msgstr "Menu"
@@ -413,4 +413,4 @@ msgstr ""
 #~ msgstr "Aplicações"
 
 #~ msgid "Show recent applications"
-#~ msgstr "Mostrar apli"
+#~ msgstr "Mostrar aplicações recentes"

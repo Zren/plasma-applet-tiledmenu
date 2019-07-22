@@ -8,14 +8,20 @@ Item {
 	property int pressedRadius: hoverRadius
 	property bool useOutlineMask: true
 
-	property int effectRadius: control && control.pressed ? pressedRadius : hoverRadius
+	property var mouseArea
+	property bool hovered: mouseArea && mouseArea.containsMouse
+	property bool pressed: mouseArea && mouseArea.pressed
+	property int mouseX: mouseArea ? mouseArea.mouseX : width/2
+	property int mouseY: mouseArea ? mouseArea.mouseY : height/2
+
+	property int effectRadius: hoverOutlineEffect.pressed ? pressedRadius : hoverRadius
 	Behavior on effectRadius {
 		NumberAnimation {
 			duration: units.longDuration
 		}
 	}
-	
-	visible: control && control.containsMouse
+
+	visible: hoverOutlineEffect.hovered
 
 	function alpha(c, a) {
 		return Qt.rgba(c.r, c.g, c.b, a)
@@ -30,7 +36,7 @@ Item {
 		visible: !hoverOutlineEffect.useOutlineMask
 		anchors.fill: parent
 		// color: "transparent"
-		color: control && control.pressed ? pressedFillColor : fillColor
+		color: hoverOutlineEffect.pressed ? pressedFillColor : fillColor
 		border.color: borderColor
 		border.width: hoverOutlineSize
 
@@ -45,8 +51,8 @@ Item {
 		id: hoverOutlineMask
 		visible: false
 		anchors.fill: parent
-		horizontalOffset: control && hoverOutlineEffect.visible ? control.mouseX - width/2 : 0
-		verticalOffset: control && hoverOutlineEffect.visible ? control.mouseY - height/2 : 0
+		horizontalOffset: hoverOutlineEffect.visible ? hoverOutlineEffect.mouseX - width/2 : 0
+		verticalOffset: hoverOutlineEffect.visible ? hoverOutlineEffect.mouseY - height/2 : 0
 		horizontalRadius: effectRadius
 		verticalRadius: effectRadius
 		gradient: Gradient {

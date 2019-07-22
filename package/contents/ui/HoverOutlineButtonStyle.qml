@@ -13,6 +13,8 @@ Item {
 		active: control.containsMouse
 		visible: active
 		source: "HoverOutlineButtonEffect.qml"
+
+		property var __control: control
 	}
 
 }

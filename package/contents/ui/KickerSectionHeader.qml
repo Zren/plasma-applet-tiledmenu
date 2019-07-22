@@ -37,10 +37,10 @@ MouseArea {
 	HoverOutlineEffect {
 		id: hoverOutlineEffect
 		anchors.fill: parent
-		visible: enableJumpToSection && control.containsMouse
+		visible: enableJumpToSection && mouseArea.containsMouse
 		hoverRadius: width/2
 		pressedRadius: width
-		property alias control: sectionDelegate
+		mouseArea: sectionDelegate
 	}
 
 	hoverEnabled: true

@@ -52,7 +52,7 @@ Item {
 			}
 		}
 		hoverOutlineSize: tileGrid.hoverOutlineSize
-		property alias control: tileMouseArea
+		mouseArea: tileMouseArea
 	}
 
 	//--- View End

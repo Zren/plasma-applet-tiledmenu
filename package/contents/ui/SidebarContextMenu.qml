@@ -20,6 +20,7 @@ SidebarMenu {
 
 	ColumnLayout {
 		id: content
+		spacing: 0
 	}
 
 	// onVisibleChanged: {

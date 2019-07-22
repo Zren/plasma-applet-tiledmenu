@@ -97,6 +97,12 @@
 		<entry name="popupHeight" type="int">
 			<default>620</default>
 		</entry>
+		<entry name="sidebarButtonSize" type="int">
+			<default>60</default>
+		</entry>
+		<entry name="sidebarIconSize" type="int">
+			<default>30</default>
+		</entry>
 
 		<!-- Removed v28
 		<entry name="favoriteApps" type="StringList">

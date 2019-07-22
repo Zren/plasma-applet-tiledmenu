@@ -148,6 +148,25 @@ ConfigPage {
 	ExclusiveGroup { id: sidebarThemeGroup }
 	ConfigSection {
 		label: i18n("Sidebar")
+		
+		ConfigSpinBox {
+			id: sidebarButtonSize
+			configKey: 'sidebarButtonSize'
+			before: i18n("Width")
+			suffix: i18n("px")
+			minimumValue: 24
+			stepSize: 2
+		}
+
+		ConfigSpinBox {
+			id: sidebarIconSize
+			configKey: 'sidebarIconSize'
+			before: i18n("Icon Size")
+			suffix: i18n("px")
+			minimumValue: 16
+			maximumValue: sidebarButtonSize.configValue
+			stepSize: 2
+		}
 
 		RadioButton {
 			text: i18n("Desktop Theme (%1)", theme.themeName)
@@ -167,7 +186,6 @@ ConfigPage {
 				configKey: 'sidebarBackgroundColor'
 			}
 		}
-		
 	}
 
 	ConfigSection {

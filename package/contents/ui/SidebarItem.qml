@@ -39,4 +39,15 @@ FlatButton {
 		x: parent.width + rightPadding
 		y: (parent.height - height) / 2
 	}
+
+	Loader {
+		id: hoverOutlineEffectLoader
+		anchors.fill: parent
+		source: "HoverOutlineButtonEffect.qml"
+		asynchronous: true
+		property var mouseArea: sidebarItem.__behavior
+		active: !!mouseArea && mouseArea.containsMouse
+		visible: active
+		property var __control: mouseArea
+	}
 }

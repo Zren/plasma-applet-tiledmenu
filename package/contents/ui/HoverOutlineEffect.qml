@@ -32,6 +32,13 @@ Item {
 	property color borderColor: alpha(effectColor, 8/16)
 
 	Rectangle {
+		id: hoverSolidFill
+		anchors.fill: parent
+		anchors.margins: hoverOutlineSize
+		color: fillColor
+	}
+
+	Rectangle {
 		id: hoverOutline
 		visible: !hoverOutlineEffect.useOutlineMask
 		anchors.fill: parent

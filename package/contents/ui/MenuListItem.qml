@@ -93,6 +93,12 @@ AppToolButton {
 			implicitHeight: itemIcon.implicitHeight
 			implicitWidth: itemIcon.implicitWidth
 
+			Rectangle {
+				id: iconBg
+				anchors.fill: parent
+				color: "transparent"
+			}
+
 			PlasmaCore.IconItem {
 				id: itemIcon
 				anchors.centerIn: parent
@@ -178,6 +184,10 @@ AppToolButton {
 				menu.addActionList(actionList, listView.model, index)
 			}
 		}
+	}
+
+	Component.onCompleted: {
+		iconPalette.determineColor(itemIcon, iconBg, 'color')
 	}
 
 } // delegate: AppToolButton

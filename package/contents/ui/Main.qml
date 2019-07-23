@@ -1,11 +1,13 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
+import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 import org.kde.kcoreaddons 1.0 as KCoreAddons
+import com.github.zren.zrenlib 1.0 as ZrenLib
 
 import "lib"
 
@@ -65,6 +67,41 @@ Item {
 			onNewData: disconnectSource(sourceName) // cmd finished
 			function exec(cmd) {
 				connectSource(cmd)
+			}
+		}
+
+		ZrenLib.IconPalette {
+			id: iconPalette
+
+			function determineColor(iconItem, outObj, outKey) {
+				if (!iconItem.valid) {
+					return
+				}
+				function grabAndSet() {
+					var grabbed = iconItem.grabToImage(function(result){
+						console.log('result.url', result.url)
+						console.log('result.image', result.image)
+						var c = iconPalette.getColor(result.image)
+						console.log('result.color', c)
+						outObj[outKey] = c
+					}, Qt.size(iconItem.width, iconItem.height))
+					console.log('size', Qt.size(iconItem.width, iconItem.height))
+					console.log('grabbed', grabbed)
+				}
+
+				console.log('iconItem', iconItem)
+				console.log('iconItem.Window', iconItem.Window)
+				console.log('iconItem.Window.visibility', iconItem.Window.visibility)
+				if (iconItem.Window.visibility != Window.Hidden) {
+					grabAndSet()
+				} else {
+					iconItem.Window.visibilityChanged.connect(function onVisibilityChanged(){
+						if (iconItem.Window.visibility != Window.Hidden) {
+							grabAndSet()
+							iconItem.Window.window.visibleChanged.disconnect(onVisibilityChanged)
+						}
+					})
+				}
 			}
 		}
 	}

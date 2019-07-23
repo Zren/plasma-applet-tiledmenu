@@ -9,7 +9,9 @@ import org.kde.draganddrop 2.0 as DragAndDrop
 
 Rectangle {
 	id: tileItemView
-	color: appObj.backgroundColor
+	color: generatedColor != "transparent" ? generatedColor : appObj.backgroundColor
+
+	property color generatedColor: "transparent"
 
 	readonly property int tilePadding: 4 * units.devicePixelRatio
 	readonly property int smallIconSize: 32 * units.devicePixelRatio
@@ -91,5 +93,9 @@ Rectangle {
 		renderType: Text.QtRendering // Fix pixelation when scaling. Plasma.Label uses NativeRendering.
 		style: Text.Outline
 		styleColor: tileItemView.color
+	}
+
+	Component.onCompleted: {
+		iconPalette.determineColor(icon, tileItemView, 'generatedColor')
 	}
 }

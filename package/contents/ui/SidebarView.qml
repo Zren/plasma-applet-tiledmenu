@@ -94,12 +94,14 @@ Item {
 					SidebarItem {
 						iconName: 'system-users'
 						text: i18n("User Manager")
+						buttonHeight: config.sidebarPopupButtonSize
 						onClicked: KCMShell.open('user_manager')
 						visible: KCMShell.authorize('user_manager.desktop').length > 0
 					}
 
 					SidebarItemRepeater {
 						model: appsModel.sessionActionsModel
+						buttonHeight: config.sidebarPopupButtonSize
 					}
 				}
 			}
@@ -119,6 +121,7 @@ Item {
 					
 					SidebarItemRepeater {
 						model: appsModel.powerActionsModel
+						buttonHeight: config.sidebarPopupButtonSize
 					}
 				}
 			}

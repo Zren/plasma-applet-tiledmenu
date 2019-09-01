@@ -103,6 +103,9 @@
 		<entry name="sidebarIconSize" type="int">
 			<default>30</default>
 		</entry>
+		<entry name="sidebarPopupButtonSize" type="int">
+			<default>30</default>
+		</entry>
 
 		<!-- Removed v28
 		<entry name="favoriteApps" type="StringList">

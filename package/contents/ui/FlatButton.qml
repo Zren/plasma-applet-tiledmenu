@@ -11,7 +11,7 @@ import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
 
 PlasmaComponents.ToolButton {
 	id: flatButton
-	implicitHeight: config.flatButtonSize
+
 	property var icon: null
 	iconName: ""
 	property bool expanded: true
@@ -27,6 +27,10 @@ PlasmaComponents.ToolButton {
 	// http://doc.qt.io/qt-5/qt.html#Edge-enum
 	property int checkedEdge: 0 // 0 = all edges
 	property int checkedEdgeWidth: 2 * units.devicePixelRatio
+
+	property int buttonHeight: config.flatButtonSize
+	property int iconSize: config.flatButtonIconSize
+	implicitHeight: buttonHeight
 
 	style: PlasmaStyles.ToolButtonStyle {
 		label: RowLayout {
@@ -45,8 +49,8 @@ PlasmaComponents.ToolButton {
 				PlasmaCore.IconItem {
 					id: icon
 					source: control.iconName || control.iconSource || control.icon
-					implicitWidth: config.flatButtonIconSize
-					implicitHeight: config.flatButtonIconSize
+					implicitWidth: control.iconSize
+					implicitHeight: control.iconSize
 					anchors.centerIn: parent
 					// colorGroup: PlasmaCore.Theme.ButtonColorGroup
 				}

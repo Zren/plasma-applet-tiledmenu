@@ -15,6 +15,7 @@ Item {
 	readonly property int sidebarWidth: flatButtonSize
 	readonly property int sidebarMinOpenWidth: 200 * units.devicePixelRatio
 	readonly property int sidebarRightMargin: 4 * units.devicePixelRatio
+	readonly property int sidebarPopupButtonSize: plasmoid.configuration.sidebarPopupButtonSize * units.devicePixelRatio
 	readonly property int appListWidth: plasmoid.configuration.appListWidth * units.devicePixelRatio
 
 	property bool showSearch: false

@@ -30,6 +30,7 @@ PlasmaComponents.ToolButton {
 
 	property int buttonHeight: config.flatButtonSize
 	property int iconSize: config.flatButtonIconSize
+	readonly property int _iconSize: Math.min(buttonHeight, iconSize)
 	implicitHeight: buttonHeight
 
 	style: PlasmaStyles.ToolButtonStyle {
@@ -49,8 +50,8 @@ PlasmaComponents.ToolButton {
 				PlasmaCore.IconItem {
 					id: icon
 					source: control.iconName || control.iconSource || control.icon
-					implicitWidth: control.iconSize
-					implicitHeight: control.iconSize
+					implicitWidth: control._iconSize
+					implicitHeight: control._iconSize
 					anchors.centerIn: parent
 					// colorGroup: PlasmaCore.Theme.ButtonColorGroup
 				}

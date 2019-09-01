@@ -59,6 +59,15 @@ PlasmaComponents.ToolButton {
 				// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
 			}
 
+			Item {
+				id: spacingItem
+				Layout.fillHeight: true
+				implicitWidth: 4 * units.devicePixelRatio
+				visible: control.labelVisible
+
+				// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
+			}
+
 			PlasmaComponents.Label {
 				id: label
 				text: QtQuickControlsPrivate.StyleHelpers.stylizeMnemonics(control.text)

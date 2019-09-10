@@ -206,7 +206,10 @@ ListModel {
 	function triggerIndex(index) {
 		var model = resultModel.get(index)
 		var runner = runnerModel.modelForRow(model.runnerIndex)
-		runner.trigger(model.runnerItemIndex, "", null)
+		var closeRequested = runner.trigger(model.runnerItemIndex, "", null)
+		if (closeRequested) {
+			plasmoid.expanded = false
+		}
 		itemTriggered()
 	}
 	
@@ -236,7 +239,10 @@ ListModel {
 		// kicker/code/tools.js triggerAction()
 		var model = resultModel.get(index)
 		var runner = runnerModel.modelForRow(model.runnerIndex)
-		runner.trigger(model.runnerItemIndex, actionId, actionArgument)
+		var closeRequested = runner.trigger(model.runnerItemIndex, actionId, actionArgument)
+		if (closeRequested) {
+			plasmoid.expanded = false
+		}
 		itemTriggered()
 
 		// Note that Recent Documents actions do not work (in the search results) as of Plasma 5.8.4

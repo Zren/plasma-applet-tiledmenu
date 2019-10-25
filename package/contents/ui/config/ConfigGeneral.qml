@@ -167,6 +167,15 @@ ConfigPage {
 			maximumValue: sidebarButtonSize.configValue
 			stepSize: 2
 		}
+		
+		ConfigSpinBox {
+			id: sidebarPopupButtonSize
+			configKey: 'sidebarPopupButtonSize'
+			before: i18n("Popup Button Height")
+			suffix: i18n("px")
+			minimumValue: 24
+			stepSize: 2
+		}
 
 		RadioButton {
 			text: i18n("Desktop Theme (%1)", theme.themeName)

@@ -104,7 +104,7 @@
 			<default>30</default>
 		</entry>
 		<entry name="sidebarPopupButtonSize" type="int">
-			<default>30</default>
+			<default>36</default>
 		</entry>
 
 		<!-- Removed v28

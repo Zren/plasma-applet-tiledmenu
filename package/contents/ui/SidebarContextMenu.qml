@@ -10,8 +10,8 @@ SidebarMenu {
 	id: sidebarContextMenu
 	visible: open
 	open: false
-	anchors.left: parent.right
-	anchors.bottom: parent.bottom
+	anchors.left: parent.left
+	anchors.bottom: parent.top
 	implicitWidth: content.implicitWidth
 	implicitHeight: content.implicitHeight
 	z: 2

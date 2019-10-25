@@ -1,3 +1,11 @@
+## v31 - October 24 2019
+
+* Configurable sidebar width and icon size. Default sidebar is smaller. Popup buttons have a hover outline. Popup appears above, like other context menus and Win10.
+* Close menu right away when launching app via search, instead of waiting for the app to steal focus before closing.
+* Add Portuguese (Brazil) translation by @herzenschein (Pull Request #46)
+* Update Portuguese (Portugal) translation by @herzenschein (Pull Request #47)
+* Add Croatian translation by @VladimirMikulic (Pull Request #50)
+
 ## v30 - April 4 2019
 
 * Fix sidebar menus not resizing to fix translated text (Issue #37).

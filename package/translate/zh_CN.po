@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-03-24 11:36-0400\n"
+"POT-Creation-Date: 2019-10-24 20:31-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Lin Mu <linmu789632@gmail.com>\n"
 "Language-Team: Chinese <kde-i18n-doc@kde.org>\n"
@@ -76,7 +76,7 @@ msgstr "磁贴"
 msgid "Tile Size"
 msgstr "磁贴大小"
 
-#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/config/ConfigGeneral.qml:297 ../contents/ui/config/ConfigGeneral.qml:361
+#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:156 ../contents/ui/config/ConfigGeneral.qml:165 ../contents/ui/config/ConfigGeneral.qml:175 ../contents/ui/config/ConfigGeneral.qml:299 ../contents/ui/config/ConfigGeneral.qml:324 ../contents/ui/config/ConfigGeneral.qml:388
 msgid "px"
 msgstr "像素"
 
@@ -84,11 +84,11 @@ msgstr "像素"
 msgid "Tile Margin"
 msgstr "磁贴边缘"
 
-#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:153 ../contents/ui/config/ConfigGeneral.qml:277
+#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:181 ../contents/ui/config/ConfigGeneral.qml:304
 msgid "Desktop Theme (%1)"
 msgstr "桌面主题 (%1)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:160
+#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:188
 msgid "Custom Color"
 msgstr "自定义颜色"
 
@@ -116,87 +116,95 @@ msgstr "右"
 msgid "Sidebar"
 msgstr "侧栏"
 
-#: ../contents/ui/config/ConfigGeneral.qml:174
-msgid "Sidebar Shortcuts"
-msgstr "侧栏快捷方式"
-
-#: ../contents/ui/config/ConfigGeneral.qml:220
-msgid "Add Default"
-msgstr "添加默认值"
-
-#: ../contents/ui/config/ConfigGeneral.qml:267
-msgid "Search Box"
-msgstr "搜索框"
-
-#: ../contents/ui/config/ConfigGeneral.qml:271
-msgid "Search Field Height"
-msgstr "搜索区域高度"
-
-#: ../contents/ui/config/ConfigGeneral.qml:283
-msgid "Windows (White)"
-msgstr "Windows (白色)"
-
-#: ../contents/ui/config/ConfigGeneral.qml:291
-msgid "App List"
-msgstr "应用列表"
-
-#: ../contents/ui/config/ConfigGeneral.qml:296
-msgid "App List Area Width"
-msgstr "应用列表区域宽度"
-
-#: ../contents/ui/config/ConfigGeneral.qml:304
-msgid "Default View"
+#: ../contents/ui/config/ConfigGeneral.qml:155
+msgid "Width"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:63
-msgid "Alphabetical"
-msgstr "字母顺序"
-
-#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:69
-msgid "Categories"
-msgstr "分组"
-
-#: ../contents/ui/config/ConfigGeneral.qml:308
-msgid "Jump To Letter"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:309
-msgid "Jump To Category"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
-msgid "Tiles Only"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:317
-msgid "App Description"
-msgstr "应用描述"
-
-#: ../contents/ui/config/ConfigGeneral.qml:319
-msgid "Hidden"
-msgstr "隐藏"
-
-#: ../contents/ui/config/ConfigGeneral.qml:320
-msgid "After"
-msgstr "后方"
-
-#: ../contents/ui/config/ConfigGeneral.qml:321
-msgid "Below"
-msgstr "下方"
-
-#: ../contents/ui/config/ConfigGeneral.qml:360
+#: ../contents/ui/config/ConfigGeneral.qml:164 ../contents/ui/config/ConfigGeneral.qml:387
 msgid "Icon Size"
 msgstr "图标大小"
 
-#: ../contents/ui/config/ConfigGeneral.qml:376
+#: ../contents/ui/config/ConfigGeneral.qml:174
+msgid "Popup Button Height"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:201
+msgid "Sidebar Shortcuts"
+msgstr "侧栏快捷方式"
+
+#: ../contents/ui/config/ConfigGeneral.qml:247
+msgid "Add Default"
+msgstr "添加默认值"
+
+#: ../contents/ui/config/ConfigGeneral.qml:294
+msgid "Search Box"
+msgstr "搜索框"
+
+#: ../contents/ui/config/ConfigGeneral.qml:298
+msgid "Search Field Height"
+msgstr "搜索区域高度"
+
+#: ../contents/ui/config/ConfigGeneral.qml:310
+msgid "Windows (White)"
+msgstr "Windows (白色)"
+
+#: ../contents/ui/config/ConfigGeneral.qml:318
+msgid "App List"
+msgstr "应用列表"
+
+#: ../contents/ui/config/ConfigGeneral.qml:323
+msgid "App List Area Width"
+msgstr "应用列表区域宽度"
+
+#: ../contents/ui/config/ConfigGeneral.qml:331
+msgid "Default View"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:333 ../contents/ui/SidebarView.qml:63
+msgid "Alphabetical"
+msgstr "字母顺序"
+
+#: ../contents/ui/config/ConfigGeneral.qml:334 ../contents/ui/SidebarView.qml:69
+msgid "Categories"
+msgstr "分组"
+
+#: ../contents/ui/config/ConfigGeneral.qml:335
+msgid "Jump To Letter"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:336
+msgid "Jump To Category"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:337 ../contents/ui/SidebarView.qml:57
+msgid "Tiles Only"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:344
+msgid "App Description"
+msgstr "应用描述"
+
+#: ../contents/ui/config/ConfigGeneral.qml:346
+msgid "Hidden"
+msgstr "隐藏"
+
+#: ../contents/ui/config/ConfigGeneral.qml:347
+msgid "After"
+msgstr "后方"
+
+#: ../contents/ui/config/ConfigGeneral.qml:348
+msgid "Below"
+msgstr "下方"
+
+#: ../contents/ui/config/ConfigGeneral.qml:403
 msgid "Search Results"
 msgstr "搜索结果"
 
-#: ../contents/ui/config/ConfigGeneral.qml:380
+#: ../contents/ui/config/ConfigGeneral.qml:407
 msgid "Merged (Application Launcher)"
 msgstr "合并（应用启动器）"
 
-#: ../contents/ui/config/ConfigGeneral.qml:389
+#: ../contents/ui/config/ConfigGeneral.qml:416
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "分类（应用菜单/仪表板）"
 
@@ -334,7 +342,7 @@ msgstr "过滤器"
 msgid "User Manager"
 msgstr "用户管理程序"
 
-#: ../contents/ui/SidebarView.qml:114
+#: ../contents/ui/SidebarView.qml:116
 msgid "Power"
 msgstr "电源"
 

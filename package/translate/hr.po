@@ -1,4 +1,4 @@
-# Translation of tiledmenu in LANGUAGE
+# Translation of tiledmenu in hr
 # Copyright (C) 2019
 # This file is distributed under the same license as the tiledmenu package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-03-24 11:36-0400\n"
+"POT-Creation-Date: 2019-10-24 20:31-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Vladimir Mikulic <vladimir.mikulic2@gmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -77,8 +77,7 @@ msgstr "Pločice"
 msgid "Tile Size"
 msgstr "Veličina Pločice"
 
-#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/config/ConfigGeneral.qml:297
-#: ../contents/ui/config/ConfigGeneral.qml:361
+#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:156 ../contents/ui/config/ConfigGeneral.qml:165 ../contents/ui/config/ConfigGeneral.qml:175 ../contents/ui/config/ConfigGeneral.qml:299 ../contents/ui/config/ConfigGeneral.qml:324 ../contents/ui/config/ConfigGeneral.qml:388
 msgid "px"
 msgstr "px"
 
@@ -86,11 +85,11 @@ msgstr "px"
 msgid "Tile Margin"
 msgstr "Margina Pločice"
 
-#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:153 ../contents/ui/config/ConfigGeneral.qml:277
+#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:181 ../contents/ui/config/ConfigGeneral.qml:304
 msgid "Desktop Theme (%1)"
 msgstr "Desktop Tema"
 
-#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:160
+#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:188
 msgid "Custom Color"
 msgstr "Boja po volji"
 
@@ -103,102 +102,110 @@ msgid "Text Alignment"
 msgstr "Položaj Teksta"
 
 #: ../contents/ui/config/ConfigGeneral.qml:141
-msgid "Lijevo"
+msgid "Left"
 msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:142
-msgid "Centar"
+msgid "Center"
 msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:143
-msgid "Desno"
+msgid "Right"
 msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml:150
-msgid "Bočna traka"
+msgid "Sidebar"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:174
-msgid "Sidebar Shortcuts"
-msgstr "Prečaci bočne trake"
+#: ../contents/ui/config/ConfigGeneral.qml:155
+msgid "Width"
+msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:220
-msgid "Add Default"
-msgstr "Dodaj Početni"
-
-#: ../contents/ui/config/ConfigGeneral.qml:267
-msgid "Search Box"
-msgstr "Tražilica"
-
-#: ../contents/ui/config/ConfigGeneral.qml:271
-msgid "Search Field Height"
-msgstr "Visina tražilice"
-
-#: ../contents/ui/config/ConfigGeneral.qml:283
-msgid "Windows (White)"
-msgstr "Prozori (Bijeli)"
-
-#: ../contents/ui/config/ConfigGeneral.qml:291
-msgid "App List"
-msgstr "Lista Aplikacija"
-
-#: ../contents/ui/config/ConfigGeneral.qml:296
-msgid "App List Area Width"
-msgstr "Širina liste za Aplikacije"
-
-#: ../contents/ui/config/ConfigGeneral.qml:304
-msgid "Default View"
-msgstr "Početni izgled"
-
-#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:63
-msgid "Alphabetical"
-msgstr "Abecedni"
-
-#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:69
-msgid "Categories"
-msgstr "Kategorije"
-
-#: ../contents/ui/config/ConfigGeneral.qml:308
-msgid "Jump To Letter"
-msgstr "Izdvoji Slovo"
-
-#: ../contents/ui/config/ConfigGeneral.qml:309
-msgid "Jump To Category"
-msgstr "Izdvoji Kategoriju"
-
-#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
-msgid "Tiles Only"
-msgstr "Samo Pločice"
-
-#: ../contents/ui/config/ConfigGeneral.qml:317
-msgid "App Description"
-msgstr "Opis Aplikacije"
-
-#: ../contents/ui/config/ConfigGeneral.qml:319
-msgid "Hidden"
-msgstr "Sakriveno"
-
-#: ../contents/ui/config/ConfigGeneral.qml:320
-msgid "After"
-msgstr "Nakon"
-
-#: ../contents/ui/config/ConfigGeneral.qml:321
-msgid "Below"
-msgstr "Ispod"
-
-#: ../contents/ui/config/ConfigGeneral.qml:360
+#: ../contents/ui/config/ConfigGeneral.qml:164 ../contents/ui/config/ConfigGeneral.qml:387
 msgid "Icon Size"
 msgstr "Veličina Ikone"
 
-#: ../contents/ui/config/ConfigGeneral.qml:376
+#: ../contents/ui/config/ConfigGeneral.qml:174
+msgid "Popup Button Height"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:201
+msgid "Sidebar Shortcuts"
+msgstr "Prečaci bočne trake"
+
+#: ../contents/ui/config/ConfigGeneral.qml:247
+msgid "Add Default"
+msgstr "Dodaj Početni"
+
+#: ../contents/ui/config/ConfigGeneral.qml:294
+msgid "Search Box"
+msgstr "Tražilica"
+
+#: ../contents/ui/config/ConfigGeneral.qml:298
+msgid "Search Field Height"
+msgstr "Visina tražilice"
+
+#: ../contents/ui/config/ConfigGeneral.qml:310
+msgid "Windows (White)"
+msgstr "Prozori (Bijeli)"
+
+#: ../contents/ui/config/ConfigGeneral.qml:318
+msgid "App List"
+msgstr "Lista Aplikacija"
+
+#: ../contents/ui/config/ConfigGeneral.qml:323
+msgid "App List Area Width"
+msgstr "Širina liste za Aplikacije"
+
+#: ../contents/ui/config/ConfigGeneral.qml:331
+msgid "Default View"
+msgstr "Početni izgled"
+
+#: ../contents/ui/config/ConfigGeneral.qml:333 ../contents/ui/SidebarView.qml:63
+msgid "Alphabetical"
+msgstr "Abecedni"
+
+#: ../contents/ui/config/ConfigGeneral.qml:334 ../contents/ui/SidebarView.qml:69
+msgid "Categories"
+msgstr "Kategorije"
+
+#: ../contents/ui/config/ConfigGeneral.qml:335
+msgid "Jump To Letter"
+msgstr "Izdvoji Slovo"
+
+#: ../contents/ui/config/ConfigGeneral.qml:336
+msgid "Jump To Category"
+msgstr "Izdvoji Kategoriju"
+
+#: ../contents/ui/config/ConfigGeneral.qml:337 ../contents/ui/SidebarView.qml:57
+msgid "Tiles Only"
+msgstr "Samo Pločice"
+
+#: ../contents/ui/config/ConfigGeneral.qml:344
+msgid "App Description"
+msgstr "Opis Aplikacije"
+
+#: ../contents/ui/config/ConfigGeneral.qml:346
+msgid "Hidden"
+msgstr "Sakriveno"
+
+#: ../contents/ui/config/ConfigGeneral.qml:347
+msgid "After"
+msgstr "Nakon"
+
+#: ../contents/ui/config/ConfigGeneral.qml:348
+msgid "Below"
+msgstr "Ispod"
+
+#: ../contents/ui/config/ConfigGeneral.qml:403
 msgid "Search Results"
 msgstr "Rezultati Pretraživanja"
 
-#: ../contents/ui/config/ConfigGeneral.qml:380
+#: ../contents/ui/config/ConfigGeneral.qml:407
 msgid "Merged (Application Launcher)"
 msgstr "Spojeno (Pokretač Aplikacija)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:389
+#: ../contents/ui/config/ConfigGeneral.qml:416
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Razdvoji u Kategorije (Izbornik Aplikacija / Nadzorna ploča)"
 
@@ -335,7 +342,7 @@ msgstr "Filteri"
 msgid "User Manager"
 msgstr "Upravitelj Korisnika"
 
-#: ../contents/ui/SidebarView.qml:114
+#: ../contents/ui/SidebarView.qml:116
 msgid "Power"
 msgstr "Snaga"
 

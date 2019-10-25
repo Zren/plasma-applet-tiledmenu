@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-03-24 11:36-0400\n"
+"POT-Creation-Date: 2019-10-24 20:31-0400\n"
 "PO-Revision-Date: 2018-10-13 21:48+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
@@ -78,7 +78,7 @@ msgstr "Tegels"
 msgid "Tile Size"
 msgstr "Tegelgrootte"
 
-#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/config/ConfigGeneral.qml:297 ../contents/ui/config/ConfigGeneral.qml:361
+#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:156 ../contents/ui/config/ConfigGeneral.qml:165 ../contents/ui/config/ConfigGeneral.qml:175 ../contents/ui/config/ConfigGeneral.qml:299 ../contents/ui/config/ConfigGeneral.qml:324 ../contents/ui/config/ConfigGeneral.qml:388
 msgid "px"
 msgstr "px"
 
@@ -86,11 +86,11 @@ msgstr "px"
 msgid "Tile Margin"
 msgstr "Tegelruimte"
 
-#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:153 ../contents/ui/config/ConfigGeneral.qml:277
+#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:181 ../contents/ui/config/ConfigGeneral.qml:304
 msgid "Desktop Theme (%1)"
 msgstr "Bureaubladthema (%1)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:160
+#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:188
 msgid "Custom Color"
 msgstr "Aangepaste kleur"
 
@@ -118,87 +118,95 @@ msgstr "Rechts"
 msgid "Sidebar"
 msgstr "Zijbalk"
 
-#: ../contents/ui/config/ConfigGeneral.qml:174
-msgid "Sidebar Shortcuts"
-msgstr "Snelkoppelingen in zijbalk"
+#: ../contents/ui/config/ConfigGeneral.qml:155
+msgid "Width"
+msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:220
-msgid "Add Default"
-msgstr "Standaard toevoegen"
-
-#: ../contents/ui/config/ConfigGeneral.qml:267
-msgid "Search Box"
-msgstr "Zoekvak"
-
-#: ../contents/ui/config/ConfigGeneral.qml:271
-msgid "Search Field Height"
-msgstr "Hoogte"
-
-#: ../contents/ui/config/ConfigGeneral.qml:283
-msgid "Windows (White)"
-msgstr "Windows (wit)"
-
-#: ../contents/ui/config/ConfigGeneral.qml:291
-msgid "App List"
-msgstr "Applicatielijst"
-
-#: ../contents/ui/config/ConfigGeneral.qml:296
-msgid "App List Area Width"
-msgstr "Breedte"
-
-#: ../contents/ui/config/ConfigGeneral.qml:304
-msgid "Default View"
-msgstr "Standaardweergave"
-
-#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:63
-msgid "Alphabetical"
-msgstr "Alfabetisch"
-
-#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:69
-msgid "Categories"
-msgstr "Categorieën"
-
-#: ../contents/ui/config/ConfigGeneral.qml:308
-msgid "Jump To Letter"
-msgstr "Spring naar letter"
-
-#: ../contents/ui/config/ConfigGeneral.qml:309
-msgid "Jump To Category"
-msgstr "Spring naar categorie"
-
-#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
-msgid "Tiles Only"
-msgstr "Alleen tegels"
-
-#: ../contents/ui/config/ConfigGeneral.qml:317
-msgid "App Description"
-msgstr "Beschrijving"
-
-#: ../contents/ui/config/ConfigGeneral.qml:319
-msgid "Hidden"
-msgstr "Verborgen"
-
-#: ../contents/ui/config/ConfigGeneral.qml:320
-msgid "After"
-msgstr "Naast"
-
-#: ../contents/ui/config/ConfigGeneral.qml:321
-msgid "Below"
-msgstr "Onder"
-
-#: ../contents/ui/config/ConfigGeneral.qml:360
+#: ../contents/ui/config/ConfigGeneral.qml:164 ../contents/ui/config/ConfigGeneral.qml:387
 msgid "Icon Size"
 msgstr "Pictogramgrootte"
 
-#: ../contents/ui/config/ConfigGeneral.qml:376
+#: ../contents/ui/config/ConfigGeneral.qml:174
+msgid "Popup Button Height"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:201
+msgid "Sidebar Shortcuts"
+msgstr "Snelkoppelingen in zijbalk"
+
+#: ../contents/ui/config/ConfigGeneral.qml:247
+msgid "Add Default"
+msgstr "Standaard toevoegen"
+
+#: ../contents/ui/config/ConfigGeneral.qml:294
+msgid "Search Box"
+msgstr "Zoekvak"
+
+#: ../contents/ui/config/ConfigGeneral.qml:298
+msgid "Search Field Height"
+msgstr "Hoogte"
+
+#: ../contents/ui/config/ConfigGeneral.qml:310
+msgid "Windows (White)"
+msgstr "Windows (wit)"
+
+#: ../contents/ui/config/ConfigGeneral.qml:318
+msgid "App List"
+msgstr "Applicatielijst"
+
+#: ../contents/ui/config/ConfigGeneral.qml:323
+msgid "App List Area Width"
+msgstr "Breedte"
+
+#: ../contents/ui/config/ConfigGeneral.qml:331
+msgid "Default View"
+msgstr "Standaardweergave"
+
+#: ../contents/ui/config/ConfigGeneral.qml:333 ../contents/ui/SidebarView.qml:63
+msgid "Alphabetical"
+msgstr "Alfabetisch"
+
+#: ../contents/ui/config/ConfigGeneral.qml:334 ../contents/ui/SidebarView.qml:69
+msgid "Categories"
+msgstr "Categorieën"
+
+#: ../contents/ui/config/ConfigGeneral.qml:335
+msgid "Jump To Letter"
+msgstr "Spring naar letter"
+
+#: ../contents/ui/config/ConfigGeneral.qml:336
+msgid "Jump To Category"
+msgstr "Spring naar categorie"
+
+#: ../contents/ui/config/ConfigGeneral.qml:337 ../contents/ui/SidebarView.qml:57
+msgid "Tiles Only"
+msgstr "Alleen tegels"
+
+#: ../contents/ui/config/ConfigGeneral.qml:344
+msgid "App Description"
+msgstr "Beschrijving"
+
+#: ../contents/ui/config/ConfigGeneral.qml:346
+msgid "Hidden"
+msgstr "Verborgen"
+
+#: ../contents/ui/config/ConfigGeneral.qml:347
+msgid "After"
+msgstr "Naast"
+
+#: ../contents/ui/config/ConfigGeneral.qml:348
+msgid "Below"
+msgstr "Onder"
+
+#: ../contents/ui/config/ConfigGeneral.qml:403
 msgid "Search Results"
 msgstr "Zoekresultaten"
 
-#: ../contents/ui/config/ConfigGeneral.qml:380
+#: ../contents/ui/config/ConfigGeneral.qml:407
 msgid "Merged (Application Launcher)"
 msgstr "Samengevoegd (applicatiestarter)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:389
+#: ../contents/ui/config/ConfigGeneral.qml:416
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Opgesplitst in categorieën (applicatiemenu/dashboard)"
 
@@ -335,7 +343,7 @@ msgstr "Filters"
 msgid "User Manager"
 msgstr "Gebruikersbeheer"
 
-#: ../contents/ui/SidebarView.qml:114
+#: ../contents/ui/SidebarView.qml:116
 msgid "Power"
 msgstr "Afsluitmenu"
 

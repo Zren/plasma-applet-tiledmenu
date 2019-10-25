@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2019-03-24 11:36-0400\n"
+"POT-Creation-Date: 2019-10-24 20:31-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ruman Gerst <rumangerst@gmail.com>\n"
 "Language-Team: German <LL@li.org>\n"
@@ -76,7 +76,7 @@ msgstr "Kacheln"
 msgid "Tile Size"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:272 ../contents/ui/config/ConfigGeneral.qml:297 ../contents/ui/config/ConfigGeneral.qml:361
+#: ../contents/ui/config/ConfigGeneral.qml:99 ../contents/ui/config/ConfigGeneral.qml:105 ../contents/ui/config/ConfigGeneral.qml:156 ../contents/ui/config/ConfigGeneral.qml:165 ../contents/ui/config/ConfigGeneral.qml:175 ../contents/ui/config/ConfigGeneral.qml:299 ../contents/ui/config/ConfigGeneral.qml:324 ../contents/ui/config/ConfigGeneral.qml:388
 msgid "px"
 msgstr "px"
 
@@ -84,11 +84,11 @@ msgstr "px"
 msgid "Tile Margin"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:153 ../contents/ui/config/ConfigGeneral.qml:277
+#: ../contents/ui/config/ConfigGeneral.qml:111 ../contents/ui/config/ConfigGeneral.qml:181 ../contents/ui/config/ConfigGeneral.qml:304
 msgid "Desktop Theme (%1)"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:160
+#: ../contents/ui/config/ConfigGeneral.qml:119 ../contents/ui/config/ConfigGeneral.qml:188
 msgid "Custom Color"
 msgstr ""
 
@@ -116,87 +116,95 @@ msgstr "Rechts"
 msgid "Sidebar"
 msgstr "Seitenleiste"
 
-#: ../contents/ui/config/ConfigGeneral.qml:174
-msgid "Sidebar Shortcuts"
+#: ../contents/ui/config/ConfigGeneral.qml:155
+msgid "Width"
 msgstr ""
 
-#: ../contents/ui/config/ConfigGeneral.qml:220
-msgid "Add Default"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:267
-msgid "Search Box"
-msgstr "Suchleiste"
-
-#: ../contents/ui/config/ConfigGeneral.qml:271
-msgid "Search Field Height"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:283
-msgid "Windows (White)"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:291
-msgid "App List"
-msgstr "Anwendungsliste"
-
-#: ../contents/ui/config/ConfigGeneral.qml:296
-msgid "App List Area Width"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:304
-msgid "Default View"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:306 ../contents/ui/SidebarView.qml:63
-msgid "Alphabetical"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:307 ../contents/ui/SidebarView.qml:69
-msgid "Categories"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:308
-msgid "Jump To Letter"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:309
-msgid "Jump To Category"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:310 ../contents/ui/SidebarView.qml:57
-msgid "Tiles Only"
-msgstr ""
-
-#: ../contents/ui/config/ConfigGeneral.qml:317
-msgid "App Description"
-msgstr "Anwendungsbeschreibung"
-
-#: ../contents/ui/config/ConfigGeneral.qml:319
-msgid "Hidden"
-msgstr "Versteckt"
-
-#: ../contents/ui/config/ConfigGeneral.qml:320
-msgid "After"
-msgstr "Danach"
-
-#: ../contents/ui/config/ConfigGeneral.qml:321
-msgid "Below"
-msgstr "Darunter"
-
-#: ../contents/ui/config/ConfigGeneral.qml:360
+#: ../contents/ui/config/ConfigGeneral.qml:164 ../contents/ui/config/ConfigGeneral.qml:387
 msgid "Icon Size"
 msgstr "Symbolgröße"
 
-#: ../contents/ui/config/ConfigGeneral.qml:376
+#: ../contents/ui/config/ConfigGeneral.qml:174
+msgid "Popup Button Height"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:201
+msgid "Sidebar Shortcuts"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:247
+msgid "Add Default"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:294
+msgid "Search Box"
+msgstr "Suchleiste"
+
+#: ../contents/ui/config/ConfigGeneral.qml:298
+msgid "Search Field Height"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:310
+msgid "Windows (White)"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:318
+msgid "App List"
+msgstr "Anwendungsliste"
+
+#: ../contents/ui/config/ConfigGeneral.qml:323
+msgid "App List Area Width"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:331
+msgid "Default View"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:333 ../contents/ui/SidebarView.qml:63
+msgid "Alphabetical"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:334 ../contents/ui/SidebarView.qml:69
+msgid "Categories"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:335
+msgid "Jump To Letter"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:336
+msgid "Jump To Category"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:337 ../contents/ui/SidebarView.qml:57
+msgid "Tiles Only"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml:344
+msgid "App Description"
+msgstr "Anwendungsbeschreibung"
+
+#: ../contents/ui/config/ConfigGeneral.qml:346
+msgid "Hidden"
+msgstr "Versteckt"
+
+#: ../contents/ui/config/ConfigGeneral.qml:347
+msgid "After"
+msgstr "Danach"
+
+#: ../contents/ui/config/ConfigGeneral.qml:348
+msgid "Below"
+msgstr "Darunter"
+
+#: ../contents/ui/config/ConfigGeneral.qml:403
 msgid "Search Results"
 msgstr "Suchergebnisse"
 
-#: ../contents/ui/config/ConfigGeneral.qml:380
+#: ../contents/ui/config/ConfigGeneral.qml:407
 msgid "Merged (Application Launcher)"
 msgstr "Vereinigt (Anwendungsstarter)"
 
-#: ../contents/ui/config/ConfigGeneral.qml:389
+#: ../contents/ui/config/ConfigGeneral.qml:416
 msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "In Kategorien unterteilen (Anwendungsmenü / Dashboard)"
 
@@ -333,7 +341,7 @@ msgstr ""
 msgid "User Manager"
 msgstr "Benutzerverwaltung"
 
-#: ../contents/ui/SidebarView.qml:114
+#: ../contents/ui/SidebarView.qml:116
 msgid "Power"
 msgstr "Ein/Aus"
 

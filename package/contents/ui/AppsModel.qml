@@ -17,7 +17,7 @@ Item {
 	property alias tileGridModel: tileGridModel
 	property alias sidebarModel: sidebarModel
 
-	property string order: plasmoid.configuration.defaultAppListOrder
+	property string order: "categories"
 	onOrderChanged: allAppsModel.refresh()
 
 	signal refreshing()

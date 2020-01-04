@@ -35,23 +35,31 @@ ListModel {
 		var item = {
 			parentModel: model,
 			indexInParent: i,
-			parentName: model.name,
 			name: model.data(modelIndex, Qt.DisplayRole),
 			description: model.data(modelIndex, DescriptionRole),
 			favoriteId: model.data(modelIndex, FavoriteIdRole),
 			largeIcon: false, // for KickerListView
 		};
 
+		if (typeof model.name === 'string') {
+			item.parentName = model.name
+		}
+
 		// ListView.append() doesn't like it when we have { key: [object] }.
 		var url = model.data(modelIndex, UrlRole);
 		if (typeof url === 'object') {
 			url = url.toString();
 		}
-		item.url = url;
+		if (typeof url === 'string') {
+			item.url = url
+		}
 
 		var icon =  model.data(modelIndex, Qt.DecorationRole);
-		item.icon = typeof icon === 'object' ? icon : undefined;
-		item.iconName = typeof icon === 'string' ? icon : undefined;
+		if (typeof icon === 'object') {
+			item.icon = icon
+		} else if (typeof icon === 'string') {
+			item.iconName = icon
+		}
 
 		return item;
 	}

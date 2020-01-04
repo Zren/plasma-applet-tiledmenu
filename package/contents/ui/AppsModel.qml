@@ -181,7 +181,7 @@ Item {
 				property var parentModel: rootModel.modelForRow(1).modelForRow(index)
 
 				Repeater { // Aaa ... Azz (Apps)
-					model: parentModel.hasChildren ? parentModel : []
+					model: parentModel && parentModel.hasChildren ? parentModel : []
 
 					Item {
 						Component.onCompleted: {

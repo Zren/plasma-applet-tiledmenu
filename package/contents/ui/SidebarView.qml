@@ -57,6 +57,7 @@ Item {
 				text: i18n("Tiles Only")
 				onClicked: searchView.showTilesOnly()
 				checked: searchView.showingOnlyTiles
+				visible: plasmoid.configuration.favGridCols > 0
 			}
 			SidebarViewButton {
 				appletIconName: "view-list-alphabetically"

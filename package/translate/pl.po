@@ -86,7 +86,7 @@ msgstr "Markines segmentu tytułowego"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Desktop Theme (%1)"
-msgstr "Motyw pulpitu"
+msgstr "Motyw pulpitu (%1)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"

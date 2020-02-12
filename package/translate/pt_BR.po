@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2020-01-07 22:31-0500\n"
+"POT-Creation-Date: 2020-02-12 15:32-0500\n"
 "PO-Revision-Date: 2019-07-12 11:44-0300\n"
 "Last-Translator: Thiago Masato Costa Sueto <herzenschein@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -197,6 +197,18 @@ msgstr "Em seguida"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Below"
 msgstr "Abaixo"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Show:"
+msgstr "Mostrar:"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Recent applications"
+msgstr "Aplicativos recentes"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Often used applications"
+msgstr "Aplicativos usados frequentemente"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Results"

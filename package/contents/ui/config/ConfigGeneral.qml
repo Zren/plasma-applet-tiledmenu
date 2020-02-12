@@ -359,7 +359,7 @@ ConfigPage {
 		RowLayout {
 			ConfigCheckBox {
 				id: showRecentAppsCheckBox
-				text: i18nd("plasma_applet_org.kde.plasma.kicker", "Show:")
+				text: i18n("Show:")
 				configKey: 'showRecentApps'
 			}
 			ConfigSpinBox {
@@ -375,8 +375,9 @@ ConfigPage {
 				configKey: 'recentOrdering'
 				label: ""
 				model: [
-					{ value: 0, text: i18nd("plasma_applet_org.kde.plasma.kicker", "Show recent applications") },
-					{ value: 1, text: i18nd("plasma_applet_org.kde.plasma.kicker", "Show often used applications") },
+					// TODO: Use plasma_applet_org.kde.plasma.kicker domain after depending on Plasma 5.18
+					{ value: 0, text: i18n("Recent applications") }, 
+					{ value: 1, text: i18n("Often used applications") },
 				]
 			}
 		}

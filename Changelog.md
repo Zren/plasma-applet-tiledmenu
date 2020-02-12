@@ -1,3 +1,11 @@
+## v32 - February 12 2020
+
+* Hide Tiles Only button when tile grid is hidden completely.
+* Cleanup a few warnings in plasmashell logs.
+* Updated Dutch translation by @Vistaus (Pull Request #51)
+* Updated Polish translations by @Qik000 (Issue #55)
+* Grab a few translations from KDE as a few messages were changed in Plasma 5.18.
+
 ## v31 - October 24 2019
 
 * Configurable sidebar width and icon size. Default sidebar is smaller. Popup buttons have a hover outline. Popup appears above, like other context menus and Win10.

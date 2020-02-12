@@ -395,7 +395,7 @@ msgstr "Pliki obrazów (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Preset Tiles"
-msgstr "Gotowe kafelki"
+msgstr "Gotowe Kafelki"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Color"
@@ -403,7 +403,7 @@ msgstr "Kolor tła"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Position / Size"
-msgstr "Pozycja / rozmiar"
+msgstr "Pozycja / Rozmiar"
 
 #: ../contents/ui/TileGrid.qml
 msgid "New Group"

@@ -106,6 +106,22 @@ Item {
 		}
 	}
 
+	Loader {
+		id: groupEffectLoader
+		visible: tileMouseArea.containsMouse
+		active: appObj.isGroup && visible
+		sourceComponent: Rectangle {
+			id: groupOutline
+			color: "transparent"
+			border.width: 1 * units.devicePixelRatio
+			border.color: "#80ffffff"
+			y: modelData.h * cellBoxSize
+			z: 100
+			width: appObj.groupRect.w * cellBoxSize
+			height: appObj.groupRect.h * cellBoxSize
+		}
+	}
+
 	AppContextMenu {
 		id: contextMenu
 		tileIndex: index

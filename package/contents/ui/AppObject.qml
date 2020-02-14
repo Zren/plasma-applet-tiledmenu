@@ -47,4 +47,12 @@ QtObject {
 			menu.addActionList(actionList, appsModel.tileGridModel, appObj.app.indexInModel)
 		}
 	}
+
+	readonly property var groupRect: {
+		if (isGroup) {
+			return tileGrid.getGroupAreaRect(modelData)
+		} else {
+			return null
+		}
+	}
 }

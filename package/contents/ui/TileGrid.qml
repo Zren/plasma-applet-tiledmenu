@@ -86,16 +86,31 @@ DragAndDrop.DropArea {
 			if (tile.tileType == "group"
 				&& tileWithin(tile, x1, y1, x2, y2)
 			) {
+				// We effectively use Math.min() here as we shrink the box tileWithin uses.
 				y2 = tile.y - 1
 				// console.log('group found at y =', tile.y, 'y2 set to', y2)
 			}
 		}
+
+		var lowestTileY = y1
+		// console.log('lowestTileY start at y = ', lowestTileY)
+		for (var i = 0; i < tileModel.length; i++) {
+			var tile = tileModel[i]
+			if (tileWithin(tile, x1, y1, x2, y2)) {
+				lowestTileY = Math.max(lowestTileY, tile.y + tile.h - 1)
+				// console.log('lowestTileY set to', lowestTileY, JSON.stringify(tile))
+			}
+		}
+
+		y2 = Math.min(lowestTileY, y2)
 
 		return {
 			x1: x1,
 			y1: y1,
 			x2: x2,
 			y2: y2,
+			w: x2 - x1 + 1,
+			h: y2 - y1 + 1,
 		}
 	}
 

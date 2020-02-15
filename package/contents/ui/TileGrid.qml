@@ -32,6 +32,7 @@ DragAndDrop.DropArea {
 	property int columns: Math.max(minColumns, maxColumn)
 	property int rows: Math.max(minRows, maxRow)
 
+	property bool isDragging: false
 	property var addedItem: null
 	readonly property bool adding: addedItem
 	property int draggedIndex: -1
@@ -44,6 +45,15 @@ DragAndDrop.DropArea {
 	readonly property int dropWidth: draggedItem ? draggedItem.w : addedItem ? addedItem.w : 0
 	readonly property int dropHeight: draggedItem ? draggedItem.h : addedItem ? addedItem.h : 0
 	property bool canDrop: false
+	readonly property bool hasDrag: tileGrid.editing && dropHoverX >= 0 && dropHoverY >= 0
+	readonly property bool isDraggingGroup: hasDrag && draggedItem && draggedItem.tileType == "group"
+	readonly property var draggedGroupRect: {
+		if (isDraggingGroup) {
+			return getGroupAreaRect(draggedItem)
+		} else {
+			return null
+		}
+	}
 	function resetDragHover() {
 		dropHoverX = -1
 		dropHoverY = -1
@@ -53,14 +63,14 @@ DragAndDrop.DropArea {
 	}
 	function resetDrag() {
 		resetDragHover()
-		cellRepeater.dropping = false
+		isDragging = false
 		draggedIndex = -1
 	}
 	function startDrag(index) {
 		draggedIndex = index
 		dropHoverX = draggedItem.x
 		dropHoverY = draggedItem.y
-		cellRepeater.dropping = true
+		isDragging = true
 	}
 
 	function tileWithin(tile, x1, y1, x2, y2) {
@@ -400,10 +410,9 @@ DragAndDrop.DropArea {
 
 			Repeater {
 				id: cellRepeater
-				property int cellCount: columns * rows
-				property bool dropping: false
+				readonly property int cellCount: columns * rows
 				onCellCountChanged: {
-					if (!dropping) {
+					if (!isDragging) {
 						model = cellCount
 					}
 				}
@@ -418,18 +427,18 @@ DragAndDrop.DropArea {
 					width: cellBoxSize
 					height: cellBoxSize
 
-					readonly property bool hasDrag: tileGrid.editing && dropHoverX >= 0 && dropHoverY >= 0
 					readonly property bool tileHovered: (hasDrag
 						&& dropHoverX <= modelX && modelX < dropHoverX + dropWidth
 						&& dropHoverY <= modelY && modelY < dropHoverY + dropHeight
 					)
-
-					readonly property bool isDraggingGroup: hasDrag && draggedItem && draggedItem.tileType == "group"
 					readonly property bool groupAreaHovered: {
 						if (isDraggingGroup) {
-							var groupArea = getGroupAreaRect(draggedItem)
-							return groupArea.x1 <= modelX && modelX <= groupArea.x2
-								&& groupArea.y1 <= modelY && modelY <= groupArea.y2
+							var groupX1 = dropHoverX
+							var groupY1 = dropHoverY + dropHeight
+							var groupX2 = groupX1 + draggedGroupRect.w - 1
+							var groupY2 = groupY1 + draggedGroupRect.h - 1
+							return groupX1 <= modelX && modelX <= groupX2
+								&& groupY1 <= modelY && modelY <= groupY2
 						} else {
 							return false
 						}

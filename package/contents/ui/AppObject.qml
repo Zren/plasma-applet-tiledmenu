@@ -52,7 +52,7 @@ QtObject {
 
 	readonly property var groupRect: {
 		if (isGroup) {
-			return tileGrid.getGroupAreaRect(modelData)
+			return tileGrid.getGroupAreaRect(tile)
 		} else {
 			return null
 		}

@@ -1,6 +1,8 @@
 import QtQuick 2.0
 
 QtObject {
+	id: appObj
+
 	property var tile: null
 
 	readonly property bool isGroup: tile && tile.tileType == "group"
@@ -53,6 +55,14 @@ QtObject {
 			return tileGrid.getGroupAreaRect(modelData)
 		} else {
 			return null
+		}
+	}
+	property Connections tileGridConnection: Connections {
+		target: tileGrid
+		onTileModelChanged: {
+			if (appObj.isGroup) {
+				appObj.groupRectChanged()
+			}
 		}
 	}
 }

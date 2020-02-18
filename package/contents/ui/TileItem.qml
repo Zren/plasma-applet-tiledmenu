@@ -96,7 +96,7 @@ Item {
 				if (mouse.button == Qt.LeftButton) {
 					if (tileEditorView && tileEditorView.tile) {
 						openTileEditor()
-					} else {
+					} else if (modelData.url) {
 						appsModel.tileGridModel.runApp(modelData.url)
 					}
 				} else if (mouse.button == Qt.RightButton) {

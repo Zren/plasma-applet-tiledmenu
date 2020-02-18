@@ -69,7 +69,7 @@ ColumnLayout {
 			width: scrollView.viewportWidth
 
 			TileEditorField {
-				visible: appObj.isLauncher
+				// visible: appObj.isLauncher
 				title: i18n("Url")
 				key: 'url'
 			}

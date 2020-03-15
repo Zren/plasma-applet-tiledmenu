@@ -7,7 +7,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0 as DragAndDrop
 
-ListView {
+GridView {
 	id: listView
 	width: parent.width
 	Layout.fillHeight: true
@@ -17,13 +17,13 @@ ListView {
 	// snapMode: ListView.SnapToItem
 	keyNavigationWraps: true
 	highlightMoveDuration: 0
-	highlightResizeDuration: 0
+	// highlightResizeDuration: 0
 
 	property bool showItemUrl: true
 	property bool showDesktopFileUrl: false
 	property int iconSize: 36 * units.devicePixelRatio
 
-	section.delegate: KickerSectionHeader {}
+	// section.delegate: KickerSectionHeader {}
 
 	delegate: MenuListItem {}
 
@@ -47,15 +47,24 @@ ListView {
 	// 	}
 	// }
 
-	highlight: PlasmaComponents.Highlight {
-		visible: listView.currentItem && !listView.currentItem.isSeparator
+	// highlight: PlasmaComponents.Highlight {
+	// 	visible: listView.currentItem && !listView.currentItem.isSeparator
+	// 	width: GridView.view ? GridView.view.width : undefined
+	// }
+
+	highlight: Rectangle {
+		color: "#22ffffff"
 	}
+	cellWidth: 200 * units.devicePixelRatio
+	cellHeight: listView.iconSize
 
 	// function triggerIndex(index) {
 	// 	model.triggerIndex(index)
 	// }
 
 	function goUp() {
+		return moveCurrentIndexUp()
+
 		if (verticalLayoutDirection == ListView.TopToBottom) {
 			decrementCurrentIndex()
 		} else { // ListView.BottomToTop
@@ -64,6 +73,8 @@ ListView {
 	}
 
 	function goDown() {
+		return moveCurrentIndexDown()
+
 		if (verticalLayoutDirection == ListView.TopToBottom) {
 			incrementCurrentIndex()
 		} else { // ListView.BottomToTop

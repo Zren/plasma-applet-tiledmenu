@@ -13,14 +13,14 @@ ScrollView {
 	KickerListView {
 		id: appsListView
 		
-		section.property: 'sectionKey'
+		// section.property: 'sectionKey'
 		// section.criteria: ViewSection.FirstCharacter
 
 		model: appsModel.allAppsModel // Should be populated by the time this is created
 
-		section.delegate: KickerSectionHeader {
-			enableJumpToSection: true
-		}
+		// section.delegate: KickerSectionHeader {
+		// 	enableJumpToSection: true
+		// }
 
 		delegate: MenuListItem {
 			secondRowVisible: config.appDescriptionBelow

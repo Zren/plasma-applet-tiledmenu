@@ -14,9 +14,9 @@ KickerListView { // RunnerResultsList
 		property var runner: search.runnerModel.modelForRow(model.runnerIndex)
 		iconSource: runner && runner.data(runner.index(model.runnerItemIndex, 0), Qt.DecorationRole)
 	}
-	
-	section.property: 'runnerName'
-	section.criteria: ViewSection.FullString
+	cellWidth: width
+	// section.property: 'runnerName'
+	// section.criteria: ViewSection.FullString
 	// verticalLayoutDirection: config.searchResultsDirection
 
 	Connections {

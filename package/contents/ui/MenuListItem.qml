@@ -1,13 +1,17 @@
 import QtQuick 2.0
+import QtQuick.Controls 2.11 as QQC2
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+// import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0 as DragAndDrop
 
 AppToolButton {
 	id: itemDelegate
 
-	width: parent.width
+	// width: parent.width
+	width: GridView.view ? GridView.view.cellWidth : undefined
+	implicitWidth: row.implicitWidth
 	implicitHeight: row.implicitHeight
 
 	property var parentModel: typeof modelList !== "undefined" && modelList[index] ? modelList[index].parentModel : undefined
@@ -19,7 +23,9 @@ AppToolButton {
 	property bool secondRowVisible: secondRowText
 	property string launcherUrl: model.favoriteId || model.url
 	property alias iconSource: itemIcon.source
-	property int iconSize: model.largeIcon ? listView.iconSize * 2 : listView.iconSize
+	// property int iconSize: model.largeIcon ? listView.iconSize * 2 : listView.iconSize
+	property int iconSize: listView.iconSize
+	// Layout.columnSpan:  model.largeIcon ? 2 : 1
 
 	function endsWith(s, substr) {
 		return s.indexOf(substr) == s.length - substr.length
@@ -107,44 +113,75 @@ AppToolButton {
 			}
 		}
 
-		ColumnLayout {
+		GridLayout {
 			Layout.fillWidth: true
 			// Layout.fillHeight: true
 			Layout.alignment: Qt.AlignVCenter
-			spacing: 0
+			// spacing: 0
+			rowSpacing: 0
+			columnSpacing: 5 * units.devicePixelRatio
+			columns: itemDelegate.secondRowVisible ? 1 : 2
 
-			RowLayout {
-				Layout.fillWidth: true
+			// RowLayout {
+			// 	Layout.fillWidth: true
 				// height: itemLabel.height
+				// Layout.alignment: Qt.AlignLeft
 
-				PlasmaComponents.Label {
+				PlasmaComponents3.Label {
 					id: itemLabel
-					text: model.name
-					maximumLineCount: 1
-					// elide: Text.ElideMiddle
-					height: implicitHeight
-				}
-
-				PlasmaComponents.Label {
+					// Layout.preferredWidth: implicitWidth
 					Layout.fillWidth: true
-					text: !itemDelegate.secondRowVisible ? itemDelegate.description : ''
-					color: config.menuItemTextColor2
-					maximumLineCount: 1
+					Layout.maximumWidth: -1
+					// Layout.maximumWidth: descriptionLabel.visible ? parent.implicitWidth * 0.8 : parent.implicitWidth
+					// Layout.maximumWidth: implicitWidth
+					// horizontalAlignment: Text.AlignLeft
+					// text: model.name
+					maximumLineCount: itemDelegate.secondRowVisible ? 2 : 1
+					// elide: Text.ElideMiddle
 					elide: Text.ElideRight
-					height: implicitHeight // ElideRight causes some top padding for some reason
-				}
-			}
+					height: implicitHeight
 
-			PlasmaComponents.Label {
-				visible: itemDelegate.secondRowVisible
-				Layout.fillWidth: true
-				// Layout.fillHeight: true
-				text: itemDelegate.secondRowText
-				color: config.menuItemTextColor2
-				maximumLineCount: 1
-				elide: Text.ElideMiddle
-				height: implicitHeight
-			}
+					wrapMode: Text.Wrap
+					textFormat: Text.StyledText
+					text: {
+						if (itemDelegate.secondRowVisible) {
+							return '' + model.name + '<br>' + '<font color="' + config.menuItemTextColor2 + '">' + itemDelegate.description + '</font>'
+						} else {
+							return '' + model.name + ' ' + '<font color="' + config.menuItemTextColor2 + '">' + itemDelegate.description + '</font>'
+						}
+					}
+
+					QQC2.ToolTip.text: text
+					QQC2.ToolTip.visible: truncated && itemDelegate.containsMouse
+					QQC2.ToolTip.delay: 600
+
+					// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
+				}
+
+				// PlasmaComponents.Label {
+				// 	id: descriptionLabel
+				// 	Layout.fillWidth: true
+				// 	// visible: !!text
+				// 	// text: !itemDelegate.secondRowVisible ? itemDelegate.description : ''
+				// 	text: itemDelegate.description
+				// 	color: config.menuItemTextColor2
+				// 	maximumLineCount: 1
+				// 	elide: Text.ElideRight
+				// 	height: implicitHeight // ElideRight causes some top padding for some reason
+				// }
+			// }
+
+			// PlasmaComponents.Label {
+			// 	id: secondRowLabel
+			// 	visible: itemDelegate.secondRowVisible
+			// 	Layout.fillWidth: true
+			// 	// Layout.fillHeight: true
+			// 	text: itemDelegate.secondRowText
+			// 	color: config.menuItemTextColor2
+			// 	maximumLineCount: 1
+			// 	elide: Text.ElideMiddle
+			// 	height: implicitHeight
+			// }
 		}
 
 	}

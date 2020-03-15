@@ -87,7 +87,6 @@ Rectangle {
 		horizontalAlignment: tileLabelAlignment
 		verticalAlignment: Text.AlignBottom
 		width: parent.width
-		font.pointSize: 10
 		renderType: Text.QtRendering // Fix pixelation when scaling. Plasma.Label uses NativeRendering.
 		style: Text.Outline
 		styleColor: tileItemView.color

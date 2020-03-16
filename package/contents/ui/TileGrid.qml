@@ -9,12 +9,8 @@ import org.kde.draganddrop 2.0 as DragAndDrop
 import org.kde.plasma.private.kicker 0.1 as Kicker
 import org.kde.kquickcontrolsaddons 2.0
 
-// MouseArea {
-DragAndDrop.DropArea {
+DropArea {
 	id: tileGrid
-
-	// hoverEnabled: true
-	property bool isDragging: cellRepeater.dropping
 
 	property int cellSize: 60 * units.devicePixelRatio
 	property real cellMargin: 3 * units.devicePixelRatio
@@ -32,6 +28,8 @@ DragAndDrop.DropArea {
 	property int columns: Math.max(minColumns, maxColumn)
 	property int rows: Math.max(minRows, maxRow)
 
+
+	//--- Drag and Drop properties
 	property bool isDragging: false
 	property var addedItem: null
 	readonly property bool adding: addedItem
@@ -54,6 +52,37 @@ DragAndDrop.DropArea {
 			return null
 		}
 	}
+
+	//--- Drag and Drop events
+	// onContainsDragChanged: console.log('containsDrag', containsDrag)
+	onEntered: {
+		// console.log('onEntered', drag)
+		dragTick(drag)
+	}
+	onPositionChanged: {
+		// console.log('onPositionChanged', drag)
+		dragTick(drag)
+	}
+	onExited: {
+		// console.log('onExited')
+		resetDragHover()
+	}
+	onDropped: {
+		// console.log('onDropped', drop)
+		if (draggedItem) {
+			tileGrid.moveTile(draggedItem, dropHoverX, dropHoverY)
+			tileGrid.resetDrag()
+			// event.accept(Qt.MoveAction)
+		} else if (addedItem) {
+			addedItem.x = dropHoverX
+			addedItem.y = dropHoverY
+			tileGrid.tileModel.push(addedItem)
+			tileGrid.tileModelChanged()
+			tileGrid.resetDrag()
+		}
+	}
+
+	// Drag and Drop functions
 	function resetDragHover() {
 		dropHoverX = -1
 		dropHoverY = -1
@@ -149,20 +178,6 @@ DragAndDrop.DropArea {
 		tileGrid.tileModelChanged()
 	}
 
-	onDrop: {
-		// console.log('onDrop', JSON.stringify(draggedItem))
-		if (draggedItem) {
-			tileGrid.moveTile(draggedItem, dropHoverX, dropHoverY)
-			tileGrid.resetDrag()
-			// event.accept(Qt.MoveAction)
-		} else if (addedItem) {
-			addedItem.x = dropHoverX
-			addedItem.y = dropHoverY
-			tileGrid.tileModel.push(addedItem)
-			tileGrid.tileModelChanged()
-			tileGrid.resetDrag()
-		}
-	}
 	function parseDropUrl(url) {
 		var workingDir = Qt.resolvedUrl('.')
 		var endsWithDesktop = url.indexOf('.desktop') === url.length - '.desktop'.length
@@ -186,20 +201,24 @@ DragAndDrop.DropArea {
 		}
 	}
 
+	// QQuickDropEvent
+	// https://github.com/qt/qtdeclarative/blob/a4aa8d9ade44d75cb5a1d84bd7c1773fadc73095/src/quick/items/qquickdroparea_p.h#L63
 	function dragTick(event) {
+		// console.log('dragTick', event.x, event.y)
 		var dragX = event.x + scrollView.flickableItem.contentX - dropOffsetX
 		var dragY = event.y + scrollView.flickableItem.contentY - dropOffsetY
 		var modelX = Math.floor(dragX / cellBoxSize)
 		var modelY = Math.floor(dragY / cellBoxSize)
-		// console.log('onDragMove', event.x, event.y, modelX, modelY)
+		var globalPoint = popup.mapFromItem(tileGrid, event.x, event.y)
+		// console.log('onDragMove', event.x, event.y, modelX, modelY, globalPoint)
 		scrollUpArea.checkContains(event)
 		scrollDownArea.checkContains(event)
 
 		if (draggedItem) {
 		} else if (addedItem) {
-		} else if (event && event.mimeData && event.mimeData.url) {
-			var url = event.mimeData.url.toString()
-			// console.log('new addedItem', event.mimeData.url, url)
+		} else if (event && event.hasUrls && event.urls) { 
+			var url = event.urls[0]
+			// console.log('new addedItem', event.urls, url)
 			url = parseDropUrl(url)
 
 			addedItem = newTile(url)
@@ -213,12 +232,12 @@ DragAndDrop.DropArea {
 		dropHoverY = Math.max(0, modelY)
 		canDrop = !hits(dropHoverX, dropHoverY, dropWidth, dropHeight)
 	}
-	onDragEnter: dragTick(event)
-	onDragMove: dragTick(event)
-	onDragLeave: {
-		// console.log('onExited')
-		resetDragHover()
-	}
+	// onDragEnter: dragTick(event)
+	// onDragMove: dragTick(event)
+	// onDragLeave: {
+	// 	// console.log('onExited')
+	// 	resetDragHover()
+	// }
 
 	property var hitBox: [] // hitBox[y][x]
 	function updateSize() {

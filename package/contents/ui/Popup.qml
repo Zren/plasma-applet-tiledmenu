@@ -7,6 +7,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
 MouseArea {
+	id: popup
 	property alias searchView: searchView
 	property alias appsView: searchView.appsView
 	property alias tileEditorView: searchView.tileEditorView

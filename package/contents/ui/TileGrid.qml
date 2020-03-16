@@ -216,10 +216,18 @@ DropArea {
 
 		if (draggedItem) {
 		} else if (addedItem) {
-		} else if (event && event.hasUrls && event.urls) { 
-			var url = event.urls[0]
-			// console.log('new addedItem', event.urls, url)
-			url = parseDropUrl(url)
+		} else if (event && event.hasUrls && event.urls) {
+			if (event.keys && event.keys.indexOf('favoriteId') >= 0) {
+				var url = event.getDataAsString('favoriteId')
+			} else {
+				var url = event.urls[0]
+				// console.log('new addedItem', event.urls, url)
+				url = parseDropUrl(url)
+			}
+			// console.log('new addedItem')
+			// console.log('\t', 'urls', event.urls)
+			// console.log('\t', 'mimeData.favoriteId', event.getDataAsString('favoriteId'))
+			// console.log('\t', 'url', url)
 
 			addedItem = newTile(url)
 			dropHoverX = modelX

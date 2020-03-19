@@ -82,7 +82,7 @@ Item {
 			when: searchOnTop
 			PropertyChanges {
 				target: stackViewContainer
-				anchors.topMargin: searchField.height
+				anchors.topMargin: searchField.visible ? searchField.height : 0
 			}
 			PropertyChanges {
 				target: searchField
@@ -94,7 +94,7 @@ Item {
 			when: !searchOnTop
 			PropertyChanges {
 				target: stackViewContainer
-				anchors.bottomMargin: searchField.height
+				anchors.bottomMargin: searchField.visible ? searchField.height : 0
 			}
 			PropertyChanges {
 				target: searchField
@@ -236,7 +236,7 @@ Item {
 
 	SearchField {
 		id: searchField
-		// width: 430
+		visible: !config.isEditingTile
 		height: config.searchFieldHeight
 		anchors.left: parent.left
 		anchors.right: parent.right

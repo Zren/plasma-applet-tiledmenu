@@ -17,9 +17,19 @@ Item {
 	readonly property int sidebarRightMargin: 4 * units.devicePixelRatio
 	readonly property int sidebarPopupButtonSize: plasmoid.configuration.sidebarPopupButtonSize * units.devicePixelRatio
 	readonly property int appListWidth: plasmoid.configuration.appListWidth * units.devicePixelRatio
+	readonly property int tileEditorMinWidth: Math.max(350, 350 * units.devicePixelRatio)
 
 	property bool showSearch: false
-	readonly property int appAreaWidth: (showSearch ? appListWidth : 0)
+	property bool isEditingTile: false
+	readonly property int appAreaWidth: {
+		if (isEditingTile) {
+			return tileEditorMinWidth
+		} else if (showSearch) {
+			return appListWidth
+		} else {
+			return 0
+		}
+	}
 	readonly property int leftSectionWidth: sidebarWidth + sidebarRightMargin + appAreaWidth
 
 	readonly property real tileScale: plasmoid.configuration.tileScale

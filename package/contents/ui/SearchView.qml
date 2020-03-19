@@ -217,6 +217,10 @@ Item {
 				active = true
 				item.open(tile)
 			}
+			readonly property bool isCurrentView: stackView.currentItem == tileEditorView
+			onIsCurrentViewChanged: {
+				config.isEditingTile = isCurrentView
+			}
 		}
 
 		SearchStackView {

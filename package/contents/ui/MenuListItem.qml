@@ -55,9 +55,9 @@ AppToolButton {
 	function startDrag() {
 		widget.draggedFavoriteId = model.favoriteId
 
-		// Requires Plasma 5.9 (probably) https://github.com/KDE/plasma-desktop/commit/85d946b206f6e8a12cf0a03b2386279ff2b0ff1a
+		// Note that we fallback from url to favoriteId for "Most Used" apps.
 		// console.log('startDrag', widget, model.url, iconInstance, "favoriteId", model.favoriteId)
-		dragHelper.startDrag(widget, model.url, iconInstance, "favoriteId", model.favoriteId)
+		dragHelper.startDrag(widget, model.url || model.favoriteId, iconInstance, "favoriteId", model.favoriteId)
 
 		resetDragState()
 	}

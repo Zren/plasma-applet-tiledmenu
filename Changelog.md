@@ -1,3 +1,13 @@
+## v33 - March __ 2020
+
+* Use QML's internal Drag and Drop instead of Plasma's global drag.
+* Fix adding tiles when the launcher is in a subdir (like wine apps).
+* Show outline around grouped tiles when hovering group label. Dragged group highlight follows cursor.
+* Remove hardcoded font.pointSize=10 assignment in TileItemView.
+* Allow groups to have urls / run apps when left clicked.
+* Use 350px AppList width when editing a tile (Issue #49)
+* Updated German translations by @4tmelDriver (Pull Request #56)
+
 ## v32 - February 12 2020
 
 * Hide Tiles Only button when tile grid is hidden completely.

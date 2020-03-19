@@ -9,8 +9,8 @@ Item {
 	property bool useOutlineMask: true
 
 	property var mouseArea
-	property bool hovered: mouseArea && mouseArea.containsMouse
-	property bool pressed: mouseArea && mouseArea.pressed
+	property bool hovered: mouseArea ? mouseArea.containsMouse : false
+	property bool pressed: mouseArea ? mouseArea.pressed : false
 	property int mouseX: mouseArea ? mouseArea.mouseX : width/2
 	property int mouseY: mouseArea ? mouseArea.mouseY : height/2
 

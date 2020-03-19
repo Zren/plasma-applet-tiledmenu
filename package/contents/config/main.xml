@@ -89,7 +89,7 @@
 			<default>48</default>
 		</entry>
 		<entry name="appListWidth" type="int">
-			<default>350</default>
+			<default>840</default>
 		</entry>
 		<entry name="favGridCols" type="int">
 			<default>6</default>

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2020-02-12 15:32-0500\n"
+"POT-Creation-Date: 2020-04-24 09:15-0400\n"
 "PO-Revision-Date: 2019-07-12 11:44-0300\n"
 "Last-Translator: Thiago Masato Costa Sueto <herzenschein@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -93,6 +93,10 @@ msgstr "Tema da área de trabalho (%1)"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"
 msgstr "Cor personalizada"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Gradient"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"

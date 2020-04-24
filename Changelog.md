@@ -1,4 +1,8 @@
-## v33 - March __ 2020
+## v34 - ____ __ 2020
+
+* Add vertical gradient to tiles, which can be toggle off in the config.
+
+## v33 - April 24 2020
 
 * Use QML's internal Drag and Drop instead of Plasma's global drag.
 * Fix adding tiles when the launcher is in a subdir (like wine apps).
@@ -7,6 +11,7 @@
 * Allow groups to have urls / run apps when left clicked.
 * Use 350px AppList width when editing a tile (Issue #49)
 * Updated German translations by @4tmelDriver (Pull Request #56)
+* Prepare vertical gradient code.
 
 ## v32 - February 12 2020
 

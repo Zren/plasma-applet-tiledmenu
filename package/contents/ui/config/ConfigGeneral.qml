@@ -126,6 +126,7 @@ ConfigPage {
 				configKey: 'defaultTileColor'
 			}
 			ConfigCheckBox {
+				visible: false
 				text: i18n("Gradient")
 				configKey: 'defaultTileGradient'
 			}

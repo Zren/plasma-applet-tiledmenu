@@ -64,7 +64,7 @@
 			<default></default>
 		</entry>
 		<entry name="defaultTileGradient" type="bool">
-			<default>true</default>
+			<default>false</default>
 		</entry>
 		<entry name="sidebarBackgroundColor" type="string">
 			<default></default>

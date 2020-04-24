@@ -25,6 +25,7 @@ QtObject {
 	readonly property bool showLabel: tile && typeof tile.showLabel !== "undefined" ? tile.showLabel : true
 	readonly property color backgroundColor: tile && typeof tile.backgroundColor !== "undefined" ? tile.backgroundColor : defaultBackgroundColor
 	readonly property string backgroundImage: tile && typeof tile.backgroundImage !== "undefined" ? tile.backgroundImage : ""
+	readonly property bool backgroundGradient: tile && typeof tile.gradient !== "undefined" ? tile.gradient : config.defaultTileGradient
 
 	readonly property int tileX: tile && typeof tile.x !== "undefined" ? tile.x : 0
 	readonly property int tileY: tile && typeof tile.y !== "undefined" ? tile.y : 0

@@ -125,6 +125,10 @@ ConfigPage {
 				label: ""
 				configKey: 'defaultTileColor'
 			}
+			ConfigCheckBox {
+				text: i18n("Gradient")
+				configKey: 'defaultTileGradient'
+			}
 		}
 		RadioButton {
 			text: i18n("Transparent")

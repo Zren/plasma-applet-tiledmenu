@@ -10,6 +10,16 @@ import org.kde.draganddrop 2.0 as DragAndDrop
 Rectangle {
 	id: tileItemView
 	color: appObj.backgroundColor
+	property color gradientBottomColor: Qt.darker(appObj.backgroundColor, 2.0)
+
+	Component {
+		id: tileGradient
+		Gradient {
+			GradientStop { position: 0.0; color: appObj.backgroundColor }
+			GradientStop { position: 1.0; color: tileItemView.gradientBottomColor }
+		}
+	}
+	gradient: appObj.backgroundGradient ? tileGradient.createObject(tileItemView) : null
 
 	readonly property int tilePadding: 4 * units.devicePixelRatio
 	readonly property int smallIconSize: 32 * units.devicePixelRatio
@@ -89,6 +99,6 @@ Rectangle {
 		width: parent.width
 		renderType: Text.QtRendering // Fix pixelation when scaling. Plasma.Label uses NativeRendering.
 		style: Text.Outline
-		styleColor: tileItemView.color
+		styleColor: appObj.backgroundGradient ? tileItemView.gradientBottomColor : appObj.backgroundColor
 	}
 }

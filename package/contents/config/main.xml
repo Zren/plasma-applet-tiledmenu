@@ -63,6 +63,9 @@
 		<entry name="defaultTileColor" type="string">
 			<default></default>
 		</entry>
+		<entry name="defaultTileGradient" type="bool">
+			<default>true</default>
+		</entry>
 		<entry name="sidebarBackgroundColor" type="string">
 			<default></default>
 		</entry>

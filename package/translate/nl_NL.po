@@ -96,7 +96,7 @@ msgstr "Aangepaste kleur"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Gradient"
-msgstr ""
+msgstr "Kleurverloop"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"

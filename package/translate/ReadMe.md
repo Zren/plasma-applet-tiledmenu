@@ -40,7 +40,7 @@ Or if you know how to make a pull request
 | hr       |  93/103 |   90% |
 | id       | 100/103 |   97% |
 | ko       |  98/103 |   95% |
-| nl_NL    | 102/103 |   99% |
+| nl_NL    | 103/103 |   99% |
 | pl       | 102/103 |   99% |
 | pt_BR    | 100/103 |   97% |
 | pt_PT    |  97/103 |   94% |

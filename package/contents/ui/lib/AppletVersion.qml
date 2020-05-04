@@ -1,15 +1,16 @@
+// Version 2
+
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 
-Item {
-	implicitWidth: label.implicitWidth
-	implicitHeight: label.implicitHeight
-
+Label {
 	property string version: "?"
 	property string metadataFilepath: plasmoid.file("", "../metadata.desktop")
+
+	text: i18n("<b>Version:</b> %1", version)
 
 	PlasmaCore.DataSource {
 		id: executable
@@ -34,11 +35,6 @@ Item {
 		onExited: {
 			version = stdout.replace('\n', ' ').trim()
 		}
-	}
-
-	Label {
-		id: label
-		text: i18n("<b>Version:</b> %1", version)
 	}
 
 	Component.onCompleted: {

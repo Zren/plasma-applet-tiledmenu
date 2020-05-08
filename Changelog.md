@@ -1,6 +1,11 @@
-## v34 - ____ __ 2020
+## v34 - May 8 2020
 
 * Add vertical gradient to tiles, which can be toggle off in the config.
+* Only show "Tiles Only" button if it's the default view.
+* Update ConfigPage to fix scrollbar overlap (Issue #62)
+* Fix xdg folder button labels in the config.
+* Remove old code that's no longer used (Issue #13), and update a couple config controls.
+* Add Romanian translations by https://www.pling.com/u/sebyx87
 
 ## v33 - April 24 2020
 

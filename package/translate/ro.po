@@ -1,0 +1,432 @@
+# Translation of tiledmenu in ro
+# Copyright (C) 2020
+# This file is distributed under the same license as the tiledmenu package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tiledmenu \n"
+"Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
+"POT-Creation-Date: 2020-04-24 09:15-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: Istrate Sebastian <istratesebastian@yahoo.com>\n"
+"Language-Team: Romanian\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../contents/config/config.qml
+msgid "General"
+msgstr "General"
+
+#: ../contents/config/config.qml
+msgid "Import/Export Layout"
+msgstr "Importă/Exportă schema"
+
+#: ../contents/config/config.qml
+msgid "Advanced"
+msgstr "Avansat"
+
+#: ../contents/ui/AppContextMenu.qml
+msgid "Unpin from Menu"
+msgstr "Anulați fixarea din Meniu"
+
+#: ../contents/ui/AppContextMenu.qml
+msgid "Pin to Menu"
+msgstr "Fixați în Meniu"
+
+#: ../contents/ui/AppContextMenu.qml
+msgid "Pin to Taskbar"
+msgstr "Fixați in bara de activități"
+
+#: ../contents/ui/AppsModel.qml
+msgid "Recent Apps"
+msgstr "Aplicatii recente"
+
+#: ../contents/ui/AppsModel.qml
+msgid "Most Used"
+msgstr "Cele mai folosite"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Popup"
+msgstr "Popup"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Fullscreen"
+msgstr "Ecran complet"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Grid Columns"
+msgstr "Coloane de grilă"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Panel Icon"
+msgstr "Pictogramă panou"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Fixed Size"
+msgstr "Marime fixă"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Tiles"
+msgstr "Dale"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Tile Size"
+msgstr "Mărime dale"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "px"
+msgstr "px"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Tile Margin"
+msgstr "Margine dală"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Desktop Theme (%1)"
+msgstr "Temă Desktop (%1)"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Custom Color"
+msgstr "Culoare personalizată"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Gradient"
+msgstr "Gradient"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Transparent"
+msgstr "Transparent"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Text Alignment"
+msgstr "Aliniere text"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Left"
+msgstr "Stânga"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Center"
+msgstr "Centru"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Right"
+msgstr "Dreapta"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Sidebar"
+msgstr "Bara laterală"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Width"
+msgstr "Lăţime"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Icon Size"
+msgstr "Mărime pictogramă"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Popup Button Height"
+msgstr "Înălțime buton Popup"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Sidebar Shortcuts"
+msgstr "Scurtături bara laterală"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Add Default"
+msgstr "Adăugați implicit"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Search Box"
+msgstr "Caseta de căutare"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Search Field Height"
+msgstr "Înălțimea câmpului de căutare"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Windows (White)"
+msgstr "Ferestre (albe)"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "App List"
+msgstr "Listă aplicații"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "App List Area Width"
+msgstr "Lățimea zonei listei de aplicații"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Default View"
+msgstr "Vizualizare implicită"
+
+#: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
+msgid "Alphabetical"
+msgstr "Alfabetic"
+
+#: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
+msgid "Categories"
+msgstr "Categorii"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Jump To Letter"
+msgstr "Salt la litera"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Jump To Category"
+msgstr "Salt la categorie"
+
+#: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
+msgid "Tiles Only"
+msgstr "Numai Dale"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "App Description"
+msgstr "Descriere aplicatie"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Hidden"
+msgstr "Ascuns"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "After"
+msgstr "După"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Below"
+msgstr "Dedesubt"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Show:"
+msgstr "Arată:"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Recent applications"
+msgstr "Aplicații recente"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Often used applications"
+msgstr "Aplicații utilizate des"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Search Results"
+msgstr "Rezultatele căutării"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Merged (Application Launcher)"
+msgstr "Îmbina (lansator de aplicații)"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Split into Categories (Application Menu / Dashboard)"
+msgstr "Împărțiți în categorii (Meniu aplicație / )"
+
+#: ../contents/ui/config/ConfigurationShortcuts.qml
+msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
+msgstr "Când acest widget are un set global de comenzi rapide, precum 'Alt + F1', Plasma va deschide acest meniu doar cu tasta ⊞ Windows / Meta."
+
+#: ../contents/ui/lib/AppletVersion.qml
+msgid "<b>Version:</b> %1"
+msgstr "<b>Versiune:</b> %1"
+
+#: ../contents/ui/Main.qml
+msgid "System Info"
+msgstr "Informații sistem"
+
+#: ../contents/ui/Main.qml
+msgid "Terminal"
+msgstr "Terminal"
+
+#: ../contents/ui/Main.qml
+msgid "Task Manager"
+msgstr "Gestionar sarcini"
+
+#: ../contents/ui/Main.qml
+msgid "System Settings"
+msgstr "Setari sistem"
+
+#: ../contents/ui/Main.qml
+msgid "File Manager"
+msgstr "Manager de fișiere"
+
+#: ../contents/ui/Main.qml
+msgid "Edit Applications..."
+msgstr "Editare aplicații..."
+
+#: ../contents/ui/Popup.qml
+msgid "Resize?"
+msgstr "Redimensionați?"
+
+#: ../contents/ui/Popup.qml
+msgid "Alt + Right Click to resize the menu."
+msgstr "Alt + Click dreapta pentru redimensionarea meniului."
+
+#: ../contents/ui/SearchField.qml
+msgid "Search"
+msgstr "Caută"
+
+#: ../contents/ui/SearchField.qml
+msgid "Search Apps"
+msgstr "Caută aplicații"
+
+#: ../contents/ui/SearchField.qml
+msgid "Search Files"
+msgstr "Caută fișiere"
+
+#: ../contents/ui/SearchField.qml
+msgid "Search Bookmarks"
+msgstr "Caută marcaje"
+
+#: ../contents/ui/SearchField.qml
+msgctxt "Search [krunnerName, krunnerName, ...], "
+msgid "Search %1"
+msgstr "Caută %1"
+
+#: ../contents/ui/SearchFiltersViewItem.qml ../contents/ui/SearchFiltersView.qml
+msgid "Default"
+msgstr "Implicit"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "All"
+msgstr "Toate"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Search with all KRunner plugins"
+msgstr "Căutați cu toate pluginurile KRunner"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Search with user selected defaults"
+msgstr "Căutați cu valorile implicite selectate de utilizator"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Applications"
+msgstr "Aplicații"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Files"
+msgstr "Fișiere"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Music"
+msgstr "Muzică"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Videos"
+msgstr "Videoclipuri"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Bookmarks"
+msgstr "Marcaje"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "locations"
+msgstr "locații"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Dictionary"
+msgstr "Dicţionar"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Shell"
+msgstr "Shell"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Calculator"
+msgstr "Calculator"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Windowed Widgets"
+msgstr "Widget-uri ferestre"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Date/Time"
+msgstr "Dată/Timp"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Unit Converter"
+msgstr "Convertor de unități"
+
+#: ../contents/ui/SearchResultsView.qml
+msgid "Filters"
+msgstr "Filtre"
+
+#: ../contents/ui/SidebarView.qml
+msgid "User Manager"
+msgstr "Manager utilizator"
+
+#: ../contents/ui/SidebarView.qml
+msgid "Power"
+msgstr "Putere"
+
+#: ../contents/ui/TileEditorView.qml ../contents/ui/TileItem.qml
+msgid "Edit Tile"
+msgstr "Editați Dalele"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Reset Tile"
+msgstr "Resetare Dalele"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Close"
+msgstr "Închide"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Url"
+msgstr "Url"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Label"
+msgstr "Eticheta"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Icon"
+msgstr "Pictogramă"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Background Image"
+msgstr "Imagine fundal"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Choose an image"
+msgstr "Alege o imagine"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+msgstr "Fișiere imagine (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Preset Tiles"
+msgstr "Dale presetate"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Background Color"
+msgstr "Culoare de fundal"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Position / Size"
+msgstr "Poziție / Dimensiune"
+
+#: ../contents/ui/TileGrid.qml
+msgid "New Group"
+msgstr "Grup nou"
+
+#: ../contents/ui/TileGrid.qml
+msgid "Unlock Tiles"
+msgstr "Deblocare dale"
+
+#: ../contents/ui/TileGrid.qml
+msgid "Lock Tiles"
+msgstr "Blocare dale"
+
+#: ../contents/ui/TileGrid.qml
+msgctxt "default group label"
+msgid "Group"
+msgstr "Grup"
+
+#: ../contents/ui/TileItem.qml
+msgid "Sort Tiles"
+msgstr "Sortează Dalele"

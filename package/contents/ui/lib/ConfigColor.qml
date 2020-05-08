@@ -1,3 +1,5 @@
+// Version 3
+
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
@@ -13,19 +15,52 @@ RowLayout {
 	id: configColor
 	spacing: 2
 	// Layout.fillWidth: true
-	Layout.maximumWidth: 300
+	Layout.maximumWidth: 300 * units.devicePixelRatio
 
 	property alias label: label.text
+	property alias labelColor: label.color
 	property alias horizontalAlignment: label.horizontalAlignment
+	property alias showAlphaChannel: dialog.showAlphaChannel
+	property color buttonOutlineColor: {
+		if (valueColor.r + valueColor.g + valueColor.b > 0.5) {
+			return "#BB000000" // Black outline
+		} else {
+			return "#BBFFFFFF" // White outline
+		}
+	}
+
+	property TextField textField: textField
+	property ColorDialog dialog: dialog
 
 	property string configKey: ''
-	property string value: configKey ? plasmoid.configuration[configKey] : "#000"
+	property string defaultColor: ''
+	property string value: {
+		if (configKey) {
+			return plasmoid.configuration[configKey]
+		} else {
+			return "#000"
+		}
+	}
+
+	readonly property color defaultColorValue: defaultColor
+	readonly property color valueColor: {
+		if (value == '' && defaultColor) {
+			return defaultColor
+		} else {
+			return value
+		}
+	}
+
 	onValueChanged: {
 		if (!textField.activeFocus) {
 			textField.text = configColor.value
 		}
 		if (configKey) {
-			plasmoid.configuration[configKey] = value
+			if (value == defaultColorValue) {
+				plasmoid.configuration[configKey] = ""
+			} else {
+				plasmoid.configuration[configKey] = value
+			}
 		}
 	}
 
@@ -41,25 +76,24 @@ RowLayout {
 	}
 
 	MouseArea {
-		// width: label.font.pixelSize
-		// height: label.font.pixelSize
-		width: textField.height
-		height: textField.height
+		id: mouseArea
+		Layout.preferredWidth: textField.height
+		Layout.preferredHeight: textField.height
 		hoverEnabled: true
 
 		onClicked: dialog.open()
 
 		Rectangle {
 			anchors.fill: parent
-			color: configColor.value
+			color: configColor.valueColor
 			border.width: 2
-			border.color: parent.containsMouse ? theme.highlightColor : "#BB000000"
+			border.color: parent.containsMouse ? theme.highlightColor : buttonOutlineColor
 		}
 	}
 
 	TextField {
 		id: textField
-		placeholderText: "#AARRGGBB"
+		placeholderText: defaultColor ? defaultColor : "#AARRGGBB"
 		Layout.fillWidth: label.horizontalAlignment == Text.AlignLeft
 		onTextChanged: {
 			// Make sure the text is:
@@ -79,7 +113,7 @@ RowLayout {
 		modality: Qt.WindowModal
 		title: configColor.label
 		showAlphaChannel: true
-		color: configColor.value
+		color: configColor.valueColor
 		onCurrentColorChanged: {
 			if (visible && color != currentColor) {
 				configColor.value = currentColor

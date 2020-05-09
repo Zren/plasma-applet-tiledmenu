@@ -424,7 +424,7 @@ msgstr "Dévérouiller les Tuiles"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Lock Tiles"
-msgstr "Vérouiller les Tuiles"
+msgstr "Verrouiller les Tuiles"
 
 #: ../contents/ui/TileGrid.qml
 msgctxt "default group label"

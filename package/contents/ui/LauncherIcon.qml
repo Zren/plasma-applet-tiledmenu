@@ -14,22 +14,22 @@ MouseArea {
 	Layout.minimumWidth: {
 		switch (plasmoid.formFactor) {
 		case PlasmaCore.Types.Vertical:
-			return 0;
+			return 0
 		case PlasmaCore.Types.Horizontal:
-			return height;
+			return height
 		default:
-			return units.gridUnit * 3;
+			return units.gridUnit * 3
 		}
 	}
 
 	Layout.minimumHeight: {
 		switch (plasmoid.formFactor) {
 		case PlasmaCore.Types.Vertical:
-			return width;
+			return width
 		case PlasmaCore.Types.Horizontal:
-			return 0;
+			return 0
 		default:
-			return units.gridUnit * 3;
+			return units.gridUnit * 3
 		}
 	}
 

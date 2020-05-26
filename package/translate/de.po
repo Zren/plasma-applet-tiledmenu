@@ -1,16 +1,17 @@
-# Translation of tiledmenu in de
-# Copyright (C) 2016
+# Translation of tiledmenu in LANGUAGE
+# Copyright (C) 2020
 # This file is distributed under the same license as the tiledmenu package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
+#, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
 "POT-Creation-Date: 2020-04-24 09:15-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Ruman Gerst <rumangerst@gmail.com>\n"
-"Language-Team: German <LL@li.org>\n"
+"Last-Translator: André Wollmarker\n"
+"Language-Team: German\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -22,7 +23,7 @@ msgstr "Allgemein"
 
 #: ../contents/config/config.qml
 msgid "Import/Export Layout"
-msgstr "Importiere/Exportiere Layout"
+msgstr "Layout importieren/exportieren"
 
 #: ../contents/config/config.qml
 msgid "Advanced"
@@ -30,27 +31,27 @@ msgstr "Erweitert"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Unpin from Menu"
-msgstr "Von Menü loslösen"
+msgstr "Vom Menü lösen"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Pin to Menu"
-msgstr "An Menü anheften"
+msgstr "An das Menü anheften"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Pin to Taskbar"
-msgstr "An Anwendungsleiste anheften"
+msgstr "An die Taskleiste anheften"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Recent Apps"
-msgstr "Kürzlich verwendet"
+msgstr "Neueste Anwendungen"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Most Used"
-msgstr "Meist verwendet"
+msgstr "Oft benutzt"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup"
-msgstr ""
+msgstr "Popup"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Fullscreen"
@@ -58,11 +59,11 @@ msgstr "Vollbild"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Grid Columns"
-msgstr "Raster Spalten"
+msgstr "Gitterspalten"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Panel Icon"
-msgstr "Symbol"
+msgstr "Icons der Seitenleiste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Fixed Size"
@@ -82,11 +83,11 @@ msgstr "px"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
-msgstr "Kachelabstand"
+msgstr "Kachelrand"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Desktop Theme (%1)"
-msgstr ""
+msgstr "Desktop Design (%1)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"
@@ -94,7 +95,7 @@ msgstr "Benutzerdefinierte Farbe"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Gradient"
-msgstr ""
+msgstr "Farbverlauf"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"
@@ -102,7 +103,7 @@ msgstr "Transparent"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Text Alignment"
-msgstr "Textausrichtung"
+msgstr "Text-Ausrichtung"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Left"
@@ -130,15 +131,15 @@ msgstr "Symbolgröße"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup Button Height"
-msgstr "Popup Knopf Größe"
+msgstr "Höhe der Popup-Schaltfläche"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
-msgstr "Seitenleiste Schnelltasten"
+msgstr "Verknüpfungen in der Seitenleiste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Add Default"
-msgstr "Standardtasten"
+msgstr "Voreinstellung hinzufügen"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Box"
@@ -146,11 +147,11 @@ msgstr "Suchleiste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Field Height"
-msgstr "Suchleisten Höhe"
+msgstr "Höhe des Suchfelds"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Windows (White)"
-msgstr "Windows (Weiß)"
+msgstr "Fenster (Weiß)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App List"
@@ -158,11 +159,11 @@ msgstr "Anwendungsliste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App List Area Width"
-msgstr "Breite Anwendungsliste"
+msgstr "Breite der Anwendungsliste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Default View"
-msgstr "Standard Ansicht"
+msgstr "Standardansicht"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Alphabetical"
@@ -174,11 +175,11 @@ msgstr "Kategorien"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Jump To Letter"
-msgstr "Springe zu Buchstaben"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Jump To Category"
-msgstr "Springe zu Kategorien"
+msgstr "Zur Kategorien springen"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Tiles Only"
@@ -186,7 +187,7 @@ msgstr "Nur Kacheln"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App Description"
-msgstr "Anwendungsbeschreibung"
+msgstr "Beschreibung der Anwendung"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hidden"
@@ -198,7 +199,7 @@ msgstr "Danach"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Below"
-msgstr "Darunter"
+msgstr "Unterhalb"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Show:"
@@ -206,11 +207,11 @@ msgstr "Anzeigen:"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Recent applications"
-msgstr "Zuletzt benutzte Anwendungen"
+msgstr "Neueste Anwendungen"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Often used applications"
-msgstr "Häufig benutzte Anwendungen"
+msgstr "Häufig verwendete Anwendungen"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Results"
@@ -218,31 +219,31 @@ msgstr "Suchergebnisse"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Merged (Application Launcher)"
-msgstr "Vereinigt (Anwendungsstarter)"
+msgstr "Zusammengeführt (Anwendungsstarter)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Split into Categories (Application Menu / Dashboard)"
-msgstr "In Kategorien unterteilen (Anwendungsmenü / Dashboard)"
+msgstr "Einteilung in Kategorien (Anwendungsmenü / Dashboard)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
 msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr "Wenn für dieses Widget ein globales Tastenkürzel wie 'Alt+F1' festgelegt ist, wird Plasma dieses Menu mit der ⊞ Windows / Meta Taste öffnen"
+msgstr "Wenn dieses Widget über eine globale Tastenkombination wie 'Alt+F1' verfügt, öffnet Plasma dieses Menü nur mit der Taste ⊞ Windows / Meta."
 
 #: ../contents/ui/lib/AppletVersion.qml
 msgid "<b>Version:</b> %1"
-msgstr ""
+msgstr "<b>Version:</b> %1"
 
 #: ../contents/ui/Main.qml
 msgid "System Info"
-msgstr "Systeminformationen"
+msgstr "Informationen zum System"
 
 #: ../contents/ui/Main.qml
 msgid "Terminal"
-msgstr "Terminal"
+msgstr "Konsole"
 
 #: ../contents/ui/Main.qml
 msgid "Task Manager"
-msgstr "Taskmanager"
+msgstr "Aufgaben-Manager"
 
 #: ../contents/ui/Main.qml
 msgid "System Settings"
@@ -250,11 +251,11 @@ msgstr "Systemeinstellungen"
 
 #: ../contents/ui/Main.qml
 msgid "File Manager"
-msgstr "Dateiverwaltung"
+msgstr "Dateimanager"
 
 #: ../contents/ui/Main.qml
 msgid "Edit Applications..."
-msgstr "Anwendungen bearbeiten..."
+msgstr "Anwendung bearbeiten..."
 
 #: ../contents/ui/Popup.qml
 msgid "Resize?"
@@ -262,32 +263,32 @@ msgstr "Größe ändern?"
 
 #: ../contents/ui/Popup.qml
 msgid "Alt + Right Click to resize the menu."
-msgstr "Alt + Rechtsklick um Menügröße zu ändern."
+msgstr "Alt + Rechtsklick, um die Größe des Menüs zu ändern."
 
 #: ../contents/ui/SearchField.qml
 msgid "Search"
-msgstr "Suchen"
+msgstr "Suche"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search Apps"
-msgstr "Suche Anwendungen"
+msgstr "Anwendung durchsuchen"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search Files"
-msgstr "Suche Dateien"
+msgstr "Dateien durchsuchen"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search Bookmarks"
-msgstr "Suche Lesezeichen"
+msgstr "Lesezeichen durchsuchen"
 
 #: ../contents/ui/SearchField.qml
 msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
-msgstr "Suche %1"
+msgstr "Suche [krunnerName, krunnerName, ...], "
 
 #: ../contents/ui/SearchFiltersViewItem.qml ../contents/ui/SearchFiltersView.qml
 msgid "Default"
-msgstr "Standard"
+msgstr "Standart"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "All"
@@ -295,11 +296,11 @@ msgstr "Alle"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Search with all KRunner plugins"
-msgstr "Suche mit allen KRunner Plugins"
+msgstr "Suche mit allen KRunner-Plugins"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Search with user selected defaults"
-msgstr "Suche mit benutzerdefinierten Einstellungen"
+msgstr "Suche mit vom Benutzer gewählten Standardeinstellungen"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Applications"
@@ -323,7 +324,7 @@ msgstr "Lesezeichen"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "locations"
-msgstr "Orte"
+msgstr "Standorte"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Dictionary"
@@ -331,7 +332,7 @@ msgstr "Wörterbuch"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Shell"
-msgstr ""
+msgstr "Shell"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Calculator"
@@ -339,15 +340,15 @@ msgstr "Taschenrechner"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Windowed Widgets"
-msgstr ""
+msgstr "Fenster-Widgets"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Date/Time"
-msgstr "Datum/Zeit"
+msgstr "Datum/Uhrzeit"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Unit Converter"
-msgstr "Einheitenrechner"
+msgstr "Einheitenumrechner"
 
 #: ../contents/ui/SearchResultsView.qml
 msgid "Filters"
@@ -355,7 +356,7 @@ msgstr "Filter"
 
 #: ../contents/ui/SidebarView.qml
 msgid "User Manager"
-msgstr "Benutzerverwaltung"
+msgstr "Benutzermanager"
 
 #: ../contents/ui/SidebarView.qml
 msgid "Power"
@@ -363,19 +364,19 @@ msgstr "Ein/Aus"
 
 #: ../contents/ui/TileEditorView.qml ../contents/ui/TileItem.qml
 msgid "Edit Tile"
-msgstr "Bearbeite Kachel"
+msgstr "Kachel bearbeiten"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Reset Tile"
-msgstr "Setze Kachel zurück"
+msgstr "Kachel zurücksetzen"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Close"
-msgstr "Schließe"
+msgstr "Schließen"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Url"
-msgstr ""
+msgstr "URL"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Label"
@@ -383,19 +384,19 @@ msgstr "Beschriftung"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Icon"
-msgstr ""
+msgstr "Symbol"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Image"
-msgstr "Hindergrundbild"
+msgstr "Hintergrundbild"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Choose an image"
-msgstr "Bild auswählen"
+msgstr "Wählen Sie ein Bild"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
-msgstr "Bilder (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+msgstr "Bilddateien (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Preset Tiles"
@@ -415,11 +416,11 @@ msgstr "Neue Gruppe"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Unlock Tiles"
-msgstr "Entsperre Kacheln"
+msgstr "Kachel entsperren"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Lock Tiles"
-msgstr "Sperre Kacheln"
+msgstr "Kachel sperren"
 
 #: ../contents/ui/TileGrid.qml
 msgctxt "default group label"
@@ -428,36 +429,4 @@ msgstr "Gruppe"
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
-msgstr "Sortiere Kacheln"
-
-#~ msgid "Menu"
-#~ msgstr "Menü"
-
-#~ msgid "Apps"
-#~ msgstr "Anwendungen"
-
-#~ msgid "Show recent applications"
-#~ msgstr "Letzte Anwendungen anzeigen"
-
-#~ msgctxt "@item:inmenu Open icon chooser dialog"
-#~ msgid "Choose..."
-#~ msgstr "Auswählen..."
-
-#~ msgctxt "@item:inmenu Reset icon to default"
-#~ msgid "Clear Icon"
-#~ msgstr "Symbol zurücksetzen"
-
-#~ msgid "More"
-#~ msgstr "Mehr"
-
-#~ msgid "Size"
-#~ msgstr "Größe"
-
-#~ msgid "Small"
-#~ msgstr "Klein"
-
-#~ msgid "Medium"
-#~ msgstr "Mittel"
-
-#~ msgid "Settings"
-#~ msgstr "Einstellungen"
+msgstr "Kacheln sortieren"

@@ -26,7 +26,6 @@ MouseArea {
 				return section
 			}
 		}
-		font.bold: true
 		font.pointSize: 14 * units.devicePixelRatio
 
 		property bool centerOverIcon: sectionHeading.contentWidth <= listView.iconSize

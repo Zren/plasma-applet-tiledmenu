@@ -142,4 +142,13 @@ ListModel {
 		}
 		return null
 	}
+
+	function hasApp(favoriteId) {
+		for (var i = 0; i < count; i++) {
+			var item = get(i);
+			if (item.favoriteId == favoriteId) {
+				return true
+			}
+		}
+	}
 }

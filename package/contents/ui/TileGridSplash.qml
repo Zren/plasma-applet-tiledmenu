@@ -40,6 +40,6 @@ ColumnLayout {
 	PlasmaComponents.Button {
 		Layout.alignment: Qt.AlignHCenter
 		text: i18n("Use Default Tile Layout")
-		onClicked: tileGridPresets.addProductivity()
+		onClicked: tileGridPresets.addDefault()
 	}
 }

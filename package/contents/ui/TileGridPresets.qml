@@ -7,16 +7,32 @@ PlasmaComponents.MenuItem {
 	text: i18n("Add Preset")
 
 	//---
-	function addProductivity() {
-		var pos = tileGrid.findOpenPos(6, 3)
-		var group = tileGrid.addGroup(pos.x, pos.y, {
-			label: i18n("Productivity"),
-		})
-		var writer = addWriter(pos.x, pos.y + 1)
-		var calc = addCalc(pos.x + 2, pos.y + 1)
-		var gmail = addGmail(pos.x + 4, pos.y + 1)
+	function addDefault() {
+		var pos = tileGrid.findOpenPos(6, 6)
+		addProductivity(pos.x, pos.y)
+		addExplore(pos.x, pos.y + 3)
 	}
 
+	function addProductivity(x, y) {
+		var group = tileGrid.addGroup(x, y, {
+			label: i18n("Productivity"),
+		})
+		var writer = addWriter(x, y + 1)
+		var calc = addCalc(x + 2, y + 1)
+		var mail = addMail(x + 4, y + 1)
+	}
+
+	function addExplore(x, y) {
+		var group = tileGrid.addGroup(x, y, {
+			label: i18n("Explore"),
+		})
+		var appCenter = addAppCenter(x, y + 1)
+		var browser = addWebBrowser(x + 2, y + 1)
+		var steam = addSteam(x + 4, y + 1)
+	}
+
+
+	//---
 	function addWriter(x, y) {
 		return tileGrid.addTile(x, y, {
 			url: 'libreoffice-writer.desktop',
@@ -29,12 +45,54 @@ PlasmaComponents.MenuItem {
 			backgroundColor: '#80289769',
 		})
 	}
+	function addMail(x, y) {
+		if (appsModel.allAppsModel.hasApp('org.kde.kmail2.desktop')) {
+			return addKMail(x, y)
+		} else {
+			return addGmail(x, y)
+		}
+	}
+	function addKMail(x, y) {
+		return tileGrid.addTile(x, y, {
+			url: 'org.kde.kmail2.desktop',
+		})
+	}
 	function addGmail(x, y) {
 		return tileGrid.addTile(x, y, {
 			url: 'https://mail.google.com/mail/u/0/#inbox',
 			label: i18n("Gmail"),
 			icon: 'mail-message',
 			backgroundColor: '#80a73325',
+		})
+	}
+
+	function addAppCenter(x, y) {
+		// Note that "Software Center" is translated in
+		// https://github.com/KDE/discover/blob/master/discover/org.kde.discover.desktop.cmake#L55
+		if (appsModel.allAppsModel.hasApp('octopi.desktop')) {
+			return tileGrid.addTile(x, y, {
+				url: 'octopi.desktop',
+				label: i18n("App Center"),
+			})
+		} else if (appsModel.allAppsModel.hasApp('org.kde.discover')) {
+			return tileGrid.addTile(x, y, {
+				url: 'org.kde.discover',
+				label: i18n("App Center"),
+			})
+		} else {
+			return null
+		}
+	}
+
+	function addWebBrowser(x, y) {
+		return tileGrid.addTile(x, y, {
+			url: 'preferred://browser',
+		})
+	}
+
+	function addSteam(x, y) {
+		return tileGrid.addTile(x, y, {
+			url: 'steam.desktop',
 		})
 	}
 
@@ -47,7 +105,17 @@ PlasmaComponents.MenuItem {
 			icon: "libreoffice-startcenter"
 			text: i18n("Productivity")
 			onClicked: {
-				presetMenuItem.addProductivity()
+				var pos = tileGrid.findOpenPos(6, 3)
+				presetMenuItem.addProductivity(pos.x, pos.y)
+			}
+		}
+
+		PlasmaComponents.MenuItem {
+			icon: "internet-web-browser"
+			text: i18n("Explore")
+			onClicked: {
+				var pos = tileGrid.findOpenPos(6, 3)
+				presetMenuItem.addExplore(pos.x, pos.y)
 			}
 		}
 

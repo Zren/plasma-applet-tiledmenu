@@ -20,7 +20,7 @@ TextField {
 		} else if (search.isBookmarksFilter) {
 			return i18n("Search Bookmarks")
 		} else {
-			return i18nc("Search [krunnerName, krunnerName, ...], ", "Search %1", search.filters)
+			return i18nc("Search [krunnerName, krunnerName, ...], ", "Search %1", search.filters.toString())
 		}
 	}
 	property int topMargin: 0

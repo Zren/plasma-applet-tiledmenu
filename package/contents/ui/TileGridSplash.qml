@@ -26,6 +26,7 @@ ColumnLayout {
 			var tips = [
 				i18n("Drag apps onto the grid."),
 				i18n("Drag folders from the file manager here."),
+				i18n("Alt + Right Click to resize the menu."),
 			]
 			var str = '<ul>'
 			for (var i = 0; i < tips.length; i++) {

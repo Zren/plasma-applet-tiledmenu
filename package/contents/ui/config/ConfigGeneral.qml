@@ -63,6 +63,7 @@ ConfigPage {
 
 		RowLayout {
 			spacing: 0
+			visible: !plasmoid.configuration.fullscreen
 
 			ConfigSpinBox {
 				configKey: 'favGridCols'

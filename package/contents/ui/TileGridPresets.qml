@@ -91,9 +91,13 @@ PlasmaComponents.MenuItem {
 	}
 
 	function addSteam(x, y) {
-		return tileGrid.addTile(x, y, {
-			url: 'steam.desktop',
-		})
+		if (appsModel.allAppsModel.hasApp('steam.desktop')) {
+			return tileGrid.addTile(x, y, {
+				url: 'steam.desktop',
+			})
+		} else {
+			return null
+		}
 	}
 
 

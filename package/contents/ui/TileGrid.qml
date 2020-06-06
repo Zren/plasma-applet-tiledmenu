@@ -522,7 +522,7 @@ DropArea {
 				}
 
 				TileGridPresets {
-					id: presetMenuItem
+					id: tileGridPresets
 					visible: !plasmoid.configuration.tilesLocked
 				}
 
@@ -546,6 +546,15 @@ DropArea {
 				
 			}
 		}
+	}
+
+	Loader {
+		id: tileGridSplashLoader
+		anchors.centerIn: parent
+		active: tileModel.length == 0
+		visible: active
+		source: "TileGridSplash.qml"
+		property alias tileGridPresets: tileGridPresets
 	}
 
 	/* Scroll on hover with drag */

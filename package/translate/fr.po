@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu \n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2020-04-24 09:15-0400\n"
+"POT-Creation-Date: 2020-06-06 18:11-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Arno Pillods <arno.pillods@tutanota.com>\n"
 "Language-Team: fr\n"
@@ -64,6 +64,10 @@ msgid "Grid Columns"
 msgstr "Colonnes de la grille"
 
 #: ../contents/ui/config/ConfigGeneral.qml
+msgid "px"
+msgstr "px"
+
+#: ../contents/ui/config/ConfigGeneral.qml
 msgid "Panel Icon"
 msgstr "Icone du panneau"
 
@@ -78,10 +82,6 @@ msgstr "Tuiles"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Size"
 msgstr "Taille des tuiles"
-
-#: ../contents/ui/config/ConfigGeneral.qml
-msgid "px"
-msgstr "px"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
@@ -264,7 +264,7 @@ msgstr "Éditer les applications…"
 msgid "Resize?"
 msgstr "Changer la taille?"
 
-#: ../contents/ui/Popup.qml
+#: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
 msgid "Alt + Right Click to resize the menu."
 msgstr "Alt + Clic Droit pour modifier la taille du menu."
 
@@ -414,6 +414,26 @@ msgstr "Couleur de fond"
 msgid "Position / Size"
 msgstr "Position / Taille"
 
+#: ../contents/ui/TileGridPresets.qml
+msgid "Add Preset"
+msgstr ""
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Productivity"
+msgstr ""
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Explore"
+msgstr ""
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Gmail"
+msgstr ""
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Software Center"
+msgstr ""
+
 #: ../contents/ui/TileGrid.qml
 msgid "New Group"
 msgstr "Nouveau Groupe"
@@ -430,6 +450,22 @@ msgstr "Verrouiller les Tuiles"
 msgctxt "default group label"
 msgid "Group"
 msgstr "Groupe"
+
+#: ../contents/ui/TileGridSplash.qml
+msgid "Getting Started"
+msgstr ""
+
+#: ../contents/ui/TileGridSplash.qml
+msgid "Drag apps onto the grid."
+msgstr ""
+
+#: ../contents/ui/TileGridSplash.qml
+msgid "Drag folders from the file manager here."
+msgstr ""
+
+#: ../contents/ui/TileGridSplash.qml
+msgid "Use Default Tile Layout"
+msgstr ""
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"

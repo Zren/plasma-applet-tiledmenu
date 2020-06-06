@@ -551,10 +551,11 @@ DropArea {
 	Loader {
 		id: tileGridSplashLoader
 		anchors.centerIn: parent
-		active: tileModel.length == 0
-		visible: active
+		active: tileModel.length == 0 && !tileGrid.editing
+		visible: active && width <= parent.width
 		source: "TileGridSplash.qml"
 		property alias tileGridPresets: tileGridPresets
+		property int maxWidth: parent.width
 	}
 
 	/* Scroll on hover with drag */

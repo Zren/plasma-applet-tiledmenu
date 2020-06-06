@@ -4,15 +4,24 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 
 ColumnLayout {
+	// inherits tileGridPresets from Loader
+	// inherits maxWidth from Loader
+
 	spacing: units.largeSpacing
 
 	PlasmaExtras.Heading {
-		Layout.fillWidth: true
+		Layout.alignment: Qt.AlignHCenter
+		Layout.maximumWidth: maxWidth
+		wrapMode: Text.Wrap
 		horizontalAlignment: Text.AlignHCenter
 		text: i18n("Getting Started")
 	}
 	PlasmaComponents.Label {
-		Layout.fillWidth: true
+		Layout.alignment: Qt.AlignHCenter
+		Layout.preferredWidth: contentWidth
+		Layout.maximumWidth: maxWidth
+		wrapMode: Text.Wrap
+
 		text: {
 			var tips = [
 				i18n("Drag apps onto the grid."),

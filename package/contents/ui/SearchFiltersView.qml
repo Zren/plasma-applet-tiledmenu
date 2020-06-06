@@ -110,21 +110,21 @@ ColumnLayout {
 	SearchFiltersViewItem {
 		runnerId: "org.kde.windowedwidgets"
 		indentLevel: 1
-		iconSource: ""
+		iconSource: "plasma"
 		text: i18n("Windowed Widgets")
 	}
 
 	SearchFiltersViewItem {
 		runnerId: "org.kde.datetime"
 		indentLevel: 1
-		iconSource: ""
+		iconSource: "clock"
 		text: i18n("Date/Time")
 	}
 
 	SearchFiltersViewItem {
 		runnerId: "unitconverter"
 		indentLevel: 1
-		iconSource: ""
+		iconSource: "accessories-calculator"
 		text: i18n("Unit Converter")
 	}
 }

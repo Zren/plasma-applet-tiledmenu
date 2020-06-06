@@ -67,22 +67,20 @@ PlasmaComponents.MenuItem {
 	}
 
 	function addAppCenter(x, y) {
-		// Note that "Software Center" is translated in
-		// https://github.com/KDE/discover/blob/master/discover/org.kde.discover.desktop.cmake#L55
 		if (appsModel.allAppsModel.hasApp('octopi.desktop')) {
 			return tileGrid.addTile(x, y, {
 				url: 'octopi.desktop',
-				label: i18n("App Center"),
+				label: i18n("Software Center"),
 			})
 		} else if (appsModel.allAppsModel.hasApp('org.opensuse.YaST.desktop')) {
 			return tileGrid.addTile(x, y, {
 				url: 'org.opensuse.YaST.desktop',
-				label: i18n("App Center"),
+				label: i18n("Software Center"),
 			})
 		} else if (appsModel.allAppsModel.hasApp('org.kde.discover')) {
 			return tileGrid.addTile(x, y, {
 				url: 'org.kde.discover',
-				label: i18n("App Center"),
+				label: i18n("Software Center"),
 			})
 		} else {
 			return null

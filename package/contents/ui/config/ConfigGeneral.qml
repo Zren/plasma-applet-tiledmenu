@@ -61,9 +61,22 @@ ConfigPage {
 			configKey: 'fullscreen'
 		}
 
-		ConfigSpinBox {
-			configKey: 'favGridCols'
-			before: i18n("Grid Columns")
+		RowLayout {
+			spacing: 0
+
+			ConfigSpinBox {
+				configKey: 'favGridCols'
+				before: i18n("Grid Columns")
+			}
+
+			Label {
+				text: " x "
+			}
+
+			ConfigSpinBox {
+				configKey: 'popupHeight'
+				suffix: i18n("px")
+			}
 		}
 	}
 

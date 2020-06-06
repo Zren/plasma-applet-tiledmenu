@@ -226,12 +226,30 @@ DropArea {
 			}
 			// console.log('new addedItem')
 			// console.log('\t', 'urls', event.urls)
-			// console.log('\t', 'mimeData.favoriteId', event.getDataAsString('favoriteId'))
 			// console.log('\t', 'url', url)
+			// console.log('\t', 'keys', event.keys)
+			// for (var i = 0; i < event.keys.length; i++) {
+			// 	var key = event.keys[i]
+			// 	var value = event.getDataAsString(key)
+			// 	console.log('\t', 'mimeData', key, value)
+			// }
 
 			addedItem = newTile(url)
 			dropHoverX = modelX
 			dropHoverY = modelY
+
+			// Firefox/Chromium url dropped
+			if (event.keys.indexOf('_NETSCAPE_URL')) {
+				var netscapeUrl = event.getDataAsString('_NETSCAPE_URL')
+				var tokens = netscapeUrl.split('\n')
+				if (tokens.length >= 2) {
+					var title = tokens[1].trim()
+					if (title) {
+						addedItem.label = title
+						addedItem.icon = 'internet-web-browser'
+					}
+				}
+			}
 		} else {
 			return
 		}

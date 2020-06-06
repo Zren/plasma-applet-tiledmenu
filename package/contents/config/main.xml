@@ -25,7 +25,7 @@
 		<entry name="searchDefaultFilters" type="StringList">
 			<!-- See SearchModel.qml for more info. -->
 			<label>Runner ids used in the default search.</label>
-			<default>Dictionary,services,shell,org.kde.windowedwidgets,org.kde.datetime,baloosearch,locations,unitconverter</default>
+			<default>Dictionary,services,calculator,shell,org.kde.windowedwidgets,org.kde.datetime,baloosearch,locations,unitconverter</default>
 		</entry>
 		<entry name="showRecentApps" type="bool">
 			<label>Whether to show the "Recent Applications" category.</label>

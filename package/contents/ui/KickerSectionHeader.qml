@@ -26,7 +26,9 @@ MouseArea {
 				return section
 			}
 		}
-		font.pointSize: 14 * units.devicePixelRatio
+
+		// Add 4pt to font. Default 10pt => 14pt
+		font.pointSize: theme.defaultFont.pointSize + 4
 
 		property bool centerOverIcon: sectionHeading.contentWidth <= listView.iconSize
 		width: centerOverIcon ? listView.iconSize : parent.width

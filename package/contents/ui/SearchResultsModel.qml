@@ -45,10 +45,17 @@ ListModel {
 				var url = runner.data(modelIndex, UrlRole);
 				if (typeof url === 'object') {
 					url = url.toString();
+				} else if (typeof url === 'undefined') {
+					url = ''
 				}
 				var icon = runner.data(modelIndex, Qt.DecorationRole);
 				if (typeof icon === 'object') {
 					icon = icon.toString();
+				}
+
+				var favoriteId = runner.data(modelIndex, FavoriteIdRole)
+				if (typeof favoriteId === 'undefined') {
+					favoriteId = ''
 				}
 
 				var resultItem = {
@@ -59,7 +66,7 @@ ListModel {
 					description: runner.data(modelIndex, DescriptionRole),
 					icon: icon,
 					url: url,
-					favoriteId: runner.data(modelIndex, FavoriteIdRole),
+					favoriteId: favoriteId,
 					largeIcon: false, // for KickerListView
 				};
 

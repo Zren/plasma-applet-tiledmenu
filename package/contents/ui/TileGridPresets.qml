@@ -74,6 +74,11 @@ PlasmaComponents.MenuItem {
 				url: 'octopi.desktop',
 				label: i18n("App Center"),
 			})
+		} else if (appsModel.allAppsModel.hasApp('org.opensuse.YaST.desktop')) {
+			return tileGrid.addTile(x, y, {
+				url: 'org.opensuse.YaST.desktop',
+				label: i18n("App Center"),
+			})
 		} else if (appsModel.allAppsModel.hasApp('org.kde.discover')) {
 			return tileGrid.addTile(x, y, {
 				url: 'org.kde.discover',

@@ -1,3 +1,13 @@
+## v35 - June __ 2020
+
+* Add splash text to help user get started. Includes a button to use a default tile layout with: LibreOffice Writer, Calc, KMail or Gmail, Software Center (Octopi, YaST, Discover), Web Browser, and Steam.
+* Add the Productivity/Explore group presets to the context menu when tiles are unlocked. Added the Gmail tile preset to the context menu too.
+* Re-Enable the calculator search plugin by default. It was disabled after Plasma 5.9 as it caused Plasma to crash. Please report if you notice any crashes when searching. (Issue #28)
+* Implement configuration for default search filters (Issue #28)
+* Scale the app list section headers. They'll always be 4pt larger than the app list labels. (Issue #38)
+* Add popup height control in config (Issue #57)
+* Fixed French "Lock Tiles" message by https://www.pling.com/u/eric63/
+
 ## v34 - May 8 2020
 
 * Add vertical gradient to tiles, which can be toggle off in the config.

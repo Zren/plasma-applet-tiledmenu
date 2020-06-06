@@ -34,16 +34,7 @@ RowLayout {
 	}
 
 	Item { // Align CheckBoxes buttons to "All"
-		Layout.minimumWidth: surfaceNormal.margins.left
-		Layout.maximumWidth: Layout.minimumWidth
-		Layout.fillHeight: true
-		// visible: isDefaultFilter.visible && searchFiltersViewItem.indentLevel > 0
-	}
-
-
-	Item { // Align CheckBoxes buttons to "All"
-		// Layout.minimumWidth: (isDefaultFilter.Layout.preferredWidth + surfaceNormal.margins.left) * (searchFiltersViewItem.indentLevel - (isDefaultFilter.visible ? 1 : 0))
-		Layout.minimumWidth: (isDefaultFilter.Layout.minimumWidth + surfaceNormal.margins.left) * searchFiltersViewItem.indentLevel
+		Layout.minimumWidth: surfaceNormal.margins.left + (config.flatButtonIconSize + surfaceNormal.margins.left) * searchFiltersViewItem.indentLevel
 		Layout.maximumWidth: Layout.minimumWidth
 		Layout.fillHeight: true
 	}
@@ -98,20 +89,15 @@ RowLayout {
 
 	PlasmaComponents.CheckBox {
 		id: isDefaultFilter
-		checked: search.defaultFilters.indexOf(searchFiltersViewItem.runnerId) != -1
-		enabled: false
+		checked: search.defaultFiltersContains(searchFiltersViewItem.runnerId)
 		onCheckedChanged: {
 			if (checked) {
-
+				search.addDefaultFilter(searchFiltersViewItem.runnerId)
 			} else {
-
+				search.removeDefaultFilter(searchFiltersViewItem.runnerId)
 			}
 		}
-		// Layout.fillHeight: true
-		Layout.preferredHeight: config.flatButtonIconSize
-		Layout.minimumWidth: config.flatButtonIconSize
-		Layout.preferredWidth: implicitWidth
-		implicitHeight: -1
+		Layout.fillHeight: true
 		text: i18n("Default")
 	}
 

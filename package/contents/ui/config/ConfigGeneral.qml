@@ -316,6 +316,16 @@ ConfigPage {
 			checked: !plasmoid.configuration.searchFieldFollowsTheme
 			onClicked: plasmoid.configuration.searchFieldFollowsTheme = false
 		}
+
+		// For debugging purposes.
+		// User can configures the Filters in the SearchView
+		// ConfigStringList {
+		// 	configKey: 'searchDefaultFilters'
+		// 	textArea.readOnly: true
+		// 	function serialize() {
+		// 		// Do nothing
+		// 	}
+		// }
 	}
 
 	ConfigSection {

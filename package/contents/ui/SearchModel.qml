@@ -62,18 +62,26 @@ Item {
 		id: resultModel
 	}
 
-	property var defaultFilters: [
-		'Dictionary',
-		'services',
-		// 'calculator',
-		'shell',
-		'org.kde.windowedwidgets',
-		'org.kde.datetime',
-		'baloosearch',
-		// 'bookmarks',
-		'locations',
-		'unitconverter',
-	]
+	readonly property var defaultFilters: plasmoid.configuration.searchDefaultFilters
+	function defaultFiltersContains(runnerId) {
+		return defaultFilters.indexOf(runnerId) != -1
+	}
+	function addDefaultFilter(runnerId) {
+		if (!defaultFiltersContains(runnerId)) {
+			var l = plasmoid.configuration.searchDefaultFilters
+			l.push(runnerId)
+			plasmoid.configuration.searchDefaultFilters = l
+		}
+	}
+	function removeDefaultFilter(runnerId) {
+		console.log(JSON.stringify(plasmoid.configuration.searchDefaultFilters))
+		var i = defaultFilters.indexOf(runnerId)
+		if (i >= 0) {
+			var l = plasmoid.configuration.searchDefaultFilters
+			l.splice(i, 1) // Remove 1 item at index
+			plasmoid.configuration.searchDefaultFilters = l
+		}
+	}
 
 	function isFilter(runnerId) {
 		return filters.length == 1 && filters[0] == runnerId

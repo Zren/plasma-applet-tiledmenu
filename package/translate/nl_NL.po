@@ -435,7 +435,7 @@ msgstr ""
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Software Center"
-msgstr ""
+msgstr "Softwarecentrum"
 
 #: ../contents/ui/TileGrid.qml
 msgid "New Group"

@@ -427,7 +427,7 @@ msgstr ""
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Software Center"
-msgstr ""
+msgstr "Pusat Perangkat Lunak"
 
 #: ../contents/ui/TileGrid.qml
 msgid "New Group"

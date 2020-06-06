@@ -128,7 +128,7 @@ PlasmaComponents.MenuItem {
 
 		PlasmaComponents.MenuItem {
 			icon: "mail-message"
-			text: i18n("GMail")
+			text: i18n("Gmail")
 			onClicked: {
 				var tile = presetMenuItem.addGmail(cellContextMenu.cellX, cellContextMenu.cellY)
 				tileGrid.editTile(tile)

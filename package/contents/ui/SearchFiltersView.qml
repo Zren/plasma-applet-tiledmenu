@@ -13,6 +13,7 @@ ColumnLayout {
 	// Layout.fillHeight: true
 
 	SearchFiltersViewItem {
+		visible: false
 		runnerId: ""
 		indentLevel: 0
 		iconSource: "applications-other"

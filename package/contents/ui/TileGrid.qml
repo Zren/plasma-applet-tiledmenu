@@ -521,6 +521,11 @@ DropArea {
 					}
 				}
 
+				TileGridPresets {
+					id: presetMenuItem
+					visible: !plasmoid.configuration.tilesLocked
+				}
+
 				PlasmaComponents.MenuItem {
 					icon: plasmoid.configuration.tilesLocked ? "object-unlocked" : "object-locked"
 					text: plasmoid.configuration.tilesLocked ? i18n("Unlock Tiles") : i18n("Lock Tiles")
@@ -646,11 +651,6 @@ DropArea {
 		}
 	}
 
-	function addTile(tile) {
-		tileModel.push(tile)
-		tileModelChanged()
-	}
-
 	function findOpenPos(w, h) {
 		for (var y = 0; y < rows; y++) {
 			for (var x = 0; x < columns - (w-1); x++) {
@@ -704,16 +704,39 @@ DropArea {
 	function limit(minValue, value, maxValue) {
 		return Math.max(minValue, Math.min(value, maxValue))
 	}
-	function addGroup(x, y) {
+
+	function addTile(x, y, props) {
 		var tile = newTile("")
 		parseTileXY(tile, x, y)
-		tile.tileType = "group"
-		tile.label = i18nc("default group label", "Group")
-		tile.w = limit(2, columns-x, 6) // 6 unless we have less columns.
-		tile.h = 1
+		if (typeof props !== "undefined") {
+			var keys = Object.keys(props)
+			for (var i = 0; i < keys.length; i++) {
+				var key = keys[i]
+				var value = props[key]
+				tile[key] = value
+			}
+		}
 		tileModel.push(tile)
 		tileModelChanged()
 		return tile
+	}
+
+	function addGroup(x, y, props) {
+		var groupProps = {
+			tileType: "group",
+			label: i18nc("default group label", "Group"),
+			w: limit(2, columns-x, 6), // 6 unless we have less columns.
+			h: 1,
+		}
+		if (typeof props !== "undefined") {
+			var keys = Object.keys(props)
+			for (var i = 0; i < keys.length; i++) {
+				var key = keys[i]
+				var value = props[key]
+				groupProps[key] = value
+			}
+		}
+		return addTile(x, y, groupProps)
 	}
 
 	signal editTile(var tile)

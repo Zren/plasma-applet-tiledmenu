@@ -8,14 +8,14 @@ msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
 "POT-Creation-Date: 2020-06-06 18:11-0400\n"
-"PO-Revision-Date: 2019-10-25 17:23+0200\n"
+"PO-Revision-Date: 2020-06-07 12:46+0200\n"
 "Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
 "Language-Team: \n"
 "Language: nl_NL\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"X-Generator: Poedit 2.3.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: ../contents/config/config.qml
@@ -44,7 +44,7 @@ msgstr "Vastmaken aan taakbalk"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Recent Apps"
-msgstr "Recente programma's"
+msgstr "Onlangs gebruikt"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Most Used"
@@ -60,7 +60,7 @@ msgstr "Volledig scherm"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Grid Columns"
-msgstr "Rasterkolommen"
+msgstr "Roosterkolommen"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "px"
@@ -136,7 +136,7 @@ msgstr "Hoogte van pop-upknop"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
-msgstr "Snelkoppelingen in zijbalk"
+msgstr "Snelkoppelingen op zijbalk"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Add Default"
@@ -208,11 +208,11 @@ msgstr "Tonen:"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Recent applications"
-msgstr "Recente toepassingen"
+msgstr "Onlangs gebruikte programma's"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Often used applications"
-msgstr "Vaak gebruikte toepassingen"
+msgstr "Vaak gebruikte programma's"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Results"
@@ -232,7 +232,7 @@ msgid ""
 "this menu with just the ⊞ Windows / Meta key."
 msgstr ""
 "Als er voor deze widget een globale sneltoets is ingesteld, bijv. 'Alt+F1', "
-"dan open Plasma dit menu alleen met de ⊞ Windows-/Meta-toets."
+"dan opent Plasma dit menu alleen met de ⊞ Windows-/Meta-toets."
 
 #: ../contents/ui/lib/AppletVersion.qml
 msgid "<b>Version:</b> %1"
@@ -268,8 +268,7 @@ msgstr "Grootte aanpassen?"
 
 #: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
 msgid "Alt + Right Click to resize the menu."
-msgstr ""
-"Gebruik Alt + rechtermuisklik om de grootte van het menu aan te passen."
+msgstr "Gebruik Alt + rechtermuisklik om de menugrootte aan te passen."
 
 #: ../contents/ui/SearchField.qml
 msgid "Search"
@@ -307,7 +306,7 @@ msgstr "Zoeken met alle KRunner-plug-ins"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Search with user selected defaults"
-msgstr "Zoeken met door gebruiker opgegeven standaardwaarden"
+msgstr "Zoeken met ingestelde standaardwaarden"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Applications"
@@ -407,7 +406,7 @@ msgstr "Afbeeldingsbestanden (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Preset Tiles"
-msgstr "Voorinstellingen van tegels"
+msgstr "Voorinstellingen"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Color"
@@ -419,19 +418,19 @@ msgstr "Positie / Grootte"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Add Preset"
-msgstr ""
+msgstr "Voorinstelling toevoegen"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Productivity"
-msgstr ""
+msgstr "Productiviteit"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Explore"
-msgstr ""
+msgstr "Verkennen"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Gmail"
-msgstr ""
+msgstr "Gmail"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Software Center"
@@ -456,19 +455,19 @@ msgstr "Groep"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Getting Started"
-msgstr ""
+msgstr "Aan de slag"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag apps onto the grid."
-msgstr ""
+msgstr "Sleep programma's naar het rooster."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag folders from the file manager here."
-msgstr ""
+msgstr "Sleep mappen hierheen om ze vast te maken."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Use Default Tile Layout"
-msgstr ""
+msgstr "Standaard tegelindeling gebruiken"
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"

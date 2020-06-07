@@ -258,12 +258,6 @@ DropArea {
 		dropHoverY = Math.max(0, modelY)
 		canDrop = !hits(dropHoverX, dropHoverY, dropWidth, dropHeight)
 	}
-	// onDragEnter: dragTick(event)
-	// onDragMove: dragTick(event)
-	// onDragLeave: {
-	// 	// console.log('onExited')
-	// 	resetDragHover()
-	// }
 
 	property var hitBox: [] // hitBox[y][x]
 	function updateSize() {

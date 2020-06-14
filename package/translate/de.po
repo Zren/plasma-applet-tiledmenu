@@ -50,7 +50,7 @@ msgstr "Meist verwendet"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup"
-msgstr ""
+msgstr "Erscheinung"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Fullscreen"
@@ -86,7 +86,7 @@ msgstr "Kachelabstand"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Desktop Theme (%1)"
-msgstr ""
+msgstr "Desktop Thema (%1)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"
@@ -94,7 +94,7 @@ msgstr "Benutzerdefinierte Farbe"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Gradient"
-msgstr ""
+msgstr "Verlauf"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"
@@ -130,11 +130,11 @@ msgstr "Symbolgröße"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup Button Height"
-msgstr "Popup Knopf Größe"
+msgstr "Kontextmenu Knopfgröße"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
-msgstr "Seitenleiste Schnelltasten"
+msgstr "Schnelltasten in Seitenleiste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Add Default"
@@ -146,7 +146,7 @@ msgstr "Suchleiste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Field Height"
-msgstr "Suchleisten Höhe"
+msgstr "Höhe Suchleiste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Windows (White)"
@@ -162,7 +162,7 @@ msgstr "Breite Anwendungsliste"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Default View"
-msgstr "Standard Ansicht"
+msgstr "Standardansicht"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Alphabetical"
@@ -190,11 +190,11 @@ msgstr "Anwendungsbeschreibung"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hidden"
-msgstr "Versteckt"
+msgstr "Ausgeblendet"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "After"
-msgstr "Danach"
+msgstr "Dahinter"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Below"
@@ -202,7 +202,7 @@ msgstr "Darunter"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Show:"
-msgstr "Anzeigen:"
+msgstr "Zeige:"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Recent applications"
@@ -210,7 +210,7 @@ msgstr "Zuletzt benutzte Anwendungen"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Often used applications"
-msgstr "Häufig benutzte Anwendungen"
+msgstr "Meist benutzte Anwendungen"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Results"
@@ -226,11 +226,11 @@ msgstr "In Kategorien unterteilen (Anwendungsmenü / Dashboard)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
 msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr "Wenn für dieses Widget ein globales Tastenkürzel wie 'Alt+F1' festgelegt ist, wird Plasma dieses Menu mit der ⊞ Windows / Meta Taste öffnen"
+msgstr "Wenn für dieses Widget ein globales Tastenkürzel wie 'Alt+F1' festgelegt ist, wird Plasma dieses Menu mit der ⊞ Windows / Meta-Taste öffnen"
 
 #: ../contents/ui/lib/AppletVersion.qml
 msgid "<b>Version:</b> %1"
-msgstr ""
+msgstr "<b>Version:</b> %1"
 
 #: ../contents/ui/Main.qml
 msgid "System Info"
@@ -331,7 +331,7 @@ msgstr "Wörterbuch"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Shell"
-msgstr ""
+msgstr "Konsolenbefehle"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Calculator"
@@ -339,7 +339,7 @@ msgstr "Taschenrechner"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Windowed Widgets"
-msgstr ""
+msgstr "Miniprogramme"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Date/Time"
@@ -367,15 +367,15 @@ msgstr "Bearbeite Kachel"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Reset Tile"
-msgstr "Setze Kachel zurück"
+msgstr "Zurücksetzen"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Close"
-msgstr "Schließe"
+msgstr "Schließen"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Url"
-msgstr ""
+msgstr "Url"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Label"
@@ -383,7 +383,7 @@ msgstr "Beschriftung"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Icon"
-msgstr ""
+msgstr "Symbol"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Image"
@@ -411,19 +411,19 @@ msgstr "Position / Größe"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Add Preset"
-msgstr ""
+msgstr "Standardanordnung hinzufügen"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Productivity"
-msgstr ""
+msgstr "Produktivität"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Explore"
-msgstr ""
+msgstr "Entdecken"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Gmail"
-msgstr ""
+msgstr "Gmail"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Software Center"
@@ -448,19 +448,19 @@ msgstr "Gruppe"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Getting Started"
-msgstr ""
+msgstr "Erste Schritte"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag apps onto the grid."
-msgstr ""
+msgstr "Ziehe Anwendungen auf das Feld."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag folders from the file manager here."
-msgstr ""
+msgstr "Ziehe Ordner vom Dateiexplorer hierhin."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Use Default Tile Layout"
-msgstr ""
+msgstr "Nutze Standardanornung"
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"

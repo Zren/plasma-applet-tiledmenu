@@ -7,7 +7,7 @@ import org.kde.draganddrop 2.0 as DragAndDrop
 AppToolButton {
 	id: itemDelegate
 
-	width: parent.width
+	width: ListView.view.width
 	implicitHeight: row.implicitHeight
 
 	property var parentModel: typeof modelList !== "undefined" && modelList[index] ? modelList[index].parentModel : undefined

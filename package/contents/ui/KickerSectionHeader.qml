@@ -6,7 +6,7 @@ import org.kde.plasma.components 2.0 as PlasmaComponents
 MouseArea {
 	id: sectionDelegate
 
-	width: parent.width
+	width: ListView.view.width
 	// height: childrenRect.height
 	implicitHeight: listView.iconSize
 

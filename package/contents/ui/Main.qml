@@ -160,7 +160,11 @@ Item {
 		onTriggered: {
 			if (!plasmoid.configuration.fullscreen) {
 				// Need to Math.ceil when writing to fix (Issue #71)
-				plasmoid.configuration.popupHeight = Math.ceil(height / units.devicePixelRatio)
+				var dPR = units.devicePixelRatio
+				var pH2 = height / dPR
+				var pH3 = Math.ceil(pH2)
+				// console.log('pH.set', 'dPR='+dPR, 'pH1='+height, 'pH2='+pH2, 'pH3='+pH3)
+				plasmoid.configuration.popupHeight = pH3
 			}
 		}
 	}

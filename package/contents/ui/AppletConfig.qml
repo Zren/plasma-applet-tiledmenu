@@ -65,7 +65,12 @@ Item {
 			return Screen.desktopAvailableHeight
 		} else {
 			// implicit Math.floor() when cast as int
-			return plasmoid.configuration.popupHeight * units.devicePixelRatio
+			var dPR = units.devicePixelRatio
+			var pH3 = plasmoid.configuration.popupHeight
+			var pH4 = pH3 * dPR
+			var pH5 = Math.floor(pH4)
+			// console.log('pH.get', 'dPR='+dPR, 'pH3='+pH3, 'pH4='+pH4, 'pH5='+pH5)
+			return pH5
 		}
 	}
 	

@@ -18,7 +18,6 @@ ColumnLayout {
 	}
 	PlasmaComponents.Label {
 		Layout.alignment: Qt.AlignHCenter
-		Layout.preferredWidth: contentWidth
 		Layout.maximumWidth: maxWidth
 		wrapMode: Text.Wrap
 

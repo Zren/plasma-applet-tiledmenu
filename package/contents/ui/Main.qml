@@ -159,7 +159,8 @@ Item {
 		interval: 200
 		onTriggered: {
 			if (!plasmoid.configuration.fullscreen) {
-				plasmoid.configuration.popupHeight = height / units.devicePixelRatio
+				// Need to Math.ceil when writing to fix (Issue #71)
+				plasmoid.configuration.popupHeight = Math.ceil(height / units.devicePixelRatio)
 			}
 		}
 	}

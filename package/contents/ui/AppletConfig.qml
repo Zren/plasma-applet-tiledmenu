@@ -64,6 +64,7 @@ Item {
 		if (plasmoid.configuration.fullscreen) {
 			return Screen.desktopAvailableHeight
 		} else {
+			// implicit Math.floor() when cast as int
 			return plasmoid.configuration.popupHeight * units.devicePixelRatio
 		}
 	}

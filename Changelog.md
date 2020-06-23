@@ -1,3 +1,9 @@
+## v36 - June 23 2020
+
+* Use Math.ceil() to fix popup growing shorter every second (Issue #71)
+* Fix tips list getting stuck at 1-2 cols width (Issue #72)
+* Updated German translations by @4VRDriver (Pull Request #66)
+
 ## v35 - June 10 2020
 
 * Add splash text to help user get started. Includes a button to use a default tile layout with: LibreOffice Writer, Calc, KMail or Gmail, Software Center (Octopi, YaST, Discover), Web Browser, and Steam.

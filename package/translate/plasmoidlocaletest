@@ -57,6 +57,7 @@ declare -a langArr=(
 	"tr_TR:tr:Turkish (Turkey)"
 	"uk_UA:uk:Ukrainian (Ukraine)"
 	"zh_CN:zh:Chinese (China)"
+	"ja_JP:ja:Japanese (Japan)"
 )
 
 for i in "${langArr[@]}"; do

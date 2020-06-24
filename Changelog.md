@@ -1,3 +1,7 @@
+## v37 - June __ 2020
+
+* Added Japanese translations by @ymadd (Pull Request #73)
+
 ## v36 - June 23 2020
 
 * Use Math.ceil() to fix popup growing shorter every second (Issue #71)

@@ -53,8 +53,6 @@ AppToolButton {
 			&& dragHelper.isDrag(pressX, pressY, mouse.x, mouse.y) // Mouse moved far enough?
 	}
 	function startDrag() {
-		widget.draggedFavoriteId = model.favoriteId
-
 		// Note that we fallback from url to favoriteId for "Most Used" apps.
 		var dragIcon = iconInstance
 		if (typeof dragIcon === "string") {

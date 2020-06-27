@@ -47,8 +47,6 @@ Item {
 
 			dragIconSize: units.iconSizes.medium
 
-			onDropped: widget.draggedFavoriteId = ""
-
 			// Used when we only have a string and don't have a QIcon.
 			// DragHelper.startDrag(...) requires a QIcon. See Issue #75.
 			property var defaultIconItem: KQuickControlsAddons.QIconItem {
@@ -76,13 +74,6 @@ Item {
 			}
 		}
 	}
-
-	// Workaround for passing the favoriteId to the drop handler.
-	// Use until event.mimeData.mimeData is exposed.
-	// https://github.com/KDE/kdeclarative/blob/0e47f91b3a2c93655f25f85150faadad0d65d2c1/src/qmlcontrols/draganddrop/DeclarativeDragDropEvent.cpp#L66
-	property string draggedFavoriteId: ""
-	// onDraggedFavoriteIdChanged: console.log('onDraggedFavoriteIdChanged', draggedFavoriteId)
-
 
 	AppletConfig {
 		id: config

@@ -86,6 +86,7 @@ ConfigPage {
 
 		ConfigIcon {
 			configKey: 'icon'
+			defaultValue: 'start-here-kde'
 			previewIconSize: units.iconSizes.large
 
 			ConfigCheckBox {

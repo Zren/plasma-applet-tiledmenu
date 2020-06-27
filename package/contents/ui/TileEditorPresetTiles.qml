@@ -46,7 +46,7 @@ GroupBox {
 	}
 
 	function checkIfRecognizedLauncher() {
-		console.log('checkIfRecognizedLauncher', appObj.appUrl)
+		// console.log('checkIfRecognizedLauncher', appObj.appUrl)
 		if (!appObj.appUrl) {
 			return
 		}

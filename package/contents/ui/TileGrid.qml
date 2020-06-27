@@ -9,6 +9,8 @@ import org.kde.draganddrop 2.0 as DragAndDrop
 import org.kde.plasma.private.kicker 0.1 as Kicker
 import org.kde.kquickcontrolsaddons 2.0
 
+import "Utils.js" as Utils
+
 DropArea {
 	id: tileGrid
 
@@ -178,29 +180,6 @@ DropArea {
 		tileGrid.tileModelChanged()
 	}
 
-	function parseDropUrl(url) {
-		var workingDir = Qt.resolvedUrl('.')
-		var endsWithDesktop = url.indexOf('.desktop') === url.length - '.desktop'.length
-		var isRelativeDesktopUrl = endsWithDesktop && (
-			url.indexOf(workingDir) === 0
-			// || url.indexOf('file:///usr/share/applications/') === 0
-			// || url.indexOf('/.local/share/applications/') >= 0
-			|| url.indexOf('/share/applications/') >= 0 // 99% certain this desktop file should be accessed relatively.
-		)
-		logger.debug('parseDropUrl', workingDir, endsWithDesktop, isRelativeDesktopUrl)
-		logger.debug('onUrlDropped', 'url', url)
-		if (isRelativeDesktopUrl) {
-			// Remove the path because .favoriteId is just the file name.
-			// However passing the favoriteId in mimeData.url will prefix the current QML path because it's a QUrl.
-			var tokens = url.toString().split('/')
-			var favoriteId = tokens[tokens.length-1]
-			logger.debug('isRelativeDesktopUrl', tokens, favoriteId)
-			return favoriteId
-		} else {
-			return url
-		}
-	}
-
 	// QQuickDropEvent
 	// https://github.com/qt/qtdeclarative/blob/a4aa8d9ade44d75cb5a1d84bd7c1773fadc73095/src/quick/items/qquickdroparea_p.h#L63
 	function dragTick(event) {
@@ -222,7 +201,7 @@ DropArea {
 			} else {
 				var url = event.urls[0]
 				// console.log('new addedItem', event.urls, url)
-				url = parseDropUrl(url)
+				url = Utils.parseDropUrl(url)
 			}
 			// console.log('new addedItem')
 			// console.log('\t', 'urls', event.urls)

@@ -56,8 +56,15 @@ AppToolButton {
 		widget.draggedFavoriteId = model.favoriteId
 
 		// Note that we fallback from url to favoriteId for "Most Used" apps.
-		// console.log('startDrag', widget, model.url, iconInstance, "favoriteId", model.favoriteId)
-		dragHelper.startDrag(widget, model.url || model.favoriteId, iconInstance, "favoriteId", model.favoriteId)
+		var dragIcon = iconInstance
+		if (typeof dragIcon === "string") {
+			// startDrag must use QIcon. See Issue #75.
+			dragIcon = dragHelper.defaultIcon
+		}
+		// console.log('startDrag', widget, model.url, "favoriteId", model.favoriteId)
+		// console.log('    iconInstance', iconInstance)
+		// console.log('    dragIcon', dragIcon)
+		dragHelper.startDrag(widget, model.url || model.favoriteId, dragIcon, "favoriteId", model.favoriteId)
 
 		resetDragState()
 	}

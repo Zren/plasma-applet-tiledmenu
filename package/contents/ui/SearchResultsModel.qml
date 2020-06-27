@@ -24,10 +24,10 @@ ListModel {
 			for (var j = 0; j < runner.count; j++) {
 				// RunnerMatchesModel.modelForRow is NOT implemented.
 				// We need to use model.data(model.index(row, 0), role)
-				// https://github.com/KDE/plasma-desktop/blob/master/applets/kicker/plugin/abstractmodel.cpp#L35
-				// https://github.com/KDE/plasma-desktop/blob/master/applets/kicker/plugin/runnermatchesmodel.cpp#L54
+				// https://github.com/KDE/plasma-workspace/blame/master/applets/kicker/plugin/abstractmodel.cpp#L35
+				// https://github.com/KDE/plasma-workspace/blame/master/applets/kicker/plugin/runnermatchesmodel.cpp#L54
 
-				// https://github.com/KDE/plasma-desktop/blob/master/applets/kicker/plugin/actionlist.h#L30
+				// https://github.com/KDE/plasma-workspace/blame/master/applets/kicker/plugin/actionlist.h#L30
 				var DescriptionRole = Qt.UserRole + 1;
 				var GroupRole = DescriptionRole + 1;
 				var FavoriteIdRole = DescriptionRole + 2;

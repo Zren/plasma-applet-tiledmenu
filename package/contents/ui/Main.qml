@@ -6,6 +6,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
 import org.kde.kcoreaddons 1.0 as KCoreAddons
+import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import "lib"
 
@@ -47,6 +48,13 @@ Item {
 			dragIconSize: units.iconSizes.medium
 
 			onDropped: widget.draggedFavoriteId = ""
+
+			// Used when we only have a string and don't have a QIcon.
+			// DragHelper.startDrag(...) requires a QIcon. See Issue #75.
+			property var defaultIconItem: KQuickControlsAddons.QIconItem {
+				id: defaultIconItem
+			}
+			property alias defaultIcon: defaultIconItem.icon
 		}
 
 		Kicker.ProcessRunner {

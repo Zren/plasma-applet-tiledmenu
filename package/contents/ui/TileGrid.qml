@@ -198,6 +198,7 @@ DropArea {
 		} else if (event && event.hasUrls && event.urls) {
 			if (event.keys && event.keys.indexOf('favoriteId') >= 0) {
 				var url = event.getDataAsString('favoriteId')
+				url = Utils.parseDropUrl(url)
 			} else {
 				var url = event.urls[0]
 				// console.log('new addedItem', event.urls, url)
@@ -685,6 +686,7 @@ DropArea {
 		}
 	}
 	function addApp(url, x, y) {
+		url = Utils.parseDropUrl(url)
 		var tile = newTile(url)
 		parseTileXY(tile, x, y)
 		tileModel.push(tile)

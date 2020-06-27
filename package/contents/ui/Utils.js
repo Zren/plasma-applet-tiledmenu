@@ -1,6 +1,12 @@
 .pragma library
 
 function parseDropUrl(url) {
+	var startsWithAppsScheme = url.indexOf('applications:') === 0 // Search Results add this prefix
+	if (startsWithAppsScheme) {
+		// console.log('parseDropUrl', 'startsWithAppsScheme', url)
+		url = url.substr('applications:'.length)
+	}
+
 	var workingDir = Qt.resolvedUrl('.')
 	var endsWithDesktop = url.indexOf('.desktop') === url.length - '.desktop'.length
 	var isRelativeDesktopUrl = endsWithDesktop && (

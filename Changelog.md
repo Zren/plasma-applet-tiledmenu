@@ -1,5 +1,6 @@
-## v37 - June __ 2020
+## v37 - June 29 2020
 
+* Fix right clicking an app (or dragging) to pin an app from the Search Results (Issue #74)
 * Added Japanese translations by @ymadd (Pull Request #73)
 
 ## v36 - June 23 2020

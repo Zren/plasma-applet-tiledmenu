@@ -22,7 +22,7 @@ msgstr "Основные"
 
 #: ../contents/config/config.qml
 msgid "Import/Export Layout"
-msgstr ""
+msgstr "Импортировать/Экспортировать разметку"
 
 #: ../contents/config/config.qml
 msgid "Advanced"
@@ -46,7 +46,7 @@ msgstr "Недавние Программы"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Most Used"
-msgstr ""
+msgstr "Часто Используемые"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup"
@@ -58,7 +58,7 @@ msgstr "На весь экран"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Grid Columns"
-msgstr ""
+msgstr "Столбцы Сетки"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "px"
@@ -94,7 +94,7 @@ msgstr "Пользовательский Цвет"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Gradient"
-msgstr ""
+msgstr "Градиент"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"
@@ -122,7 +122,7 @@ msgstr "Боковая панель"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Width"
-msgstr ""
+msgstr "Ширина"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Icon Size"
@@ -130,7 +130,7 @@ msgstr "Размер Иконки"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup Button Height"
-msgstr ""
+msgstr "Высота Всплывающей Кнопки"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
@@ -182,7 +182,7 @@ msgstr "Перейти к Категории"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Tiles Only"
-msgstr ""
+msgstr "Только Плитки"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App Description"
@@ -226,7 +226,7 @@ msgstr "Разделённые по Категориям (Меню прилож�
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
 msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr ""
+msgstr "Когда этому виджету назначена глобальная комбинация клавиш, например 'Alt + F1', Plasma будет открывать это меню только с помощью клавиши Win/Meta"
 
 #: ../contents/ui/lib/AppletVersion.qml
 msgid "<b>Version:</b> %1"
@@ -262,7 +262,7 @@ msgstr "Изменить Размер?"
 
 #: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
 msgid "Alt + Right Click to resize the menu."
-msgstr "Alt + Правая Кнопка Мыши для изменения размера меню"
+msgstr "Alt + ПКМ для изменения размера меню"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search"
@@ -347,7 +347,7 @@ msgstr "Дата / Время"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Unit Converter"
-msgstr "Преобразование величин"
+msgstr "Преобразование Величин"
 
 #: ../contents/ui/SearchResultsView.qml
 msgid "Filters"
@@ -355,7 +355,7 @@ msgstr "Фильтры"
 
 #: ../contents/ui/SidebarView.qml
 msgid "User Manager"
-msgstr "Управление пользователями"
+msgstr "Управление Пользователями"
 
 #: ../contents/ui/SidebarView.qml
 msgid "Power"
@@ -363,7 +363,7 @@ msgstr "Выход"
 
 #: ../contents/ui/TileEditorView.qml ../contents/ui/TileItem.qml
 msgid "Edit Tile"
-msgstr "Изменить плитку"
+msgstr "Изменить Плитку"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Reset Tile"
@@ -399,7 +399,7 @@ msgstr "Файлы Изображений (*.png *.jpg *.jpeg *.bmp *.svg *.svgz
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Preset Tiles"
-msgstr ""
+msgstr "Пресет Плиток"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Color"
@@ -411,19 +411,19 @@ msgstr "Расположение / Размер"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Add Preset"
-msgstr ""
+msgstr "Добавить Пресет"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Productivity"
-msgstr ""
+msgstr "Продуктивность"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Explore"
-msgstr ""
+msgstr "Исследование"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Gmail"
-msgstr ""
+msgstr "Gmail"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Software Center"
@@ -448,23 +448,23 @@ msgstr "Группа"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Getting Started"
-msgstr ""
+msgstr "Начало"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag apps onto the grid."
-msgstr ""
+msgstr "Переносите приложения сюда"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag folders from the file manager here."
-msgstr ""
+msgstr "Переносите папки из файлого менеджера сюда"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Use Default Tile Layout"
-msgstr ""
+msgstr "Использовать стандартную разметку плиток"
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
-msgstr ""
+msgstr "Отсортировать Плитки"
 
 #~ msgid "Menu"
 #~ msgstr "Меню"
@@ -474,3 +474,4 @@ msgstr ""
 
 #~ msgid "Show recent applications"
 #~ msgstr "Показать недавние приложения"
+

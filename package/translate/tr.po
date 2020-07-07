@@ -1,4 +1,4 @@
-# Translation of tiledmenu in LANGUAGE
+# Translation of tiledmenu in tr
 # Copyright (C) 2020
 # This file is distributed under the same license as the tiledmenu package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
@@ -226,8 +226,12 @@ msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Kategorilere Böl (Uygulama Menüsü / Gösterge Tablosu)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
-msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr "Bu widget, 'Alt + F1' gibi genel bir kısayol kümesine sahip olduğunda, Plazma bu menüyü yalnızca ⊞ Windows / Meta tuşuyla açar."
+msgid ""
+"When this widget has a global shortcut set, like 'Alt+F1', Plasma will open "
+"this menu with just the ⊞ Windows / Meta key."
+msgstr ""
+"Bu widget, 'Alt + F1' gibi genel bir kısayol kümesine sahip olduğunda, "
+"Plazma bu menüyü yalnızca ⊞ Windows / Meta tuşuyla açar."
 
 #: ../contents/ui/lib/AppletVersion.qml
 msgid "<b>Version:</b> %1"
@@ -397,7 +401,7 @@ msgstr "Bir resim seçin"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
-msgstr "Resim Dosyaları(*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+msgstr "Resim Dosyaları (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Preset Tiles"

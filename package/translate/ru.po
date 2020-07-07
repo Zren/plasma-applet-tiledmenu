@@ -474,4 +474,3 @@ msgstr "Отсортировать Плитки"
 
 #~ msgid "Show recent applications"
 #~ msgstr "Показать недавние приложения"
-

@@ -1,3 +1,8 @@
+## v38 - July 8 2020
+
+* Added Russian translations by @Platun0v (Pull Request #77)
+* Added Turkish translations by @oltulu (Pull Request #78)
+
 ## v37 - June 29 2020
 
 * Fix right clicking an app (or dragging) to pin an app from the Search Results (Issue #74)

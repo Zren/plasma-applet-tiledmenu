@@ -47,6 +47,7 @@ Item {
 	readonly property bool showingAppList: stackView.currentItem == appsView || stackView.currentItem == jumpToLetterView
 	readonly property bool showingAppsAlphabetically: config.showSearch && appsModel.order == "alphabetical" && showingAppList
 	readonly property bool showingAppsCategorically: config.showSearch && appsModel.order == "categories" && showingAppList
+	readonly property bool showSearchField: config.hideSearchField ? !!searchField.text : true
 
 	property bool searchOnTop: false
 
@@ -236,7 +237,7 @@ Item {
 
 	SearchField {
 		id: searchField
-		visible: !config.isEditingTile
+		visible: !config.isEditingTile && searchView.showSearchField
 		height: config.searchFieldHeight
 		anchors.left: parent.left
 		anchors.right: parent.right

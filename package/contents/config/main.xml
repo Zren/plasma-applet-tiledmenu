@@ -76,6 +76,9 @@
 		</entry>
 
 		<!-- Style -->
+		<entry name="hideSearchField" type="bool">
+			<default>false</default>
+		</entry>
 		<entry name="searchFieldFollowsTheme" type="bool">
 			<default>false</default>
 		</entry>

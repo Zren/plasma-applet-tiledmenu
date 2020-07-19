@@ -30,6 +30,7 @@ Item {
 			return 0
 		}
 	}
+	readonly property bool hideSearchField: plasmoid.configuration.hideSearchField
 	readonly property int leftSectionWidth: sidebarWidth + sidebarRightMargin + appAreaWidth
 
 	readonly property real tileScale: plasmoid.configuration.tileScale

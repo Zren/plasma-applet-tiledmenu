@@ -1,4 +1,4 @@
-// Version 2
+// Version 3
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0
@@ -8,7 +8,7 @@ RowLayout {
 	id: configSpinBox
 
 	property string configKey: ''
-	readonly property var configValue: plasmoid.configuration[configKey]
+	readonly property var configValue: configKey ? plasmoid.configuration[configKey] : 0
 	property alias decimals: spinBox.decimals
 	property alias horizontalAlignment: spinBox.horizontalAlignment
 	property alias maximumValue: spinBox.maximumValue
@@ -44,6 +44,10 @@ RowLayout {
 	Timer { // throttle
 		id: serializeTimer
 		interval: 300
-		onTriggered: plasmoid.configuration[configKey] = value
+		onTriggered: {
+			if (configKey) {
+				plasmoid.configuration[configKey] = value
+			}
+		}
 	}
 }

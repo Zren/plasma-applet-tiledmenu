@@ -18,6 +18,7 @@ AppToolButton {
 	property string secondRowText: showItemUrl && model.url ? model.url : modelDescription
 	property bool secondRowVisible: secondRowText
 	property string launcherUrl: model.favoriteId || model.url
+	property string iconName: model.iconName || ''
 	property alias iconSource: itemIcon.source
 	property int iconSize: model.largeIcon ? listView.iconSize * 2 : listView.iconSize
 
@@ -108,7 +109,7 @@ AppToolButton {
 
 				animated: false
 				// usesPlasmaTheme: false
-				source: itemDelegate.iconInstance
+				source: itemDelegate.iconName || itemDelegate.iconInstance
 			}
 		}
 

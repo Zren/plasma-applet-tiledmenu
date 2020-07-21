@@ -312,6 +312,11 @@ ConfigPage {
 	ConfigSection {
 		label: i18n("Search Box")
 
+		ConfigCheckBox {
+			configKey: 'hideSearchField'
+			text: i18n("Hide Search Field")
+		}
+
 		ConfigSpinBox {
 			configKey: 'searchFieldHeight'
 			before: i18n("Search Field Height")

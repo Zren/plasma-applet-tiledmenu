@@ -163,7 +163,9 @@ Item {
 				var pH2 = height / dPR
 				var pH3 = Math.ceil(pH2)
 				// console.log('pH.set', 'dPR='+dPR, 'pH1='+height, 'pH2='+pH2, 'pH3='+pH3)
-				plasmoid.configuration.popupHeight = pH3
+				if (plasmoid.configuration.popupHeight != pH3) {
+					plasmoid.configuration.popupHeight = pH3
+				}
 			}
 		}
 	}

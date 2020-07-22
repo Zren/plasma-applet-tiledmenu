@@ -1,3 +1,10 @@
+## v39 - July 22 2020
+
+* Fix RecentUsage Apps, it now uses iconName instead of icon (Issue #76)
+* Added config toggle for hiding the search field (Issue #81)
+* Attempt to fix popupHeight shrinking when config is open bug. Only affects certain users with a particular screen scaling. (Issue #79)
+* Updated Dutch translations by @Vistaus (Pull Request #82)
+
 ## v38 - July 8 2020
 
 * Added Russian translations by @Platun0v (Pull Request #77)

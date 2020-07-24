@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../metadata.desktop
 msgid "Tiled Menu"
-msgstr ""
+msgstr "Плиточное Меню"
 
 #: ../metadata.desktop
 msgid "A menu based on Windows 10's Start Menu."
-msgstr ""
+msgstr "Меню, основанное на меню Пуск Windows 10."
 
 #: ../contents/config/config.qml
 msgid "General"
@@ -154,7 +154,7 @@ msgstr "Поле Поиска"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hide Search Field"
-msgstr ""
+msgstr "Скрыть Поле Поиска"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Field Height"

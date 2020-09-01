@@ -16,6 +16,5 @@ X-KDE-PluginInfo-Version=39
 X-KDE-PluginInfo-Website=https://github.com/Zren/plasma-applet-tiledmenu
 X-KDE-PluginInfo-KdeStoreId=1160672
 X-KDE-PluginInfo-Category=Application Launchers
-X-KDE-PluginInfo-Depends=
 
 X-Plasma-Provides=org.kde.plasma.launchermenu

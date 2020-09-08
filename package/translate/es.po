@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../metadata.desktop
 msgid "Tiled Menu"
-msgstr ""
+msgstr "Menú con Baldosas"
 
 #: ../metadata.desktop
 msgid "A menu based on Windows 10's Start Menu."
-msgstr ""
+msgstr "Un menú basado en el menú de inicio de Windows 10"
 
 #: ../contents/config/config.qml
 msgid "General"
@@ -399,7 +399,7 @@ msgstr "Icono"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Image"
-msgstr ""
+msgstr "Imagen de Fondo"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Choose an image"

@@ -48,6 +48,6 @@ Or if you know how to make a pull request
 | pt_BR    | 101/115 |   87% |
 | pt       |  98/115 |   85% |
 | ro       | 103/115 |   89% |
-| ru       | 112/115 |   97% |
+| ru       | 115/115 |  100% |
 | tr       | 112/115 |   97% |
 | zh_CN    |  90/115 |   78% |

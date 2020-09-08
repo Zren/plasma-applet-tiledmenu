@@ -18,3 +18,6 @@ X-KDE-PluginInfo-KdeStoreId=1160672
 X-KDE-PluginInfo-Category=Application Launchers
 
 X-Plasma-Provides=org.kde.plasma.launchermenu
+
+Name[ru]=Плиточное Меню
+Comment[ru]=Меню, основанное на меню Пуск Windows 10.

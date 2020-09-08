@@ -1,3 +1,9 @@
+## v40 - September 8 2020
+
+* Update i18n merge script to translate widget name.
+* Updated Spanish translations by https://www.pling.com/u/quasarfreak/
+* Updated Russian translation by @Platun0v (Pull Request #84)
+
 ## v39 - July 22 2020
 
 * Fix RecentUsage Apps, it now uses iconName instead of icon (Issue #76)

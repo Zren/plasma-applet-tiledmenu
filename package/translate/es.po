@@ -5,11 +5,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: tiledmenu \n"
+"Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
 "POT-Creation-Date: 2020-07-23 18:31-0400\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kepa Badiola <badiol@yahoo.es>\n"
+"PO-Revision-Date: 2020-09-08 15:41-0300\n"
+"Last-Translator: QUASAR FREAK <quasarfreak@gmail.com>\n"
 "Language-Team: Spanish <LL@li.org>\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
@@ -30,7 +30,7 @@ msgstr "General"
 
 #: ../contents/config/config.qml
 msgid "Import/Export Layout"
-msgstr ""
+msgstr "Importar/Exportar Distribución"
 
 #: ../contents/config/config.qml
 msgid "Advanced"
@@ -50,11 +50,11 @@ msgstr "Anclar a la Barra de Tareas"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Recent Apps"
-msgstr ""
+msgstr "Aplicaciones Recientes"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Most Used"
-msgstr ""
+msgstr "Más Usadas"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup"
@@ -66,7 +66,7 @@ msgstr "Pantalla Completa"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Grid Columns"
-msgstr ""
+msgstr "Columnas en Grilla"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "px"
@@ -86,11 +86,11 @@ msgstr "Baldosas"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Size"
-msgstr ""
+msgstr "Tamaño de Baldosa"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
-msgstr ""
+msgstr "Margen de Baldosa"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Desktop Theme (%1)"
@@ -102,7 +102,7 @@ msgstr "Color Personalizado"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Gradient"
-msgstr ""
+msgstr "Gradiente"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"
@@ -130,7 +130,7 @@ msgstr "Barra Lateral"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Width"
-msgstr ""
+msgstr "Ancho"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Icon Size"
@@ -138,15 +138,15 @@ msgstr "Tamaño de Icono"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup Button Height"
-msgstr ""
+msgstr "Altura del Botón Emergente"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
-msgstr ""
+msgstr "Accesos directos de barra lateral"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Add Default"
-msgstr ""
+msgstr "Agregar Predeterminado"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Box"
@@ -154,11 +154,11 @@ msgstr "Caja de Búsqueda"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hide Search Field"
-msgstr ""
+msgstr "Ocultar campo de búsqueda"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Field Height"
-msgstr ""
+msgstr "Altura de campo de búsqueda"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Windows (White)"
@@ -174,11 +174,11 @@ msgstr "Ancho del area de la Lista de Aplicaciones"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Default View"
-msgstr ""
+msgstr "Vista Predeterminada"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Alphabetical"
-msgstr ""
+msgstr "Alfabético"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Categories"
@@ -186,15 +186,15 @@ msgstr "Categorías"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Jump To Letter"
-msgstr ""
+msgstr "Saltar a Letra"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Jump To Category"
-msgstr ""
+msgstr "Saltar a Categoría"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Tiles Only"
-msgstr ""
+msgstr "Sólo Baldosas"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App Description"
@@ -238,7 +238,7 @@ msgstr "Dividir en Categorías (Menú de Aplicaciones / Tablero de Mandos)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
 msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr ""
+msgstr "Cuando este widget tiene configurado un acceso directo global, por ejemplo 'Alt+F1', Plasma abrirá este menú con la tecla ⊞ Windows / Meta key."
 
 #: ../contents/ui/lib/AppletVersion.qml
 msgid "<b>Version:</b> %1"
@@ -274,7 +274,7 @@ msgstr "¿Redimensionar?"
 
 #: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
 msgid "Alt + Right Click to resize the menu."
-msgstr "Alt + Click Derecho para redimensioanr el menú"
+msgstr "Alt + Click Derecho para Redimensionar el menú"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search"
@@ -411,7 +411,7 @@ msgstr "Archivos de Imagen (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Preset Tiles"
-msgstr ""
+msgstr "Perfiles de Baldosas"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Color"
@@ -423,19 +423,19 @@ msgstr "Posición / Tamaño"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Add Preset"
-msgstr ""
+msgstr "Agregar Perfil"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Productivity"
-msgstr ""
+msgstr "Productividad"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Explore"
-msgstr ""
+msgstr "Explorar"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Gmail"
-msgstr ""
+msgstr "Gmail"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Software Center"
@@ -443,40 +443,40 @@ msgstr "Centro de software"
 
 #: ../contents/ui/TileGrid.qml
 msgid "New Group"
-msgstr ""
+msgstr "Nuevo Grupo"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Unlock Tiles"
-msgstr ""
+msgstr "Desbloquear Baldosas"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Lock Tiles"
-msgstr ""
+msgstr "Bloquear Baldosas"
 
 #: ../contents/ui/TileGrid.qml
 msgctxt "default group label"
 msgid "Group"
-msgstr ""
+msgstr "Grupo"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Getting Started"
-msgstr ""
+msgstr "Empezar"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag apps onto the grid."
-msgstr ""
+msgstr "Arrastrar aplicaciones a la grilla."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag folders from the file manager here."
-msgstr ""
+msgstr "Arrastrar carpetas desde el administrador de archivos aquí."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Use Default Tile Layout"
-msgstr ""
+msgstr "Usar la Distribución de Baldosas Predeterminada"
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
-msgstr ""
+msgstr "Ordenar Baldosas"
 
 #~ msgid "Menu"
 #~ msgstr "Menú"

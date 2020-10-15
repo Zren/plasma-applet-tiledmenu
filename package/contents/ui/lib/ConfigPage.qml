@@ -1,4 +1,4 @@
-// Version 6
+// Version 7
 
 import QtQuick 2.0
 import QtQuick.Layouts 1.0
@@ -12,6 +12,9 @@ Item {
 	Layout.fillWidth: true
 	default property alias _contentChildren: content.data
 	implicitHeight: content.implicitHeight
+
+	LayoutMirroring.enabled: Qt.application.layoutDirection == Qt.RightToLeft
+	LayoutMirroring.childrenInherit: true
 
 	// We should probably get ScrollBar.width but this works.
 	property int scrollbarWidth: 21

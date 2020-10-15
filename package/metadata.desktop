@@ -20,6 +20,10 @@ X-KDE-PluginInfo-Category=Application Launchers
 X-Plasma-Provides=org.kde.plasma.launchermenu
 
 Name[es]=Menú con Baldosas
+Name[he]=תפריט אריחים
+Name[nl]=Tegelmenu
 Name[ru]=Плиточное Меню
 Comment[es]=Un menú basado en el menú de inicio de Windows 10
+Comment[he]=תפריט שמבוסס על מראה תפריט "התחל" של Windows 10.
+Comment[nl]=Een menu a la Windows 10's startmenu.
 Comment[ru]=Меню, основанное на меню Пуск Windows 10.

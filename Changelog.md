@@ -1,3 +1,9 @@
+## v41 - October 23 2020
+
+* Improve display of right to left locales like Hebrew in the config window.
+* Added Hebrew translations by @omeritzics (Pull Request #88 and #89)
+* Updated Dutch translations by @Vistaus (Pull Request #85)
+
 ## v40 - September 8 2020
 
 * Update i18n merge script to translate widget name.

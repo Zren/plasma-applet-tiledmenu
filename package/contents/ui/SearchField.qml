@@ -95,8 +95,6 @@ TextField {
 			event.accepted = true; listView.currentItem.trigger()
 		} else if (event.modifiers & Qt.MetaModifier && event.key == Qt.Key_R) {
 			event.accepted = true; search.filters = ['shell']
-		} else if (event.modifiers & Qt.MetaModifier && event.key == Qt.Key_R) {
-			event.accepted = true; search.filters = ['shell']
 		} else if (event.key == Qt.Key_Escape) {
 			plasmoid.expanded = false
 		}

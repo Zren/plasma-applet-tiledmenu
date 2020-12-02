@@ -57,7 +57,21 @@ Repeater {
 		property string xdgDisplayName: {
 			var xdgFolder = isLocalizedFolder()
 			if (xdgFolder) {
-				return xdgPathsLoader.displayName(xdgFolder)
+				// https://translationproject.org/domain/xdg-user-dirs.html
+				// https://translationproject.org/PO-files/fr/xdg-user-dirs-0.17.fr.po
+				if (xdgFolder === 'DOCUMENTS') {
+					return i18nd("xdg-user-dirs", "Documents")
+				} else if (xdgFolder === 'DOWNLOAD') {
+					return i18nd("xdg-user-dirs", "Download")
+				} else if (xdgFolder === 'MUSIC') {
+					return i18nd("xdg-user-dirs", "Music")
+				} else if (xdgFolder === 'PICTURES') {
+					return i18nd("xdg-user-dirs", "Pictures")
+				} else if (xdgFolder === 'VIDEOS') {
+					return i18nd("xdg-user-dirs", "Videos")
+				} else {
+					return ''
+				}
 			} else {
 				return ''
 			}

@@ -96,8 +96,15 @@ Item {
 						iconName: 'system-users'
 						text: i18n("User Manager")
 						buttonHeight: config.sidebarPopupButtonSize
-						onClicked: KCMShell.open('user_manager')
-						visible: KCMShell.authorize('user_manager.desktop').length > 0
+						onClicked: {
+							KCMShell.open([
+								'user_manager', // Plasma 5.19
+								'kcm_users' // Plasma 5.20
+							])
+						}
+						// An uninstalled KCM like 'user_manager.desktop' in Plasma 5.20 is returned
+						// in the output list, so we need to check if user has permission for both.
+						visible: KCMShell.authorize(['user_manager.desktop', 'kcm_users.desktop']).length == 2
 					}
 
 					SidebarItemRepeater {

@@ -121,7 +121,7 @@ ConfigPage {
 		}
 		RadioButton {
 			visible: false
-			text: i18n("Desktop Theme (%1)", theme.themeName)
+			text: i18n("Plasma Style (%1)", theme.themeName)
 			exclusiveGroup: tilesThemeGroup
 			checked: false
 			enabled: false
@@ -195,7 +195,7 @@ ConfigPage {
 		}
 
 		RadioButton {
-			text: i18n("Desktop Theme (%1)", theme.themeName)
+			text: i18n("Plasma Style (%1)", theme.themeName)
 			exclusiveGroup: sidebarThemeGroup
 			checked: plasmoid.configuration.sidebarFollowsTheme
 			onClicked: plasmoid.configuration.sidebarFollowsTheme = true
@@ -323,7 +323,7 @@ ConfigPage {
 		}
 		
 		RadioButton {
-			text: i18n("Desktop Theme (%1)", theme.themeName)
+			text: i18n("Plasma Style (%1)", theme.themeName)
 			exclusiveGroup: searchBoxThemeGroup
 			checked: plasmoid.configuration.searchFieldFollowsTheme
 			onClicked: plasmoid.configuration.searchFieldFollowsTheme = true

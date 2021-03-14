@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../metadata.desktop
 msgid "Tiled Menu"
-msgstr ""
+msgstr "Menu em Ladrilhos"
 
 #: ../metadata.desktop
 msgid "A menu based on Windows 10's Start Menu."
-msgstr ""
+msgstr "Um menu baseado no Start Menu do Windows 10."
 
 #: ../contents/config/config.qml
 msgid "General"
@@ -84,15 +84,15 @@ msgstr "Tamanho fixo"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tiles"
-msgstr "Tiles"
+msgstr "Ladrilhos"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Size"
-msgstr "Tamanho dos tiles"
+msgstr "Tamanho dos ladrilhos"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
-msgstr "Margem dos tiles"
+msgstr "Margem dos ladrilhos"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Desktop Theme (%1)"
@@ -104,7 +104,7 @@ msgstr "Cor personalizada"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Gradient"
-msgstr ""
+msgstr "Degradê"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"
@@ -132,7 +132,7 @@ msgstr "Barra lateral"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Width"
-msgstr ""
+msgstr "Largura"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Icon Size"
@@ -140,7 +140,7 @@ msgstr "Tamanho dos ícones"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup Button Height"
-msgstr ""
+msgstr "Altura do botão Popup"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
@@ -156,7 +156,7 @@ msgstr "Caixa de pesquisa"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hide Search Field"
-msgstr ""
+msgstr "Esconder caixa de pesquisa"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Field Height"
@@ -196,7 +196,7 @@ msgstr "Ir para categoria"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Tiles Only"
-msgstr "Apenas tiles"
+msgstr "Apenas ladrilhos"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App Description"
@@ -276,7 +276,7 @@ msgstr "Editar aplicativos..."
 
 #: ../contents/ui/Popup.qml
 msgid "Resize?"
-msgstr "Gostaria de redimensionar?"
+msgstr "Redimensionar?"
 
 #: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
 msgid "Alt + Right Click to resize the menu."
@@ -382,11 +382,11 @@ msgstr "Sair"
 
 #: ../contents/ui/TileEditorView.qml ../contents/ui/TileItem.qml
 msgid "Edit Tile"
-msgstr "Editar tile"
+msgstr "Editar ladrilho"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Reset Tile"
-msgstr "Redefinir tile"
+msgstr "Redefinir ladrilho"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Close"
@@ -398,7 +398,7 @@ msgstr "Url"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Label"
-msgstr "Título"
+msgstr "Rótulo"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Icon"
@@ -418,7 +418,7 @@ msgstr "Arquivos de imagem (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Preset Tiles"
-msgstr "Tiles predefinidos"
+msgstr "Ladrilhos predefinidos"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Color"
@@ -430,15 +430,15 @@ msgstr "Posição / Tamanho"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Add Preset"
-msgstr ""
+msgstr "Adicionar predefinição"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Productivity"
-msgstr ""
+msgstr "Produtividade"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Explore"
-msgstr ""
+msgstr "Explorar"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Gmail"
@@ -454,11 +454,11 @@ msgstr "Novo grupo"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Unlock Tiles"
-msgstr "Desbloquear tiles"
+msgstr "Desbloquear ladrilhos"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Lock Tiles"
-msgstr "Bloquear tiles"
+msgstr "Bloquear ladrilhos"
 
 #: ../contents/ui/TileGrid.qml
 msgctxt "default group label"
@@ -467,20 +467,20 @@ msgstr "Grupo"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Getting Started"
-msgstr ""
+msgstr "Começando"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag apps onto the grid."
-msgstr ""
+msgstr "Arraste os aplicativos para a grade."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag folders from the file manager here."
-msgstr ""
+msgstr "Arraste pastas do gerenciador de arquivos aqui."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Use Default Tile Layout"
-msgstr ""
+msgstr "Usar o layout de ladrilhos padrão"
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
-msgstr "Organizar tiles"
+msgstr "Organizar ladrilhos"

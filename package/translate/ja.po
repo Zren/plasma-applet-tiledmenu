@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2020-07-23 18:31-0400\n"
+"POT-Creation-Date: 2021-04-09 22:46-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Yamato Kobayashi <Kb_yamato@protonmail.com>\n"
 "Language-Team: japanese<LL@li.org>\n"
@@ -91,10 +91,6 @@ msgstr "タイルサイズ"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
 msgstr "タイルマージン"
-
-#: ../contents/ui/config/ConfigGeneral.qml
-msgid "Desktop Theme (%1)"
-msgstr "デスクトップテーマ (%1)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"
@@ -477,3 +473,6 @@ msgstr "ユーザーのデフォルトタイルレイアウト"
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
 msgstr "タイルをソート"
+
+#~ msgid "Desktop Theme (%1)"
+#~ msgstr "デスクトップテーマ (%1)"

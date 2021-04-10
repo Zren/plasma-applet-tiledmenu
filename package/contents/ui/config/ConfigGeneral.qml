@@ -13,6 +13,11 @@ ConfigPage {
 	id: page
 	showAppletVersion: true
 
+	readonly property string plasmaStyleLabelText: {
+		var plasmaStyleText = i18nd("kcm_desktoptheme", "Plasma Style")
+		return plasmaStyleText + ' (' + theme.themeName + ')'
+	}
+
 	function getTopItem(item) {
 		var curItem = item
 		while (curItem.parent) {
@@ -121,7 +126,7 @@ ConfigPage {
 		}
 		RadioButton {
 			visible: false
-			text: i18n("Plasma Style (%1)", theme.themeName)
+			text: plasmaStyleLabelText
 			exclusiveGroup: tilesThemeGroup
 			checked: false
 			enabled: false
@@ -195,7 +200,7 @@ ConfigPage {
 		}
 
 		RadioButton {
-			text: i18n("Plasma Style (%1)", theme.themeName)
+			text: plasmaStyleLabelText
 			exclusiveGroup: sidebarThemeGroup
 			checked: plasmoid.configuration.sidebarFollowsTheme
 			onClicked: plasmoid.configuration.sidebarFollowsTheme = true
@@ -323,7 +328,7 @@ ConfigPage {
 		}
 		
 		RadioButton {
-			text: i18n("Plasma Style (%1)", theme.themeName)
+			text: plasmaStyleLabelText
 			exclusiveGroup: searchBoxThemeGroup
 			checked: plasmoid.configuration.searchFieldFollowsTheme
 			onClicked: plasmoid.configuration.searchFieldFollowsTheme = true

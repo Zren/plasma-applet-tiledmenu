@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2020-07-23 18:31-0400\n"
+"POT-Creation-Date: 2021-04-09 22:46-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Arno Pillods <arno.pillods@tutanota.com>\n"
 "Language-Team: fr\n"
@@ -94,10 +94,6 @@ msgstr "Taille des tuiles"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
 msgstr "Marge des tuiles"
-
-#: ../contents/ui/config/ConfigGeneral.qml
-msgid "Desktop Theme (%1)"
-msgstr "Thème du Bureau (%1)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"
@@ -482,6 +478,9 @@ msgstr ""
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
 msgstr "Trier les Tuiles"
+
+#~ msgid "Desktop Theme (%1)"
+#~ msgstr "Thème du Bureau (%1)"
 
 #~ msgid "Menu"
 #~ msgstr "Menu"

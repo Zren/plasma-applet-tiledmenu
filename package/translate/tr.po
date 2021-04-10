@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2020-07-23 18:31-0400\n"
+"POT-Creation-Date: 2021-04-09 22:46-0400\n"
 "PO-Revision-Date: 2020-07-07 16:59+0300\n"
 "Last-Translator: Cihan Alkan <cihanalk@gmail.com>\n"
 "Language-Team: Turkish <LL@li.org>\n"
@@ -92,10 +92,6 @@ msgstr "Döşeme Boyutu"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
 msgstr "Döşeme Kenar Boşluğu"
-
-#: ../contents/ui/config/ConfigGeneral.qml
-msgid "Desktop Theme (%1)"
-msgstr "Masaüstü Teması (%1)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"
@@ -483,3 +479,6 @@ msgstr "Varsayılan Döşeme Düzenini Kullan"
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
 msgstr "Döşemeleri Sıralama"
+
+#~ msgid "Desktop Theme (%1)"
+#~ msgstr "Masaüstü Teması (%1)"

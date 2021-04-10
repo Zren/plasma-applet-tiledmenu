@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2020-07-23 18:31-0400\n"
+"POT-Creation-Date: 2021-04-09 22:46-0400\n"
 "PO-Revision-Date: 2021-03-15 12:27+0200\n"
 "Last-Translator: Omer I.S. <omeritzicschwartz@gmail.com>\n"
 "Language-Team: Hebrew <kde-i18n-he@kde.org>\n"
@@ -16,8 +16,8 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Lokalize 20.12.0\n"
-"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? 2 :"
-" 3);\n"
+"Plural-Forms: nplurals=4; plural=(n==1 ? 0 : n==2 ? 1 : n>10 && n%10==0 ? "
+"2 : 3);\n"
 
 #: ../metadata.desktop
 msgid "Tiled Menu"
@@ -96,10 +96,6 @@ msgstr "גודל אריח"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
 msgstr "שולֵי האריח"
-
-#: ../contents/ui/config/ConfigGeneral.qml
-msgid "Desktop Theme (%1)"
-msgstr "ערכת הנושא של שולחן העבודה (%1)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"
@@ -246,8 +242,8 @@ msgid ""
 "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open "
 "this menu with just the ⊞ Windows / Meta key."
 msgstr ""
-"כאשר ליישומון הזה מוגדר קיצור גלובלי, כמו \"Alt+F1\", ממשק Plasma יפתח את"
-" התפריט הזה בעזרת לחיצה על מקש ⊞ Windows / ‏Meta."
+"כאשר ליישומון הזה מוגדר קיצור גלובלי, כמו \"Alt+F1\", ממשק Plasma יפתח את "
+"התפריט הזה בעזרת לחיצה על מקש ⊞ Windows / ‏Meta."
 
 #: ../contents/ui/lib/AppletVersion.qml
 msgid "<b>Version:</b> %1"
@@ -487,3 +483,6 @@ msgstr "שימוש בפריסת ברירת המחדל"
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
 msgstr "מיון אריחים"
+
+#~ msgid "Desktop Theme (%1)"
+#~ msgstr "ערכת הנושא של שולחן העבודה (%1)"

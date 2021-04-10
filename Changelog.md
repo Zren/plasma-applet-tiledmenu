@@ -1,3 +1,12 @@
+## v42 - April 19 2021
+
+* Fix User Manager kcm id in sidebar button (Issue #98)
+* Change "Desktop Theme" to newer "Plasma Style" label in the config, using kcm_desktoptheme translation of "Plasma Style".
+* Updated pt_BR translations by @DmKaleid (Pull Request #101)
+* Updated Spanish translations by https://www.pling.com/u/pirracas/
+* Updated Hebrew translations by @omeritzics (Pull Request #102 and #103)
+* Use xdg-user-dirs gettext domain instead of Qt's StandardPaths for xdg dir labels.
+
 ## v41 - October 23 2020
 
 * Improve display of right to left locales like Hebrew in the config window.

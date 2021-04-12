@@ -20,14 +20,16 @@ QQC2.SpinBox {
 
 	readonly property int spinBox_MININT: -2147483648
 	readonly property int spinBox_MAXINT: 2147483647
-	// from: spinBox_MININT
-	to: spinBox_MAXINT
+	from: Math.round(minimumValue * factor)
+	to: Math.round(maximumValue * factor)
 
 	// Reimplement QQC1 properties
 	// https://github.com/qt/qtquickcontrols/blob/dev/src/controls/SpinBox.qml
 	property int decimals: 0
 	property alias prefix: prefixLabel.text
 	property alias suffix: suffixLabel.text
+	property real minimumValue: 0
+	property real maximumValue: spinBox_MAXINT
 
 	// Avoid selecting prefix/suffix by drawing them overlayed on top.
 	// As a bonus, we can draw with in a different color (textColor at 60% opacity).

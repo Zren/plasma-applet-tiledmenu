@@ -1,4 +1,4 @@
-// Version 3
+// Version 4
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as QQC2
@@ -17,7 +17,11 @@ QQC2.SpinBox {
 	readonly property real valueReal: value / factor
 	value: Math.round(configValue * factor)
 	onValueRealChanged: serializeTimer.start()
-	to: 2147483647
+
+	readonly property int spinBox_MININT: -2147483648
+	readonly property int spinBox_MAXINT: 2147483647
+	// from: spinBox_MININT
+	to: spinBox_MAXINT
 
 	// Reimplement QQC1 properties
 	// https://github.com/qt/qtquickcontrols/blob/dev/src/controls/SpinBox.qml
@@ -71,7 +75,7 @@ QQC2.SpinBox {
 	}
 
 	validator: RegExpValidator {
-		regExp: /[\d\.]+/
+		regExp: /[\-\.\d]+/
 	}
 
 	textFromValue: function(value, locale) {
@@ -80,9 +84,13 @@ QQC2.SpinBox {
 
 	valueFromText: function(text, locale) {
 		var text2 = text
-			.replace(/[^\.\d]/g, '') // Remove non digit characters
+			.replace(/[^\-\.\d]/g, '') // Remove non digit characters
 			.replace(/\.+/g, '.') // Allow user to type '.' instad of RightArrow to enter to decimals
 		var val = Number(text2)
+		if (isNaN(val)) {
+			val = -0
+		}
+		// console.log('valueFromText', text, val)
 		return Math.round(val * factor)
 	}
 
@@ -101,6 +109,18 @@ QQC2.SpinBox {
 		}
 	}
 
+	function fixMinus(str) {
+		var minusIndex = str.indexOf('-')
+		if (minusIndex >= 0) {
+			var a = str.substr(0, minusIndex)
+			var b = str.substr(minusIndex+1)
+			console.log('a', a, 'b', b)
+
+			return '-' + a + b
+		} else {
+			return str
+		}
+	}
 	function fixDecimals(str) {
 		var periodIndex = str.indexOf('.')
 		var a = str.substr(0, periodIndex+1)
@@ -108,9 +128,15 @@ QQC2.SpinBox {
 		return a + b.replace(/\.+/g, '') // Remove extra periods
 	}
 
+	function fixText(str) {
+		return fixMinus(fixDecimals(str))
+	}
+
 	function onTextEdited() {
 		var oldText = spinBox.contentItem.text
-		oldText = fixDecimals(oldText)
+		// console.log('onTextEdited', 'oldText1', oldText)
+		oldText = fixText(oldText)
+		// console.log('onTextEdited', 'oldText2', oldText)
 		var oldPeriodIndex = oldText.indexOf('.')
 		if (oldPeriodIndex == -1) {
 			oldPeriodIndex = oldText.length
@@ -122,7 +148,9 @@ QQC2.SpinBox {
 		spinBox.valueModified()
 
 		var newText = spinBox.contentItem.text
-		newText = fixDecimals(newText)
+		// console.log('onTextEdited', 'newText1', newText)
+		newText = fixText(newText)
+		// console.log('onTextEdited', 'newText2', newText)
 		var newPeriodIndex = newText.indexOf('.')
 		if (newPeriodIndex == -1) {
 			newPeriodIndex = newText.length

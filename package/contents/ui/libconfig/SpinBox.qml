@@ -3,6 +3,28 @@
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as QQC2
 
+/*
+** Example:
+**
+import './libconfig' as LibConfig
+// Integer
+LibConfig.SpinBox {
+	configKey: "leftPadding"
+	suffix: "px"
+	from: 0
+	to: 1000
+	stepSize: 5
+}
+// Double
+LibConfig.SpinBox {
+	configKey: "distance"
+	decimals: 3
+	suffix: "m"
+	minimumValue: 0.0
+	maximumValue: 1000.0
+	stepSize: Math.round(0.5 * factor)
+}
+*/
 // QQC1.SpinBox: https://github.com/qt/qtquickcontrols/blob/dev/src/controls/SpinBox.qml
 // QQC2.SpinBox: https://github.com/qt/qtquickcontrols2/blob/5.15/src/imports/controls/SpinBox.qml
 // KDE Config Theme: https://invent.kde.org/frameworks/qqc2-desktop-style/-/blob/master/org.kde.desktop/SpinBox.qml

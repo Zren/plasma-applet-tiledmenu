@@ -1,4 +1,4 @@
-// Version 4
+// Version 5
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as QQC2
@@ -40,8 +40,8 @@ QQC2.SpinBox {
 	value: Math.round(configValue * factor)
 	onValueRealChanged: serializeTimer.start()
 
-	readonly property int spinBox_MININT: -2147483648
-	readonly property int spinBox_MAXINT: 2147483647
+	readonly property int spinBox_MININT: Math.ceil(-2147483648 / factor)
+	readonly property int spinBox_MAXINT: Math.floor(2147483647 / factor)
 	from: Math.round(minimumValue * factor)
 	to: Math.round(maximumValue * factor)
 

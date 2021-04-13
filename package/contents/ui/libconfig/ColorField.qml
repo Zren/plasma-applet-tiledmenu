@@ -173,14 +173,11 @@ QQC2.TextField {
 					dialogLoader.active = false
 				}
 			}
-		}
-		onItemChanged: {
-			if (item) {
-				// showAlphaChannel must be set before opening the dialog.
-				// If we create the dialog with visible=true, the showAlphaChannelbinding
-				// will not be set before it opens.
-				item.open()
-			}
+
+			// showAlphaChannel must be set before opening the dialog.
+			// If we create the dialog with visible=true, the showAlphaChannelbinding
+			// will not be set before it opens.
+			Component.onCompleted: visible = true
 		}
 	}
 }

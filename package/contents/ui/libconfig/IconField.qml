@@ -1,4 +1,4 @@
-// Version: 4
+// Version 5
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as QQC2
@@ -23,7 +23,7 @@ RowLayout {
 	}
 	property int previewIconSize: Kirigami.Units.iconSizes.medium
 	property string defaultValue: ""
-	property string placeholderValue: ""
+	property alias placeholderValue: textField.placeholderText
 
 	// Based on org.kde.plasma.kickoff
 	QQC2.Button {
@@ -85,9 +85,11 @@ RowLayout {
 				text: configIcon.configValue
 				onTextChanged: serializeTimer.restart()
 
-				placeholderText: configIcon.placeholderValue
+				rightPadding: clearButton.width + Kirigami.Units.smallSpacing
 
 				QQC2.ToolButton {
+					id: clearButton
+					visible: configIcon.configValue != configIcon.defaultValue
 					icon.name: "edit-clear"
 					onClicked: configIcon.value = defaultValue
 
@@ -100,6 +102,7 @@ RowLayout {
 			}
 
 			QQC2.Button {
+				id: browseButton
 				icon.name: "document-open"
 				onClicked: dialogLoader.active = true
 			}

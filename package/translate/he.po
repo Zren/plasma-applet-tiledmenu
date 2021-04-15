@@ -33,7 +33,7 @@ msgstr "כללי"
 
 #: ../contents/config/config.qml
 msgid "Import/Export Layout"
-msgstr "ייבוא\\ייצוא פריסה"
+msgstr "ייבוא/ייצוא פריסה"
 
 #: ../contents/config/config.qml
 msgid "Advanced"
@@ -167,7 +167,7 @@ msgstr "גובה שדה החיפוש"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Windows (White)"
-msgstr "Windows ‏(לבן)"
+msgstr "‏Windows (לבן)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App List"
@@ -183,7 +183,7 @@ msgstr "תצוגה ברירת מחדל"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Alphabetical"
-msgstr "לפי האל״ף־בי״ת"
+msgstr "בסדר אלפביתי"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Categories"
@@ -231,15 +231,15 @@ msgstr "יישומים בשימוש לעתים קרובות"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Results"
-msgstr "תוצאות חיפוש"
+msgstr "תוצאות החיפוש"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Merged (Application Launcher)"
-msgstr ""
+msgstr "משולבות (מפעיל יישומים)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Split into Categories (Application Menu / Dashboard)"
-msgstr "פיצול לקטגוריות (תפריט היישומים \\ לוח מחוונים)"
+msgstr "מפוצלות לקטגוריות (תפריט היישומים / לוח מחוונים)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
 msgid ""
@@ -365,7 +365,7 @@ msgstr "יישומונים בחלונות"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Date/Time"
-msgstr "תאריך\\שעה"
+msgstr "תאריך/שעה"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Unit Converter"
@@ -429,7 +429,7 @@ msgstr "צבע רקע"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Position / Size"
-msgstr "מיקום \\ גודל"
+msgstr "מיקום / גודל"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Add Preset"
@@ -474,11 +474,11 @@ msgstr "התחלת השימוש"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag apps onto the grid."
-msgstr "ניתן לגרור יישומים לתוך הרשת."
+msgstr "אפשר לגרור יישומים לתוך הרשת."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag folders from the file manager here."
-msgstr "ניתן לגרור לכאן תיקיות ממנהל הקבצים."
+msgstr "אפשר לגרור לכאן תיקיות ממנהל הקבצים."
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Use Default Tile Layout"

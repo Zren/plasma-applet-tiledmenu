@@ -1,15 +1,10 @@
 import QtQuick 2.2
-import QtQuick.Window 2.1
-import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.0
-import QtQuick.Dialogs 1.0
+import QtQuick.Dialogs 1.0 as QtDialogs
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
-
-import "./config"
 
 ColumnLayout {
 	id: tileEditorView
@@ -43,12 +38,12 @@ ColumnLayout {
 			text: i18n("Edit Tile")
 		}
 
-		PlasmaComponents.Button {
+		PlasmaComponents3.Button {
 			text: i18n("Reset Tile")
 			onClicked: resetTile()
 		}
 
-		PlasmaComponents.Button {
+		PlasmaComponents3.Button {
 			text: i18n("Close")
 			onClicked: {
 				tileEditorView.close()
@@ -57,16 +52,15 @@ ColumnLayout {
 	}
 
 
-	ScrollView {
+	PlasmaComponents3.ScrollView {
 		id: scrollView
 		Layout.fillHeight: true
 		Layout.fillWidth: true
 
-		readonly property int viewportWidth: viewport ? viewport.width : 0
-
 		ColumnLayout {
 			id: scrollContent
-			width: scrollView.viewportWidth
+			Layout.fillWidth: true
+			width: scrollView.availableWidth
 
 			TileEditorField {
 				// visible: appObj.isLauncher
@@ -90,8 +84,8 @@ ColumnLayout {
 				checkedKey: 'showIcon'
 				checkedDefault: appObj.defaultShowIcon
 
-				PlasmaComponents.Button {
-					iconName: "document-open"
+				PlasmaComponents3.Button {
+					icon.name: "document-open"
 					onClicked: iconDialog.open()
 
 					KQuickAddons.IconDialog {
@@ -106,11 +100,11 @@ ColumnLayout {
 				title: i18n("Background Image")
 				key: 'backgroundImage'
 
-				PlasmaComponents.Button {
-					iconName: 'document-open'
+				PlasmaComponents3.Button {
+					icon.name: 'document-open'
 					onClicked: imagePicker.open()
 
-					FileDialog {
+					QtDialogs.FileDialog {
 						id: imagePicker
 
 						title: i18n("Choose an image")

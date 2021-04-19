@@ -62,40 +62,40 @@ Item {
 	}
 	//--- View End
 
-		MouseArea {
-			id: tileMouseArea
-			anchors.fill: parent
-			hoverEnabled: true
-			acceptedButtons: Qt.LeftButton | Qt.RightButton
-			cursorShape: editing ? Qt.ClosedHandCursor : Qt.ArrowCursor
-			readonly property bool isLeftPressed: pressedButtons & Qt.LeftButton
+	MouseArea {
+		id: tileMouseArea
+		anchors.fill: parent
+		hoverEnabled: true
+		acceptedButtons: Qt.LeftButton | Qt.RightButton
+		cursorShape: editing ? Qt.ClosedHandCursor : Qt.ArrowCursor
+		readonly property bool isLeftPressed: pressedButtons & Qt.LeftButton
 
-			property int pressX: -1
-			property int pressY: -1
-			onPressed: {
-				pressX = mouse.x
-				pressY = mouse.y
-			}
+		property int pressX: -1
+		property int pressY: -1
+		onPressed: {
+			pressX = mouse.x
+			pressY = mouse.y
+		}
 
-			drag.target: plasmoid.configuration.tilesLocked ? undefined : tileItem
-			// drag.onActiveChanged: console.log('drag.active', drag.active)
+		drag.target: plasmoid.configuration.tilesLocked ? undefined : tileItem
+		// drag.onActiveChanged: console.log('drag.active', drag.active)
 
-			// This MouseArea will spam "QQuickItem::ungrabMouse(): Item is not the mouse grabber."
-			// but there's no other way of having a clickable drag area.
-			onClicked: {
-				mouse.accepted = true
-				tileGrid.resetDrag()
-				if (mouse.button == Qt.LeftButton) {
-					if (tileEditorView && tileEditorView.tile) {
-						openTileEditor()
-					} else if (modelData.url) {
-						appsModel.tileGridModel.runApp(modelData.url)
-					}
-				} else if (mouse.button == Qt.RightButton) {
-					contextMenu.open(mouse.x, mouse.y)
+		// This MouseArea will spam "QQuickItem::ungrabMouse(): Item is not the mouse grabber."
+		// but there's no other way of having a clickable drag area.
+		onClicked: {
+			mouse.accepted = true
+			tileGrid.resetDrag()
+			if (mouse.button == Qt.LeftButton) {
+				if (tileEditorView && tileEditorView.tile) {
+					openTileEditor()
+				} else if (modelData.url) {
+					appsModel.tileGridModel.runApp(modelData.url)
 				}
+			} else if (mouse.button == Qt.RightButton) {
+				contextMenu.open(mouse.x, mouse.y)
 			}
 		}
+	}
 
 	Drag.dragType: Drag.Automatic
 	Drag.proposedAction: Qt.MoveAction

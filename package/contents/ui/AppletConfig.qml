@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Window 2.2
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
 	function setAlpha(c, a) {
@@ -9,15 +10,15 @@ Item {
 	}
 
 	//--- Sizes
-	readonly property int panelIconSize: 24 * units.devicePixelRatio
-	readonly property int flatButtonSize: plasmoid.configuration.sidebarButtonSize * units.devicePixelRatio
-	readonly property int flatButtonIconSize: plasmoid.configuration.sidebarIconSize * units.devicePixelRatio
+	readonly property int panelIconSize: 24 * PlasmaCore.Units.devicePixelRatio
+	readonly property int flatButtonSize: plasmoid.configuration.sidebarButtonSize * PlasmaCore.Units.devicePixelRatio
+	readonly property int flatButtonIconSize: plasmoid.configuration.sidebarIconSize * PlasmaCore.Units.devicePixelRatio
 	readonly property int sidebarWidth: flatButtonSize
-	readonly property int sidebarMinOpenWidth: 200 * units.devicePixelRatio
-	readonly property int sidebarRightMargin: 4 * units.devicePixelRatio
-	readonly property int sidebarPopupButtonSize: plasmoid.configuration.sidebarPopupButtonSize * units.devicePixelRatio
-	readonly property int appListWidth: plasmoid.configuration.appListWidth * units.devicePixelRatio
-	readonly property int tileEditorMinWidth: Math.max(350, 350 * units.devicePixelRatio)
+	readonly property int sidebarMinOpenWidth: 200 * PlasmaCore.Units.devicePixelRatio
+	readonly property int sidebarRightMargin: 4 * PlasmaCore.Units.devicePixelRatio
+	readonly property int sidebarPopupButtonSize: plasmoid.configuration.sidebarPopupButtonSize * PlasmaCore.Units.devicePixelRatio
+	readonly property int appListWidth: plasmoid.configuration.appListWidth * PlasmaCore.Units.devicePixelRatio
+	readonly property int tileEditorMinWidth: Math.max(350, 350 * PlasmaCore.Units.devicePixelRatio)
 
 	property bool showSearch: false
 	property bool isEditingTile: false
@@ -37,22 +38,22 @@ Item {
 	readonly property int cellBoxUnits: 80
 	readonly property int cellMarginUnits: plasmoid.configuration.tileMargin
 	readonly property int cellSizeUnits: cellBoxUnits - cellMarginUnits*2
-	readonly property int cellSize: cellSizeUnits * tileScale * units.devicePixelRatio
-	readonly property real cellMargin: cellMarginUnits * tileScale * units.devicePixelRatio
+	readonly property int cellSize: cellSizeUnits * tileScale * PlasmaCore.Units.devicePixelRatio
+	readonly property real cellMargin: cellMarginUnits * tileScale * PlasmaCore.Units.devicePixelRatio
 	readonly property real cellPushedMargin: cellMargin * 2
 	readonly property int cellBoxSize: cellMargin + cellSize + cellMargin
 	readonly property int tileGridWidth: plasmoid.configuration.favGridCols * cellBoxSize
 
-	readonly property int favCellWidth: 60 * units.devicePixelRatio
-	readonly property int favCellPushedMargin: 5 * units.devicePixelRatio
-	readonly property int favCellPadding: 3 * units.devicePixelRatio
+	readonly property int favCellWidth: 60 * PlasmaCore.Units.devicePixelRatio
+	readonly property int favCellPushedMargin: 5 * PlasmaCore.Units.devicePixelRatio
+	readonly property int favCellPadding: 3 * PlasmaCore.Units.devicePixelRatio
 	readonly property int favColWidth: ((favCellWidth + favCellPadding * 2) * 2) // = 132 (Medium Size)
-	readonly property int favViewDefaultWidth: (favColWidth * 3) * units.devicePixelRatio
-	readonly property int favSmallIconSize: 32 * units.devicePixelRatio
-	readonly property int favMediumIconSize: 72 * units.devicePixelRatio
+	readonly property int favViewDefaultWidth: (favColWidth * 3) * PlasmaCore.Units.devicePixelRatio
+	readonly property int favSmallIconSize: 32 * PlasmaCore.Units.devicePixelRatio
+	readonly property int favMediumIconSize: 72 * PlasmaCore.Units.devicePixelRatio
 	readonly property int favGridWidth: (plasmoid.configuration.favGridCols/2) * favColWidth
 
-	readonly property int searchFieldHeight: plasmoid.configuration.searchFieldHeight * units.devicePixelRatio
+	readonly property int searchFieldHeight: plasmoid.configuration.searchFieldHeight * PlasmaCore.Units.devicePixelRatio
 
 	readonly property int popupWidth: {
 		if (plasmoid.configuration.fullscreen) {
@@ -66,7 +67,7 @@ Item {
 			return Screen.desktopAvailableHeight
 		} else {
 			// implicit Math.floor() when cast as int
-			var dPR = units.devicePixelRatio
+			var dPR = PlasmaCore.Units.devicePixelRatio
 			var pH3 = plasmoid.configuration.popupHeight
 			var pH4 = pH3 * dPR
 			var pH5 = Math.floor(pH4)
@@ -75,7 +76,7 @@ Item {
 		}
 	}
 	
-	readonly property int menuItemHeight: plasmoid.configuration.menuItemHeight * units.devicePixelRatio
+	readonly property int menuItemHeight: plasmoid.configuration.menuItemHeight * PlasmaCore.Units.devicePixelRatio
 	
 	readonly property int searchFilterRowHeight: {
 		if (plasmoid.configuration.appListWidth >= 310) {
@@ -89,21 +90,21 @@ Item {
 
 	//--- Colors
 	readonly property color themeButtonBgColor: {
-		if (theme.themeName == "oxygen") {
+		if (PlasmaCore.Theme.themeName == "oxygen") {
 			return "#20FFFFFF"
 		} else {
-			return theme.buttonBackgroundColor
+			return PlasmaCore.Theme.buttonBackgroundColor
 		}
 	}
 	readonly property color defaultTileColor: plasmoid.configuration.defaultTileColor || themeButtonBgColor
 	readonly property bool defaultTileGradient: plasmoid.configuration.defaultTileGradient
-	readonly property color sidebarBackgroundColor: plasmoid.configuration.sidebarBackgroundColor || theme.backgroundColor
-	readonly property color menuItemTextColor2: setAlpha(theme.textColor, 0.6)
-	readonly property color favHoverOutlineColor: setAlpha(theme.textColor, 0.8)
+	readonly property color sidebarBackgroundColor: plasmoid.configuration.sidebarBackgroundColor || PlasmaCore.Theme.backgroundColor
+	readonly property color menuItemTextColor2: setAlpha(PlasmaCore.Theme.textColor, 0.6)
+	readonly property color favHoverOutlineColor: setAlpha(PlasmaCore.Theme.textColor, 0.8)
 	readonly property color flatButtonBgHoverColor: themeButtonBgColor
 	readonly property color flatButtonBgColor: Qt.rgba(flatButtonBgHoverColor.r, flatButtonBgHoverColor.g, flatButtonBgHoverColor.b, 0)
-	readonly property color flatButtonBgPressedColor: theme.highlightColor
-	readonly property color flatButtonCheckedColor: theme.highlightColor
+	readonly property color flatButtonBgPressedColor: PlasmaCore.Theme.highlightColor
+	readonly property color flatButtonCheckedColor: PlasmaCore.Theme.highlightColor
 
 	//--- Style
 	// Tiles

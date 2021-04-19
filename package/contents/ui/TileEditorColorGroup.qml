@@ -12,6 +12,7 @@ TileEditorGroupBox {
 
 	TileEditorColorField {
 		id: colorField
+		showPreviewBg: false
 		anchors.left: parent.left
 		anchors.right: parent.right
 		text: key && appObj.tile && appObj.tile[key] ? appObj.tile[key] : ''

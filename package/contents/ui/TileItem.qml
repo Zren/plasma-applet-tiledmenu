@@ -1,12 +1,5 @@
-import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
+import QtQuick 2.2
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.draganddrop 2.0 as DragAndDrop
-import QtGraphicalEffects 1.0
 
 Item {
 	id: tileItem
@@ -129,7 +122,7 @@ Item {
 		sourceComponent: Rectangle {
 			id: groupOutline
 			color: "transparent"
-			border.width: 1 * units.devicePixelRatio
+			border.width: Math.max(1, Math.round(1 * PlasmaCore.Units.devicePixelRatio))
 			border.color: "#80ffffff"
 			y: modelData.h * cellBoxSize
 			z: 100
@@ -145,7 +138,7 @@ Item {
 			if (!plasmoid.configuration.tilesLocked) {
 				menu.addPinToMenuAction(modelData.url)
 			}
-			
+
 			appObj.addActionList(menu)
 
 			if (!plasmoid.configuration.tilesLocked) {

@@ -1,11 +1,6 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.draganddrop 2.0 as DragAndDrop
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 Rectangle {
 	id: tileItemView
@@ -21,10 +16,10 @@ Rectangle {
 	}
 	gradient: appObj.backgroundGradient ? tileGradient.createObject(tileItemView) : null
 
-	readonly property int tilePadding: 4 * units.devicePixelRatio
-	readonly property int smallIconSize: 32 * units.devicePixelRatio
-	readonly property int mediumIconSize: 72 * units.devicePixelRatio
-	readonly property int largeIconSize: 96 * units.devicePixelRatio
+	readonly property int tilePadding: 4 * PlasmaCore.Units.devicePixelRatio
+	readonly property int smallIconSize: 32 * PlasmaCore.Units.devicePixelRatio
+	readonly property int mediumIconSize: 72 * PlasmaCore.Units.devicePixelRatio
+	readonly property int largeIconSize: 96 * PlasmaCore.Units.devicePixelRatio
 
 	readonly property int tileLabelAlignment: config.tileLabelAlignment
 
@@ -83,7 +78,7 @@ Rectangle {
 		smooth: appObj.iconFill
 	}
 
-	PlasmaComponents.Label {
+	PlasmaComponents3.Label {
 		id: label
 		visible: appObj.showLabel
 		text: appObj.labelText

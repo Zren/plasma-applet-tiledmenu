@@ -1,17 +1,8 @@
 import QtQuick 2.2
-import QtQuick.Window 2.1
-import QtQuick.Controls 1.2
 import QtQuick.Layouts 1.0
-import QtQuick.Dialogs 1.0
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
-
-import "lib"
-
-GroupBox {
+TileEditorGroupBox {
 	id: tileEditorField
 	title: "Label"
 	Layout.fillWidth: true
@@ -46,14 +37,12 @@ GroupBox {
 		}
 	}
 
-	style: PlasmaStyles.GroupBoxStyle {}
-
 	RowLayout {
 		id: content
 		anchors.left: parent.left
 		anchors.right: parent.right
 
-		PlasmaComponents.TextField {
+		PlasmaComponents3.TextField {
 			id: textField
 			Layout.fillWidth: true
 			text: key && appObj.tile && appObj.tile[key] ? appObj.tile[key] : ''
@@ -76,12 +65,6 @@ GroupBox {
 						textField.updateOnChange = true
 					}
 				}
-			}
-		}
-
-		Component.onDestruction: {
-			while (children.length > 0) {
-				children[children.length - 1].parent = tileEditorField
 			}
 		}
 	}

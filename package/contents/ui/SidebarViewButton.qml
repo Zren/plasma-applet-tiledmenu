@@ -11,7 +11,7 @@ SidebarItem {
 	readonly property string appletIconFilename: appletIconName ? plasmoid.file("", "icons/" + internalIconName + ".svg") : ""
 
 	checkedEdge: Qt.LeftEdge
-	checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
+	checkedEdgeWidth: 4 * PlasmaCore.Units.devicePixelRatio // Twice as thick as normal
 
 	PlasmaCore.SvgItem {
 		id: icon
@@ -21,7 +21,7 @@ SidebarItem {
 		}
 
 		// From FlatButton.qml, modifed so icon is also 16px
-		property int iconSize: units.roundToIconSize(config.flatButtonIconSize)
+		property int iconSize: PlasmaCore.Units.roundToIconSize(config.flatButtonIconSize)
 		width: iconSize
 		height: iconSize
 		anchors.centerIn: parent

@@ -1,14 +1,12 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
+// import QtQuick.Controls 1.1
+// import QtQuick.Controls.Styles 1.1
 import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
+// import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-
+// import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0 as DragAndDrop
 import org.kde.kquickcontrolsaddons 2.0 // KCMShell
-
 import "Utils.js" as Utils
 
 Item {
@@ -77,7 +75,7 @@ Item {
 			// 	onClicked: searchResultsView.showDefaultSearch()
 			// 	// checked: stackView.currentItem == searchResultsView
 			// 	// checkedEdge: Qt.RightEdge
-			// 	// checkedEdgeWidth: 4 * units.devicePixelRatio // Twice as thick as normal
+			// 	// checkedEdgeWidth: 4 * PlasmaCore.Units.devicePixelRatio // Twice as thick as normal
 			// }
 		}
 		ColumnLayout {

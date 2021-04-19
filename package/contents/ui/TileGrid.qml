@@ -1,24 +1,18 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Controls.Styles 1.1
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.draganddrop 2.0 as DragAndDrop
-import org.kde.plasma.private.kicker 0.1 as Kicker
-import org.kde.kquickcontrolsaddons 2.0
-
 import "Utils.js" as Utils
 
 DropArea {
 	id: tileGrid
 
-	property int cellSize: 60 * units.devicePixelRatio
-	property real cellMargin: 3 * units.devicePixelRatio
-	property real cellPushedMargin: 6 * units.devicePixelRatio
+	property int cellSize: 60 * PlasmaCore.Units.devicePixelRatio
+	property real cellMargin: 3 * PlasmaCore.Units.devicePixelRatio
+	property real cellPushedMargin: 6 * PlasmaCore.Units.devicePixelRatio
 	property int cellBoxSize: cellMargin + cellSize + cellMargin
-	property int hoverOutlineSize: 2 * units.devicePixelRatio
+	property int hoverOutlineSize: 2 * PlasmaCore.Units.devicePixelRatio
 
 	property int minColumns: Math.floor(width / cellBoxSize)
 	property int minRows: Math.floor(height / cellBoxSize)
@@ -583,7 +577,7 @@ DropArea {
 			anchors.fill: parent
 			opacity: parent.ticking ? 1 : 0
 			gradient: Gradient {
-				GradientStop { position: 0.0; color: theme.highlightColor }
+				GradientStop { position: 0.0; color: PlasmaCore.Theme.highlightColor }
 				GradientStop { position: 0.3; color: "transparent" }
 			}
 		}
@@ -619,7 +613,7 @@ DropArea {
 			opacity: parent.ticking ? 1 : 0
 			gradient: Gradient {
 				GradientStop { position: 0.7; color: "transparent" }
-				GradientStop { position: 1.0; color: theme.highlightColor }
+				GradientStop { position: 1.0; color: PlasmaCore.Theme.highlightColor }
 			}
 		}
 	}

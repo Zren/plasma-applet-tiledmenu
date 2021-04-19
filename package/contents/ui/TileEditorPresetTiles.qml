@@ -1,20 +1,13 @@
 import QtQuick 2.2
-import QtQuick.Window 2.1
-import QtQuick.Controls 1.2
+import QtQuick.Controls 2.0 as QQC2
 import QtQuick.Layouts 1.0
-import QtQuick.Dialogs 1.0
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
-
-import "lib"
 import "lib/Requests.js" as Requests
 
 // Note: This references a global KCoreAddons.KUser { id: kuser }
 
-GroupBox {
+QQC2.GroupBox {
 	id: tileEditorPresetTiles
 	title: "Label"
 	Layout.fillWidth: true
@@ -101,8 +94,6 @@ GroupBox {
 			tileEditorPresetTiles.checkIfRecognizedLauncher()
 		}
 	}
-
-	style: PlasmaStyles.GroupBoxStyle {}
 
 	GridLayout {
 		id: content

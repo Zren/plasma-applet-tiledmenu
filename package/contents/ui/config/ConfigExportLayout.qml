@@ -5,17 +5,17 @@ import QtQuick.Layouts 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
-import ".."
+import ".." as TiledMenu
 import "../lib"
 
 ColumnLayout {
 	id: page
 
-	ConfigBase64JsonString {
+	TextAreaBase64JsonString {
 		id: exportData
 		Layout.fillHeight: true
 
-		Base64JsonString {
+		TiledMenu.Base64JsonString {
 			id: configTileModel
 			configKey: 'tileModel'
 			writing: exportData.base64JsonString.writing

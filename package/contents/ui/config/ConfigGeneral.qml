@@ -5,8 +5,7 @@ import QtQuick.Layouts 1.0
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
-import ".."
-import "../lib"
+import ".." as TiledMenu
 import "../libconfig" as LibConfig
 
 
@@ -52,7 +51,7 @@ Kirigami.FormLayout {
 		hideKeyboardShortcutTab()
 	}
 
-	property var config: AppletConfig {
+	property var config: TiledMenu.AppletConfig {
 		id: config
 	}
 

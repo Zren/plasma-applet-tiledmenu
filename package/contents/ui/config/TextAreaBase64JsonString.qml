@@ -2,17 +2,18 @@ import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Layouts 1.0
 
-import ".."
+import ".." as TiledMenu
+import "../libconfig" as LibConfig
 
-RowLayout {
-	id: configJsonString
+LibConfig.TextArea {
+	id: textArea
 	Layout.fillWidth: true
 
-	property var base64JsonString: Base64JsonString {
+	property var base64JsonString: TiledMenu.Base64JsonString {
 		id: base64JsonString
 	}
 
-	property alias configKey: base64JsonString.configKey
+	property alias jsonKey: base64JsonString.configKey
 	property alias defaultValue: base64JsonString.defaultValue
 
 	property alias enabled: textArea.enabled
@@ -48,34 +49,5 @@ RowLayout {
 	function serialize() {
 		var newValue = parseText(textArea.text)
 		base64JsonString.set(newValue)
-	}
-
-	property alias before: labelBefore.text
-	property alias after: labelAfter.text
-
-	Label {
-		id: labelBefore
-		text: ""
-		visible: text
-	}
-	
-	TextArea {
-		id: textArea
-		Layout.fillWidth: true
-		Layout.fillHeight: configJsonString.Layout.fillHeight
-
-		onTextChanged: serializeTimer.restart()
-	}
-
-	Label {
-		id: labelAfter
-		text: ""
-		visible: text
-	}
-
-	Timer { // throttle
-		id: serializeTimer
-		interval: 300
-		onTriggered: serialize()
 	}
 }

@@ -1,4 +1,4 @@
-// Version 5
+// Version 6
 
 import QtQuick 2.4
 import QtQuick.Controls 2.0 as QQC2
@@ -10,7 +10,7 @@ import org.kde.kirigami 2.2 as Kirigami
 
 
 QQC2.TextField {
-	id: configColor
+	id: colorField
 	font.family: "monospace"
 	readonly property string defaultText: "#AARRGGBB"
 	placeholderText: defaultColor ? defaultColor : defaultText
@@ -22,7 +22,7 @@ QQC2.TextField {
 		if (text.length === 0
 			|| (text.indexOf('#') === 0 && (text.length == 4 || text.length == 7 || text.length == 9))
 		) {
-			configColor.value = text
+			colorField.value = text
 		}
 	}
 
@@ -50,7 +50,7 @@ QQC2.TextField {
 
 	onValueChanged: {
 		if (!activeFocus) {
-			text = configColor.value
+			text = colorField.value
 		}
 		if (configKey) {
 			if (value == defaultColorValue) {
@@ -65,11 +65,11 @@ QQC2.TextField {
 
 	FontMetrics {
 		id: fontMetrics
-		font.family: configColor.font.family
-		font.italic: configColor.font.italic
-		font.pointSize: configColor.font.pointSize
-		font.pixelSize: configColor.font.pixelSize
-		font.weight: configColor.font.weight
+		font.family: colorField.font.family
+		font.italic: colorField.font.italic
+		font.pointSize: colorField.font.pointSize
+		font.pixelSize: colorField.font.pixelSize
+		font.weight: colorField.font.weight
 	}
 	readonly property int defaultWidth: Math.ceil(fontMetrics.advanceWidth(defaultText))
 	implicitWidth: rightPadding + Math.max(defaultWidth, contentWidth) + leftPadding
@@ -128,7 +128,7 @@ QQC2.TextField {
 		}
 		QtGraphicalEffects.ConicalGradient {
 			id: previewBgGradient
-			visible: configColor.showPreviewBg
+			visible: colorField.showPreviewBg
 			anchors.fill: parent
 			angle: 0.0
 			gradient: Gradient {
@@ -146,7 +146,7 @@ QQC2.TextField {
 		Rectangle {
 			id: previewFill
 			anchors.fill: parent
-			color: configColor.valueColor
+			color: colorField.valueColor
 			border.width: 1 * Kirigami.Units.devicePixelRatio
 			border.color: lerpColor(color, Kirigami.Theme.textColor, 0.5)
 			// border.color: Kirigami.ColorUtils.linearInterpolation(color, Kirigami.Theme.textColor, 0.5)
@@ -161,11 +161,11 @@ QQC2.TextField {
 			id: dialog
 			visible: false
 			modality: Qt.WindowModal
-			showAlphaChannel: configColor.showAlphaChannel
-			color: configColor.valueColor
+			showAlphaChannel: colorField.showAlphaChannel
+			color: colorField.valueColor
 			onCurrentColorChanged: {
 				if (visible && color != currentColor) {
-					configColor.text = currentColor
+					colorField.text = currentColor
 				}
 			}
 			onVisibleChanged: {

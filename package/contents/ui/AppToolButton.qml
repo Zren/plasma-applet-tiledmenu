@@ -15,7 +15,7 @@ MouseArea {
 	property string tooltip: ""
 
 
-	property font font: theme.defaultFont
+	property font font: PlasmaCore.Theme.defaultFont
 	property real minimumWidth: 0
 	property real minimumHeight: 0
 	property bool flat: true
@@ -47,9 +47,9 @@ MouseArea {
 		RowLayout {
 			id: buttonContent
 			anchors.fill: parent
-			spacing: units.smallSpacing
+			spacing: PlasmaCore.Units.smallSpacing
 
-			Layout.preferredHeight: Math.max(units.iconSizes.small, label.implicitHeight)
+			Layout.preferredHeight: Math.max(PlasmaCore.Units.iconSizes.small, label.implicitHeight)
 
 			PlasmaCore.IconItem {
 				id: icon
@@ -72,11 +72,11 @@ MouseArea {
 				id: label
 				Layout.minimumWidth: implicitWidth
 				text: QtQuickControlsPrivate.StyleHelpers.stylizeMnemonics(control.text)
-				font: control.font || theme.defaultFont
+				font: control.font || PlasmaCore.Theme.defaultFont
 				visible: control.text != ""
 				Layout.fillWidth: true
 				height: parent.height
-				color: control.containsMouse ? theme.buttonTextColor : PlasmaCore.ColorScope.textColor
+				color: control.containsMouse ? PlasmaCore.Theme.buttonTextColor : PlasmaCore.ColorScope.textColor
 				horizontalAlignment: icon.valid ? Text.AlignLeft : Text.AlignHCenter
 				verticalAlignment: Text.AlignVCenter
 				elide: Text.ElideRight

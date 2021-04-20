@@ -1,8 +1,5 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
 import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -26,7 +23,7 @@ PlasmaComponents.ToolButton {
 
 	// http://doc.qt.io/qt-5/qt.html#Edge-enum
 	property int checkedEdge: 0 // 0 = all edges
-	property int checkedEdgeWidth: 2 * units.devicePixelRatio
+	property int checkedEdgeWidth: 2 * PlasmaCore.Units.devicePixelRatio
 
 	property int buttonHeight: config.flatButtonSize
 	property int iconSize: config.flatButtonIconSize
@@ -36,7 +33,7 @@ PlasmaComponents.ToolButton {
 	style: PlasmaStyles.ToolButtonStyle {
 		label: RowLayout {
 			id: labelRowLayout
-			// spacing: units.smallSpacing
+			// spacing: PlasmaCore.Units.smallSpacing
 			spacing: 0
 			scale: control.zoomOnPush && control.pressed ? (height-5) / height : 1
 			Behavior on scale { NumberAnimation { duration: 200 } }
@@ -62,7 +59,7 @@ PlasmaComponents.ToolButton {
 			Item {
 				id: spacingItem
 				Layout.fillHeight: true
-				implicitWidth: 4 * units.devicePixelRatio
+				implicitWidth: 4 * PlasmaCore.Units.devicePixelRatio
 				visible: control.labelVisible
 
 				// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
@@ -71,7 +68,7 @@ PlasmaComponents.ToolButton {
 			PlasmaComponents.Label {
 				id: label
 				text: QtQuickControlsPrivate.StyleHelpers.stylizeMnemonics(control.text)
-				font: control.font || theme.defaultFont
+				font: control.font || PlasmaCore.Theme.defaultFont
 				visible: control.labelVisible
 				horizontalAlignment: Text.AlignLeft
 				verticalAlignment: Text.AlignVCenter

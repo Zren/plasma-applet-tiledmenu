@@ -27,7 +27,7 @@ MouseArea {
 	Rectangle {
 		anchors.fill: parent
 		visible: plasmoid.configuration.sidebarFollowsTheme
-		color: theme.backgroundColor
+		color: PlasmaCore.Theme.backgroundColor
 		opacity: parent.open ? 1 : 0
 	}
 	PlasmaCore.FrameSvgItem {

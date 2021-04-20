@@ -27,7 +27,7 @@ Item {
 	function alpha(c, a) {
 		return Qt.rgba(c.r, c.g, c.b, a)
 	}
-	property color effectColor: theme.textColor
+	property color effectColor: PlasmaCore.Theme.textColor
 	property color fillColor: alpha(effectColor, 1/16)
 	property color pressedFillColor: alpha(effectColor, 4/16)
 	property color borderColor: alpha(effectColor, 8/16)

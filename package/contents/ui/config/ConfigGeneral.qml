@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Controls 2.5 as QQC2
 import QtQuick.Layouts 1.0
 
+import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kirigami 2.5 as Kirigami
 import org.kde.kcoreaddons 1.0 as KCoreAddons
 
@@ -14,7 +15,7 @@ Kirigami.FormLayout {
 
 	readonly property string plasmaStyleLabelText: {
 		var plasmaStyleText = i18nd("kcm_desktoptheme", "Plasma Style")
-		return plasmaStyleText + ' (' + theme.themeName + ')'
+		return plasmaStyleText + ' (' + PlasmaCore.Theme.themeName + ')'
 	}
 
 	function getTopItem(item) {

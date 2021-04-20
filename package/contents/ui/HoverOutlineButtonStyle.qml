@@ -10,11 +10,11 @@ Item {
 	Loader {
 		id: hoverOutlineEffectLoader
 		anchors.fill: parent
-		active: control.containsMouse
+		active: mouseArea.containsMouse
 		visible: active
 		source: "HoverOutlineButtonEffect.qml"
 
-		property var __control: control
+		property var __mouseArea: mouseArea
 	}
 
 }

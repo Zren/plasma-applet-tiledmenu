@@ -39,6 +39,6 @@ FlatButton {
 		property var mouseArea: sidebarItem.__behavior
 		active: !!mouseArea && mouseArea.containsMouse
 		visible: active
-		property var __control: mouseArea
+		property var __mouseArea: mouseArea
 	}
 }

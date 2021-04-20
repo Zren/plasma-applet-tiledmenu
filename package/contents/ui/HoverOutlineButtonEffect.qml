@@ -5,5 +5,5 @@ HoverOutlineEffect {
 	anchors.fill: parent
 	hoverRadius: Math.max(width/2, height)
 	pressedRadius: width
-	mouseArea: __control
+	mouseArea: __mouseArea
 }

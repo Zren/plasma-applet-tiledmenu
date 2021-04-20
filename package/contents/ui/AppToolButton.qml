@@ -26,7 +26,7 @@ MouseArea {
 		asynchronous: true
 		// source: "AppToolButtonStyle.qml"
 		source: "HoverOutlineButtonStyle.qml"
-		property var control: control
+		property var mouseArea: control
 
 		readonly property int paddingTop: item ? item.paddingTop : 0
 		readonly property int paddingLeft: item ? item.paddingLeft : 0

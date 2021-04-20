@@ -1,9 +1,10 @@
 import QtQuick 2.0
 import QtGraphicalEffects 1.0
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
 	id: hoverOutlineEffect
-	property int hoverOutlineSize: 1 * units.devicePixelRatio
+	property int hoverOutlineSize: 1 * PlasmaCore.Units.devicePixelRatio
 	property int hoverRadius: 40
 	property int pressedRadius: hoverRadius
 	property bool useOutlineMask: true
@@ -17,7 +18,7 @@ Item {
 	property int effectRadius: hoverOutlineEffect.pressed ? pressedRadius : hoverRadius
 	Behavior on effectRadius {
 		NumberAnimation {
-			duration: units.longDuration
+			duration: PlasmaCore.Units.longDuration
 		}
 	}
 
@@ -49,7 +50,7 @@ Item {
 
 		Behavior on color {
 			ColorAnimation {
-				duration: units.longDuration
+				duration: PlasmaCore.Units.longDuration
 			}
 		}
 	}

@@ -1,5 +1,4 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -43,7 +42,7 @@ Item {
 		Kicker.DragHelper {
 			id: dragHelper
 
-			dragIconSize: units.iconSizes.medium
+			dragIconSize: PlasmaCore.Units.iconSizes.medium
 
 			// Used when we only have a string and don't have a QIcon.
 			// DragHelper.startDrag(...) requires a QIcon. See Issue #75.
@@ -157,7 +156,7 @@ Item {
 		onTriggered: {
 			if (!plasmoid.configuration.fullscreen) {
 				// Need to Math.ceil when writing to fix (Issue #71)
-				var dPR = units.devicePixelRatio
+				var dPR = PlasmaCore.Units.devicePixelRatio
 				var pH2 = height / dPR
 				var pH3 = Math.ceil(pH2)
 				// console.log('pH.set', 'dPR='+dPR, 'pH1='+height, 'pH2='+pH2, 'pH3='+pH3)

@@ -60,8 +60,8 @@ MouseArea {
 		visible: !plasmoid.configuration.tilesLocked && !(plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.RightEdge)
 		anchors.top: parent.top
 		anchors.right: parent.right
-		width: units.largeSpacing
-		height: units.largeSpacing
+		width: PlasmaCore.Units.largeSpacing
+		height: PlasmaCore.Units.largeSpacing
 		cursorShape: Qt.WhatsThisCursor
 
 		PlasmaCore.ToolTipArea {
@@ -76,8 +76,8 @@ MouseArea {
 		visible: !plasmoid.configuration.tilesLocked && !(plasmoid.location == PlasmaCore.Types.BottomEdge || plasmoid.location == PlasmaCore.Types.RightEdge)
 		anchors.bottom: parent.bottom
 		anchors.right: parent.right
-		width: units.largeSpacing
-		height: units.largeSpacing
+		width: PlasmaCore.Units.largeSpacing
+		height: PlasmaCore.Units.largeSpacing
 		cursorShape: Qt.WhatsThisCursor
 
 		PlasmaCore.ToolTipArea {

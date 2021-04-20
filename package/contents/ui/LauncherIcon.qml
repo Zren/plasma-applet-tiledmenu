@@ -18,7 +18,7 @@ MouseArea {
 		case PlasmaCore.Types.Horizontal:
 			return height
 		default:
-			return units.gridUnit * 3
+			return PlasmaCore.Units.gridUnit * 3
 		}
 	}
 
@@ -29,7 +29,7 @@ MouseArea {
 		case PlasmaCore.Types.Horizontal:
 			return 0
 		default:
-			return units.gridUnit * 3
+			return PlasmaCore.Units.gridUnit * 3
 		}
 	}
 
@@ -37,7 +37,7 @@ MouseArea {
 	property int size: {
 		if (inPanel) {
 			if (plasmoid.configuration.fixedPanelIcon) {
-				return units.iconSizeHints.panel
+				return PlasmaCore.Units.iconSizeHints.panel
 			} else {
 				return maxSize
 			}

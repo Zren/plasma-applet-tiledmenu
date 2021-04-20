@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 GridView {
 	id: jumpToSectionView
@@ -27,9 +27,9 @@ GridView {
 
 	property int buttonSize: {
 		if (squareView) {
-			return 70 * units.devicePixelRatio
+			return 70 * PlasmaCore.Units.devicePixelRatio
 		} else {
-			return 36 * units.devicePixelRatio
+			return 36 * PlasmaCore.Units.devicePixelRatio
 		}
 	}
 

@@ -90,9 +90,9 @@ AppToolButton {
 	RowLayout { // ItemListDelegate
 		id: row
 		anchors.left: parent.left
-		anchors.leftMargin: units.smallSpacing
+		anchors.leftMargin: PlasmaCore.Units.smallSpacing
 		anchors.right: parent.right
-		anchors.rightMargin: units.smallSpacing
+		anchors.rightMargin: PlasmaCore.Units.smallSpacing
 
 		Item {
 			Layout.fillHeight: true

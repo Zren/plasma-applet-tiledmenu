@@ -1,8 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
+import QtQuick.Controls.Styles 1.1 as QtStyles
 import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
 
@@ -25,7 +24,7 @@ TextField {
 	}
 	property int topMargin: 0
 	property int bottomMargin: 0
-	property int defaultFontSize: 16 * units.devicePixelRatio // Not the same as pointSize=16
+	property int defaultFontSize: 16 * PlasmaCore.Units.devicePixelRatio // Not the same as pointSize=16
 	property int styleMaxFontSize: height - topMargin - bottomMargin
 	font.pixelSize: Math.min(defaultFontSize, styleMaxFontSize)
 
@@ -35,7 +34,7 @@ TextField {
 		// Creates the following warning when not in use:
 		//   file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Controls/Styles/Plasma/TextFieldStyle.qml:74: ReferenceError: textField is not defined
 		// Caused by:
-		//   var actionIconSize = Math.max(textField.height * 0.8, units.iconSizes.small);
+		//   var actionIconSize = Math.max(textField.height * 0.8, PlasmaCore.Units.iconSizes.small);
 		PlasmaStyles.TextFieldStyle {
 			id: style
 			Component.onCompleted: {
@@ -53,7 +52,7 @@ TextField {
 
 		// https://github.com/qt/qtquickcontrols/blob/dev/src/controls/Styles/Base/TextFieldStyle.qml
 		// https://github.com/qt/qtquickcontrols/blob/dev/src/controls/Styles/Desktop/TextFieldStyle.qml
-		TextFieldStyle {
+		QtStyles.TextFieldStyle {
 			id: style
 			
 			background: Rectangle {

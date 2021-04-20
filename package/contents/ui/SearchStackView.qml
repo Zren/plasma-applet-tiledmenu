@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
+import org.kde.plasma.core 2.0 as PlasmaCore
 
 StackView {
 	id: stackView
@@ -10,8 +11,8 @@ StackView {
 
 	property int zoomDuration: 250
 	property int zoomDelta: 100
-	property real zoomedInRatio: Math.max(1, stackView.width + zoomDelta * units.devicePixelRatio) / stackView.width
-	property real zoomedOutRatio: Math.max(1, stackView.width - zoomDelta * units.devicePixelRatio) / stackView.width
+	property real zoomedInRatio: Math.max(1, stackView.width + zoomDelta * PlasmaCore.Units.devicePixelRatio) / stackView.width
+	property real zoomedOutRatio: Math.max(1, stackView.width - zoomDelta * PlasmaCore.Units.devicePixelRatio) / stackView.width
 
 	readonly property var noTransition: StackViewDelegate {}
 

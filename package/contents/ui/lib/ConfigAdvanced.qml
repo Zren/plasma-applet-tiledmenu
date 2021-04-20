@@ -1,9 +1,10 @@
-// Version 3
+// Version 5
 
 import QtQuick 2.0
 import QtQuick.Controls 1.0
 import QtQuick.Controls.Styles 1.0
 import QtQuick.Layouts 1.0
+import org.kde.kirigami 2.0 as Kirigami
 
 ColumnLayout {
 	id: page
@@ -11,12 +12,12 @@ ColumnLayout {
 	Component {
 		id: textFieldStyle
 		TextFieldStyle {
-			// textColor: syspal.text
+			// textColor: Kirigami.Theme.textColor
 
 			background: Rectangle {
 				radius: 2
-				color: control.activeFocus ? syspal.base : "transparent"
-				border.color: control.activeFocus ? syspal.highlight : "transparent"
+				color: control.activeFocus ? Kirigami.Theme.viewBackgroundColor : "transparent"
+				border.color: control.activeFocus ? Kirigami.Theme.highlightColor : "transparent"
 				border.width: 1
 			}
 		}
@@ -32,7 +33,7 @@ ColumnLayout {
 			Layout.fillWidth: true
 			Layout.fillHeight: true
 
-			spacing: units.smallSpacing
+			spacing: Kirigami.Units.smallSpacing
 
 			model: []
 			cacheBuffer: 100000
@@ -106,7 +107,10 @@ ColumnLayout {
 			delegate: RowLayout {
 				width: parent.width
 
-				property bool isDefault: ('' + model.value) === model.defaultValue
+				function valueToString(val) {
+					return (typeof val === 'undefined' || val === null) ? '' : ''+val
+				}
+				readonly property bool isDefault: valueToString(model.value) == valueToString(model.defaultValue)
 
 				TextField {
 					Layout.alignment: Qt.AlignTop | Qt.AlignLeft
@@ -114,7 +118,7 @@ ColumnLayout {
 					text: model.key
 					readOnly: true
 					style: textFieldStyle
-					Layout.preferredWidth: 200 * units.devicePixelRatio
+					Layout.preferredWidth: 200 * Kirigami.Units.devicePixelRatio
 					font.bold: !isDefault
 				}
 				TextField {
@@ -122,7 +126,7 @@ ColumnLayout {
 					text: model.stringType || model.configType || model.valueType
 					readOnly: true
 					style: textFieldStyle
-					Layout.preferredWidth: 80 * units.devicePixelRatio
+					Layout.preferredWidth: 80 * Kirigami.Units.devicePixelRatio
 				}
 				Loader {
 					id: valueControlLoader
@@ -162,7 +166,7 @@ ColumnLayout {
 
 		signal updated()
 
-		// http://stackoverflow.com/a/29881855/947742
+		// https://stackoverflow.com/a/29881855/947742
 		function fetch() {
 			var doc = new XMLHttpRequest()
 			doc.onreadystatechange = function() {
@@ -210,7 +214,7 @@ ColumnLayout {
 			}
 		}
 
-		// http://doc.qt.io/qt-5/qdomnode.html
+		// https://doc.qt.io/qt-5/qdomnode.html
 		function parse(rootNode) {
 			clear()
 			findAll(rootNode, 'group', function(group) {
@@ -229,8 +233,8 @@ ColumnLayout {
 					configDefaults.append({
 						key: key,
 						valueType: valueType,
-						value: value,
-						stringType: stringType
+						value: (typeof value !== 'undefined' && value !== null) ? value : '',
+						stringType: stringType || '',
 					})
 				})
 			})
@@ -242,7 +246,7 @@ ColumnLayout {
 
 	// plasmoid.configuration is a KDeclarative::ConfigPropertyMap which inherits QQmlPropertyMap
 	// https://github.com/KDE/kdeclarative/blob/master/src/kdeclarative/configpropertymap.h
-	// http://doc.qt.io/qt-5/qqmlpropertymap.html
+	// https://doc.qt.io/qt-5/qqmlpropertymap.html
 	ListModel {
 		id: configTableModel
 		dynamicRoles: true
@@ -283,10 +287,14 @@ ColumnLayout {
 				var value = plasmoid.configuration[key]
 				var valueStr = '' + value
 				var node = configDefaults.get(i)
+				if (key === 'minimumWidth') {
+					continue // Ignore
+				}
 				if (!node) {
-					console.log('configDefaults doesn\'t conain an entry for plasmoid.configuration.' + key)
+					console.log('configDefaults doesn\'t contain an entry for plasmoid.configuration.' + key)
 					continue
 				}
+
 				var configType = node.valueType
 				var stringType = node.stringType
 				var defaultValue = node.value

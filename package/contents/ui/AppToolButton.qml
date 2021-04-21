@@ -1,8 +1,8 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-import QtQuick.Controls.Private 1.0 as QtQuickControlsPrivate
+import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.kirigami 2.3 as Kirigami
 
 MouseArea {
 	id: control
@@ -14,6 +14,8 @@ MouseArea {
 	property string text: ""
 	property string tooltip: ""
 
+	Kirigami.MnemonicData.enabled: control.enabled && control.visible
+	Kirigami.MnemonicData.label: control.text
 
 	property font font: PlasmaCore.Theme.defaultFont
 	property real minimumWidth: 0
@@ -68,10 +70,10 @@ MouseArea {
 				colorGroup: control.containsMouse ? PlasmaCore.Theme.ButtonColorGroup : PlasmaCore.ColorScope.colorGroup
 			}
 
-			PlasmaComponents.Label {
+			PlasmaComponents3.Label {
 				id: label
 				Layout.minimumWidth: implicitWidth
-				text: QtQuickControlsPrivate.StyleHelpers.stylizeMnemonics(control.text)
+				text: control.Kirigami.MnemonicData.richTextLabel
 				font: control.font || PlasmaCore.Theme.defaultFont
 				visible: control.text != ""
 				Layout.fillWidth: true

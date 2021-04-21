@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0 as DragAndDrop
 
 AppToolButton {
@@ -123,7 +123,7 @@ AppToolButton {
 				Layout.fillWidth: true
 				// height: itemLabel.height
 
-				PlasmaComponents.Label {
+				PlasmaComponents3.Label {
 					id: itemLabel
 					text: model.name
 					maximumLineCount: 1
@@ -131,7 +131,7 @@ AppToolButton {
 					height: implicitHeight
 				}
 
-				PlasmaComponents.Label {
+				PlasmaComponents3.Label {
 					Layout.fillWidth: true
 					text: !itemDelegate.secondRowVisible ? itemDelegate.description : ''
 					color: config.menuItemTextColor2
@@ -141,7 +141,7 @@ AppToolButton {
 				}
 			}
 
-			PlasmaComponents.Label {
+			PlasmaComponents3.Label {
 				visible: itemDelegate.secondRowVisible
 				Layout.fillWidth: true
 				// Layout.fillHeight: true

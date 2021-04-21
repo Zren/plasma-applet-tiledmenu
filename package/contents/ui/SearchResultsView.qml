@@ -1,5 +1,5 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
+import QtQuick.Controls 2.2 as QQC2
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
@@ -90,9 +90,7 @@ GridLayout {
 		// anchors.bottom: searchFiltersRow.bottom - 1
 	}
 
-	
-
-	StackView {
+	QQC2.StackView {
 		id: searchResultsViewStackView
 		Layout.row: searchView.searchOnTop ? 0 : 2
 		Layout.fillWidth: true
@@ -111,7 +109,7 @@ GridLayout {
 			}
 		}
 
-		ScrollView {
+		QQC2.ScrollView {
 			id: searchResultsListScrollView
 			visible: false
 
@@ -120,13 +118,12 @@ GridLayout {
 			}
 		}
 
-		ScrollView {
+		QQC2.ScrollView {
 			id: searchFiltersViewScrollView
 			visible: false
 
 			SearchFiltersView {
 				id: searchFiltersView
-				width: searchFiltersViewScrollView.viewport.width
 			}
 		}
 		

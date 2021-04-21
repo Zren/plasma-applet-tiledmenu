@@ -1,18 +1,20 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
+import QtQuick.Controls 2.3 as QQC2 // Qt 5.10
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
 
-ScrollView {
+QQC2.ScrollView {
 	id: appsView
 	property alias listView: appsListView
 
+	// The horizontal ScrollBar always appears in QQC2 for some reason.
+	// The PC3 is drawn as if it thinks the scrollWidth is 0, which is
+	// possible since it inits at width=350px, then changes to 0px until
+	// the popup is opened before it returns to 350px.
+	QQC2.ScrollBar.horizontal.policy: QQC2.ScrollBar.AlwaysOff
+
 	KickerListView {
 		id: appsListView
-		
+
 		section.property: 'sectionKey'
 		// section.criteria: ViewSection.FirstCharacter
 

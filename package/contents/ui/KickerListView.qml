@@ -1,13 +1,10 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 2.0 as PlasmaComponents2 // Highlight
 
 ListView {
 	id: listView
-	width: parent.width
-	Layout.fillHeight: true
 	clip: true
 	cacheBuffer: 200 // Don't unload when scrolling (prevent stutter)
 
@@ -44,7 +41,7 @@ ListView {
 	// 	}
 	// }
 
-	highlight: PlasmaComponents.Highlight {
+	highlight: PlasmaComponents2.Highlight {
 		visible: listView.currentItem && !listView.currentItem.isSeparator
 	}
 

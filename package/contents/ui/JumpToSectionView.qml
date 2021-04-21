@@ -42,7 +42,7 @@ GridView {
 	}
 	cellHeight: buttonSize
 
-	delegate: AppToolButton {
+	delegate: JumpToSectionButton {
 		width: jumpToLetterView.cellWidth
 		height: jumpToLetterView.cellHeight
 

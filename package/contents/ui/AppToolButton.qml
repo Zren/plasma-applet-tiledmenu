@@ -12,7 +12,6 @@ MouseArea {
 	property string iconName: ""
 	property var iconSource: null
 	property string text: ""
-	property string tooltip: ""
 
 	Kirigami.MnemonicData.enabled: control.enabled && control.visible
 	Kirigami.MnemonicData.label: control.text

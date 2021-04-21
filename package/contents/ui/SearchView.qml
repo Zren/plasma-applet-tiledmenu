@@ -1,15 +1,6 @@
 import QtQuick 2.0
 import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-
-import org.kde.draganddrop 2.0 as DragAndDrop
-import org.kde.kquickcontrolsaddons 2.0 // KCMShell
-
-import "Utils.js" as Utils
+import QtQuick.Layouts 1.0
 
 Item {
 	id: searchView
@@ -34,8 +25,6 @@ Item {
 	}
 	clip: true
 
-	// width: config.leftSectionWidth
-	height: config.popupHeight
 	property alias searchResultsView: searchResultsView
 	property alias appsView: appsView
 	property alias tileEditorView: tileEditorViewLoader.item
@@ -190,23 +179,6 @@ Item {
 			}
 		}
 
-		// TM3.Main {
-		// 	id: appsView
-		// 	// width: parent.width
-		// 	// height: parent.height
-
-		// 	function show() {
-		// 		if (stackView.currentItem != appsView) {
-		// 			stackView.push(appsView, true)
-		// 		}
-		// 		appsView.scrollToTop()
-		// 	}
-		// }
-
-		// Item {
-		// 	id: appsView
-		// }
-
 		Loader {
 			id: tileEditorViewLoader
 			source: "TileEditorView.qml"
@@ -226,10 +198,7 @@ Item {
 
 		SearchStackView {
 			id: stackView
-			width: config.appAreaWidth
-			anchors.top: parent.top
-			anchors.right: parent.right
-			anchors.bottom: parent.bottom
+			anchors.fill: parent
 			initialItem: appsView
 		}
 	}

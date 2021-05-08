@@ -72,6 +72,11 @@ PlasmaComponents.MenuItem {
 				url: 'octopi.desktop',
 				label: i18n("Software Center"),
 			})
+		} else if (appsModel.allAppsModel.hasApp('org.manjaro.pamac.manager.desktop')) {
+			return tileGrid.addTile(x, y, {
+				url: 'org.manjaro.pamac.manager.desktop',
+				// default label is 'Add/Remove Software'
+			})
 		} else if (appsModel.allAppsModel.hasApp('org.opensuse.YaST.desktop')) {
 			return tileGrid.addTile(x, y, {
 				url: 'org.opensuse.YaST.desktop',

@@ -13,47 +13,76 @@ PlasmaComponents.MenuItem {
 		addExplore(pos.x, pos.y + 3)
 	}
 
+	function isAppInstalled(appId) {
+		return appsModel.allAppsModel.hasApp(appId)
+	}
+
+	function addTilePreset(x, y, tileData) {
+		var appId = tileData.url
+		if (isAppInstalled(appId)) {
+			return tileGrid.addTile(x, y, tileData)
+		} else {
+			return null
+		}
+	}
+
+	function addGroupPreset(x, y, groupData, tileFnList) {
+		var group = tileGrid.addGroup(x, y, groupData)
+		var tileX = group.x
+		var tileY = y + group.h
+		for (var i = 0; i < tileFnList.length; i++) {
+			var tileFn = tileFnList[i]
+			var tile = tileFn(tileX, tileY)
+			if (tile) {
+				// TODO: Support Wrap
+				tileX += tile.w
+			}
+		}
+	}
+
 	function addProductivity(x, y) {
-		var group = tileGrid.addGroup(x, y, {
+		addGroupPreset(x, y, {
 			label: i18n("Productivity"),
-		})
-		var writer = addWriter(x, y + 1)
-		var calc = addCalc(x + 2, y + 1)
-		var mail = addMail(x + 4, y + 1)
+		}, [
+			addWriter,
+			addCalc,
+			addMail,
+		])
 	}
 
 	function addExplore(x, y) {
-		var group = tileGrid.addGroup(x, y, {
+		addGroupPreset(x, y, {
 			label: i18n("Explore"),
-		})
-		var appCenter = addAppCenter(x, y + 1)
-		var browser = addWebBrowser(x + 2, y + 1)
-		var steam = addSteam(x + 4, y + 1)
+		}, [
+			addAppCenter,
+			addWebBrowser,
+			addSteam,
+		])
 	}
 
 
 	//---
 	function addWriter(x, y) {
-		return tileGrid.addTile(x, y, {
+		return addTilePreset(x, y, {
 			url: 'libreoffice-writer.desktop',
 			backgroundColor: '#802584b7',
 		})
 	}
 	function addCalc(x, y) {
-		return tileGrid.addTile(x, y, {
+		return addTilePreset(x, y, {
 			url: 'libreoffice-calc.desktop',
 			backgroundColor: '#80289769',
 		})
 	}
 	function addMail(x, y) {
-		if (appsModel.allAppsModel.hasApp('org.kde.kmail2.desktop')) {
-			return addKMail(x, y)
-		} else {
-			return addGmail(x, y)
+		var tile = addKMail(x, y)
+		if (!tile) {
+			tile = addGmail(x, y)
 		}
+		return tile
 	}
 	function addKMail(x, y) {
-		return tileGrid.addTile(x, y, {
+		return addTilePreset(x, y, {
 			url: 'org.kde.kmail2.desktop',
 		})
 	}
@@ -67,22 +96,22 @@ PlasmaComponents.MenuItem {
 	}
 
 	function addAppCenter(x, y) {
-		if (appsModel.allAppsModel.hasApp('octopi.desktop')) {
+		if (isAppInstalled('octopi.desktop')) {
 			return tileGrid.addTile(x, y, {
 				url: 'octopi.desktop',
 				label: i18n("Software Center"),
 			})
-		} else if (appsModel.allAppsModel.hasApp('org.manjaro.pamac.manager.desktop')) {
+		} else if (isAppInstalled('org.manjaro.pamac.manager.desktop')) {
 			return tileGrid.addTile(x, y, {
 				url: 'org.manjaro.pamac.manager.desktop',
 				// default label is 'Add/Remove Software'
 			})
-		} else if (appsModel.allAppsModel.hasApp('org.opensuse.YaST.desktop')) {
+		} else if (isAppInstalled('org.opensuse.YaST.desktop')) {
 			return tileGrid.addTile(x, y, {
 				url: 'org.opensuse.YaST.desktop',
 				label: i18n("Software Center"),
 			})
-		} else if (appsModel.allAppsModel.hasApp('org.kde.discover')) {
+		} else if (isAppInstalled('org.kde.discover')) {
 			return tileGrid.addTile(x, y, {
 				url: 'org.kde.discover',
 				label: i18n("Software Center"),
@@ -99,13 +128,9 @@ PlasmaComponents.MenuItem {
 	}
 
 	function addSteam(x, y) {
-		if (appsModel.allAppsModel.hasApp('steam.desktop')) {
-			return tileGrid.addTile(x, y, {
-				url: 'steam.desktop',
-			})
-		} else {
-			return null
-		}
+		return addTilePreset(x, y, {
+			url: 'steam.desktop',
+		})
 	}
 
 

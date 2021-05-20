@@ -18,27 +18,27 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../metadata.desktop
-msgid "Tiled Menu"
+msgid "Döşeli Menü"
 msgstr ""
 
 #: ../metadata.desktop
-msgid "A menu based on Windows 10's Start Menu."
+msgid "Windows 10'un Başlat Menüsü'nü temel alan bir menü."
 msgstr ""
 
 #: ../contents/config/config.qml
-msgid "General"
+msgid "Genel"
 msgstr ""
 
 #: ../contents/config/config.qml
-msgid "Import/Export Layout"
+msgid "Düzeni İçeri/Dışarı Aktar"
 msgstr ""
 
 #: ../contents/config/config.qml
-msgid "Advanced"
+msgid "Gelişmiş"
 msgstr ""
 
 #: ../contents/ui/AppContextMenu.qml
-msgid "Unpin from Menu"
+msgid "Menüden sabitlemeyi kaldır"
 msgstr ""
 
 #: ../contents/ui/AppContextMenu.qml

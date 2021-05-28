@@ -275,8 +275,8 @@ msgid "Resize?"
 msgstr "Grootte aanpassen?"
 
 #: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
-msgid "Alt + Right Click to resize the menu."
-msgstr "Gebruik Alt + rechtermuisklik om de menugrootte aan te passen."
+msgid "Meta + Right Click to resize the menu."
+msgstr "Gebruik Meta + rechtermuisklik om de menugrootte aan te passen."
 
 #: ../contents/ui/SearchField.qml
 msgid "Search"

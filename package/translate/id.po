@@ -269,8 +269,8 @@ msgid "Resize?"
 msgstr "Ingin Ubah Ukuran?"
 
 #: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
-msgid "Alt + Right Click to resize the menu."
-msgstr "Cukup dengan tombol Alt+Klik Kanan"
+msgid "Meta + Right Click to resize the menu."
+msgstr "Cukup dengan tombol Meta+Klik Kanan"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search"

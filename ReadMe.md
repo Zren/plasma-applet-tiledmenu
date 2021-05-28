@@ -6,7 +6,7 @@ A menu based on Windows 10's Start Menu.
 
 * Supports:
     * Pin/Favourite apps/files through the context menu (or by dragging them from dolphin).
-    * Resizing (permanently) the size of the menu by Alt + Right Clicking and dragging.
+    * Resizing (permanently) the size of the menu by Meta + Right Clicking and dragging.
     * Any size tile 1x1, 2x2, 4x4, 4x2, 1x3, etc.
     * Easily edit the background image of a tile.
     * Customizable sidebar shortcuts.

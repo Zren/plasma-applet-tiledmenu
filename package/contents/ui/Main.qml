@@ -191,7 +191,7 @@ Item {
 					// console.log(plasmoid.configuration.favGridCols, cols)
 					plasmoid.configuration.favGridCols = cols
 				}
-				// Force a reflow since Alt+RightClick+Drag resizing doesn't really play nice with PlasmaCore.Dialog.
+				// Force a reflow since Meta+RightClick+Drag resizing doesn't really play nice with PlasmaCore.Dialog.
 				config.popupWidthChanged()
 				widget.Layout.preferredWidthChanged()
 				attemptsLeft -= 1

@@ -235,7 +235,7 @@ msgstr "תוצאות החיפוש"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Merged (Application Launcher)"
-msgstr "משולבות"
+msgstr "משולבות (מפעיל יישומים)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Split into Categories (Application Menu / Dashboard)"

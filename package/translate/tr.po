@@ -19,11 +19,11 @@ msgstr ""
 
 #: ../metadata.desktop
 msgid "Tiled Menu"
-msgstr ""
+msgstr "Döşeli Menü"
 
 #: ../metadata.desktop
 msgid "A menu based on Windows 10's Start Menu."
-msgstr ""
+msgstr "Windows 10'un Başlat Menüsü'nü temel alan bir menü."
 
 #: ../contents/config/config.qml
 msgid "General"

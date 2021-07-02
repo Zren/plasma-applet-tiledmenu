@@ -103,7 +103,7 @@ Item {
 		// KickerAppModel is a wrapper of Kicker.FavoritesModel
 		// Kicker.FavoritesModel must be a child object of RootModel.
 		// appEntry.actions() looks at the parent object for parent.appletInterface and will crash plasma if it can't find it.
-		// https://github.com/KDE/plasma-desktop/blob/master/applets/kicker/plugin/appentry.cpp#L151
+		// https://invent.kde.org/plasma/plasma-workspace/-/blob/master/applets/kicker/plugin/appentry.cpp#L151
 		favoritesModel: KickerAppModel {
 			id: favoritesModel
 

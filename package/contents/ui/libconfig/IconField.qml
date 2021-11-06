@@ -1,4 +1,4 @@
-// Version 5
+// Version 6
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as QQC2
@@ -9,7 +9,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
 
 RowLayout {
-	id: configIcon
+	id: iconField
 
 	default property alias _contentChildren: content.data
 
@@ -49,7 +49,7 @@ RowLayout {
 				anchors.topMargin: previewFrame.fixedMargins.top
 				anchors.rightMargin: previewFrame.fixedMargins.right
 				anchors.bottomMargin: previewFrame.fixedMargins.bottom
-				source: configIcon.value || configIcon.placeholderValue
+				source: iconField.value || iconField.placeholderValue
 				active: iconButton.hovered
 			}
 		}
@@ -68,7 +68,7 @@ RowLayout {
 			QQC2.MenuItem {
 				text: i18ndc("plasma_applet_org.kde.plasma.kickoff", "@item:inmenu Reset icon to default", "Clear Icon")
 				icon.name: "edit-clear"
-				onClicked: configIcon.value = defaultValue
+				onClicked: iconField.value = defaultValue
 			}
 		}
 	}
@@ -82,16 +82,16 @@ RowLayout {
 				id: textField
 				Layout.fillWidth: true
 
-				text: configIcon.configValue
+				text: iconField.configValue
 				onTextChanged: serializeTimer.restart()
 
 				rightPadding: clearButton.width + Kirigami.Units.smallSpacing
 
 				QQC2.ToolButton {
 					id: clearButton
-					visible: configIcon.configValue != configIcon.defaultValue
+					visible: iconField.configValue != iconField.defaultValue
 					icon.name: "edit-clear"
-					onClicked: configIcon.value = defaultValue
+					onClicked: iconField.value = defaultValue
 
 					anchors.top: parent.top
 					anchors.right: parent.right
@@ -117,7 +117,7 @@ RowLayout {
 			visible: true
 			modality: Qt.WindowModal
 			onIconNameChanged: {
-				configIcon.value = iconName
+				iconField.value = iconName
 			}
 			onVisibleChanged: {
 				if (!visible) {
@@ -132,7 +132,7 @@ RowLayout {
 		interval: 300
 		onTriggered: {
 			if (configKey) {
-				plasmoid.configuration[configKey] = configIcon.value
+				plasmoid.configuration[configKey] = iconField.value
 			}
 		}
 	}

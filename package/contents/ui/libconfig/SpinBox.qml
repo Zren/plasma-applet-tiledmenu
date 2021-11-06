@@ -1,4 +1,4 @@
-// Version 5
+// Version 6
 
 import QtQuick 2.0
 import QtQuick.Controls 2.0 as QQC2
@@ -109,7 +109,7 @@ QQC2.SpinBox {
 	valueFromText: function(text, locale) {
 		var text2 = text
 			.replace(/[^\-\.\d]/g, '') // Remove non digit characters
-			.replace(/\.+/g, '.') // Allow user to type '.' instad of RightArrow to enter to decimals
+			.replace(/\.+/g, '.') // Allow user to type '.' instead of RightArrow to enter to decimals
 		var val = Number(text2)
 		if (isNaN(val)) {
 			val = -0

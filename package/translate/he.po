@@ -147,7 +147,7 @@ msgstr "גובה כפתור התפריט הקופץ"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Theme"
-msgstr ""
+msgstr "ערכת נושא"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
@@ -171,7 +171,7 @@ msgstr "גובה שדה החיפוש"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Box Theme"
-msgstr ""
+msgstr "ערכת נושא לתיבת החיפוש"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Windows (White)"
@@ -227,7 +227,7 @@ msgstr "מתחת"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App History"
-msgstr ""
+msgstr "היסטוריית יישומים"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Show:"

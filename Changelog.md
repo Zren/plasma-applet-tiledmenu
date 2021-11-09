@@ -1,3 +1,23 @@
+## v43 - November 10 2021
+
+* Refactor config window to use QQC2 controls with a custom LibConfig implementation.
+* Port Tile Editor controls to QQC2.
+* Ensure group outline thickness is always at least 1px.
+* Port scaling to use `PlasmaCore.Units` singleton and cleanup imports.
+* Port various text elements to QQC2/PC3 labels.
+* Port App List ScrollView to QQC2. The "StackView" is still QQC1 as the QQC2 requires a tree rather than swapping views.
+* Port the nested Search Results Filter view to QQC2 since it's a simple tree.
+* Support `org.manjaro.pamac.manager` when generating the default tiles.
+* Check if libreoffice apps are installed before creating preset tiles.
+* When generating preset groups, missing apps will not create empty spaces and will instead align left.
+* Change resize popup hint from `Alt+RightClick` to `Meta+RightClick` (new default in Plamsa 5.20). Unfortunately it cannot check System Settings, so it might still be `Alt+RightClick` for users with older installations.
+* Added Finnish translation by @mahtiankka (Pull Request #107)
+* Added Slovenian translation by @Ugowsky (Issue #110)
+* Updated Hebrew translations by @omeritzics (Pull Request #112)
+* Updated Dutch translation by @Vistaus (Pull Request #111)
+* Updated Turkish translation of widget name+comment by @ekto (Pull Request #105)
+* Updated French translations by @Tuxman2 (Issue #113)
+
 ## v42 - April 19 2021
 
 * Fix User Manager kcm id in sidebar button (Issue #98)

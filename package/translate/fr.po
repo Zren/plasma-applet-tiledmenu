@@ -253,8 +253,12 @@ msgid "Split into Categories (Application Menu / Dashboard)"
 msgstr "Diviser en catégories (Menu des applications / Panneau de bord)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
-msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr "Quand cet add-on a un raccourci clavier établi, comme 'Alt+F1', Plasma ouvrira le menu avec la touche ⊞ Windows / Meta."
+msgid ""
+"When this widget has a global shortcut set, like 'Alt+F1', Plasma will open "
+"this menu with just the ⊞ Windows / Meta key."
+msgstr ""
+"Quand cet add-on a un raccourci clavier établi, comme 'Alt+F1', Plasma "
+"ouvrira le menu avec la touche ⊞ Windows / Meta."
 
 #: ../contents/ui/Main.qml
 msgid "System Info"

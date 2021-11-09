@@ -8,15 +8,15 @@ msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
 "POT-Creation-Date: 2021-07-27 18:27-0400\n"
-"PO-Revision-Date: 2020-09-10 14:22+0200\n"
-"Last-Translator: Heimen Stoffels <vistausss@outlook.com>\n"
+"PO-Revision-Date: 2021-11-09 17:56+0100\n"
+"Last-Translator: Heimen Stoffels <vistausss@fastmail.com>\n"
 "Language-Team: \n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.0\n"
 
 #: ../metadata.desktop
 msgid "Tiled Menu"
@@ -24,7 +24,7 @@ msgstr "Tegelmenu"
 
 #: ../metadata.desktop
 msgid "A menu based on Windows 10's Start Menu."
-msgstr "Een menu a la Windows 10's startmenu."
+msgstr "Een menu a la het Windows 10-startmenu."
 
 #: ../contents/config/config.qml
 msgid "General"
@@ -144,7 +144,7 @@ msgstr "Hoogte van pop-upknop"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Theme"
-msgstr ""
+msgstr "Thema"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
@@ -168,7 +168,7 @@ msgstr "Hoogte van zoekvak"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Box Theme"
-msgstr ""
+msgstr "Zoekvakthema"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Windows (White)"
@@ -224,7 +224,7 @@ msgstr "Onder"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App History"
-msgstr ""
+msgstr "Programmageschiedenis"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Show:"
@@ -236,7 +236,7 @@ msgstr "Onlangs gebruikte programma's"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Often used applications"
-msgstr "Vaak gebruikte programma's"
+msgstr "Veelgebruikte programma's"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Results"
@@ -255,8 +255,8 @@ msgid ""
 "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open "
 "this menu with just the ⊞ Windows / Meta key."
 msgstr ""
-"Als er voor deze widget een globale sneltoets is ingesteld, bijv. 'Alt+F1', "
-"dan opent Plasma dit menu alleen met de ⊞ Windows-/Meta-toets."
+"Als er voor deze widget een globale sneltoets is ingesteld, bijv. ‘Alt+F1’, "
+"dan opent Plasma dit menu alleen met de ⊞ Windows-/Metatoets."
 
 #: ../contents/ui/Main.qml
 msgid "System Info"
@@ -280,7 +280,7 @@ msgstr "Bestandsbeheerder"
 
 #: ../contents/ui/Main.qml
 msgid "Edit Applications..."
-msgstr "Programma's bewerken..."
+msgstr "Programma's bewerken…"
 
 #: ../contents/ui/Popup.qml
 msgid "Resize?"
@@ -309,7 +309,7 @@ msgstr "Zoeken naar bladwijzers"
 #: ../contents/ui/SearchField.qml
 msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
-msgstr "%1 zoeken"
+msgstr "%1 doorzoeken"
 
 #: ../contents/ui/SearchFiltersViewItem.qml
 #: ../contents/ui/SearchFiltersView.qml

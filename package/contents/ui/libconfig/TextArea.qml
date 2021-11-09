@@ -1,9 +1,9 @@
-// Version 5
+// Version 6
 
 import QtQuick 2.0
 import QtQuick.Controls 2.1 as QQC2
 import QtQuick.Layouts 1.0
-import org.kde.kirigami 2.0 as Kirigami
+import org.kde.kirigami 2.3 as Kirigami
 
 QQC2.TextArea {
 	id: textArea
@@ -14,6 +14,8 @@ QQC2.TextArea {
 	onTextChanged: serializeTimer.restart()
 
 	wrapMode: TextArea.Wrap
+
+	Kirigami.FormData.labelAlignment: Qt.AlignTop
 
 	// An empty TextArea adjust to it's empty contents.
 	// So we need the TextArea to be wide enough.

@@ -1,4 +1,4 @@
-// Version 4
+// Version 5
 
 import QtQuick 2.0
 import QtQuick.Controls 2.5 as QQC2
@@ -32,6 +32,7 @@ ColumnLayout {
 	property string text: ""
 	property alias separator: separator
 	property alias label: label
+	property bool useThickTopMargin: true
 
 	property Item __formLayout: {
 		if (parent && typeof parent.wideMode === 'boolean') {
@@ -59,7 +60,7 @@ ColumnLayout {
 
 	Kirigami.Heading {
 		id: label
-		Layout.topMargin: Kirigami.Units.largeSpacing * 3
+		Layout.topMargin: useThickTopMargin ? Kirigami.Units.largeSpacing * 3 : Kirigami.Units.largeSpacing
 		Layout.bottomMargin: Kirigami.Units.smallSpacing
 		Layout.fillWidth: true
 		text: heading.text

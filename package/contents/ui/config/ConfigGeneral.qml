@@ -138,6 +138,7 @@ Kirigami.FormLayout {
 	LibConfig.RadioButtonGroup {
 		id: tilesThemeGroup
 		Kirigami.FormData.label: i18n("Background Color")
+		Kirigami.FormData.buddyFor: defaultTileColorRadioButton
 		spacing: 0 // "Custom Color" has lots of spacings already
 		RowLayout {
 			QQC2.RadioButton {

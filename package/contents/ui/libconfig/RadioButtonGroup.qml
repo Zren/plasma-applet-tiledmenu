@@ -1,4 +1,4 @@
-// Version 5
+// Version 6
 
 import QtQuick 2.0
 import QtQuick.Controls 2.5 as QQC2
@@ -23,6 +23,8 @@ ColumnLayout {
 
 	property string configKey: ''
 	readonly property var configValue: configKey ? plasmoid.configuration[configKey] : ""
+	
+	Kirigami.FormData.labelAlignment: Qt.AlignTop
 
 	property alias group: group
 	QQC2.ButtonGroup {

@@ -106,9 +106,9 @@ PlasmaComponents.MenuItem {
 				url: 'org.manjaro.pamac.manager.desktop',
 				// default label is 'Add/Remove Software'
 			})
-		} else if (isAppInstalled('org.opensuse.YaST.desktop')) {
+		} else if (isAppInstalled('org.opensuse.yast.Packager.desktop')) {
 			return tileGrid.addTile(x, y, {
-				url: 'org.opensuse.YaST.desktop',
+				url: 'org.opensuse.yast.Packager.desktop',
 				label: i18n("Software Center"),
 			})
 		} else if (isAppInstalled('org.kde.discover')) {

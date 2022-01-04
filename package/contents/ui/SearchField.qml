@@ -90,7 +90,7 @@ TextField {
 			event.accepted = true; listView.pageUp()
 		} else if (event.key == Qt.Key_PageDown) {
 			event.accepted = true; listView.pageDown()
-		} else if (event.key == Qt.Key_Return) {
+		} else if (event.key == Qt.Key_Return || event.key == Qt.Key_Enter) {
 			event.accepted = true; listView.currentItem.trigger()
 		} else if (event.modifiers & Qt.MetaModifier && event.key == Qt.Key_R) {
 			event.accepted = true; search.filters = ['shell']

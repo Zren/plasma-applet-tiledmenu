@@ -31,8 +31,13 @@ Item {
 	}
 
 	Item {
+		// https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kcoreaddons/kuserproxy.h
+		// https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kcoreaddons/kuserproxy.cpp
 		KCoreAddons.KUser {
 			id: kuser
+			// faceIconUrl is an empty QUrl 'object' when ~/.face.icon doesn't exist.
+			// Cast it to string first before checking if it's empty by casting to bool.
+			readonly property bool hasFaceIcon: (''+faceIconUrl)
 		}
 		
 		Kicker.SystemSettings {

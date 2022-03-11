@@ -83,7 +83,7 @@ Item {
 			spacing: 0
 
 			SidebarItem {
-				iconName: kuser.faceIconUrl ? kuser.faceIconUrl : 'user-identity'
+				iconName: kuser.hasFaceIcon ? kuser.faceIconUrl : 'user-identity'
 				text: kuser.fullName
 				submenu: userMenu
 

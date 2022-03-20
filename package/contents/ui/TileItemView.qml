@@ -21,7 +21,7 @@ Rectangle {
 	readonly property int mediumIconSize: 72 * PlasmaCore.Units.devicePixelRatio
 	readonly property int largeIconSize: 96 * PlasmaCore.Units.devicePixelRatio
 
-	readonly property int tileLabelAlignment: config.tileLabelAlignment
+	readonly property int labelAlignment: appObj.isGroup ? config.groupLabelAlignment : config.tileLabelAlignment
 
 	property bool hovered: false
 
@@ -89,7 +89,7 @@ Rectangle {
 		anchors.left: parent.left
 		anchors.right: parent.right
 		wrapMode: Text.Wrap
-		horizontalAlignment: tileLabelAlignment
+		horizontalAlignment: labelAlignment
 		verticalAlignment: Text.AlignBottom
 		width: parent.width
 		renderType: Text.QtRendering // Fix pixelation when scaling. Plasma.Label uses NativeRendering.

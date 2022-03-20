@@ -174,7 +174,15 @@ Kirigami.FormLayout {
 			{ value: "right", text: i18n("Right") },
 		]
 	}
-
+	LibConfig.ComboBox {
+		configKey: "groupLabelAlignment"
+		Kirigami.FormData.label: i18n("Group Text Alignment")
+		model: [
+			{ value: "left", text: i18n("Left") },
+			{ value: "center", text: i18n("Center") },
+			{ value: "right", text: i18n("Right") },
+		]
+	}
 
 
 

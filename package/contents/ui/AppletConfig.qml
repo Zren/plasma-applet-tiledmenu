@@ -118,6 +118,17 @@ Item {
 			return Text.AlignLeft
 		}
 	}
+	readonly property int groupLabelAlignment: {
+		var val = plasmoid.configuration.groupLabelAlignment
+		if (val === 'center') {
+			return Text.AlignHCenter
+		} else if (val === 'right') {
+			return Text.AlignRight
+		} else { // left
+			return Text.AlignLeft
+		}
+	}
+	
 	// App Description Enum (hidden, after, below)
 	readonly property bool appDescriptionVisible: plasmoid.configuration.appDescription !== 'hidden'
 	readonly property bool appDescriptionBelow: plasmoid.configuration.appDescription == 'below'

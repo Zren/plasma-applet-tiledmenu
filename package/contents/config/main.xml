@@ -89,6 +89,10 @@
 			<!-- enum: left, center, right -->
 			<default>left</default>
 		</entry>
+		<entry name="groupLabelAlignment" type="string">
+			<!-- enum: left, center, right -->
+			<default>left</default>
+		</entry>
 		<entry name="appDescription" type="string">
 			<!-- enum: hidden, after, below -->
 			<default>after</default>

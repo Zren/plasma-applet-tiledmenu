@@ -1,4 +1,5 @@
 import QtQuick 2.2
+import QtQuick.Controls 2.0 as QQC2
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
@@ -113,6 +114,15 @@ Item {
 			Drag.drop() // Breaks QML context.
 			// We need to use callLater to call functions after Drag.drop().
 		}
+	}
+
+	QQC2.ToolTip {
+		id: control
+		visible: tileItemView.hovered && !(dragActive || contextMenu.opened) && appObj.tile.w == 1 && appObj.tile.h == 1
+		text: appObj.labelText
+		delay: 0
+		x: parent.width + rightPadding
+		y: (parent.height - height) / 2
 	}
 
 	Loader {

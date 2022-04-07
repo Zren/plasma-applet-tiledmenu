@@ -18,38 +18,56 @@ Kirigami.FormLayout {
 		return plasmaStyleText + ' (' + PlasmaCore.Theme.themeName + ')'
 	}
 
-	function getTopItem(item) {
+	function isClassName(item, className) {
+		var itemClassName = (''+item).split('_', 1)[0]
+		return itemClassName == className
+	}
+	function getAncestor(item, className) {
 		var curItem = item
 		while (curItem.parent) {
 			curItem = curItem.parent
+			if (isClassName(curItem, className)) {
+				return curItem
+			}
 		}
-		return curItem
+		return null
 	}
-	function hideKeyboardShortcutTab() {
-		// console.log('root', root)
-		// console.log('root.parent', root.parent)
-		// console.log('getTopItem(root)', getTopItem(root))
-		
+	function getAppletConfiguration() {
 		// https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/configuration/AppletConfiguration.qml
-		// The "root" id can't always be referenced here, so use one of the child id's and get it's parent.
-		var appletConfiguration
-		if (typeof mainColumn !== "undefined") { // Plasma 5.14 and below
-			appletConfiguration = mainColumn.parent
-		} else if (typeof root !== "undefined") { // Plasma 5.15 and above
-			// root is the StackView { id: pageStack } in plasmoidviewer
-			// walk up to the top node of the "DOM" for AppletConfiguration
-			// However root in plasmashell is AppletConfiguration for some reason...
-			appletConfiguration = getTopItem(root)
+		if (typeof root === "undefined") {
+			return null
 		}
-		if (typeof appletConfiguration !== "undefined" && typeof appletConfiguration.globalConfigModel !== "undefined") {
+		// [Plasma 5.15] root was the StackView { id: pageStack } in plasmoidviewer
+		// [Plasma 5.15] However root was plasmashell is AppletConfiguration for some reason
+		// [Plasma 5.15] The "root" id can't always be referenced here, so use one of the child id's and get it's parent.
+		if (isClassName(root, 'AppletConfiguration')) {
+			return root
+		}
+		// https://github.com/KDE/plasma-desktop/blob/master/desktoppackage/contents/configuration/ConfigurationAppletPage.qml
+		// [Plasma 5.24] root is ConfigurationAppletPage. It does not have a parent when we check first check it so we need to
+		//               wait until it is attached before looking for it's ancestor.
+		// Walk up to the top node of the "DOM" for AppletConfiguration
+		return getAncestor(root, 'AppletConfiguration')
+	}
+	property bool keyboardShortcutsHidden: false
+	function hideKeyboardShortcutTab() {
+		var appletConfiguration = getAppletConfiguration()
+		if (appletConfiguration && typeof appletConfiguration.globalConfigModel !== "undefined") {
 			// Remove default Global Keyboard Shortcut config tab.
 			var keyboardShortcuts = appletConfiguration.globalConfigModel.get(0)
 			appletConfiguration.globalConfigModel.removeCategoryAt(0)
+			keyboardShortcutsHidden = true
 		}
 	}
 
 	Component.onCompleted: {
 		hideKeyboardShortcutTab()
+
+		if (typeof root !== "undefined" && isClassName(root, 'ConfigurationAppletPage')) {
+			root.parentChanged.connect(function(){
+				hideKeyboardShortcutTab()
+			})
+		}
 	}
 
 	property var config: TiledMenu.AppletConfig {

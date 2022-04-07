@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-02-24 16:07-0500\n"
+"POT-Creation-Date: 2022-04-07 15:47-0400\n"
 "PO-Revision-Date: 2019-07-12 11:44-0300\n"
 "Last-Translator: Thiago Masato Costa Sueto <herzenschein@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -125,6 +125,10 @@ msgstr "Centro"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Right"
 msgstr "Direita"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Group Text Alignment"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar"

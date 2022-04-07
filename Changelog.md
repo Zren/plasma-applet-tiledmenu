@@ -1,3 +1,13 @@
+## v44 - April 7 2022
+
+* In the preset tiles, use YaST Software for the Software Center, not YaST (System Settings app).
+* Show tooltip when hovering over a 1x1 tile. By @BVengo (Pull Request #120)
+* Default group label alignment is independant of default tile label alignment. By @BVengo (Pull Request #120)
+* Fix user avatar when faceIconUrl is empty QUrl() (Issue #16)
+* Allow Enter Key on NumPad in SearchField to trigger app (Issue #118)
+* Fix hiding the default "Keyboard Shortcuts" tab (we bundle our own to mention how Meta key works).
+* Update widget and i18n scripts.
+
 ## v43 - November 10 2021
 
 * Refactor config window to use QQC2 controls with a custom LibConfig implementation.

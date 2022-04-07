@@ -20,7 +20,7 @@ ConfigModel {
 		visible: false
 	}
 	ConfigCategory {
-		name: i18nd("plasma_shell_org.kde.plasma.desktop", "Keyboard shortcuts")
+		name: i18nd("plasma_shell_org.kde.plasma.desktop", "Keyboard Shortcuts")
 		icon: "preferences-desktop-keyboard"
 		source: "config/ConfigurationShortcuts.qml"
 	}

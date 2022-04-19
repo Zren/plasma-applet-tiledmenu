@@ -23,21 +23,30 @@ TileEditorGroupBox {
 		visible = visiblePresets > 0
 	}
 	Component.onCompleted: {
-		checkForPreset()
+		checkIfRecognizedLauncher()
 	}
 
 	readonly property bool isDesktopFile: endsWith(appObj.appUrl, '.desktop')
 	property string steamGameId: ''
-	property bool isSteamGameLauncher: !!steamGameId
+	readonly property bool isSteamGameLauncher: !!steamGameId
 	property string lutrisGameSlug: ''
-	property bool isLutrisGameLauncher: !!lutrisGameSlug
+	readonly property bool isLutrisGameLauncher: !!lutrisGameSlug
 
 	function endsWith(s, substr) {
 		return s.indexOf(substr) == s.length - substr.length
 	}
 
+	function resetRecognizedLaunchers() {
+		tileEditorPresetTiles.steamGameId = ''
+		tileEditorPresetTiles.lutrisGameSlug = ''
+	}
+
 	function checkIfRecognizedLauncher() {
 		// console.log('checkIfRecognizedLauncher', appObj.appUrl)
+
+		resetRecognizedLaunchers()
+		checkForPreset()
+
 		if (!appObj.appUrl) {
 			return
 		}
@@ -46,18 +55,37 @@ TileEditorGroupBox {
 			return
 		}
 
-		Requests.getFile(appObj.appUrl, function(err, data) {
-			if (err) {
-				console.log('[tiledmenu] checkIfRecognizedLauncher.err', err)
-				return
-			}
+		// Qt 5.15+ warns that XHR on local file will be removed.
+		// Requests.getFile(appObj.appUrl, function(err, data) {
+		// 	if (err) {
+		// 		console.log('[tiledmenu] checkIfRecognizedLauncher.err', err)
+		// 		return
+		// 	}
 
-			var desktopFile = Requests.parseMetadata(data)
-			checkIfSteamLauncher(desktopFile)
-			checkIfLutrisLauncher(desktopFile)
+		// 	var desktopFile = Requests.parseMetadata(data)
+		// 	checkIfSteamLauncher(desktopFile)
+		// 	checkIfLutrisLauncher(desktopFile)
 
+		// 	tileEditorPresetTiles.checkForPreset()
+		// })
+
+		checkIfSteamIcon(appObj.iconSource)
+		appObj.iconSourceChanged.connect(function(){
+			tileEditorPresetTiles.checkIfSteamIcon(appObj.iconSource)
 			tileEditorPresetTiles.checkForPreset()
 		})
+
+		// Lutris does not use game id in icon name. Eg: lutris_overwatch instead of lutris_game_1
+	}
+
+	function checkIfSteamIcon(iconSource) {
+		var steamIconRegex = /steam_icon_(\d+)/
+		var m = steamIconRegex.exec(iconSource)
+		if (m) {
+			tileEditorPresetTiles.steamGameId = m[1]
+		} else {
+			tileEditorPresetTiles.steamGameId = '' // Reset
+		}
 	}
 
 	function checkIfSteamLauncher(desktopFile) {
@@ -87,8 +115,6 @@ TileEditorGroupBox {
 
 		onAppUrlChanged: {
 			logger.debug('onAppUrlChanged', appObj.appUrl)
-			tileEditorPresetTiles.steamGameId = ''
-			tileEditorPresetTiles.checkForPreset()
 			tileEditorPresetTiles.checkIfRecognizedLauncher()
 		}
 	}

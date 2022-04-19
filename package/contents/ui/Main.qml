@@ -140,6 +140,7 @@ Item {
 		anchors.fill: parent
 	}
 	Layout.minimumWidth: config.leftSectionWidth
+	Layout.minimumHeight: config.minimumHeight
 	Layout.preferredWidth: config.popupWidth
 	Layout.preferredHeight: config.popupHeight
 

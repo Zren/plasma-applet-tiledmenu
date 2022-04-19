@@ -19,6 +19,7 @@ Item {
 	readonly property int sidebarPopupButtonSize: plasmoid.configuration.sidebarPopupButtonSize * PlasmaCore.Units.devicePixelRatio
 	readonly property int appListWidth: plasmoid.configuration.appListWidth * PlasmaCore.Units.devicePixelRatio
 	readonly property int tileEditorMinWidth: Math.max(350, 350 * PlasmaCore.Units.devicePixelRatio)
+	readonly property int minimumHeight: flatButtonSize * 5 // Issue #125
 
 	property bool showSearch: false
 	property bool isEditingTile: false

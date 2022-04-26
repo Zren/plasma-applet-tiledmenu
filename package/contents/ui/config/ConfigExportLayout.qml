@@ -40,6 +40,13 @@ ColumnLayout {
 				if (ignoredKeys.indexOf(configKey) >= 0) {
 					continue
 				}
+				// Filter KF5 5.78 default keys https://invent.kde.org/frameworks/kdeclarative/-/merge_requests/38
+				if (configKey.endsWith('Default')) {
+					var key2 = configKey.substr(0, configKey.length - 'Default'.length)
+					if (typeof plasmoid.configuration[key2] !== 'undefined') {
+						continue
+					}
+				}
 				if (configKey == 'tileModel') {
 					data.tileModel = configTileModel.value
 				} else {

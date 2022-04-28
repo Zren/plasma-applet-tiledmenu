@@ -1,3 +1,11 @@
+## v45 - April 28 2022
+
+* Force a minimum popup height of 5 sidebar buttons (Issue #125)
+* Fix searching for System Settings categories in Plasma 5.23+ (Issue #127)
+* Fix Steam + Lutris Preset Tiles as the current workaround is getting removed in Qt6.
+* Filter Default config keys in export tab based on updated ConfigAdvanced.
+* Updated Dutch translation by @Vistaus (Pull Request #124)
+
 ## v44 - April 7 2022
 
 * In the preset tiles, use YaST Software for the Software Center, not YaST (System Settings app).

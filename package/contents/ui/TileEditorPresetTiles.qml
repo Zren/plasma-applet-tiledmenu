@@ -72,6 +72,7 @@ TileEditorGroupBox {
 		checkIfSteamIcon(appObj.iconSource)
 		appObj.iconSourceChanged.connect(function(){
 			tileEditorPresetTiles.checkIfSteamIcon(appObj.iconSource)
+			tileEditorPresetTiles.checkIfLutrisIcon(appObj.iconSource)
 			tileEditorPresetTiles.checkForPreset()
 		})
 
@@ -85,6 +86,16 @@ TileEditorGroupBox {
 			tileEditorPresetTiles.steamGameId = m[1]
 		} else {
 			tileEditorPresetTiles.steamGameId = '' // Reset
+		}
+	}
+
+	function checkIfLutrisIcon(iconSource) {
+		var lutrisIconRegex = /lutris_([\w\-]+)/
+		var m = lutrisIconRegex.exec(iconSource)
+		if (m) {
+			tileEditorPresetTiles.lutrisGameSlug = m[1]
+		} else {
+			tileEditorPresetTiles.lutrisGameSlug = '' // Reset
 		}
 	}
 
@@ -156,8 +167,10 @@ TileEditorGroupBox {
 		// 5x2 or 2x1
 		TileEditorPresetTileButton {
 			filename: 'lutris_' + lutrisGameSlug + '_2x1.jpg'
-			property string tileImageUrl: '/home/' + kuser.loginName + '/.local/share/lutris/banners/' + lutrisGameSlug + '.jpg'
-			source: (isLutrisGameLauncher && kuser.loginName) ? tileImageUrl : ''
+			// property string tileImageUrl: '/home/' + kuser.loginName + '/.local/share/lutris/banners/' + lutrisGameSlug + '.jpg'
+			// source: (isLutrisGameLauncher && kuser.loginName) ? tileImageUrl : ''
+			property string tileImageUrl: 'https://lutris.net/games/banner/' + lutrisGameSlug + '.jpg'
+			source: (isLutrisGameLauncher) ? tileImageUrl : ''
 			w: 2
 			h: 1
 		}

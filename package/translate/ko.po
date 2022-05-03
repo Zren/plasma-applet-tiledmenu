@@ -18,11 +18,11 @@ msgstr ""
 
 #: ../metadata.desktop
 msgid "Tiled Menu"
-msgstr ""
+msgstr "타일 메뉴"
 
 #: ../metadata.desktop
 msgid "A menu based on Windows 10's Start Menu."
-msgstr ""
+msgstr "Windows 10 시작메뉴를 기반으로 한 실행기"
 
 #: ../contents/config/config.qml
 msgid "General"
@@ -38,23 +38,23 @@ msgstr "고급"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Unpin from Menu"
-msgstr "앱 고정 해제"
+msgstr "메뉴에 고정 해제"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Pin to Menu"
-msgstr "앱 고정"
+msgstr "메뉴에 고정"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Pin to Taskbar"
-msgstr "작업표시줄에 고정"
+msgstr "작업 표시줄에 고정"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Recent Apps"
-msgstr "최근 사용한 앱"
+msgstr "최근 사용한 프로그램"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Most Used"
-msgstr "가장 많이 사용한 앱"
+msgstr "가장 많이 사용한 프로그램"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup"
@@ -62,7 +62,7 @@ msgstr "팝업"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Fullscreen"
-msgstr "전체화면"
+msgstr "전체 화면"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Grid Columns"
@@ -70,7 +70,7 @@ msgstr "Grid Columns"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "px"
-msgstr "화소"
+msgstr "픽셀"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Panel Icon"
@@ -78,7 +78,7 @@ msgstr "패널 아이콘"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Fixed Size"
-msgstr "고정 크기"
+msgstr "고정된 크기"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tiles"
@@ -102,7 +102,7 @@ msgstr "커스텀 컬러"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Gradient"
-msgstr ""
+msgstr "그라데이션"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"
@@ -118,7 +118,7 @@ msgstr "왼쪽"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Center"
-msgstr "중앙"
+msgstr "가운데"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Right"
@@ -126,7 +126,7 @@ msgstr "오른쪽"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Group Text Alignment"
-msgstr ""
+msgstr "그룹 텍스트 정렬"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar"
@@ -134,7 +134,7 @@ msgstr "사이드바"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Width"
-msgstr ""
+msgstr "폭"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Icon Size"
@@ -142,11 +142,11 @@ msgstr "아이콘 크기"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup Button Height"
-msgstr ""
+msgstr "팝업 버튼 높이"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Theme"
-msgstr ""
+msgstr "테마"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
@@ -162,7 +162,7 @@ msgstr "검색 상자"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hide Search Field"
-msgstr ""
+msgstr "검색 창 숨기기"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Field Height"
@@ -170,7 +170,7 @@ msgstr "검색 창 높이"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Box Theme"
-msgstr ""
+msgstr "검색 창 스타일"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Windows (White)"
@@ -206,11 +206,11 @@ msgstr "범주로 이동"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Tiles Only"
-msgstr ""
+msgstr "타일만"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App Description"
-msgstr "앱 설명"
+msgstr "프로그램 설명"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hidden"
@@ -226,7 +226,7 @@ msgstr "아래"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App History"
-msgstr ""
+msgstr "프로그램 기록"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Show:"
@@ -246,11 +246,11 @@ msgstr "검색 결과"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Merged (Application Launcher)"
-msgstr "병합 (어플리케이션 실행)"
+msgstr "병합 (프로그램 실행)"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Split into Categories (Application Menu / Dashboard)"
-msgstr "분할 (어플리케이션 메뉴 / 대시보드)"
+msgstr "분할 (프로그램 메뉴 / 대시보드)"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
 msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
@@ -278,11 +278,11 @@ msgstr "파일 관리자"
 
 #: ../contents/ui/Main.qml
 msgid "Edit Applications..."
-msgstr "어플리케이션 편진"
+msgstr "프로그램 편집..."
 
 #: ../contents/ui/Popup.qml
 msgid "Resize?"
-msgstr "크기변경?"
+msgstr "크기를 변경하시겠습니까?"
 
 #: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
 msgid "Meta + Right Click to resize the menu."
@@ -294,7 +294,7 @@ msgstr "검색"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search Apps"
-msgstr "앱 검색"
+msgstr "프로그램 검색"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search Files"
@@ -327,7 +327,7 @@ msgstr "사용자가 선택한 기본값으로 검색"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Applications"
-msgstr "어플리케이션"
+msgstr "프로그램"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Files"
@@ -391,7 +391,7 @@ msgstr "타일 편집"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Reset Tile"
-msgstr "타일 리셋"
+msgstr "타일 초기화"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Close"
@@ -431,19 +431,19 @@ msgstr "위치 / 크기"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Add Preset"
-msgstr ""
+msgstr "프리셋 추가"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Productivity"
-msgstr ""
+msgstr "생산성"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Explore"
-msgstr ""
+msgstr "탐색"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Gmail"
-msgstr ""
+msgstr "Gmail"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Software Center"
@@ -468,7 +468,7 @@ msgstr "그룹"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Getting Started"
-msgstr ""
+msgstr "시작하기"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag apps onto the grid."
@@ -480,7 +480,7 @@ msgstr ""
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Use Default Tile Layout"
-msgstr ""
+msgstr "기본 타일 레이아웃 사용"
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"

@@ -139,10 +139,10 @@ Kirigami.FormLayout {
 			suffix: 'x'
 			minimumValue: 0.1
 			maximumValue: 4
-			decimals: 1
+			decimals: 2
 		}
 		QQC2.Label {
-			text: '' + config.cellBoxSize + i18n("px")
+			text: '' + 2* (config.cellSize + config.cellMargin) + i18n("px")
 		}
 	}
 	LibConfig.SpinBox {

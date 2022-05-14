@@ -11,7 +11,7 @@ DropArea {
 	property int cellSize: 60 * PlasmaCore.Units.devicePixelRatio
 	property real cellMargin: 3 * PlasmaCore.Units.devicePixelRatio
 	property real cellPushedMargin: 6 * PlasmaCore.Units.devicePixelRatio
-	property int cellBoxSize: cellMargin + cellSize + cellMargin
+	property int cellBoxSize: 2 * cellMargin + cellSize
 	property int hoverOutlineSize: 2 * PlasmaCore.Units.devicePixelRatio
 
 	property int minColumns: Math.floor(width / cellBoxSize)

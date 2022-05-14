@@ -36,11 +36,11 @@ Item {
 	readonly property int leftSectionWidth: sidebarWidth + sidebarRightMargin + appAreaWidth
 
 	readonly property real tileScale: plasmoid.configuration.tileScale
-	readonly property int cellBoxUnits: 80
+	readonly property int cellUnits: 48 // The base size of a medium tile at 100% scale is 100 px excluding margins with base margin size of 2 px
 	readonly property int cellMarginUnits: plasmoid.configuration.tileMargin
-	readonly property int cellSizeUnits: cellBoxUnits - cellMarginUnits*2
-	readonly property int cellSize: cellSizeUnits * tileScale * PlasmaCore.Units.devicePixelRatio
-	readonly property real cellMargin: cellMarginUnits * tileScale * PlasmaCore.Units.devicePixelRatio
+	readonly property int cellBoxUnits: cellUnits + 2 * cellMarginUnits
+	readonly property int cellSize: cellUnits * tileScale * PlasmaCore.Units.devicePixelRatio
+	readonly property real cellMargin: cellMarginUnits * PlasmaCore.Units.devicePixelRatio
 	readonly property real cellPushedMargin: cellMargin * 2
 	readonly property int cellBoxSize: cellMargin + cellSize + cellMargin
 	readonly property int tileGridWidth: plasmoid.configuration.favGridCols * cellBoxSize

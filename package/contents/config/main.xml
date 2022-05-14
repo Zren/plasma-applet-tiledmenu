@@ -54,10 +54,10 @@
 			<default></default>
 		</entry>
 		<entry name="tileScale" type="double">
-			<default>0.8</default>
+			<default>1.00</default>
 		</entry>
 		<entry name="tileMargin" type="double">
-			<default>5</default>
+			<default>2</default>
 		</entry>
 		<entry name="tilesLocked" type="bool">
 			<default>false</default>
@@ -101,10 +101,10 @@
 			<default>36</default>
 		</entry>
 		<entry name="searchFieldHeight" type="int">
-			<default>48</default>
+			<default>40</default>
 		</entry>
 		<entry name="appListWidth" type="int">
-			<default>350</default>
+			<default>260</default>
 		</entry>
 		<entry name="favGridCols" type="int">
 			<default>6</default>

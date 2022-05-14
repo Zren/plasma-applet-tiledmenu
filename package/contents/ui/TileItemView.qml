@@ -16,10 +16,10 @@ Rectangle {
 	}
 	gradient: appObj.backgroundGradient ? tileGradient.createObject(tileItemView) : null
 
-	readonly property int tilePadding: 4 * PlasmaCore.Units.devicePixelRatio
 	readonly property int smallIconSize: 32 * PlasmaCore.Units.devicePixelRatio
 	readonly property int mediumIconSize: 72 * PlasmaCore.Units.devicePixelRatio
 	readonly property int largeIconSize: 96 * PlasmaCore.Units.devicePixelRatio
+	readonly property int tilePadding: 8 * PlasmaCore.Units.devicePixelRatio
 
 	readonly property int labelAlignment: appObj.isGroup ? config.groupLabelAlignment : config.tileLabelAlignment
 
@@ -86,14 +86,15 @@ Rectangle {
 		anchors.bottom: parent.bottom
 		anchors.leftMargin: tilePadding
 		anchors.rightMargin: tilePadding
+		anchors.bottomMargin: tilePadding/2
 		anchors.left: parent.left
 		anchors.right: parent.right
 		wrapMode: Text.Wrap
 		horizontalAlignment: labelAlignment
 		verticalAlignment: Text.AlignBottom
 		width: parent.width
-		renderType: Text.QtRendering // Fix pixelation when scaling. Plasma.Label uses NativeRendering.
-		style: Text.Outline
-		styleColor: appObj.backgroundGradient ? tileItemView.gradientBottomColor : appObj.backgroundColor
+		// Already handled https://api.kde.org/frameworks/plasma-framework/html/qml_2Label_8qml_source.html renderType: Text.QtRendering // Fix pixelation when scaling. Plasma.Label uses NativeRendering.
+		// style: Text.Outline
+		// styleColor: appObj.backgroundGradient ? tileItemView.gradientBottomColor : appObj.backgroundColor
 	}
 }

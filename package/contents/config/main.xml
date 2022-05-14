@@ -59,6 +59,15 @@
 		<entry name="tileMargin" type="double">
 			<default>2</default>
 		</entry>
+		<entry name="smallIconSize" type="double">
+			<default>24</default>
+		</entry>
+		<entry name="mediumIconSize" type="double">
+			<default>36</default>
+		</entry>
+		<entry name="largeIconSize" type="double">
+			<default>144</default>
+		</entry>
 		<entry name="tilesLocked" type="bool">
 			<default>false</default>
 		</entry>

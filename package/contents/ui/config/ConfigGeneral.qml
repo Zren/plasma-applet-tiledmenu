@@ -153,6 +153,28 @@ Kirigami.FormLayout {
 		maximumValue: config.cellBoxUnits/2
 	}
 
+	LibConfig.SpinBox {
+		configKey: 'smallIconSize'
+		Kirigami.FormData.label: i18n("Icon Sizes") + ": " + i18n("Small")
+		suffix: i18n("px")
+		minimumValue: 4
+		maximumValue: config.cellSize
+	}
+	LibConfig.SpinBox {
+		configKey: 'mediumIconSize'
+		Kirigami.FormData.label: i18n("Medium")
+		suffix: i18n("px")
+		minimumValue: 4
+		maximumValue: 2 * config.cellSize + 4 *  config.cellMarginUnits
+	}
+	LibConfig.SpinBox {
+		configKey: 'largeIconSize'
+		Kirigami.FormData.label: i18n("Large")
+		suffix: i18n("px")
+		minimumValue: 4
+		maximumValue: (3 * config.cellSize + 6 * config.cellMarginUnits)
+	}
+	
 	LibConfig.RadioButtonGroup {
 		id: tilesThemeGroup
 		Kirigami.FormData.label: i18n("Background Color")

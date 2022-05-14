@@ -16,10 +16,10 @@ Rectangle {
 	}
 	gradient: appObj.backgroundGradient ? tileGradient.createObject(tileItemView) : null
 
-	readonly property int smallIconSize: 32 * PlasmaCore.Units.devicePixelRatio
-	readonly property int mediumIconSize: 72 * PlasmaCore.Units.devicePixelRatio
-	readonly property int largeIconSize: 96 * PlasmaCore.Units.devicePixelRatio
 	readonly property int tilePadding: 8 * PlasmaCore.Units.devicePixelRatio
+	readonly property int smallIconSize: plasmoid.configuration.smallIconSize * PlasmaCore.Units.devicePixelRatio
+	readonly property int mediumIconSize: plasmoid.configuration.mediumIconSize * PlasmaCore.Units.devicePixelRatio
+	readonly property int largeIconSize: plasmoid.configuration.largeIconSize * PlasmaCore.Units.devicePixelRatio
 
 	readonly property int labelAlignment: appObj.isGroup ? config.groupLabelAlignment : config.tileLabelAlignment
 

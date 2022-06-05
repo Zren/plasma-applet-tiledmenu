@@ -72,6 +72,13 @@ ColumnLayout {
 	//--- end baloosearch filters
 
 	SearchFiltersViewItem {
+		runnerId: "krunner_systemsettings"
+		indentLevel: 1
+		iconSource: "preferences-system"
+		text: i18n("System Settings")
+	}
+
+	SearchFiltersViewItem {
 		runnerId: "bookmarks"
 		indentLevel: 1
 		iconSource: "globe"

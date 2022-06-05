@@ -86,6 +86,7 @@ Item {
 				iconName: kuser.hasFaceIcon ? kuser.faceIconUrl : 'user-identity'
 				text: kuser.fullName
 				submenu: userMenu
+				iconSize: config.flatButtonSize
 
 				SidebarContextMenu {
 					id: userMenu

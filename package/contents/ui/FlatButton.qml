@@ -2,9 +2,11 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 
 import QtQuick.Controls.Private 1.0 as QtQuickControlsPrivate
 import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
+import QtGraphicalEffects 1.0 as QtGraphicalEffects
 
 PlasmaComponents.ToolButton {
 	id: flatButton
@@ -50,8 +52,42 @@ PlasmaComponents.ToolButton {
 					implicitWidth: control._iconSize
 					implicitHeight: control._iconSize
 					anchors.centerIn: parent
-					// colorGroup: PlasmaCore.Theme.ButtonColorGroup
+					colorGroup: PlasmaCore.Theme.ButtonColorGroup
+
+					// Crop the avatar to fit in a circle, like the lock and login screens
+					// but don't on software rendering where this won't render
+					// layer.enabled: faceIcon.GraphicsInfo.api !== GraphicsInfo.Software
+					layer.enabled: true
+					layer.effect: QtGraphicalEffects.OpacityMask {
+						// this Rectangle is a circle due to radius size
+						maskSource: Rectangle {
+							width: icon.width
+							height: icon.height
+							radius: height / 2
+							visible: false
+						}
+					}
 				}
+
+				// PlasmaComponents3.RoundButton {
+				// 	implicitWidth: control._iconSize
+				// 	implicitHeight: control._iconSize
+				// 	leftPadding: contentItem.extraSpace
+				// 	topPadding: contentItem.extraSpace
+				// 	rightPadding: contentItem.extraSpace
+				// 	bottomPadding: contentItem.extraSpace
+				// 	contentItem: PlasmaCore.IconItem {
+				// 		id: icon
+				// 		readonly property int extraSpace: implicitWidth/2 - implicitWidth/2*Math.sqrt(2)/2 + PlasmaCore.Units.smallSpacing
+				// 		source: control.iconName || control.iconSource || control.icon
+				// 		// implicitWidth: control._iconSize
+				// 		// implicitHeight: control._iconSize
+				// 		// anchors.centerIn: parent
+				// 		// anchors.fill: parent
+				// 		// colorGroup: PlasmaCore.Theme.ButtonColorGroup
+				// 	}
+				// }
+
 
 				// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
 			}

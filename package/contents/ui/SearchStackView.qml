@@ -9,7 +9,8 @@ StackView {
 
 	delegate: panUp
 
-	property int zoomDuration: 250
+	property int zoomDuration: 0
+	// property int zoomDuration: 250
 	property int zoomDelta: 100
 	property real zoomedInRatio: Math.max(1, stackView.width + zoomDelta * PlasmaCore.Units.devicePixelRatio) / stackView.width
 	property real zoomedOutRatio: Math.max(1, stackView.width - zoomDelta * PlasmaCore.Units.devicePixelRatio) / stackView.width

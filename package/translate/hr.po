@@ -346,8 +346,8 @@ msgid "Bookmarks"
 msgstr "Knjižne Oznake"
 
 #: ../contents/ui/SearchFiltersView.qml
-msgid "locations"
-msgstr "lokacije"
+msgid "Locations"
+msgstr "Lokacije"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Dictionary"

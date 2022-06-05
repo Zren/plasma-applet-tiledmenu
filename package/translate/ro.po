@@ -346,8 +346,8 @@ msgid "Bookmarks"
 msgstr "Marcaje"
 
 #: ../contents/ui/SearchFiltersView.qml
-msgid "locations"
-msgstr "locații"
+msgid "Locations"
+msgstr "Locații"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Dictionary"

@@ -353,8 +353,8 @@ msgid "Bookmarks"
 msgstr "Kirjanmerkit"
 
 #: ../contents/ui/SearchFiltersView.qml
-msgid "locations"
-msgstr "sijainnit"
+msgid "Locations"
+msgstr "Sijainnit"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Dictionary"

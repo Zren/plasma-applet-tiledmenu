@@ -353,7 +353,7 @@ msgid "Bookmarks"
 msgstr "Favoritos"
 
 #: ../contents/ui/SearchFiltersView.qml
-msgid "locations"
+msgid "Locations"
 msgstr "Locais"
 
 #: ../contents/ui/SearchFiltersView.qml

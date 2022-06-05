@@ -346,7 +346,7 @@ msgid "Bookmarks"
 msgstr "Закладки"
 
 #: ../contents/ui/SearchFiltersView.qml
-msgid "locations"
+msgid "Locations"
 msgstr "Расположения"
 
 #: ../contents/ui/SearchFiltersView.qml

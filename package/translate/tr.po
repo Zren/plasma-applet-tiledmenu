@@ -352,7 +352,7 @@ msgid "Bookmarks"
 msgstr "Yer İmleri"
 
 #: ../contents/ui/SearchFiltersView.qml
-msgid "locations"
+msgid "Locations"
 msgstr "Yerler"
 
 #: ../contents/ui/SearchFiltersView.qml

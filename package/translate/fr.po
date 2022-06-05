@@ -355,8 +355,8 @@ msgid "Bookmarks"
 msgstr "Favoris"
 
 #: ../contents/ui/SearchFiltersView.qml
-msgid "locations"
-msgstr "emplacements"
+msgid "Locations"
+msgstr "Emplacements"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Dictionary"

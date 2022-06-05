@@ -82,7 +82,7 @@ ColumnLayout {
 		runnerId: "locations"
 		indentLevel: 1
 		iconSource: "system-file-manager"
-		text: i18n("locations")
+		text: i18n("Locations")
 	}
 
 	SearchFiltersViewItem {

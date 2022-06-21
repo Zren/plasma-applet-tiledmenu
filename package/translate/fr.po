@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-04-07 15:47-0400\n"
+"POT-Creation-Date: 2022-06-04 21:01-0400\n"
 "PO-Revision-Date: 2021-11-10 13:35+0100\n"
 "Last-Translator: Alan Paris <Alan90000@yahoo.com>\n"
 "Language-Team: fr\n"
@@ -276,7 +276,7 @@ msgstr "Terminal"
 msgid "Task Manager"
 msgstr "Surveillance du système"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/Main.qml ../contents/ui/SearchFiltersView.qml
 msgid "System Settings"
 msgstr "Paramètres système"
 
@@ -355,8 +355,8 @@ msgid "Bookmarks"
 msgstr "Favoris"
 
 #: ../contents/ui/SearchFiltersView.qml
-msgid "locations"
-msgstr "emplacements"
+msgid "Locations"
+msgstr "Emplacements"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Dictionary"

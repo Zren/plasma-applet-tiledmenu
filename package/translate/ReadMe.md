@@ -43,7 +43,7 @@ Or if you know how to make a pull request
 | he       | 116/117 |   99% |
 | hr       |  91/117 |   77% |
 | id       |  99/117 |   84% |
-| ja       | 104/117 |   88% |
+| ja       | 117/117 |  100% |
 | ko       | 114/117 |   97% |
 | nl       | 117/117 |  100% |
 | pl       | 101/117 |   86% |
@@ -54,3 +54,4 @@ Or if you know how to make a pull request
 | sl       | 112/117 |   95% |
 | tr       | 112/117 |   95% |
 | zh_CN    |  88/117 |   75% |
+| zh_TW    | 117/117 |  100% |

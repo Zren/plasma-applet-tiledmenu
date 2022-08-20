@@ -256,9 +256,11 @@ msgstr "依類別分開（同「應用程式選單」或「應用程式儀表板
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
 msgid ""
-"When this widget has a global shortcut set, like 'Alt+F1', Plasma will open"
-" this menu with just the ⊞ Windows / Meta key."
-msgstr "當這個元件有設定全域快捷鍵，像是「Alt+F1」，Plasma 會在按下 ⊞ Windows / Meta 鍵的時候開啟這個選單。"
+"When this widget has a global shortcut set, like 'Alt+F1', Plasma will open "
+"this menu with just the ⊞ Windows / Meta key."
+msgstr ""
+"當這個元件有設定全域快捷鍵，像是「Alt+F1」，Plasma 會在按下 ⊞ Windows / Meta "
+"鍵的時候開啟這個選單。"
 
 #: ../contents/ui/Main.qml
 msgid "System Info"
@@ -313,7 +315,8 @@ msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
 msgstr "搜尋 %1"
 
-#: ../contents/ui/SearchFiltersViewItem.qml ../contents/ui/SearchFiltersView.qml
+#: ../contents/ui/SearchFiltersViewItem.qml
+#: ../contents/ui/SearchFiltersView.qml
 msgid "Default"
 msgstr "預設"
 

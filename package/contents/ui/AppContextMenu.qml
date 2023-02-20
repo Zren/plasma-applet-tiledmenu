@@ -86,7 +86,7 @@ Item {
 			}
 	
 			// // https://github.com/KDE/plasma-desktop/blob/master/applets/taskmanager/package/contents/ui/ContextMenu.qml#L75
-			function addActionList(actionList, listModel, index) {
+			function addActionList(actionList, listModel, index, isTileGridModel = false) {
 				// .desktop file Exec actions
 				// ------
 				// Pin to Taskbar / Desktop / Panel
@@ -105,7 +105,11 @@ Item {
 					menuItem.section = actionItem.type == "title"
 					menuItem.icon = actionItem.icon ? actionItem.icon : null
 					menuItem.clicked.connect(function() {
-						listModel.triggerIndexAction(index, actionItem.actionId, actionItem.actionArgument)
+						if (isTileGridModel) {
+							listModel.trigger(index, actionItem.actionId, actionItem.actionArgument)
+						} else {
+							listModel.triggerIndexAction(index, actionItem.actionId, actionItem.actionArgument)
+						}
 					})
 
 					//--- Overrides

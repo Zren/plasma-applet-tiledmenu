@@ -47,7 +47,7 @@ QtObject {
 	function addActionList(menu) {
 		if (hasActionList()) {
 			var actionList = getActionList()
-			menu.addActionList(actionList, appsModel.tileGridModel, appObj.app.indexInModel)
+			menu.addActionList(actionList, appsModel.tileGridModel, appObj.app.indexInModel, true)
 		}
 	}
 

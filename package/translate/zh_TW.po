@@ -1,73 +1,74 @@
-# Translation of tiledmenu in ja
-# Copyright (C) 2020
+# Translation of tiledmenu in zh_TW
+# Copyright (C) 2022
 # This file is distributed under the same license as the tiledmenu package.
 #
-# Yamato Kobayashi <Kb_yamato@protonmail.com>, 2020.
 # Kisaragi Hiu <mail@kisaragi-hiu.com>, 2022.
 msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
 "POT-Creation-Date: 2022-06-04 21:01-0400\n"
-"PO-Revision-Date: 2022-08-21 01:10+0900\n"
+"PO-Revision-Date: 2022-08-21 00:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
-"Language-Team: japanese<LL@li.org>\n"
-"Language: ja\n"
+"Language-Team: Traditional Chinese <kde-i18n-doc@kde.org>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Lokalize 22.04.3\n"
 
 #: ../metadata.desktop
 msgid "Tiled Menu"
-msgstr "タイルメニュー"
+msgstr "方塊磚選單"
 
 #: ../metadata.desktop
 msgid "A menu based on Windows 10's Start Menu."
-msgstr "Windows 10 のスタートメニューに基づいたメニュー。"
+msgstr "一個基於 Windows 10 開始功能表的選單。"
 
 #: ../contents/config/config.qml
 msgid "General"
-msgstr "全般"
+msgstr "一般"
 
 #: ../contents/config/config.qml
 msgid "Import/Export Layout"
-msgstr "レイアウトのインポート/エクスポート"
+msgstr "匯入/匯出佈局"
 
 #: ../contents/config/config.qml
 msgid "Advanced"
-msgstr "高度"
+msgstr "進階"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Unpin from Menu"
-msgstr "メニューから外す"
+msgstr "從選單取消釘選"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Pin to Menu"
-msgstr "メニューに固定する"
+msgstr "釘選到選單"
 
 #: ../contents/ui/AppContextMenu.qml
 msgid "Pin to Taskbar"
-msgstr "タスクバーに固定する"
+msgstr "釘選到工作列"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Recent Apps"
-msgstr "最近使用したアプリ"
+msgstr "最近的應用程式"
 
 #: ../contents/ui/AppsModel.qml
 msgid "Most Used"
-msgstr "よく使うアプリ"
+msgstr "常用"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup"
-msgstr "ポップアップ"
+msgstr "彈出視窗"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Fullscreen"
-msgstr "フルスクリーン"
+msgstr "全螢幕"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Grid Columns"
-msgstr "グリッド列"
+msgstr "網格欄位"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "px"
@@ -75,35 +76,35 @@ msgstr "px"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Panel Icon"
-msgstr "パネルアイコン"
+msgstr "面板圖示"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Fixed Size"
-msgstr "固定サイズ"
+msgstr "固定大小"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tiles"
-msgstr "タイル"
+msgstr "方塊磚"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Size"
-msgstr "タイルサイズ"
+msgstr "方塊磚大小"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
-msgstr "タイルマージン"
+msgstr "方塊磚邊距"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/TileEditorView.qml
 msgid "Background Color"
-msgstr "背景カラー"
+msgstr "背景顏色"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Custom Color"
-msgstr "カスタム色"
+msgstr "自訂顏色"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Gradient"
-msgstr "グラデーション"
+msgstr "漸層"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Transparent"
@@ -111,252 +112,257 @@ msgstr "透明"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Text Alignment"
-msgstr "テキストの配置"
+msgstr "文字對齊方式"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Left"
-msgstr "左揃え"
+msgstr "靠左"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Center"
-msgstr "中央揃え"
+msgstr "置中"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Right"
-msgstr "右揃え"
+msgstr "靠右"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Group Text Alignment"
-msgstr "グループテキストの配置"
+msgstr "群組文字對齊方式"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar"
-msgstr "サイドバー"
+msgstr "側邊欄"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Width"
-msgstr "幅"
+msgstr "寬度"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Icon Size"
-msgstr "アイコンサイズ"
+msgstr "圖示大小"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Popup Button Height"
-msgstr "ポップアップボタンの高さ"
+msgstr "彈出式按鈕高度"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Theme"
-msgstr "テーマ"
+msgstr "主題"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Sidebar Shortcuts"
-msgstr "サイドバーショートカット"
+msgstr "側邊欄捷徑"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Add Default"
-msgstr "デフォルトを追加"
+msgstr "加入內建"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Box"
-msgstr "検索ボックス"
+msgstr "搜尋方塊"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hide Search Field"
-msgstr "検索フィールドを隠す"
+msgstr "隱藏搜尋欄"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Field Height"
-msgstr "検索フィールドの高さ"
+msgstr "搜尋欄高度"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Box Theme"
-msgstr "検索ボックステーマ"
+msgstr "搜尋方塊主題"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Windows (White)"
-msgstr "Windows (白)"
+msgstr "Windows（白色）"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App List"
-msgstr "アプリリスト"
+msgstr "應用程式列表"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App List Area Width"
-msgstr "アプリリストエリアの幅"
+msgstr "應用程式列表區域寬度"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Default View"
-msgstr "デフォルトビュー"
+msgstr "預設頁面"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Alphabetical"
-msgstr "アルファベット順"
+msgstr "字母順序"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Categories"
-msgstr "カテゴリー"
+msgstr "類別"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Jump To Letter"
-msgstr "文字に移動"
+msgstr "跳至字母"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Jump To Category"
-msgstr "カテゴリーに移動"
+msgstr "跳至分類"
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
 msgid "Tiles Only"
-msgstr "タイルのみ"
+msgstr "僅方塊磚"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App Description"
-msgstr "アプリの概要"
+msgstr "應用程式描述"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Hidden"
-msgstr "隠す"
+msgstr "隱藏"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "After"
-msgstr "後"
+msgstr "後方"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Below"
-msgstr "下"
+msgstr "下方"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "App History"
-msgstr "アプリ履歴"
+msgstr "應用程式歷史紀錄"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Show:"
-msgstr "表示："
+msgstr "顯示："
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Recent applications"
-msgstr "最近使用したアプリケーション"
+msgstr "最近使用的應用程式"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Often used applications"
-msgstr "よく使うアプリケーション"
+msgstr "經常使用的應用程式"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Search Results"
-msgstr "検索結果"
+msgstr "搜尋結果"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Merged (Application Launcher)"
-msgstr "併合した (アプリケーションランチャー)"
+msgstr "混在一起（同「應用程式啟動器」）"
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Split into Categories (Application Menu / Dashboard)"
-msgstr "カテゴリーを分割 (アプリケーションメニュー / ダッシュボード)"
+msgstr "依類別分開（同「應用程式選單」或「應用程式儀表板」）"
 
 #: ../contents/ui/config/ConfigurationShortcuts.qml
-msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
-msgstr "このウィジェットには'Alt+F1'のようなグローバルショートカットをセットできます、Plasmaは ⊞ Windows(Meta)キーだけでこのメニューを開くこともできます。"
+msgid ""
+"When this widget has a global shortcut set, like 'Alt+F1', Plasma will open "
+"this menu with just the ⊞ Windows / Meta key."
+msgstr ""
+"當這個元件有設定全域快捷鍵，像是「Alt+F1」，Plasma 會在按下 ⊞ Windows / Meta "
+"鍵的時候開啟這個選單。"
 
 #: ../contents/ui/Main.qml
 msgid "System Info"
-msgstr "システム情報"
+msgstr "系統資訊"
 
 #: ../contents/ui/Main.qml
 msgid "Terminal"
-msgstr "ターミナル"
+msgstr "終端機"
 
 #: ../contents/ui/Main.qml
 msgid "Task Manager"
-msgstr "タスクマネージャー"
+msgstr "工作管理員"
 
 #: ../contents/ui/Main.qml ../contents/ui/SearchFiltersView.qml
 msgid "System Settings"
-msgstr "システム設定"
+msgstr "系統設定"
 
 #: ../contents/ui/Main.qml
 msgid "File Manager"
-msgstr "ファイルマネージャー"
+msgstr "檔案管理員"
 
 #: ../contents/ui/Main.qml
 msgid "Edit Applications..."
-msgstr "アプリケーションを編集する..."
+msgstr "編輯應用程式…"
 
 #: ../contents/ui/Popup.qml
 msgid "Resize?"
-msgstr "リサイズしますか？"
+msgstr "調整大小？"
 
 #: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
 msgid "Meta + Right Click to resize the menu."
-msgstr "Meta + 右クリックでメニューをリサイズできます。"
+msgstr "點擊 Meta + 滑鼠右鍵來調整選單大小。"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search"
-msgstr "検索"
+msgstr "搜尋"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search Apps"
-msgstr "アプリを検索"
+msgstr "搜尋應用程式"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search Files"
-msgstr "ファイルを検索"
+msgstr "搜尋檔案"
 
 #: ../contents/ui/SearchField.qml
 msgid "Search Bookmarks"
-msgstr "ブックマークを検索"
+msgstr "搜尋書籤"
 
 #: ../contents/ui/SearchField.qml
 msgctxt "Search [krunnerName, krunnerName, ...], "
 msgid "Search %1"
-msgstr "%1を検索"
+msgstr "搜尋 %1"
 
-#: ../contents/ui/SearchFiltersViewItem.qml ../contents/ui/SearchFiltersView.qml
+#: ../contents/ui/SearchFiltersViewItem.qml
+#: ../contents/ui/SearchFiltersView.qml
 msgid "Default"
-msgstr "デフォルト"
+msgstr "預設"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "All"
-msgstr "すべて"
+msgstr "全部"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Search with all KRunner plugins"
-msgstr "すべてのKRunnerプラグインで検索"
+msgstr "利用所有 KRunner 外掛程式搜尋"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Search with user selected defaults"
-msgstr "ユーザーの選択したデフォルトで検索"
+msgstr "利用使用者選取的預設值搜尋"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Applications"
-msgstr "アプリケーション"
+msgstr "應用程式"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Files"
-msgstr "ファイル"
+msgstr "檔案"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Music"
-msgstr "音楽"
+msgstr "音樂"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Videos"
-msgstr "ビデオ"
+msgstr "影片"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Bookmarks"
-msgstr "ブックマーク"
+msgstr "書籤"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Locations"
-msgstr "ロケーション"
+msgstr "位置"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Dictionary"
-msgstr "辞書"
+msgstr "字典"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Shell"
-msgstr "シェルコマンド"
+msgstr "終端機命令"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Calculator"
@@ -364,23 +370,23 @@ msgstr "計算機"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Windowed Widgets"
-msgstr "ウィンドウ化されたウィジェット"
+msgstr "視窗元件"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Date/Time"
-msgstr "日付/時間"
+msgstr "日期/時間"
 
 #: ../contents/ui/SearchFiltersView.qml
 msgid "Unit Converter"
-msgstr "単位変換器"
+msgstr "單位轉換"
 
 #: ../contents/ui/SearchResultsView.qml
 msgid "Filters"
-msgstr "フィルター"
+msgstr "過濾器"
 
 #: ../contents/ui/SidebarView.qml
 msgid "User Manager"
-msgstr "ユーザーマネージャー"
+msgstr "使用者管理"
 
 #: ../contents/ui/SidebarView.qml
 msgid "Power"
@@ -388,59 +394,59 @@ msgstr "電源"
 
 #: ../contents/ui/TileEditorView.qml ../contents/ui/TileItem.qml
 msgid "Edit Tile"
-msgstr "タイルを編集"
+msgstr "編輯方塊磚"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Reset Tile"
-msgstr "タイルをリセット"
+msgstr "重設方塊磚"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Close"
-msgstr "閉じる"
+msgstr "關閉"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Url"
-msgstr "URL"
+msgstr "網址"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Label"
-msgstr "ラベル"
+msgstr "標記"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Icon"
-msgstr "アイコン"
+msgstr "圖示"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Background Image"
-msgstr "背景画像"
+msgstr "背景影像"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Choose an image"
-msgstr "画像を選択"
+msgstr "選擇一個影像"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
-msgstr "画像ファイル (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+msgstr "影像檔 (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Preset Tiles"
-msgstr "タイルのプリセット"
+msgstr "方塊磚機制"
 
 #: ../contents/ui/TileEditorView.qml
 msgid "Position / Size"
-msgstr "位置 / 大きさ"
+msgstr "位置 / 大小"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Add Preset"
-msgstr "プリセットを追加"
+msgstr "新增機制"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Productivity"
-msgstr "生産性"
+msgstr "效率"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Explore"
-msgstr "探る"
+msgstr "探索"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Gmail"
@@ -448,47 +454,41 @@ msgstr "Gmail"
 
 #: ../contents/ui/TileGridPresets.qml
 msgid "Software Center"
-msgstr "ソフトウェアセンター"
+msgstr "軟體中心"
 
 #: ../contents/ui/TileGrid.qml
 msgid "New Group"
-msgstr "新しいグループ"
+msgstr "建立新群組"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Unlock Tiles"
-msgstr "タイルをロック解除"
+msgstr "解除鎖定方塊磚"
 
 #: ../contents/ui/TileGrid.qml
 msgid "Lock Tiles"
-msgstr "タイルをロック"
+msgstr "鎖定方塊磚"
 
 #: ../contents/ui/TileGrid.qml
 msgctxt "default group label"
 msgid "Group"
-msgstr "グループ"
+msgstr "群組"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Getting Started"
-msgstr "はじめに"
+msgstr "入門"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag apps onto the grid."
-msgstr "グリッドにアプリをドラッグしましょう。"
+msgstr "將應用程式拖曳到網格上。"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Drag folders from the file manager here."
-msgstr "ファイルマネージャからフォルダをここにドラッグしましょう。"
+msgstr "從檔案管理員拖曳資料夾到這裡。"
 
 #: ../contents/ui/TileGridSplash.qml
 msgid "Use Default Tile Layout"
-msgstr "デフォルトタイルレイアウトを使う"
+msgstr "使用預設方塊磚佈局"
 
 #: ../contents/ui/TileItem.qml
 msgid "Sort Tiles"
-msgstr "タイルをソート"
-
-#~ msgid "<b>Version:</b> %1"
-#~ msgstr "<b>バージョン<b> %1"
-
-#~ msgid "Desktop Theme (%1)"
-#~ msgstr "デスクトップテーマ (%1)"
+msgstr "排序方塊磚"

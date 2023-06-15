@@ -93,6 +93,8 @@ Rectangle {
 		horizontalAlignment: labelAlignment
 		verticalAlignment: Text.AlignBottom
 		width: parent.width
+		maximumLineCount : 2
+		elide: Text.ElideRight
 		// Already handled https://api.kde.org/frameworks/plasma-framework/html/qml_2Label_8qml_source.html renderType: Text.QtRendering // Fix pixelation when scaling. Plasma.Label uses NativeRendering.
 		// style: Text.Outline
 		// styleColor: appObj.backgroundGradient ? tileItemView.gradientBottomColor : appObj.backgroundColor

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-06-04 21:01-0400\n"
+"POT-Creation-Date: 2023-06-13 22:14+1200\n"
 "PO-Revision-Date: 2021-06-09 18:00+0300\n"
 "Last-Translator: Kimmo Kujansuu <mrkujansuu@gmail.com>\n"
 "Language-Team: \n"
@@ -93,6 +93,22 @@ msgstr "Laatan koko"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
 msgstr "Marginaali"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Icon Sizes"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Small"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Medium"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Large"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/TileEditorView.qml
 msgid "Background Color"

@@ -1,5 +1,5 @@
 # Translation of tiledmenu in LANGUAGE
-# Copyright (C) 2022
+# Copyright (C) 2023
 # This file is distributed under the same license as the tiledmenu package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-06-04 21:01-0400\n"
+"POT-Creation-Date: 2023-06-13 22:14+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,6 +91,22 @@ msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Icon Sizes"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Small"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Medium"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Large"
 msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/TileEditorView.qml

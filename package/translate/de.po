@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-06-04 21:01-0400\n"
+"POT-Creation-Date: 2023-06-13 22:14+1200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Ruman Gerst <rumangerst@gmail.com>\n"
 "Language-Team: German <LL@li.org>\n"
@@ -91,6 +91,22 @@ msgstr "Kachelgröße"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
 msgstr "Kachelabstand"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Icon Sizes"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Small"
+msgstr "Klein"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Medium"
+msgstr "Mittel"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Large"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/TileEditorView.qml
 msgid "Background Color"
@@ -514,12 +530,6 @@ msgstr "Sortiere Kacheln"
 
 #~ msgid "Size"
 #~ msgstr "Größe"
-
-#~ msgid "Small"
-#~ msgstr "Klein"
-
-#~ msgid "Medium"
-#~ msgstr "Mittel"
 
 #~ msgid "Settings"
 #~ msgstr "Einstellungen"

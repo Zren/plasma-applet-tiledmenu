@@ -10,7 +10,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-06-04 21:01-0400\n"
+"POT-Creation-Date: 2023-06-13 22:14+1200\n"
 "PO-Revision-Date: 2021-11-10 13:35+0100\n"
 "Last-Translator: Alan Paris <Alan90000@yahoo.com>\n"
 "Language-Team: fr\n"
@@ -95,6 +95,22 @@ msgstr "Taille des tuiles"
 #: ../contents/ui/config/ConfigGeneral.qml
 msgid "Tile Margin"
 msgstr "Marge des tuiles"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Icon Sizes"
+msgstr ""
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Small"
+msgstr "Petit"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Medium"
+msgstr "Moyen"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Large"
+msgstr ""
 
 #: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/TileEditorView.qml
 msgid "Background Color"
@@ -523,12 +539,6 @@ msgstr "Trier les Tuiles"
 
 #~ msgid "Size"
 #~ msgstr "Taille"
-
-#~ msgid "Small"
-#~ msgstr "Petit"
-
-#~ msgid "Medium"
-#~ msgstr "Moyen"
 
 #~ msgid "Settings"
 #~ msgstr "Configuration"

@@ -144,7 +144,7 @@ Item {
 		
 		// Recent Apps
 		Repeater {
-			model: rootModel.count >= 0 ? rootModel.modelForRow(0) : []
+			model: rootModel.count >= 0 ? rootModel.modelForRow(recentAppsIndex) : []
 			
 			Item {
 				Component.onCompleted: {
@@ -158,10 +158,10 @@ Item {
 
 		// All Apps
 		Repeater { // A-Z
-			model: rootModel.count >= 2 ? rootModel.modelForRow(1) : []
+			model: rootModel.count >= 2 ? rootModel.modelForRow(allAppsIndex) : []
 
 			Item {
-				property var parentModel: rootModel.modelForRow(1).modelForRow(index)
+				property var parentModel: rootModel.modelForRow(allAppsIndex).modelForRow(index)
 
 				Repeater { // Aaa ... Azz (Apps)
 					model: parentModel && parentModel.hasChildren ? parentModel : []
@@ -256,7 +256,7 @@ Item {
 			var recentAppList = [];
 
 			//--- populate
-			var model = rootModel.modelForRow(0)
+			var model = rootModel.modelForRow(recentAppsIndex)
 			if (model) {
 				parseModel(recentAppList, model)
 			} else {
@@ -311,6 +311,31 @@ Item {
 			}
 		}
 
+		readonly property int recentAppsIndex: 0
+		readonly property int recentDocsIndex: {
+			if (rootModel.showRecentDocs) {
+				if (rootModel.showRecentApps) {
+					return 1
+				} else {
+					return 0
+				}
+			} else {
+				return -1
+			}
+		}
+		readonly property int allAppsIndex: {
+			if (rootModel.showAllApps) {
+				if (rootModel.showRecentApps && rootModel.showRecentDocs) {
+					return 2
+				} else if (rootModel.showRecentApps || rootModel.showRecentDocs) {
+					return 1
+				} else {
+					return 0
+				}
+			} else {
+				return -1
+			}
+		}
 		property int categoryStartIndex: 2 // Skip Recent Apps, All Apps
 		property int categoryEndIndex: rootModel.count - 1 // Skip Power
 
@@ -346,7 +371,7 @@ Item {
 		function getAllApps() {
 			//--- populate list
 			var appList = [];
-			var model = rootModel.modelForRow(1)
+			var model = rootModel.modelForRow(allAppsIndex)
 			if (model) {
 				parseModel(appList, model)
 			} else {

@@ -156,6 +156,12 @@ Item {
 		resizeHeight.restart()
 	}
 
+	// Make popup resizeable like default Kickoff widget.
+	// The FullRepresentation must have an appletInterface property.
+	// https://invent.kde.org/plasma/plasma-desktop/-/commit/23c4e82cdcb6c7f251c27c6eefa643415c8c5927
+	// https://invent.kde.org/frameworks/plasma-framework/-/merge_requests/500/diffs
+	readonly property var appletInterface: Plasmoid.self
+
 	Timer {
 		id: resizeHeight
 		interval: 200

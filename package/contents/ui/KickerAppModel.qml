@@ -23,6 +23,7 @@ Kicker.FavoritesModel {
 		}
 	}
 
+	// https://invent.kde.org/plasma/plasma-workspace/-/blame/master/applets/kicker/plugin/actionlist.h#L18
 	// DescriptionRole        Qt.UserRole + 1
 	// GroupRole              Qt.UserRole + 2
 	// FavoriteIdRole         Qt.UserRole + 3
@@ -33,6 +34,9 @@ Kicker.FavoritesModel {
 	// HasActionListRole      Qt.UserRole + 8
 	// ActionListRole         Qt.UserRole + 9
 	// UrlRole                Qt.UserRole + 10
+	// DisabledRole           Qt.UserRole + 11        @since: Plasma 5.20
+	// IsMultilineTextRole    Qt.UserRole + 12        @since: Plasma 5.24
+	// DisplayWrappedRole     Qt.UserRole + 13        @since: Plasma 6.0
 	function getApp(url) {
 		for (var i = 0; i < count; i++) {
 			var modelIndex = kickerAppModel.index(i, 0)

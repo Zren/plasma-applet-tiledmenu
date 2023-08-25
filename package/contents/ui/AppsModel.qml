@@ -52,6 +52,34 @@ Item {
 		autoPopulate: false // (KDE 5.9+) defaulted to true
 		// paginate: false // (KDE 5.9+)
 
+		readonly property int recentAppsIndex: 0
+		readonly property int recentDocsIndex: {
+			if (rootModel.showRecentDocs) {
+				if (rootModel.showRecentApps) {
+					return 1
+				} else {
+					return 0
+				}
+			} else {
+				return -1
+			}
+		}
+		readonly property int allAppsIndex: {
+			if (rootModel.showAllApps) {
+				if (rootModel.showRecentApps && rootModel.showRecentDocs) {
+					return 2
+				} else if (rootModel.showRecentApps || rootModel.showRecentDocs) {
+					return 1
+				} else {
+					return 0
+				}
+			} else {
+				return -1
+			}
+		}
+		property int categoryStartIndex: 2 // Skip Recent Apps, All Apps
+		property int categoryEndIndex: rootModel.count - 1 // Skip Power
+
 		Component.onCompleted: {
 			if (!autoPopulate) {
 				rootModelRefresh.restart()
@@ -144,7 +172,7 @@ Item {
 		
 		// Recent Apps
 		Repeater {
-			model: rootModel.count >= 0 ? rootModel.modelForRow(recentAppsIndex) : []
+			model: rootModel.count >= 0 ? rootModel.modelForRow(rootModel.recentAppsIndex) : []
 			
 			Item {
 				Component.onCompleted: {
@@ -158,10 +186,10 @@ Item {
 
 		// All Apps
 		Repeater { // A-Z
-			model: rootModel.count >= 2 ? rootModel.modelForRow(allAppsIndex) : []
+			model: rootModel.count >= 2 ? rootModel.modelForRow(rootModel.allAppsIndex) : []
 
 			Item {
-				property var parentModel: rootModel.modelForRow(allAppsIndex).modelForRow(index)
+				property var parentModel: rootModel.modelForRow(rootModel.allAppsIndex).modelForRow(index)
 
 				Repeater { // Aaa ... Azz (Apps)
 					model: parentModel && parentModel.hasChildren ? parentModel : []
@@ -256,7 +284,7 @@ Item {
 			var recentAppList = [];
 
 			//--- populate
-			var model = rootModel.modelForRow(recentAppsIndex)
+			var model = rootModel.modelForRow(rootModel.recentAppsIndex)
 			if (model) {
 				parseModel(recentAppList, model)
 			} else {
@@ -311,34 +339,6 @@ Item {
 			}
 		}
 
-		readonly property int recentAppsIndex: 0
-		readonly property int recentDocsIndex: {
-			if (rootModel.showRecentDocs) {
-				if (rootModel.showRecentApps) {
-					return 1
-				} else {
-					return 0
-				}
-			} else {
-				return -1
-			}
-		}
-		readonly property int allAppsIndex: {
-			if (rootModel.showAllApps) {
-				if (rootModel.showRecentApps && rootModel.showRecentDocs) {
-					return 2
-				} else if (rootModel.showRecentApps || rootModel.showRecentDocs) {
-					return 1
-				} else {
-					return 0
-				}
-			} else {
-				return -1
-			}
-		}
-		property int categoryStartIndex: 2 // Skip Recent Apps, All Apps
-		property int categoryEndIndex: rootModel.count - 1 // Skip Power
-
 		function getCategory(rootIndex) {
 			var modelIndex = rootModel.index(rootIndex, 0)
 			var categoryLabel = rootModel.data(modelIndex, Qt.DisplayRole)
@@ -361,7 +361,7 @@ Item {
 		}
 		function getAllCategories() {
 			var appList = [];
-			for (var i = categoryStartIndex; i < categoryEndIndex; i++) { // Skip Recent Apps, All Apps, ... and Power
+			for (var i = rootModel.categoryStartIndex; i < rootModel.categoryEndIndex; i++) { // Skip Recent Apps, All Apps, ... and Power
 			// for (var i = 0; i < rootModel.count; i++) {
 				appList = appList.concat(getCategory(i))
 			}
@@ -371,7 +371,7 @@ Item {
 		function getAllApps() {
 			//--- populate list
 			var appList = [];
-			var model = rootModel.modelForRow(allAppsIndex)
+			var model = rootModel.modelForRow(rootModel.allAppsIndex)
 			if (model) {
 				parseModel(appList, model)
 			} else {

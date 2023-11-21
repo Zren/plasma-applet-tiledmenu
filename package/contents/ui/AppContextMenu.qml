@@ -84,8 +84,10 @@ Item {
 				}
 				menu.addMenuItem(menuItem)
 			}
-	
-			// // https://github.com/KDE/plasma-desktop/blob/master/applets/taskmanager/package/contents/ui/ContextMenu.qml#L75
+
+			// https://invent.kde.org/plasma/plasma-desktop/-/blob/Plasma/5.8/applets/taskmanager/package/contents/ui/ContextMenu.qml#L75
+			// https://invent.kde.org/plasma/plasma-desktop/-/blob/Plasma/5.27/applets/taskmanager/package/contents/ui/ContextMenu.qml#L75
+			// https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/package/contents/ui/ContextMenu.qml
 			function addActionList(actionList, listModel, index) {
 				// .desktop file Exec actions
 				// ------

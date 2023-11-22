@@ -60,7 +60,7 @@ QtObject {
 	}
 	property Connections tileGridConnection: Connections {
 		target: tileGrid
-		onTileModelChanged: {
+		function onTileModelChanged() {
 			if (appObj.isGroup) {
 				appObj.groupRectChanged()
 			}

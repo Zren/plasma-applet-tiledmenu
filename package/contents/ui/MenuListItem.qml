@@ -31,7 +31,7 @@ AppToolButton {
 	property var iconInstance: modelListPopulated && listView.model.list[index] ? listView.model.list[index].icon : ""
 	Connections {
 		target: listView.model
-		onRefreshed: {
+		function onRefreshed() {
 			// We need to manually trigger an update when we update the model without replacing the list.
 			// Otherwise the icon won't be in sync.
 			itemDelegate.iconInstance = listView.model.list[index] ? listView.model.list[index].icon : ""

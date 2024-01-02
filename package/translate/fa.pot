@@ -1,0 +1,488 @@
+# Translation of tiledmenu in Persian
+# Copyright (C) 2022
+# This file is distributed under the same license as the tiledmenu package.
+# FIRST AUTHOR <alirezarashidigoorabi@gmail.com>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: tiledmenu\n"
+"Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
+"POT-Creation-Date: 2024-01-02 15:00-0330\n"
+"PO-Revision-Date: 2024-01-02 15:00-0330\n"
+"Last-Translator: Alireza Rashidi <alirezarashidigoorabi@gmail.com>\n"
+"Language-Team: Persian\n"
+"Language: fa \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../metadata.desktop
+msgid "Tiled Menu"
+msgstr "منو طرح کاشی"
+
+#: ../metadata.desktop
+msgid "A menu based on Windows 10's Start Menu."
+msgstr "یک منو بر پایه ویندوز ۱۰"
+
+#: ../contents/config/config.qml
+msgid "General"
+msgstr "عمومی"
+
+#: ../contents/config/config.qml
+msgid "Import/Export Layout"
+msgstr "وارد/صادر کردن تنظیمات"
+
+#: ../contents/config/config.qml
+msgid "Advanced"
+msgstr "پیشرفته"
+
+#: ../contents/ui/AppContextMenu.qml
+msgid "Unpin from Menu"
+msgstr "برداشتن از منو"
+
+#: ../contents/ui/AppContextMenu.qml
+msgid "Pin to Menu"
+msgstr "پین کردن در منو"
+
+#: ../contents/ui/AppContextMenu.qml
+msgid "Pin to Taskbar"
+msgstr "پین کردن در نوار وظایف"
+
+#: ../contents/ui/AppsModel.qml
+msgid "Recent Apps"
+msgstr "برنامه های اخیر"
+
+#: ../contents/ui/AppsModel.qml
+msgid "Most Used"
+msgstr "بیشترین استفاده"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Popup"
+msgstr "بازشو"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Fullscreen"
+msgstr "تمام صفحه"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Grid Columns"
+msgstr "ستون ها"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "px"
+msgstr "px"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Panel Icon"
+msgstr "نماد صفحه"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Fixed Size"
+msgstr "اندازه ثابت"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Tiles"
+msgstr "کاشی ها"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Tile Size"
+msgstr "اندازه کاشی"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Tile Margin"
+msgstr "حاشیه کاشی"
+
+#: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/TileEditorView.qml
+msgid "Background Color"
+msgstr "رنگ پس‌زمینه"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Custom Color"
+msgstr "رنگ دلخواه"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Gradient"
+msgstr "طیف رنگی"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Transparent"
+msgstr "شفاف"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Text Alignment"
+msgstr "تراز متن"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Left"
+msgstr "چپ"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Center"
+msgstr "مرکز"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Right"
+msgstr "راست"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Group Text Alignment"
+msgstr "تراز گروهی متن"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Sidebar"
+msgstr "نوار کناری"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Width"
+msgstr "عرض"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Icon Size"
+msgstr "اندازه نماد"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Popup Button Height"
+msgstr "ارتفاع دکمه در پنجره بازشو"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Theme"
+msgstr "زمینه"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Sidebar Shortcuts"
+msgstr "میانبر های نوار کناری"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Add Default"
+msgstr "افزودن پیشفرض"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Search Box"
+msgstr "جعبه جستجو"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Hide Search Field"
+msgstr "مخفی سازی قسمت جستجو"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Search Field Height"
+msgstr "ارتفاع قسمت جستجو"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Search Box Theme"
+msgstr "زمینه قسمت جستجو"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Windows (White)"
+msgstr "ویندوز(روشن)"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "App List"
+msgstr "فهرست نرم‌افزار ها"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "App List Area Width"
+msgstr "عرض بخش فهرست نرم‌افزار ها"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Default View"
+msgstr "نمایش پیشفرض"
+
+#: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
+msgid "Alphabetical"
+msgstr "حروف الفبا"
+
+#: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
+msgid "Categories"
+msgstr "دسته‌بندی"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Jump To Letter"
+msgstr "پرش به حرف"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Jump To Category"
+msgstr "پرش به دسته‌بندی"
+
+#: ../contents/ui/config/ConfigGeneral.qml ../contents/ui/SidebarView.qml
+msgid "Tiles Only"
+msgstr "تنها کاشی ها"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "App Description"
+msgstr "توضیحات نرم‌افزار"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Hidden"
+msgstr "مخفی"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "After"
+msgstr "پس از"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Below"
+msgstr "پیش از"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "App History"
+msgstr "تاریخچه نرم‌افزار ها"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Show:"
+msgstr "نمایش:"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Recent applications"
+msgstr "نرم‌افزار های اخیر"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Often used applications"
+msgstr "نرم‌افزار های بیشتر استفاده شده"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Search Results"
+msgstr "نتایج جستجو"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Merged (Application Launcher)"
+msgstr "ترکیب شده(اجراکننده نرم‌افزار)"
+
+#: ../contents/ui/config/ConfigGeneral.qml
+msgid "Split into Categories (Application Menu / Dashboard)"
+msgstr "تقسیم بر اساس دسته‌بندی(اجراکننده نرم‌افزار/ پیشخوان)"
+
+#: ../contents/ui/config/ConfigurationShortcuts.qml
+msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
+msgstr "هنگامی که این ویجت دارای یک میانبر سیستمی، مانند 'Alt+F1' است ، پلاسما این منو را فقط با کلید ⊞ ویندوز / متا باز میکند."
+
+#: ../contents/ui/Main.qml
+msgid "System Info"
+msgstr "درباره سیستم"
+
+#: ../contents/ui/Main.qml
+msgid "Terminal"
+msgstr "ترمینال"
+
+#: ../contents/ui/Main.qml
+msgid "Task Manager"
+msgstr "مدیریت وظایف"
+
+#: ../contents/ui/Main.qml ../contents/ui/SearchFiltersView.qml
+msgid "System Settings"
+msgstr "تنظیمات سیستمی"
+
+#: ../contents/ui/Main.qml
+msgid "File Manager"
+msgstr "مدیریت رسانه"
+
+#: ../contents/ui/Main.qml
+msgid "Edit Applications..."
+msgstr "ویرایش نرم‌افزار"
+
+#: ../contents/ui/Popup.qml
+msgid "Resize?"
+msgstr "تغییر اندازه؟"
+
+#: ../contents/ui/Popup.qml ../contents/ui/TileGridSplash.qml
+msgid "Meta + Right Click to resize the menu."
+msgstr "متا + راست کلیک برای تغییر اندازه منو"
+
+#: ../contents/ui/SearchField.qml
+msgid "Search"
+msgstr "جستجو"
+
+#: ../contents/ui/SearchField.qml
+msgid "Search Apps"
+msgstr "جستجو نرم‌افزار ها"
+
+#: ../contents/ui/SearchField.qml
+msgid "Search Files"
+msgstr "جستجو رسانه ها"
+
+#: ../contents/ui/SearchField.qml
+msgid "Search Bookmarks"
+msgstr "جستجو نشان شده ها"
+
+#: ../contents/ui/SearchField.qml
+msgctxt "Search [krunnerName, krunnerName, ...], "
+msgid "Search %1"
+msgstr "جستجو %1"
+
+#: ../contents/ui/SearchFiltersViewItem.qml ../contents/ui/SearchFiltersView.qml
+msgid "Default"
+msgstr "پیش‌فرض"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "All"
+msgstr "همه"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Search with all KRunner plugins"
+msgstr "جستجو با تمام افزونه های KRunner"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Search with user selected defaults"
+msgstr "جستجو با پیشفرض های این کاربر"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Applications"
+msgstr "نرم‌افزار ها"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Files"
+msgstr "رسانه ها"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Music"
+msgstr "موسیقی"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Videos"
+msgstr "ویدیو ها"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Bookmarks"
+msgstr "نشان شده ها"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Locations"
+msgstr "موقعیت ها"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Dictionary"
+msgstr "فرهنگ لغت"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Shell"
+msgstr "خط فرمان"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Calculator"
+msgstr "ماشین حساب"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Windowed Widgets"
+msgstr "ابزارک های پنجره ای شده"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Date/Time"
+msgstr "تاریخ/زمان"
+
+#: ../contents/ui/SearchFiltersView.qml
+msgid "Unit Converter"
+msgstr "مبدل واحد"
+
+#: ../contents/ui/SearchResultsView.qml
+msgid "Filters"
+msgstr "فیلتر ها"
+
+#: ../contents/ui/SidebarView.qml
+msgid "User Manager"
+msgstr "مدیریت کاربر"
+
+#: ../contents/ui/SidebarView.qml
+msgid "Power"
+msgstr "نیرو"
+
+#: ../contents/ui/TileEditorView.qml ../contents/ui/TileItem.qml
+msgid "Edit Tile"
+msgstr "ویرایش کاشی"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Reset Tile"
+msgstr "بازنشانی کاشی"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Close"
+msgstr "بستن"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Url"
+msgstr "نشانی"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Label"
+msgstr "برچسب"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Icon"
+msgstr "نماد"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Background Image"
+msgstr "تصویر پس‌زمینه"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Choose an image"
+msgstr "انتخاب یک تصویر"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+msgstr "تصاویر (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Preset Tiles"
+msgstr "کاشی های از پیش تعیین شده"
+
+#: ../contents/ui/TileEditorView.qml
+msgid "Position / Size"
+msgstr "موقعیت / اندازه"
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Add Preset"
+msgstr "افزودن به از پیش تعیین شده ها"
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Productivity"
+msgstr "بهره‌وری"
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Explore"
+msgstr "کاوش"
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Gmail"
+msgstr "Gmail"
+
+#: ../contents/ui/TileGridPresets.qml
+msgid "Software Center"
+msgstr "مرکز نرم‌افزار"
+
+#: ../contents/ui/TileGrid.qml
+msgid "New Group"
+msgstr "گروه جدید"
+
+#: ../contents/ui/TileGrid.qml
+msgid "Unlock Tiles"
+msgstr "قفل‌گشایی کاشی ها"
+
+#: ../contents/ui/TileGrid.qml
+msgid "Lock Tiles"
+msgstr "قفل کردن کاشی ها"
+
+#: ../contents/ui/TileGrid.qml
+msgctxt "default group label"
+msgid "Group"
+msgstr "گروه"
+
+#: ../contents/ui/TileGridSplash.qml
+msgid "Getting Started"
+msgstr "شروع به کار"
+
+#: ../contents/ui/TileGridSplash.qml
+msgid "Drag apps onto the grid."
+msgstr "نرم‌افزار ها را به شبکه شطرنجی بکشید."
+
+#: ../contents/ui/TileGridSplash.qml
+msgid "Drag folders from the file manager here."
+msgstr "پوشه ها را از مدیریت فایل به اینجا بکشید."
+
+#: ../contents/ui/TileGridSplash.qml
+msgid "Use Default Tile Layout"
+msgstr "استفاده از کاشی های پیشفرض"
+
+#: ../contents/ui/TileItem.qml
+msgid "Sort Tiles"
+msgstr "مرتب‌سازی کاشی ها"

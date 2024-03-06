@@ -17,7 +17,7 @@ Item {
 
 	Connections {
 		target: search
-		onIsSearchingChanged: {
+		function onIsSearchingChanged() {
 			if (search.isSearching) {
 				searchView.showSearchView()
 			}
@@ -104,7 +104,7 @@ Item {
 
 			Connections {
 				target: search
-				onQueryChanged: {
+				function onQueryChanged() {
 					if (search.query.length > 0 && stackView.currentItem != searchResultsView) {
 						stackView.push(searchResultsView, true)
 					}

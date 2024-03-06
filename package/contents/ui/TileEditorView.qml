@@ -165,7 +165,7 @@ ColumnLayout {
 	Connections {
 		target: stackView
 
-		onCurrentItemChanged: {
+		function onCurrentItemChanged() {
 			if (stackView.currentItem != tileEditorView) {
 				tileEditorView.resetView()
 			}
@@ -176,7 +176,7 @@ ColumnLayout {
 	Connections {
 		target: config.tileModel
 
-		onLoaded: {
+		function onLoaded() {
 			// Base64JsonString.save() will create a new JavaScript array [],
 			// and our current tile {} reference will be incorrect, which breaks the tile editor.
 			// We could keep a reference to the tile's index in the array, and make sure

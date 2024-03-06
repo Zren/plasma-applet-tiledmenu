@@ -26,13 +26,13 @@ ListView {
 	// currentIndex: 0
 	// Connections {
 	// 	target: appsModel.allAppsModel
-	// 	onRefreshing: {
+	// 	function onRefreshing() {
 	// 		console.log('appsList.onRefreshing')
 	// 		appsList.model = []
 	// 		// console.log('search.results.onRefreshed')
 	// 		appsList.currentIndex = 0
 	// 	}
-	// 	onRefreshed: {
+	// 	function onRefreshed() {
 	// 		console.log('appsList.onRefreshed')
 	// 		// appsList.model = appsModel.allAppsList
 	// 		appsList.model = appsModel.allAppsList

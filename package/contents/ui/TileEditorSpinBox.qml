@@ -20,7 +20,7 @@ PlasmaComponents3.SpinBox {
 	Connections {
 		target: appObj
 
-		onTileChanged: {
+		function onTileChanged() {
 			if (key && tile) {
 				spinBox.updateOnChange = false
 				spinBox.value = appObj.tile[key] || 0

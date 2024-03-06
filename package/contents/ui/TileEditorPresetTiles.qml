@@ -124,7 +124,7 @@ TileEditorGroupBox {
 	Connections {
 		target: appObj
 
-		onAppUrlChanged: {
+		function onAppUrlChanged() {
 			logger.debug('onAppUrlChanged', appObj.appUrl)
 			tileEditorPresetTiles.checkIfRecognizedLauncher()
 		}

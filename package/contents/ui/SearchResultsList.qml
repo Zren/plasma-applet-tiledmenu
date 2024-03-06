@@ -21,12 +21,12 @@ KickerListView { // RunnerResultsList
 
 	Connections {
 		target: search.results
-		onRefreshing: {
+		function onRefreshing() {
 			searchResultsList.model = []
 			// console.log('search.results.onRefreshed')
 			searchResultsList.currentIndex = 0
 		}
-		onRefreshed: {
+		function onRefreshed() {
 			// console.log('search.results.onRefreshed')
 			searchResultsList.model = search.results
 			// if (searchResultsList.verticalLayoutDirection == Qt.BottomToTop) {

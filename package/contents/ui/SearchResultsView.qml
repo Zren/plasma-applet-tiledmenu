@@ -100,7 +100,7 @@ GridLayout {
 
 		Connections {
 			target: searchResultsView
-			onFilterViewOpenChanged: {
+			function onFilterViewOpenChanged() {
 				if (searchResultsView.filterViewOpen) {
 					searchResultsViewStackView.push(searchFiltersViewScrollView)
 				} else {

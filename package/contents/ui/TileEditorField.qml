@@ -28,7 +28,7 @@ TileEditorGroupBox {
 	Connections {
 		target: appObj
 
-		onTileChanged: {
+		function onTileChanged() {
 			if (checkedKey && tile) {
 				tileEditorField.updateOnChange = false
 				tileEditorField.checked = typeof appObj.tile[checkedKey] !== "undefined" ? appObj.tile[checkedKey] : checkedDefault
@@ -58,7 +58,7 @@ TileEditorGroupBox {
 			Connections {
 				target: appObj
 
-				onTileChanged: {
+				function onTileChanged() {
 					if (key && tile) {
 						textField.updateOnChange = false
 						textField.text = appObj.tile[key] || ''

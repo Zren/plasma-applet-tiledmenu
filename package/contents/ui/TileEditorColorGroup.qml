@@ -33,7 +33,7 @@ TileEditorGroupBox {
 	Connections {
 		target: appObj
 
-		onTileChanged: {
+		function onTileChanged() {
 			if (key && tile) {
 				colorField.updateOnChange = false
 				colorField.text = appObj.tile[key] || ''

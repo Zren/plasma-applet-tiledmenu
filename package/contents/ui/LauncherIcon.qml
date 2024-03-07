@@ -19,7 +19,7 @@ MouseArea {
 		case PlasmaCore.Types.Horizontal:
 			return height
 		default:
-			return PlasmaCore.Units.gridUnit * 3
+			return Kirigami.Units.gridUnit * 3
 		}
 	}
 
@@ -30,7 +30,7 @@ MouseArea {
 		case PlasmaCore.Types.Horizontal:
 			return 0
 		default:
-			return PlasmaCore.Units.gridUnit * 3
+			return Kirigami.Units.gridUnit * 3
 		}
 	}
 

@@ -2,7 +2,7 @@ import QtQuick 2.0
 import QtQuick.Controls 1.1
 import QtQuick.Controls.Styles 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras as PlasmaExtras
 import "Utils.js" as Utils
 
 DropArea {
@@ -492,12 +492,12 @@ DropArea {
 					}
 				}
 			}
-			PlasmaComponents.ContextMenu {
+			PlasmaExtras.Menu {
 				id: cellContextMenu
 				property int cellX: -1
 				property int cellY: -1
 
-				PlasmaComponents.MenuItem {
+				PlasmaExtras.MenuItem {
 					icon: "group-new"
 					text: i18n("New Group")
 					visible: !plasmoid.configuration.tilesLocked
@@ -512,7 +512,7 @@ DropArea {
 					visible: !plasmoid.configuration.tilesLocked
 				}
 
-				PlasmaComponents.MenuItem {
+				PlasmaExtras.MenuItem {
 					icon: plasmoid.configuration.tilesLocked ? "object-unlocked" : "object-locked"
 					text: plasmoid.configuration.tilesLocked ? i18n("Unlock Tiles") : i18n("Lock Tiles")
 					onClicked: {

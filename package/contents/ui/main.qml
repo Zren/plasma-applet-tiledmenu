@@ -9,7 +9,7 @@ import org.kde.coreaddons 1.0 as KCoreAddons
 
 import "lib"
 
-Item {
+PlasmoidItem {
 	id: widget
 
 	Logger {
@@ -111,15 +111,15 @@ Item {
 		}
 	}
 
-	Plasmoid.toolTipMainText: ""
-	Plasmoid.toolTipSubText: ""
+	toolTipMainText: ""
+	toolTipSubText: ""
 
-	Plasmoid.compactRepresentation: LauncherIcon {
+	compactRepresentation: LauncherIcon {
 		id: panelItem
 		iconSource: plasmoid.configuration.icon || "start-here-kde"
 	}
 
-	Plasmoid.hideOnWindowDeactivate: !plasmoid.userConfiguring
+	hideOnWindowDeactivate: !plasmoid.userConfiguring
 	property bool expanded: plasmoid.expanded
 	onExpandedChanged: {
 		if (expanded) {

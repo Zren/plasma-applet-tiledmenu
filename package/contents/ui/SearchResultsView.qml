@@ -55,7 +55,8 @@ GridLayout {
 			id: moreFiltersButton
 			Layout.preferredHeight: parent.Layout.preferredHeight
 			Layout.preferredWidth: moreFiltersButtonRow.implicitWidth + padding*2
-			property int padding: (config.searchFilterRowHeight - config.flatButtonIconSize) / 2
+			// property int padding: (config.searchFilterRowHeight - config.flatButtonIconSize) / 2
+			padding: (config.searchFilterRowHeight - config.flatButtonIconSize) / 2
 			// enabled: false
 
 			RowLayout {

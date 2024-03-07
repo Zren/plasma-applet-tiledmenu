@@ -1,6 +1,7 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
+import org.kde.kirigami 2.20 as Kirigami
 
 Rectangle {
 	id: tileItemView
@@ -16,10 +17,10 @@ Rectangle {
 	}
 	gradient: appObj.backgroundGradient ? tileGradient.createObject(tileItemView) : null
 
-	readonly property int tilePadding: 4 * PlasmaCore.Units.devicePixelRatio
-	readonly property int smallIconSize: 32 * PlasmaCore.Units.devicePixelRatio
-	readonly property int mediumIconSize: 72 * PlasmaCore.Units.devicePixelRatio
-	readonly property int largeIconSize: 96 * PlasmaCore.Units.devicePixelRatio
+	readonly property int tilePadding: 4 * Screen.devicePixelRatio
+	readonly property int smallIconSize: 32 * Screen.devicePixelRatio
+	readonly property int mediumIconSize: 72 * Screen.devicePixelRatio
+	readonly property int largeIconSize: 96 * Screen.devicePixelRatio
 
 	readonly property int labelAlignment: appObj.isGroup ? config.groupLabelAlignment : config.tileLabelAlignment
 
@@ -64,7 +65,7 @@ Rectangle {
 		asynchronous: true
 	}
 
-	PlasmaCore.IconItem {
+	Kirigami.Icon {
 		id: icon
 		visible: appObj.showIcon
 		source: appObj.iconSource

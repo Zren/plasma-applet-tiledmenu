@@ -132,7 +132,7 @@ Item {
 		sourceComponent: Rectangle {
 			id: groupOutline
 			color: "transparent"
-			border.width: Math.max(1, Math.round(1 * PlasmaCore.Units.devicePixelRatio))
+			border.width: Math.max(1, Math.round(1 * Screen.devicePixelRatio))
 			border.color: "#80ffffff"
 			y: modelData.h * cellBoxSize
 			z: 100

@@ -124,7 +124,7 @@ PlasmaComponents3.TextField {
 			id: previewBgMask
 			visible: false
 			anchors.fill: parent
-			border.width: 1 * PlasmaCore.Units.devicePixelRatio
+			border.width: 1 * Screen.devicePixelRatio
 			// border.width: 1 * Kirigami.Units.devicePixelRatio
 			border.color: "transparent"
 			radius: width / 2
@@ -150,7 +150,7 @@ PlasmaComponents3.TextField {
 			id: previewFill
 			anchors.fill: parent
 			color: colorField.valueColor
-			border.width: 1 * PlasmaCore.Units.devicePixelRatio
+			border.width: 1 * Screen.devicePixelRatio
 			border.color: lerpColor(color, PlasmaCore.Theme.textColor, 0.5)
 			// border.width: 1 * Kirigami.Units.devicePixelRatio
 			// border.color: lerpColor(color, Kirigami.Theme.textColor, 0.5)

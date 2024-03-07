@@ -2,7 +2,7 @@ import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
 
 Item {
-	property int dropShadowSize: 4 * PlasmaCore.Units.devicePixelRatio
+	property int dropShadowSize: 4 * Screen.devicePixelRatio
 	property int roundShadowHack: dropShadowSize/2 // "dropShadowSize/2" draws enough to fool the eye.
 	Rectangle {
 		id: topShadow

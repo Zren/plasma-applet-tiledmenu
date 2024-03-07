@@ -6,7 +6,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 // import org.kde.plasma.components 2.0 as PlasmaComponents
 import org.kde.draganddrop 2.0 as DragAndDrop
-import org.kde.kquickcontrolsaddons 2.0 // KCMShell
+import org.kde.kcmutils as KCM // KCMLauncher
 import "Utils.js" as Utils
 
 Item {
@@ -95,14 +95,14 @@ Item {
 						text: i18n("User Manager")
 						buttonHeight: config.sidebarPopupButtonSize
 						onClicked: {
-							KCMShell.open([
+							KCM.KCMLauncher.open([
 								'user_manager', // Plasma 5.19
 								'kcm_users' // Plasma 5.20
 							])
 						}
 						// An uninstalled KCM like 'user_manager.desktop' in Plasma 5.20 is returned
 						// in the output list, so we need to check if user has permission for both.
-						visible: KCMShell.authorize(['user_manager.desktop', 'kcm_users.desktop']).length == 2
+						visible: KCM.KCMLauncher.authorize(['user_manager.desktop', 'kcm_users.desktop']).length == 2
 					}
 
 					SidebarItemRepeater {

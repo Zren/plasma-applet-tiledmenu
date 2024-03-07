@@ -1,7 +1,7 @@
 import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents2 // Highlight
+import org.kde.plasma.extras as PlasmaExtras
 
 ListView {
 	id: listView
@@ -15,7 +15,7 @@ ListView {
 
 	property bool showItemUrl: true
 	property bool showDesktopFileUrl: false
-	property int iconSize: 36 * PlasmaCore.Units.devicePixelRatio
+	property int iconSize: 36 * Screen.devicePixelRatio
 
 	section.delegate: KickerSectionHeader {}
 
@@ -41,7 +41,7 @@ ListView {
 	// 	}
 	// }
 
-	highlight: PlasmaComponents2.Highlight {
+	highlight: PlasmaExtras.Highlight {
 		visible: listView.currentItem && !listView.currentItem.isSeparator
 	}
 

@@ -3,6 +3,7 @@ import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.draganddrop 2.0 as DragAndDrop
+import org.kde.kirigami 2.20 as Kirigami
 
 AppToolButton {
 	id: itemDelegate
@@ -93,16 +94,16 @@ AppToolButton {
 	RowLayout { // ItemListDelegate
 		id: row
 		anchors.left: parent.left
-		anchors.leftMargin: PlasmaCore.Units.smallSpacing
+		anchors.leftMargin: Kirigami.Units.smallSpacing
 		anchors.right: parent.right
-		anchors.rightMargin: PlasmaCore.Units.smallSpacing
+		anchors.rightMargin: Kirigami.Units.smallSpacing
 
 		Item {
 			Layout.fillHeight: true
 			implicitHeight: itemIcon.implicitHeight
 			implicitWidth: itemIcon.implicitWidth
 
-			PlasmaCore.IconItem {
+			Kirigami.Icon {
 				id: itemIcon
 				anchors.centerIn: parent
 				implicitHeight: itemDelegate.iconSize

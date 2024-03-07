@@ -2,6 +2,7 @@ import QtQuick 2.0
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.draganddrop 2.0 as DragAndDrop
+import org.kde.kirigami 2.20 as Kirigami
 
 MouseArea {
 	id: launcherIcon
@@ -52,7 +53,7 @@ MouseArea {
 	property int iconSize: Math.min(width, height)
 	property alias iconSource: icon.source
 
-	PlasmaCore.IconItem {
+	Kirigami.Icon {
 		id: icon
 		anchors.centerIn: parent
 		source: "start-here-kde"

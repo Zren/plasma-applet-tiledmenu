@@ -70,12 +70,12 @@ Item {
 				checked: searchView.showingAppsCategorically
 			}
 			// SidebarItem {
-			// 	iconName: 'system-search-symbolic'
+			// 	icon.name: 'system-search-symbolic'
 			// 	text: i18n("Search")
 			// 	onClicked: searchResultsView.showDefaultSearch()
 			// 	// checked: stackView.currentItem == searchResultsView
 			// 	// checkedEdge: Qt.RightEdge
-			// 	// checkedEdgeWidth: 4 * PlasmaCore.Units.devicePixelRatio // Twice as thick as normal
+			// 	// checkedEdgeWidth: 4 * Screen.devicePixelRatio // Twice as thick as normal
 			// }
 		}
 		ColumnLayout {
@@ -83,7 +83,7 @@ Item {
 			spacing: 0
 
 			SidebarItem {
-				iconName: kuser.hasFaceIcon ? kuser.faceIconUrl : 'user-identity'
+				icon.name: kuser.hasFaceIcon ? kuser.faceIconUrl : 'user-identity'
 				text: kuser.fullName
 				submenu: userMenu
 
@@ -91,7 +91,7 @@ Item {
 					id: userMenu
 
 					SidebarItem {
-						iconName: 'system-users'
+						icon.name: 'system-users'
 						text: i18n("User Manager")
 						buttonHeight: config.sidebarPopupButtonSize
 						onClicked: {
@@ -118,7 +118,7 @@ Item {
 			}
 
 			SidebarItem {
-				iconName: 'system-shutdown-symbolic'
+				icon.name: 'system-shutdown-symbolic'
 				text: i18n("Power")
 				submenu: powerMenu
 

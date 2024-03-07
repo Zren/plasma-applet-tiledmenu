@@ -17,7 +17,7 @@ GridLayout {
 		Layout.fillWidth: true
 
 		FlatButton {
-			iconName: "system-search-symbolic"
+			icon.name: "system-search-symbolic"
 			Layout.preferredHeight: parent.Layout.preferredHeight
 			Layout.preferredWidth: parent.Layout.preferredHeight
 			onClicked: search.applyDefaultFilters()
@@ -25,7 +25,7 @@ GridLayout {
 			checkedEdge: searchView.searchOnTop ?  Qt.TopEdge : Qt.BottomEdge
 		}
 		FlatButton {
-			iconName: "window"
+			icon.name: "window"
 			Layout.preferredHeight: parent.Layout.preferredHeight
 			Layout.preferredWidth: parent.Layout.preferredHeight
 			onClicked: search.filters = ['services']
@@ -33,7 +33,7 @@ GridLayout {
 			checkedEdge: searchView.searchOnTop ?  Qt.TopEdge : Qt.BottomEdge
 		}
 		FlatButton {
-			iconName: "document-new"
+			icon.name: "document-new"
 			Layout.preferredHeight: parent.Layout.preferredHeight
 			Layout.preferredWidth: parent.Layout.preferredHeight
 			onClicked: search.filters = ['baloosearch']
@@ -41,7 +41,7 @@ GridLayout {
 			checkedEdge: searchView.searchOnTop ?  Qt.TopEdge : Qt.BottomEdge
 		}
 		// FlatButton {
-		// 	iconName: "globe"
+		// 	icon.name: "globe"
 		// 	Layout.preferredHeight: parent.Layout.preferredHeight
 		// 	Layout.preferredWidth: parent.Layout.preferredHeight
 		// 	onClicked: search.filters = ['bookmarks']

@@ -1,10 +1,15 @@
 import QtQuick 2.0
-import QtGraphicalEffects 1.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+
+
+// https://doc.qt.io/qt-5/graphicaleffects.html
+// https://doc.qt.io/qt-6/qtgraphicaleffects5-index.html
+// import QtGraphicalEffects 1.0 // TODO Deprecated in Qt6
+import Qt5Compat.GraphicalEffects as QtGraphicalEffects
 
 Item {
 	id: hoverOutlineEffect
-	property int hoverOutlineSize: 1 * PlasmaCore.Units.devicePixelRatio
+	property int hoverOutlineSize: 1 * Screen.devicePixelRatio
 	property int hoverRadius: 40
 	property int pressedRadius: hoverRadius
 	property bool useOutlineMask: true
@@ -55,7 +60,7 @@ Item {
 		}
 	}
 
-	RadialGradient {
+	QtGraphicalEffects.RadialGradient {
 		id: hoverOutlineMask
 		visible: false
 		anchors.fill: parent
@@ -69,7 +74,7 @@ Item {
 		}
 	}
 
-	OpacityMask {
+	QtGraphicalEffects.OpacityMask {
 		anchors.fill: parent
 		visible: hoverOutlineEffect.useOutlineMask
 		source: hoverOutline

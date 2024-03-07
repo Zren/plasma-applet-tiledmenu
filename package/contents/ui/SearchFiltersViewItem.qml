@@ -5,6 +5,7 @@ import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.ksvg as KSvg
 
 import QtQuick.Controls.Styles 1.1 as QtQuickControlStyle
 import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
@@ -26,7 +27,7 @@ RowLayout {
 
 	signal applyButtonClicked()
 
-	property var surfaceNormal: PlasmaCore.FrameSvgItem {
+	property var surfaceNormal: KSvg.FrameSvgItem {
 		anchors.fill: parent
 		imagePath: "widgets/button"
 		prefix: "normal"

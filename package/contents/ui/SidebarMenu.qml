@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg as KSvg
 
 MouseArea {
 	id: sidebarMenu
@@ -30,7 +31,7 @@ MouseArea {
 		color: PlasmaCore.Theme.backgroundColor
 		opacity: parent.open ? 1 : 0
 	}
-	PlasmaCore.FrameSvgItem {
+	KSvg.FrameSvgItem {
 		anchors.fill: parent
 		visible: plasmoid.configuration.sidebarFollowsTheme
 		imagePath: "widgets/frame"

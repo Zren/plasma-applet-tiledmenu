@@ -1,5 +1,6 @@
 import QtQuick 2.0
 import org.kde.plasma.core 2.0 as PlasmaCore
+import org.kde.ksvg as KSvg
 
 SidebarItem {
 	id: control
@@ -11,12 +12,12 @@ SidebarItem {
 	readonly property string appletIconFilename: appletIconName ? plasmoid.file("", "icons/" + internalIconName + ".svg") : ""
 
 	checkedEdge: Qt.LeftEdge
-	checkedEdgeWidth: 4 * PlasmaCore.Units.devicePixelRatio // Twice as thick as normal
+	checkedEdgeWidth: 4 * Screen.devicePixelRatio // Twice as thick as normal
 
-	PlasmaCore.SvgItem {
+	KSvg.SvgItem {
 		id: icon
 
-		svg: PlasmaCore.Svg {
+		svg: KSvg.Svg {
 			imagePath: control.appletIconFilename
 		}
 

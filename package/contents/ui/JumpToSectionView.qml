@@ -1,5 +1,4 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
 import QtQuick.Layouts 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 
@@ -27,9 +26,9 @@ GridView {
 
 	property int buttonSize: {
 		if (squareView) {
-			return 70 * PlasmaCore.Units.devicePixelRatio
+			return 70 * Screen.devicePixelRatio
 		} else {
-			return 36 * PlasmaCore.Units.devicePixelRatio
+			return 36 * Screen.devicePixelRatio
 		}
 	}
 

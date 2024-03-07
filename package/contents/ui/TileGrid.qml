@@ -1,6 +1,7 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
+// import QtQuick.Controls 1.1
+import QtQuick.Controls 2.0 as QQC2
+// import QtQuick.Controls.Styles 1.1
 import org.kde.plasma.core 2.0 as PlasmaCore
 import org.kde.plasma.extras as PlasmaExtras
 import "Utils.js" as Utils
@@ -8,11 +9,11 @@ import "Utils.js" as Utils
 DropArea {
 	id: tileGrid
 
-	property int cellSize: 60 * PlasmaCore.Units.devicePixelRatio
-	property real cellMargin: 3 * PlasmaCore.Units.devicePixelRatio
-	property real cellPushedMargin: 6 * PlasmaCore.Units.devicePixelRatio
+	property int cellSize: 60 * Screen.devicePixelRatio
+	property real cellMargin: 3 * Screen.devicePixelRatio
+	property real cellPushedMargin: 6 * Screen.devicePixelRatio
 	property int cellBoxSize: cellMargin + cellSize + cellMargin
-	property int hoverOutlineSize: 2 * PlasmaCore.Units.devicePixelRatio
+	property int hoverOutlineSize: 2 * Screen.devicePixelRatio
 
 	property int minColumns: Math.floor(width / cellBoxSize)
 	property int minRows: Math.floor(height / cellBoxSize)
@@ -388,7 +389,7 @@ DropArea {
 		tileGrid.tileModelChanged()
 	}
 
-	ScrollView {
+	QQC2.ScrollView {
 		id: scrollView
 		anchors.fill: parent
 
@@ -405,10 +406,10 @@ DropArea {
 			}
 		}
 
-		__wheelAreaScrollSpeed: cellBoxSize
-		style: ScrollViewStyle {
-			transientScrollBars: true
-		}
+		// __wheelAreaScrollSpeed: cellBoxSize
+		// style: ScrollViewStyle {
+		// 	transientScrollBars: true
+		// }
 		
 		Item {
 			id: scrollItem

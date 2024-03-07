@@ -1,14 +1,12 @@
 import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
 import QtQuick.Layouts 1.1
 import QtQuick.Window 2.1
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.ksvg as KSvg
 
-import QtQuick.Controls.Styles 1.1 as QtQuickControlStyle
-import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
+// import QtQuick.Controls.Styles 1.1 as QtQuickControlStyle
+// import QtQuick.Controls.Styles.Plasma 2.0 as PlasmaStyles
 
 RowLayout {
 	id: searchFiltersViewItem
@@ -18,7 +16,7 @@ RowLayout {
 	property string runnerId: ''
 	property int indentLevel: 0
 
-	property alias iconSource: applyFilterButton.iconSource
+	property alias iconSource: applyFilterButton.icon.source
 	property alias text: applyFilterButton.text
 	property alias subText: applyFilterButton.subText
 
@@ -40,45 +38,45 @@ RowLayout {
 		Layout.fillHeight: true
 	}
 
-	PlasmaComponents.ToolButton {
+	PlasmaComponents3.ToolButton {
 		id: applyFilterButton
 		Layout.fillWidth: true
 		property string subText: ""
 
-		style: PlasmaStyles.ToolButtonStyle {
-			id: style
-			readonly property bool smallIcon: !control.subText
+		// style: PlasmaStyles.ToolButtonStyle {
+		// 	id: style
+		// 	readonly property bool smallIcon: !control.subText
 
-			label: RowLayout {
-				PlasmaCore.IconItem {
-					source: control.iconSource
-					Layout.preferredHeight: style.smallIcon ? config.flatButtonIconSize : -1
-					Layout.preferredWidth: style.smallIcon ? config.flatButtonIconSize : -1
-				}
-				ColumnLayout {
-					id: textColumn
-					Layout.fillWidth: true
-					Layout.fillHeight: true
-					spacing: 0
-					PlasmaComponents.Label {
-						Layout.fillWidth: true
-						text: control.text
-						horizontalAlignment: Text.AlignLeft
-						maximumLineCount: 1
-						elide: Text.ElideRight
-					}
-					PlasmaComponents.Label {
-						Layout.fillWidth: true
-						text: control.subText
-						horizontalAlignment: Text.AlignLeft
-						visible: control.subText
-						color: config.menuItemTextColor2
-						maximumLineCount: 1
-						elide: Text.ElideRight
-					}
-				}
-			}
-		}
+		// 	label: RowLayout {
+		// 		PlasmaCore.IconItem {
+		// 			source: control.iconSource
+		// 			Layout.preferredHeight: style.smallIcon ? config.flatButtonIconSize : -1
+		// 			Layout.preferredWidth: style.smallIcon ? config.flatButtonIconSize : -1
+		// 		}
+		// 		ColumnLayout {
+		// 			id: textColumn
+		// 			Layout.fillWidth: true
+		// 			Layout.fillHeight: true
+		// 			spacing: 0
+		// 			PlasmaComponents3.Label {
+		// 				Layout.fillWidth: true
+		// 				text: control.text
+		// 				horizontalAlignment: Text.AlignLeft
+		// 				maximumLineCount: 1
+		// 				elide: Text.ElideRight
+		// 			}
+		// 			PlasmaComponents3.Label {
+		// 				Layout.fillWidth: true
+		// 				text: control.subText
+		// 				horizontalAlignment: Text.AlignLeft
+		// 				visible: control.subText
+		// 				color: config.menuItemTextColor2
+		// 				maximumLineCount: 1
+		// 				elide: Text.ElideRight
+		// 			}
+		// 		}
+		// 	}
+		// }
 		onClicked: {
 			if (searchFiltersViewItem.runnerId) {
 				search.filters = [searchFiltersViewItem.runnerId]
@@ -88,7 +86,7 @@ RowLayout {
 		}
 	}
 
-	PlasmaComponents.CheckBox {
+	PlasmaComponents3.CheckBox {
 		id: isDefaultFilter
 		checked: search.defaultFiltersContains(searchFiltersViewItem.runnerId)
 		onCheckedChanged: {

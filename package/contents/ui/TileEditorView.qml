@@ -4,7 +4,7 @@ import QtQuick.Dialogs 1.0 as QtDialogs
 
 import org.kde.plasma.components 3.0 as PlasmaComponents3
 import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.iconthemes as KIconThemes // IconDialog
 
 ColumnLayout {
 	id: tileEditorView
@@ -88,7 +88,7 @@ ColumnLayout {
 					icon.name: "document-open"
 					onClicked: iconDialog.open()
 
-					KQuickAddons.IconDialog {
+					KIconThemes.IconDialog {
 						id: iconDialog
 						onIconNameChanged: iconField.text = iconName
 					}

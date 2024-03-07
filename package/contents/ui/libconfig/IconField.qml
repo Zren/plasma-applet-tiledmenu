@@ -6,7 +6,7 @@ import QtQuick.Layouts 1.0
 
 import org.kde.kirigami 2.0 as Kirigami
 import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import org.kde.iconthemes as KIconThemes // IconDialog
 
 RowLayout {
 	id: iconField
@@ -112,7 +112,7 @@ RowLayout {
 	Loader {
 		id: dialogLoader
 		active: false
-		sourceComponent: KQuickAddons.IconDialog {
+		sourceComponent: KIconThemes.IconDialog {
 			id: dialog
 			visible: true
 			modality: Qt.WindowModal

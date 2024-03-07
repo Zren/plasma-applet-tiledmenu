@@ -16,11 +16,11 @@ AppToolButton {
 		anchors.bottomMargin: control.paddingBottom
 
 		opacity: control.enabled ? 1 : 0.5
-		spacing: PlasmaCore.Units.smallSpacing
+		spacing: Kirigami.Units.smallSpacing
 
 		Layout.preferredHeight: Math.max(PlasmaCore.Units.iconSizes.small, label.implicitHeight)
 
-		PlasmaCore.IconItem {
+		Kirigami.Icon {
 			id: icon
 			source: control.iconName || control.iconSource
 
@@ -34,7 +34,7 @@ AppToolButton {
 			Layout.maximumHeight: Layout.minimumWidth
 			Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 			active: control.containsMouse
-			colorGroup: control.containsMouse ? PlasmaCore.Theme.ButtonColorGroup : PlasmaCore.ColorScope.colorGroup
+			// colorGroup: control.containsMouse ? PlasmaCore.Theme.ButtonColorGroup : PlasmaCore.ColorScope.colorGroup
 		}
 
 		PlasmaComponents3.Label {

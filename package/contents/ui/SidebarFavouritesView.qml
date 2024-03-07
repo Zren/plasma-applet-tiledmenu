@@ -14,15 +14,15 @@ Repeater {
 			repeater.parent.parent.open = false // SidebarContextMenu { Column { Repeater{} } }
 			var xdgFolder = isLocalizedFolder()
 			if (xdgFolder === 'DOCUMENTS') {
-				executable.exec('xdg-open $(xdg-user-dir DOCUMENTS)')
+				// executable.exec('xdg-open $(xdg-user-dir DOCUMENTS)')
 			} else if (xdgFolder === 'DOWNLOAD') {
-				executable.exec('xdg-open $(xdg-user-dir DOWNLOAD)')
+				// executable.exec('xdg-open $(xdg-user-dir DOWNLOAD)')
 			} else if (xdgFolder === 'MUSIC') {
-				executable.exec('xdg-open $(xdg-user-dir MUSIC)')
+				// executable.exec('xdg-open $(xdg-user-dir MUSIC)')
 			} else if (xdgFolder === 'PICTURES') {
-				executable.exec('xdg-open $(xdg-user-dir PICTURES)')
+				// executable.exec('xdg-open $(xdg-user-dir PICTURES)')
 			} else if (xdgFolder === 'VIDEOS') {
-				executable.exec('xdg-open $(xdg-user-dir VIDEOS)')
+				// executable.exec('xdg-open $(xdg-user-dir VIDEOS)')
 			} else {
 				repeater.model.triggerIndex(index)
 			}

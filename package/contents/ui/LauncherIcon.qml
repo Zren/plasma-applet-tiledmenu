@@ -38,7 +38,9 @@ MouseArea {
 	property int size: {
 		if (inPanel) {
 			if (plasmoid.configuration.fixedPanelIcon) {
-				return PlasmaCore.Units.iconSizeHints.panel
+				// Was PlasmaCore.Units.iconSizeHints.panel in Plasma5
+				// In Plasma6 https://invent.kde.org/plasma/plasma-desktop/-/merge_requests/1390/diffs
+				return 48 // Kickoff uses this hardcoded number
 			} else {
 				return maxSize
 			}

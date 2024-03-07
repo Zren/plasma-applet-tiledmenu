@@ -4,7 +4,7 @@ import org.kde.plasma.core 2.0 as PlasmaCore
 
 import org.kde.plasma.plasmoid 2.0
 import org.kde.plasma.private.kicker 0.1 as Kicker
-import org.kde.kcoreaddons 1.0 as KCoreAddons
+import org.kde.coreaddons 1.0 as KCoreAddons
 // import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
 
 import "lib"

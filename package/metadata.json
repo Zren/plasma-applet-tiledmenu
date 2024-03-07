@@ -1,0 +1,42 @@
+{
+	"KPackageStructure": "Plasma/Applet",
+	"KPlugin": {
+		"Authors": [
+			{
+				"Email": "zrenfire@gmail.com",
+				"Name": "Chris Holland"
+			}
+		],
+		"BugReportUrl": "https://github.com/Zren/plasma-applet-tiledmenu/issues",
+		"Category": "Application Launchers",
+		"Description": "A menu based on Windows 10's Start Menu.",
+		"Description[es]": "Menú basado en el menú de inicio de Windows 10",
+		"Description[fi]": "Vailikko perustuu Windows 10: n käynnistä-valikkoon.",
+		"Description[fr]": "Un menu basé sur le menu de démarrage de Windows 10.",
+		"Description[he]": "תפריט שמבוסס על מראה תפריט ההתחלה של Windows 10.",
+		"Description[nl]": "Een menu a la het Windows 10-startmenu.",
+		"Description[pt_BR]": "Um menu baseado no Start Menu do Windows 10.",
+		"Description[ru]": "Меню, основанное на меню Пуск Windows 10.",
+		"Description[sl]": "Meni, narejen po izgledu zaganjalnika v sistemu Windows 10",
+		"Description[tr]": "Windows 10'un Başlat Menüsü'nü temel alan bir menü.",
+		"Icon": "start-here-kde",
+		"Id": "com.github.zren.tiledmenu",
+		"License": "GPL-2.0+",
+		"Name": "Tiled Menu",
+		"Name[es]": "Menú con Baldosas",
+		"Name[fi]": "Tiled Menu",
+		"Name[fr]": "Tiled Menu",
+		"Name[he]": "תפריט אריחים",
+		"Name[nl]": "Tegelmenu",
+		"Name[pt_BR]": "Menu em Ladrilhos",
+		"Name[ru]": "Плиточное Меню",
+		"Name[sl]": "Meni s ploščicami",
+		"Name[tr]": "Döşeli Menü",
+		"Version": "45",
+		"Website": "https://github.com/Zren/plasma-applet-tiledmenu"
+	},
+	"X-Plasma-API-Minimum-Version": "6.0",
+	"X-Plasma-Provides": [
+		"org.kde.plasma.launchermenu"
+	]
+}

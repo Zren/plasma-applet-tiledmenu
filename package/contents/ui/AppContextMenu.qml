@@ -1,13 +1,13 @@
 // Based off kicker's ActionMenu
 import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import org.kde.plasma.extras as PlasmaExtras
 
 Item {
 	id: root
 
 	property QtObject menu
 	property Item visualParent
-	property bool opened: menu ? (menu.status != PlasmaComponents.DialogStatus.Closed) : false
+	property bool opened: menu ? (menu.status != PlasmaComponents2.DialogStatus.Closed) : false
 	property int tileIndex: -1
 
 	signal closed
@@ -52,15 +52,15 @@ Item {
 	Component {
 		id: contextMenuComponent
 
-		PlasmaComponents.ContextMenu {
+		PlasmaExtras.Menu {
 			id: contextMenu
 			visualParent: root.visualParent
 
 			function newSeperator() {
-				return Qt.createQmlObject("import org.kde.plasma.components 2.0 as PlasmaComponents; PlasmaComponents.MenuItem { separator: true }", contextMenu)
+				return Qt.createQmlObject("import org.kde.plasma.extras as PlasmaExtras; PlasmaExtras.MenuItem { separator: true }", contextMenu)
 			}
 			function newMenuItem() {
-				return Qt.createQmlObject("import org.kde.plasma.components 2.0 as PlasmaComponents; PlasmaComponents.MenuItem {}", contextMenu)
+				return Qt.createQmlObject("import org.kde.plasma.extras as PlasmaExtras; PlasmaExtras.MenuItem {}", contextMenu)
 			}
 
 			function addPinToMenuAction(favoriteId) {
@@ -133,7 +133,7 @@ Item {
 	Component {
 		id: contextMenuItemComponent
 
-		PlasmaComponents.MenuItem {
+		PlasmaExtras.MenuItem {
 			property variant actionItem
 
 			text: actionItem.text ? actionItem.text : ""

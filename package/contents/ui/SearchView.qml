@@ -56,7 +56,7 @@ Item {
 
 	function showTilesOnly() {
 		if (!showingAppList) {
-			appsView.show(stackView.noTransition)
+			// appsView.show(stackView.noTransition)
 		}
 		config.showSearch = false
 	}
@@ -142,7 +142,7 @@ Item {
 			function show(animation) {
 				config.showSearch = true
 				if (stackView.currentItem != appsView) {
-					stackView.delegate = animation || stackView.panUp
+					// stackView.delegate = animation || stackView.panUp
 					stackView.push({
 						item: appsView,
 						replace: true,
@@ -169,7 +169,7 @@ Item {
 			function show() {
 				config.showSearch = true
 				if (stackView.currentItem != jumpToLetterView) {
-					stackView.delegate = stackView.zoomOut
+					// stackView.delegate = stackView.zoomOut
 					stackView.push({
 						item: jumpToLetterView,
 						replace: true,

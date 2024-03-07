@@ -58,12 +58,15 @@ AppToolButton {
 		var dragIcon = iconInstance
 		if (typeof dragIcon === "string") {
 			// startDrag must use QIcon. See Issue #75.
-			dragIcon = dragHelper.defaultIcon
+			// dragIcon = dragHelper.defaultIcon
+			dragIcon = null
 		}
 		// console.log('startDrag', widget, model.url, "favoriteId", model.favoriteId)
 		// console.log('    iconInstance', iconInstance)
 		// console.log('    dragIcon', dragIcon)
-		dragHelper.startDrag(widget, model.url || model.favoriteId, dragIcon, "favoriteId", model.favoriteId)
+		if (dragIcon) {
+			dragHelper.startDrag(widget, model.url || model.favoriteId, dragIcon, "favoriteId", model.favoriteId)
+		}
 
 		resetDragState()
 	}

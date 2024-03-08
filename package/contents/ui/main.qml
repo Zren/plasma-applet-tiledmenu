@@ -120,8 +120,7 @@ PlasmoidItem {
 		iconSource: plasmoid.configuration.icon || "start-here-kde"
 	}
 
-	hideOnWindowDeactivate: !plasmoid.userConfiguring
-	property bool expanded: plasmoid.expanded
+	hideOnWindowDeactivate: !widget.userConfiguring
 	onExpandedChanged: {
 		if (expanded) {
 			search.query = ""
@@ -136,10 +135,10 @@ PlasmoidItem {
 	// property alias searchResultsView: popup.searchView.searchResultsView
 	// width: popup.width
 	// height: popup.height
-	Popup {
+
+	fullRepresentation: Popup {
 		id: popup
-		anchors.fill: parent
-	}
+
 	Layout.minimumWidth: config.leftSectionWidth
 	Layout.minimumHeight: config.minimumHeight
 	Layout.preferredWidth: config.popupWidth
@@ -219,6 +218,7 @@ PlasmoidItem {
 		if (focus) {
 			popup.searchView.searchField.forceActiveFocus()
 		}
+	}
 	}
 
 	function action_kinfocenter() { appsModel.launch('org.kde.kinfocenter') }

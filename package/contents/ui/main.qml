@@ -121,6 +121,7 @@ PlasmoidItem {
 	}
 
 	hideOnWindowDeactivate: !widget.userConfiguring
+	activationTogglesExpanded: true
 	onExpandedChanged: {
 		if (expanded) {
 			search.query = ""
@@ -229,9 +230,6 @@ PlasmoidItem {
 	function action_menuedit() { processRunner.runMenuEditor(); }
 
 	Component.onCompleted: {
-		if (plasmoid.hasOwnProperty("activationTogglesExpanded")) {
-			plasmoid.activationTogglesExpanded = true
-		}
 		plasmoid.setAction("kinfocenter", i18n("System Info"), "hwinfo");
 		plasmoid.setAction("konsole", i18n("Terminal"), "utilities-terminal");
 		plasmoid.setActionSeparator("systemAppsSection")

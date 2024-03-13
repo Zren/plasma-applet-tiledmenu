@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-__version__ = '16'
+__version__ = '17'
 
 #--- User Configurable Defaults
 # You can use `kpac --dir=package --i18ndir=package/translate`
@@ -428,11 +428,11 @@ class KPackage:
 			self.packageServiceType = metadata.get('Desktop Entry', 'X-KDE-ServiceTypes')
 			self.packageNamespace = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Name')
 			self.packageName = self.packageNamespace.split('.')[-1]
-			self.packageVersion = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Version')
-			self.packageAuthor = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Author')
-			self.packageAuthorEmail = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Email')
-			self.packageWebsite = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Website')
-			self.packageComment = metadata.get('Desktop Entry', 'Comment')
+			self.packageVersion = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Version', fallback='')
+			self.packageAuthor = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Author', fallback='')
+			self.packageAuthorEmail = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Email', fallback='')
+			self.packageWebsite = metadata.get('Desktop Entry', 'X-KDE-PluginInfo-Website', fallback='')
+			self.packageComment = metadata.get('Desktop Entry', 'Comment', fallback='')
 		else:
 			echoError("Could not find metadata.json or metadata.desktop in '{}'".format(self.sourceDir))
 			sys.exit(1)

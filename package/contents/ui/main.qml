@@ -126,14 +126,15 @@ PlasmoidItem {
 
 	hideOnWindowDeactivate: !widget.userConfiguring
 	activationTogglesExpanded: true
-	onExpandedChanged: {
+	onExpandedChanged: function(expanded) {
 		if (expanded) {
 			search.query = ""
 			search.applyDefaultFilters()
 			config.showSearch = false
-			popup.searchView.searchField.forceActiveFocus()
-			popup.searchView.showDefaultView()
-			// popup.searchView.tileEditorView.open('preferred://browser')
+			// TODO popup is an invalid reference here for some reason
+			fullRepresentationItem.searchView.searchField.forceActiveFocus()
+			fullRepresentationItem.searchView.showDefaultView()
+			// fullRepresentationItem.searchView.tileEditorView.open('preferred://browser')
 		}
 	}
 

@@ -18,7 +18,7 @@ Item {
 	property var filters: []
 	onFiltersChanged: {
 		// runnerModel.deleteWhenEmpty = !runnerModel.deleteWhenEmpty // runnerModel.clear()
-		runnerModel.runners = filters
+		// runnerModel.runners = filters
 		clearQueryPrefix()
 		runnerModel.query = search.query
 	}
@@ -30,7 +30,7 @@ Item {
 		favoritesModel: rootModel.favoritesModel
 		mergeResults: config.searchResultsMerged
 
-		runners: [] // Empty = All runners.
+		// runners: [] // Empty = All runners.
 
 		// deleteWhenEmpty: isDash
 		// deleteWhenEmpty: false

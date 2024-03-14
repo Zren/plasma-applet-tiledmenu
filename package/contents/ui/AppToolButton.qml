@@ -1,7 +1,5 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.3 as Kirigami
+import QtQuick
+import org.kde.kirigami as Kirigami
 
 MouseArea {
 	id: control
@@ -15,7 +13,7 @@ MouseArea {
 	Kirigami.MnemonicData.enabled: control.enabled && control.visible
 	Kirigami.MnemonicData.label: control.text
 
-	property font font: PlasmaCore.Theme.defaultFont
+	property font font: Kirigami.Theme.defaultFont
 	property real minimumWidth: 0
 	property real minimumHeight: 0
 	property bool flat: true

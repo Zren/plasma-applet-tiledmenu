@@ -1,8 +1,8 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Window
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
 import org.kde.ksvg as KSvg
 
 // import QtQuick.Controls.Styles 1.1 as QtQuickControlStyle
@@ -48,7 +48,7 @@ RowLayout {
 		// 	readonly property bool smallIcon: !control.subText
 
 		// 	label: RowLayout {
-		// 		PlasmaCore.IconItem {
+		// 		Kirigami.Icon {
 		// 			source: control.iconSource
 		// 			Layout.preferredHeight: style.smallIcon ? config.flatButtonIconSize : -1
 		// 			Layout.preferredWidth: style.smallIcon ? config.flatButtonIconSize : -1

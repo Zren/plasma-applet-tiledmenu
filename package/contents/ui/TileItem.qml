@@ -1,6 +1,6 @@
-import QtQuick 2.2
-import QtQuick.Controls 2.0 as QQC2
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.plasma.core as PlasmaCore
 
 Item {
 	id: tileItem

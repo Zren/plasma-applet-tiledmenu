@@ -1,5 +1,5 @@
-import QtQuick 2.0
-import org.kde.plasma.private.kicker 0.1 as Kicker
+import QtQuick
+import org.kde.plasma.private.kicker as Kicker
 
 Item {
 	id: search

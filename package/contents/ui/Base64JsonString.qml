@@ -1,6 +1,6 @@
-// Version 3
+// Version 4
 
-import QtQuick 2.0
+import QtQuick
 
 QtObject {
 	property string configKey

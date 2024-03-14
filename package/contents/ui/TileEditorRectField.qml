@@ -1,6 +1,6 @@
-import QtQuick 2.2
-import QtQuick.Layouts 1.0
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.components as PlasmaComponents3
 
 TileEditorGroupBox {
 	id: tileEditorRectField

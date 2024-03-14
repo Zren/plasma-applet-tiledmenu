@@ -1,5 +1,5 @@
 // Based off kicker's ActionMenu
-import QtQuick 2.0
+import QtQuick
 import org.kde.plasma.extras as PlasmaExtras
 
 Item {

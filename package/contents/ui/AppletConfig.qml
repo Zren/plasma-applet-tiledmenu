@@ -1,6 +1,7 @@
-import QtQuick 2.0
-import QtQuick.Window 2.2
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Window
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.core as PlasmaCore
 
 Item {
 	function setAlpha(c, a) {

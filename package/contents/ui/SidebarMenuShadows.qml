@@ -1,5 +1,4 @@
-import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
 
 Item {
 	property int dropShadowSize: 4 * Screen.devicePixelRatio

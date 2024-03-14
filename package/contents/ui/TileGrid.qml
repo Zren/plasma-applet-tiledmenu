@@ -1,8 +1,6 @@
-import QtQuick 2.0
-// import QtQuick.Controls 1.1
-import QtQuick.Controls 2.0 as QQC2
-// import QtQuick.Controls.Styles 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PlasmaExtras
 import "Utils.js" as Utils
 
@@ -578,7 +576,7 @@ DropArea {
 			anchors.fill: parent
 			opacity: parent.ticking ? 1 : 0
 			gradient: Gradient {
-				GradientStop { position: 0.0; color: PlasmaCore.Theme.highlightColor }
+				GradientStop { position: 0.0; color: Kirigami.Theme.highlightColor }
 				GradientStop { position: 0.3; color: "transparent" }
 			}
 		}
@@ -614,7 +612,7 @@ DropArea {
 			opacity: parent.ticking ? 1 : 0
 			gradient: Gradient {
 				GradientStop { position: 0.7; color: "transparent" }
-				GradientStop { position: 1.0; color: PlasmaCore.Theme.highlightColor }
+				GradientStop { position: 1.0; color: Kirigami.Theme.highlightColor }
 			}
 		}
 	}

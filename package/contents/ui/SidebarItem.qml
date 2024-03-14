@@ -1,6 +1,6 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
 FlatButton {
 	id: sidebarItem

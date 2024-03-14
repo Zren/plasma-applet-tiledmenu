@@ -1,9 +1,8 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.2 as QQC2
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.20 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
 GridLayout {
 	id: searchResultsView
@@ -76,7 +75,7 @@ GridLayout {
 					Layout.preferredWidth: config.flatButtonIconSize
 
 					Behavior on rotation {
-						NumberAnimation { duration: PlasmaCore.Units.longDuration }
+						NumberAnimation { duration: Kirigami.Units.longDuration }
 					}
 				}
 			}

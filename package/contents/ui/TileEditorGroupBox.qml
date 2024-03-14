@@ -1,6 +1,6 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.0
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.components as PlasmaComponents3
 
 // https://invent.kde.org/frameworks/plasma-framework/-/blame/master/src/declarativeimports/plasmacomponents3/GroupBox.qml
 PlasmaComponents3.GroupBox {

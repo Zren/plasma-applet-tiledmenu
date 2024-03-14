@@ -1,15 +1,13 @@
 // Based on LibConfig.ColorField v6
 
-import QtQuick 2.4
-import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Dialogs 1.2
-import QtQuick.Layouts 1.0
-import QtQuick.Window 2.2
-import QtGraphicalEffects 1.12 as QtGraphicalEffects
-// import org.kde.kirigami 2.2 as Kirigami
-// import org.kde.kirigami 2.12 as Kirigami
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Dialogs as QtDialogs
+import QtQuick.Layouts
+import QtQuick.Window
+import Qt5Compat.GraphicalEffects as QtGraphicalEffects
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
 
 PlasmaComponents3.TextField {
 	id: colorField
@@ -125,7 +123,6 @@ PlasmaComponents3.TextField {
 			visible: false
 			anchors.fill: parent
 			border.width: 1 * Screen.devicePixelRatio
-			// border.width: 1 * Kirigami.Units.devicePixelRatio
 			border.color: "transparent"
 			radius: width / 2
 		}
@@ -151,7 +148,7 @@ PlasmaComponents3.TextField {
 			anchors.fill: parent
 			color: colorField.valueColor
 			border.width: 1 * Screen.devicePixelRatio
-			border.color: lerpColor(color, PlasmaCore.Theme.textColor, 0.5)
+			border.color: lerpColor(color, Kirigami.Theme.textColor, 0.5)
 			// border.width: 1 * Kirigami.Units.devicePixelRatio
 			// border.color: lerpColor(color, Kirigami.Theme.textColor, 0.5)
 			// border.color: Kirigami.ColorUtils.linearInterpolation(color, Kirigami.Theme.textColor, 0.5)
@@ -162,7 +159,7 @@ PlasmaComponents3.TextField {
 	Loader {
 		id: dialogLoader
 		active: false
-		sourceComponent: ColorDialog {
+		sourceComponent: QtDialogs.ColorDialog {
 			id: dialog
 			visible: false
 			// modality: Qt.WindowModal // Don't dim the menu

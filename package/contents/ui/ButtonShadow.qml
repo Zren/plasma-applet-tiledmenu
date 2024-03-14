@@ -33,8 +33,9 @@ TODO i need more info here
 Properties:
 **/
 
-import QtQuick 2.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
 
 Item {
     id: main
@@ -43,7 +44,7 @@ Item {
     property bool hasOverState: true
     property alias enabledBorders: shadow.enabledBorders
 
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         id: hover
 
         anchors {
@@ -58,7 +59,7 @@ Item {
         prefix: "hover"
     }
 
-    PlasmaCore.FrameSvgItem {
+    KSvg.FrameSvgItem {
         id: shadow
 
         anchors {
@@ -127,7 +128,7 @@ Item {
         Transition {
             PropertyAnimation {
                 properties: "opacity"
-                duration: PlasmaCore.Units.longDuration
+                duration: Kirigami.Units.longDuration
                 easing.type: Easing.OutQuad
             }
         }

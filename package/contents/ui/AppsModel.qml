@@ -166,7 +166,9 @@ Item {
 			
 			property Connections configConnection: Connections {
 				target: plasmoid.configuration
-				onSidebarShortcutsChanged: sidebarModel.favorites = plasmoid.configuration.sidebarShortcuts
+				function onSidebarShortcutsChanged() {
+					sidebarModel.favorites = plasmoid.configuration.sidebarShortcuts
+				}
 			}
 		}
 	}

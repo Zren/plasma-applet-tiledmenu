@@ -1,19 +1,21 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Layouts 1.0
-import org.kde.kquickcontrols 2.0 as KQuickControls
-import org.kde.kirigami 2.0 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kquickcontrols as KQuickControls
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
+import org.kde.kcmutils as KCM
 
 // Based on:
 // https://invent.kde.org/plasma/plasma-desktop/blob/master/desktoppackage/contents/configuration/ConfigurationShortcuts.qml
-Kirigami.ScrollablePage {
+KCM.SimpleKCM {
 	id: page
 
 	title: i18nd("plasma_shell_org.kde.plasma.desktop", "Shortcuts")
 
 	signal configurationChanged()
 	function saveConfig() {
-		plasmoid.globalShortcut = keySequenceItem.keySequence
+		Plasmoid.globalShortcut = keySequenceItem.keySequence
 	}
 
 	ColumnLayout {
@@ -27,9 +29,12 @@ Kirigami.ScrollablePage {
 		// https://github.com/KDE/kdeclarative/blob/master/src/qmlcontrols/kquickcontrols/private/keysequencehelper.h
 		KQuickControls.KeySequenceItem {
 			id: keySequenceItem
-			keySequence: plasmoid.globalShortcut
-			onKeySequenceChanged: {
-				page.configurationChanged()
+			keySequence: Plasmoid.globalShortcut
+			modifierOnlyAllowed: true
+			onCaptureFinished: {
+				if (keySequence !== Plasmoid.globalShortcut) {
+					page.configurationChanged()
+				}
 			}
 
 			// Unfortunately, keySequence does not exposed the isEmpty function to QML.

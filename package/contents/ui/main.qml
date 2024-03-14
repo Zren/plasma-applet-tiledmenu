@@ -72,7 +72,9 @@ PlasmoidItem {
 			id: executable
 			engine: "executable"
 			connectedSources: []
-			onNewData: disconnectSource(sourceName) // cmd finished
+			onNewData: (sourceName, data) => {
+				disconnectSource(sourceName) // cmd finished
+			}
 			function exec(cmd) {
 				connectSource(cmd)
 			}

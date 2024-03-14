@@ -7,7 +7,7 @@ FlatButton {
 	Layout.fillWidth: true
 	Layout.minimumWidth: expanded ? config.sidebarMinOpenWidth : implicitWidth
 	property var sidebarMenu: parent.parent // Column.SidebarMenu
-	property bool expanded: sidebarMenu ? sidebarMenu.open : false
+	expanded: sidebarMenu ? sidebarMenu.open : false
 	labelVisible: expanded
 	property bool closeOnClick: true
 	property Item submenu: null

@@ -1,15 +1,16 @@
 import QtQuick
+import QtQuick.Controls as QQC2
 import QtQuick.Layouts
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.components as PlasmaComponents3
 
-PlasmaComponents3.ToolButton {
+QQC2.ToolButton {
 	id: flatButton
 
-	// property var icon: null
-	// iconName: ""
+	icon.name: ""
 	property bool expanded: true
 	text: ""
+	display: expanded ? QQC2.AbstractButton.TextBesideIcon : QQC2.AbstractButton.IconOnly
 	property string label: expanded ? text : ""
 	property bool labelVisible: text != ""
 	property color backgroundColor: config.flatButtonBgColor

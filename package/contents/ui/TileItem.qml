@@ -66,7 +66,7 @@ Item {
 
 		property int pressX: -1
 		property int pressY: -1
-		onPressed: {
+		onPressed: function(mouse) {
 			pressX = mouse.x
 			pressY = mouse.y
 		}
@@ -76,7 +76,7 @@ Item {
 
 		// This MouseArea will spam "QQuickItem::ungrabMouse(): Item is not the mouse grabber."
 		// but there's no other way of having a clickable drag area.
-		onClicked: {
+		onClicked: function(mouse) {
 			mouse.accepted = true
 			tileGrid.resetDrag()
 			if (mouse.button == Qt.LeftButton) {
@@ -97,7 +97,7 @@ Item {
 	// We use this drag pattern to use the internal drag with events.
 	// https://stackoverflow.com/a/24729837/947742
 	readonly property bool dragActive: tileMouseArea.drag.active
-	onDragActiveChanged: {
+	onDragActiveChanged: function(dragActive) {
 		if (dragActive) {
 			// console.log("drag started")
 			// console.log('onDragStarted', JSON.stringify(modelData), index, tileModel.length)

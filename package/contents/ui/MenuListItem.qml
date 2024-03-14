@@ -74,17 +74,17 @@ AppToolButton {
 		pressX = -1
 		pressY = -1
 	}
-	onPressed: {
+	onPressed: function(mouse) {
 		if (mouse.buttons & Qt.LeftButton) {
 			initDrag(mouse)
 		}
 	}
-	onContainsMouseChanged: {
+	onContainsMouseChanged: function(containsMouse) {
 		if (!containsMouse) {
 			resetDragState()
 		}
 	}
-	onPositionChanged: {
+	onPositionChanged: function(mouse) {
 		if (shouldStartDrag(mouse)) {
 			startDrag()
 		}

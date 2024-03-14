@@ -4,7 +4,6 @@ import org.kde.plasma.core as PlasmaCore
 import org.kde.kirigami as Kirigami
 
 import org.kde.plasma.plasmoid
-import org.kde.plasma.plasma5support as Plasma5Support
 import org.kde.plasma.private.kicker as Kicker
 import org.kde.coreaddons as KCoreAddons
 // import org.kde.kquickcontrolsaddons 2.0 as KQuickControlsAddons
@@ -66,18 +65,6 @@ PlasmoidItem {
 
 		Kicker.WindowSystem {
 			id: windowSystem
-		}
-
-		Plasma5Support.DataSource {
-			id: executable
-			engine: "executable"
-			connectedSources: []
-			onNewData: (sourceName, data) => {
-				disconnectSource(sourceName) // cmd finished
-			}
-			function exec(cmd) {
-				connectSource(cmd)
-			}
 		}
 	}
 

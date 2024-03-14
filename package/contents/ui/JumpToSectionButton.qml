@@ -43,7 +43,7 @@ AppToolButton {
 			visible: control.text != ""
 			Layout.fillWidth: true
 			height: parent.height
-			color: control.containsMouse ? Kirigami.Theme.buttonTextColor : Kirigami.Theme.textColor
+			color: control.containsMouse ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
 			horizontalAlignment: icon.valid ? Text.AlignLeft : Text.AlignHCenter
 			verticalAlignment: Text.AlignVCenter
 			elide: Text.ElideRight

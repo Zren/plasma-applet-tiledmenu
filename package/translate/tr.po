@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-06-04 21:01-0400\n"
+"POT-Creation-Date: 2024-03-14 04:37-0400\n"
 "PO-Revision-Date: 2020-07-07 16:59+0300\n"
 "Last-Translator: Cihan Alkan <cihanalk@gmail.com>\n"
 "Language-Team: Turkish <LL@li.org>\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: Poedit 2.3\n"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "Tiled Menu"
 msgstr "Döşeli Menü"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "A menu based on Windows 10's Start Menu."
 msgstr "Windows 10'un Başlat Menüsü'nü temel alan bir menü."
 
@@ -261,27 +261,27 @@ msgstr ""
 "Bu widget, 'Alt + F1' gibi genel bir kısayol kümesine sahip olduğunda, "
 "Plazma bu menüyü yalnızca ⊞ Windows / Meta tuşuyla açar."
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "System Info"
 msgstr "Sistem Bilgisi"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Terminal"
 msgstr "Uçbirim"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Task Manager"
 msgstr "Görev Yöneticisi"
 
-#: ../contents/ui/Main.qml ../contents/ui/SearchFiltersView.qml
+#: ../contents/ui/main.qml ../contents/ui/SearchFiltersView.qml
 msgid "System Settings"
 msgstr "Sistem Ayarları"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "File Manager"
 msgstr "Dosya Yöneticisi"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Edit Applications..."
 msgstr "Uygulamaları Düzenle..."
 

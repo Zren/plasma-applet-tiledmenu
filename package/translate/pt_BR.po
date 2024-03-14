@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-06-04 21:01-0400\n"
+"POT-Creation-Date: 2024-03-14 04:37-0400\n"
 "PO-Revision-Date: 2019-07-12 11:44-0300\n"
 "Last-Translator: Thiago Masato Costa Sueto <herzenschein@gmail.com>\n"
 "Language-Team: Portuguese <kde-i18n-pt_BR@kde.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Lokalize 19.04.3\n"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "Tiled Menu"
 msgstr "Menu em Ladrilhos"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "A menu based on Windows 10's Start Menu."
 msgstr "Um menu baseado no Start Menu do Windows 10."
 
@@ -262,27 +262,27 @@ msgstr ""
 "Caso este widget tenha um atalho global configurado (como Alt+F1), o Plasma "
 "irá abrir este menu ao pressionar a tecla ⊞ Windows / Meta."
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "System Info"
 msgstr "Informações do sistema"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Task Manager"
 msgstr "Gerenciador de tarefas"
 
-#: ../contents/ui/Main.qml ../contents/ui/SearchFiltersView.qml
+#: ../contents/ui/main.qml ../contents/ui/SearchFiltersView.qml
 msgid "System Settings"
 msgstr "Configurações do sistema"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "File Manager"
 msgstr "Gerenciador de arquivos"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Edit Applications..."
 msgstr "Editar aplicativos..."
 

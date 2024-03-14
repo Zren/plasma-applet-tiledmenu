@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2024-01-02 15:00-0330\n"
+"POT-Creation-Date: 2024-03-14 04:37-0400\n"
 "PO-Revision-Date: 2024-01-02 15:00-0330\n"
 "Last-Translator: Alireza Rashidi <alirezarashidigoorabi@gmail.com>\n"
 "Language-Team: Persian\n"
@@ -17,11 +17,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "Tiled Menu"
 msgstr "منو طرح کاشی"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "A menu based on Windows 10's Start Menu."
 msgstr "یک منو بر پایه ویندوز ۱۰"
 
@@ -257,27 +257,27 @@ msgstr "تقسیم بر اساس دسته‌بندی(اجراکننده نرم�
 msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
 msgstr "هنگامی که این ویجت دارای یک میانبر سیستمی، مانند 'Alt+F1' است ، پلاسما این منو را فقط با کلید ⊞ ویندوز / متا باز میکند."
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "System Info"
 msgstr "درباره سیستم"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Terminal"
 msgstr "ترمینال"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Task Manager"
 msgstr "مدیریت وظایف"
 
-#: ../contents/ui/Main.qml ../contents/ui/SearchFiltersView.qml
+#: ../contents/ui/main.qml ../contents/ui/SearchFiltersView.qml
 msgid "System Settings"
 msgstr "تنظیمات سیستمی"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "File Manager"
 msgstr "مدیریت رسانه"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Edit Applications..."
 msgstr "ویرایش نرم‌افزار"
 

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-06-04 21:01-0400\n"
+"POT-Creation-Date: 2024-03-14 04:37-0400\n"
 "PO-Revision-Date: 2022-08-21 00:40+0900\n"
 "Last-Translator: Kisaragi Hiu <mail@kisaragi-hiu.com>\n"
 "Language-Team: Traditional Chinese <kde-i18n-doc@kde.org>\n"
@@ -18,11 +18,11 @@ msgstr ""
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Lokalize 22.04.3\n"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "Tiled Menu"
 msgstr "方塊磚選單"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "A menu based on Windows 10's Start Menu."
 msgstr "一個基於 Windows 10 開始功能表的選單。"
 
@@ -262,27 +262,27 @@ msgstr ""
 "當這個元件有設定全域快捷鍵，像是「Alt+F1」，Plasma 會在按下 ⊞ Windows / Meta "
 "鍵的時候開啟這個選單。"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "System Info"
 msgstr "系統資訊"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Terminal"
 msgstr "終端機"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Task Manager"
 msgstr "工作管理員"
 
-#: ../contents/ui/Main.qml ../contents/ui/SearchFiltersView.qml
+#: ../contents/ui/main.qml ../contents/ui/SearchFiltersView.qml
 msgid "System Settings"
 msgstr "系統設定"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "File Manager"
 msgstr "檔案管理員"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Edit Applications..."
 msgstr "編輯應用程式…"
 

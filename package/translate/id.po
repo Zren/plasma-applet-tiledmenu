@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: tiledmenu\n"
 "Report-Msgid-Bugs-To: https://github.com/Zren/plasma-applet-tiledmenu\n"
-"POT-Creation-Date: 2022-06-04 21:01-0400\n"
+"POT-Creation-Date: 2024-03-14 04:37-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Dika Muhamad A. <ardumpl@gmail.com>\n"
 "Language-Team: Indonesia <LL@li.org>\n"
@@ -16,11 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "Tiled Menu"
 msgstr ""
 
-#: ../metadata.desktop
+#: ../metadata.json
 msgid "A menu based on Windows 10's Start Menu."
 msgstr ""
 
@@ -256,27 +256,27 @@ msgstr "Pisahkan dalam Kategori (Menu Aplikasi / Dasbor)"
 msgid "When this widget has a global shortcut set, like 'Alt+F1', Plasma will open this menu with just the ⊞ Windows / Meta key."
 msgstr "Jika gawit ini memiliki tombol pintasan global (seperti Alt+F1), Plasma akan membuka gawit ini dengan tombol Super/Windows"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "System Info"
 msgstr "Info Sistem"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Terminal"
 msgstr "Terminal"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Task Manager"
 msgstr "Pemantau Tugas"
 
-#: ../contents/ui/Main.qml ../contents/ui/SearchFiltersView.qml
+#: ../contents/ui/main.qml ../contents/ui/SearchFiltersView.qml
 msgid "System Settings"
 msgstr "Setelan Sistem"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "File Manager"
 msgstr "Manajer Berkas"
 
-#: ../contents/ui/Main.qml
+#: ../contents/ui/main.qml
 msgid "Edit Applications..."
 msgstr "Sunting Aplikasi..."
 

@@ -144,7 +144,7 @@ Item {
 	AppContextMenu {
 		id: contextMenu
 		tileIndex: index
-		onPopulateMenu: {
+		onPopulateMenu: function(menu) {
 			if (!plasmoid.configuration.tilesLocked) {
 				menu.addPinToMenuAction(modelData.url)
 			}

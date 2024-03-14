@@ -481,7 +481,7 @@ DropArea {
 					MouseArea {
 						anchors.fill: parent
 						acceptedButtons: Qt.RightButton
-						onClicked: {
+						onClicked: function(mouse) {
 							if (mouse.button == Qt.RightButton) {
 								cellContextMenu.cellX = cellItem.modelX
 								cellContextMenu.cellY = cellItem.modelY

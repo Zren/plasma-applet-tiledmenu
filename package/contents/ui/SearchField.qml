@@ -78,7 +78,9 @@ PlasmaComponents3.TextField {
 	}
 	Connections {
 		target: search
-		onQueryChanged: searchField.text = search.query
+		function onQueryChanged() {
+			searchField.text = search.query
+		}
 	}
 
 	property var listView: searchResultsView.listView

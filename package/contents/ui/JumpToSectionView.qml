@@ -14,7 +14,7 @@ GridView {
 
 	Connections {
 		target: appsModel.allAppsModel
-		onRefreshed: jumpToLetterView.update()
+		function onRefreshed() { jumpToLetterView.update() }
 	}
 
 	signal update()

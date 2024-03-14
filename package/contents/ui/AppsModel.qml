@@ -227,8 +227,8 @@ Item {
 		
 		Connections {
 			target: plasmoid.configuration
-			onShowRecentAppsChanged: debouncedRefresh.restart()
-			onNumRecentAppsChanged: debouncedRefresh.restart()
+			function onShowRecentAppsChanged() { debouncedRefresh.restart() }
+			function onNumRecentAppsChanged() { debouncedRefresh.restart() }
 		}
 	}
 

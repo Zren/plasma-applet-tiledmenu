@@ -22,7 +22,7 @@ SidebarItem {
 		}
 
 		// From FlatButton.qml, modifed so icon is also 16px
-		property int iconSize: PlasmaCore.Units.roundToIconSize(config.flatButtonIconSize)
+		property int iconSize: Kirigami.Units.iconSizes.roundedIconSize(config.flatButtonIconSize)
 		width: iconSize
 		height: iconSize
 		anchors.centerIn: parent

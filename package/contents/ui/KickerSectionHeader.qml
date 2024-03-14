@@ -27,7 +27,7 @@ MouseArea {
 		}
 
 		// Add 4pt to font. Default 10pt => 14pt
-		font.pointSize: PlasmaCore.Theme.defaultFont.pointSize + 4
+		font.pointSize: Kirigami.Theme.defaultFont.pointSize + 4
 
 		property bool centerOverIcon: sectionHeading.contentWidth <= listView.iconSize
 		width: centerOverIcon ? listView.iconSize : parent.width

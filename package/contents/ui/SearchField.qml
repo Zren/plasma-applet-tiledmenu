@@ -33,7 +33,7 @@ PlasmaComponents3.TextField {
 	// 	// Creates the following warning when not in use:
 	// 	//   file:///usr/lib/x86_64-linux-gnu/qt5/qml/QtQuick/Controls/Styles/Plasma/TextFieldStyle.qml:74: ReferenceError: textField is not defined
 	// 	// Caused by:
-	// 	//   var actionIconSize = Math.max(textField.height * 0.8, PlasmaCore.Units.iconSizes.small);
+	// 	//   var actionIconSize = Math.max(textField.height * 0.8, Kirigami.Units.iconSizes.small);
 	// 	PlasmaStyles.TextFieldStyle {
 	// 		id: style
 	// 		Component.onCompleted: {

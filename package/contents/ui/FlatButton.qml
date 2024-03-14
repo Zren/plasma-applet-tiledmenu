@@ -28,155 +28,153 @@ QQC2.ToolButton {
 	readonly property int _iconSize: Math.min(buttonHeight, iconSize)
 	implicitHeight: buttonHeight
 
-	// style: PlasmaStyles.ToolButtonStyle {
-	// 	label: RowLayout {
-	// 		id: labelRowLayout
-	// 		// spacing: PlasmaCore.Units.smallSpacing
-	// 		spacing: 0
-	// 		scale: control.zoomOnPush && control.pressed ? (height-5) / height : 1
-	// 		Behavior on scale { NumberAnimation { duration: 200 } }
+	// contentItem: RowLayout {
+	// 	id: labelRowLayout
+	// 	// spacing: Kirigami.Units.smallSpacing
+	// 	spacing: 0
+	// 	scale: control.zoomOnPush && control.pressed ? (height-5) / height : 1
+	// 	Behavior on scale { NumberAnimation { duration: 200 } }
 
-	// 		Item {
-	// 			id: iconContainer
-	// 			Layout.fillHeight: true
-	// 			implicitWidth: height
-	// 			visible: !!icon.source
+	// 	Item {
+	// 		id: iconContainer
+	// 		Layout.fillHeight: true
+	// 		implicitWidth: height
+	// 		visible: !!icon.source
 
-	// 			PlasmaCore.IconItem {
-	// 				id: icon
-	// 				source: control.iconName || control.iconSource || control.icon
-	// 				implicitWidth: control._iconSize
-	// 				implicitHeight: control._iconSize
-	// 				anchors.centerIn: parent
-	// 				// colorGroup: PlasmaCore.Theme.ButtonColorGroup
-	// 			}
-
-	// 			// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
+	// 		Kirigami.Icon {
+	// 			id: icon
+	// 			source: control.icon.name
+	// 			implicitWidth: control._iconSize
+	// 			implicitHeight: control._iconSize
+	// 			anchors.centerIn: parent
+	// 			// colorGroup: Kirigami.Theme.Button
 	// 		}
 
-	// 		Item {
-	// 			id: spacingItem
-	// 			Layout.fillHeight: true
-	// 			implicitWidth: 4 * Screen.devicePixelRatio
-	// 			visible: control.labelVisible
-
-	// 			// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
-	// 		}
-
-	// 		PlasmaComponents3.Label {
-	// 			id: label
-	// 			text: QtQuickControlsPrivate.StyleHelpers.stylizeMnemonics(control.text)
-	// 			font: control.font || PlasmaCore.Theme.defaultFont
-	// 			visible: control.labelVisible
-	// 			horizontalAlignment: Text.AlignLeft
-	// 			verticalAlignment: Text.AlignVCenter
-	// 			Layout.fillWidth: true
-
-	// 			// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
-	// 		}
-
-	// 		Item {
-	// 			id: rightPaddingItem
-	// 			Layout.fillHeight: true
-	// 			property int iconMargin: (iconContainer.width - icon.width)/2
-	// 			property int iconPadding: icon.width * (16-12)/16
-	// 			implicitWidth: iconMargin + iconPadding
-	// 			visible: control.labelVisible
-
-	// 			// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
-	// 		}
+	// 		// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
 	// 	}
 
-	// 	background: Item {
-	// 		Rectangle {
-	// 			id: background
-	// 			anchors.fill: parent
-	// 			color: flatButton.backgroundColor
-	// 		}
+	// 	Item {
+	// 		id: spacingItem
+	// 		Layout.fillHeight: true
+	// 		implicitWidth: 4 * Screen.devicePixelRatio
+	// 		visible: control.labelVisible
 
-	// 		Rectangle {
-	// 			id: checkedOutline
-	// 			color: flatButton.checkedColor
-	// 			visible: control.checked
-	// 			anchors.left: parent.left
-	// 			anchors.top: parent.top
-	// 			anchors.right: parent.right
-	// 			anchors.bottom: parent.bottom
+	// 		// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
+	// 	}
 
-	// 			states: [
-	// 				State {
-	// 					when: control.checkedEdge === 0
-	// 					PropertyChanges {
-	// 						target: checkedOutline
-	// 						anchors.fill: checkedOutline.parent
-	// 						color: "transparent"
-	// 						border.color: flatButton.checkedColor
-	// 					}
-	// 				},
-	// 				State {
-	// 					when: control.checkedEdge == Qt.TopEdge
-	// 					PropertyChanges {
-	// 						target: checkedOutline
-	// 						anchors.bottom: undefined
-	// 						height: control.checkedEdgeWidth
-	// 					}
-	// 				},
-	// 				State {
-	// 					when: control.checkedEdge == Qt.LeftEdge
-	// 					PropertyChanges {
-	// 						target: checkedOutline
-	// 						anchors.right: undefined
-	// 						width: control.checkedEdgeWidth
-	// 					}
-	// 				},
-	// 				State {
-	// 					when: control.checkedEdge == Qt.RightEdge
-	// 					PropertyChanges {
-	// 						target: checkedOutline
-	// 						anchors.left: undefined
-	// 						width: control.checkedEdgeWidth
-	// 					}
-	// 				},
-	// 				State {
-	// 					when: control.checkedEdge == Qt.BottomEdge
-	// 					PropertyChanges {
-	// 						target: checkedOutline
-	// 						anchors.top: undefined
-	// 						height: control.checkedEdgeWidth
-	// 					}
-	// 				}
-	// 			]
-	// 		}
+	// 	PlasmaComponents3.Label {
+	// 		id: label
+	// 		text: QtQuickControlsPrivate.StyleHelpers.stylizeMnemonics(control.text)
+	// 		font: control.font || Kirigami.Theme.defaultFont
+	// 		visible: control.labelVisible
+	// 		horizontalAlignment: Text.AlignLeft
+	// 		verticalAlignment: Text.AlignVCenter
+	// 		Layout.fillWidth: true
+
+	// 		// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
+	// 	}
+
+	// 	Item {
+	// 		id: rightPaddingItem
+	// 		Layout.fillHeight: true
+	// 		property int iconMargin: (iconContainer.width - icon.width)/2
+	// 		property int iconPadding: icon.width * (16-12)/16
+	// 		implicitWidth: iconMargin + iconPadding
+	// 		visible: control.labelVisible
+
+	// 		// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }
+	// 	}
+	// }
+
+	// background: Item {
+	// 	Rectangle {
+	// 		id: background
+	// 		anchors.fill: parent
+	// 		color: flatButton.backgroundColor
+	// 	}
+
+	// 	Rectangle {
+	// 		id: checkedOutline
+	// 		color: flatButton.checkedColor
+	// 		visible: control.checked
+	// 		anchors.left: parent.left
+	// 		anchors.top: parent.top
+	// 		anchors.right: parent.right
+	// 		anchors.bottom: parent.bottom
 
 	// 		states: [
 	// 			State {
-	// 				name: "hovering"
-	// 				when: !control.pressed && control.hovered
+	// 				when: control.checkedEdge === 0
 	// 				PropertyChanges {
-	// 					target: background
-	// 					color: flatButton.backgroundHoverColor
+	// 					target: checkedOutline
+	// 					anchors.fill: checkedOutline.parent
+	// 					color: "transparent"
+	// 					border.color: flatButton.checkedColor
 	// 				}
 	// 			},
 	// 			State {
-	// 				name: "pressed"
-	// 				when: control.pressed
+	// 				when: control.checkedEdge == Qt.TopEdge
 	// 				PropertyChanges {
-	// 					target: background
-	// 					color: flatButton.backgroundPressedColor
+	// 					target: checkedOutline
+	// 					anchors.bottom: undefined
+	// 					height: control.checkedEdgeWidth
+	// 				}
+	// 			},
+	// 			State {
+	// 				when: control.checkedEdge == Qt.LeftEdge
+	// 				PropertyChanges {
+	// 					target: checkedOutline
+	// 					anchors.right: undefined
+	// 					width: control.checkedEdgeWidth
+	// 				}
+	// 			},
+	// 			State {
+	// 				when: control.checkedEdge == Qt.RightEdge
+	// 				PropertyChanges {
+	// 					target: checkedOutline
+	// 					anchors.left: undefined
+	// 					width: control.checkedEdgeWidth
+	// 				}
+	// 			},
+	// 			State {
+	// 				when: control.checkedEdge == Qt.BottomEdge
+	// 				PropertyChanges {
+	// 					target: checkedOutline
+	// 					anchors.top: undefined
+	// 					height: control.checkedEdgeWidth
 	// 				}
 	// 			}
 	// 		]
-
-	// 		transitions: [
-	// 			Transition {
-	// 				to: "hovering"
-	// 				ColorAnimation { duration: 200 }
-	// 			},
-	// 			Transition {
-	// 				to: "pressed"
-	// 				ColorAnimation { duration: 100 }
-	// 			}
-	// 		]
 	// 	}
+
+	// 	states: [
+	// 		State {
+	// 			name: "hovering"
+	// 			when: !control.pressed && control.hovered
+	// 			PropertyChanges {
+	// 				target: background
+	// 				color: flatButton.backgroundHoverColor
+	// 			}
+	// 		},
+	// 		State {
+	// 			name: "pressed"
+	// 			when: control.pressed
+	// 			PropertyChanges {
+	// 				target: background
+	// 				color: flatButton.backgroundPressedColor
+	// 			}
+	// 		}
+	// 	]
+
+	// 	transitions: [
+	// 		Transition {
+	// 			to: "hovering"
+	// 			ColorAnimation { duration: 200 }
+	// 		},
+	// 		Transition {
+	// 			to: "pressed"
+	// 			ColorAnimation { duration: 100 }
+	// 		}
+	// 	]
 	// }
 }

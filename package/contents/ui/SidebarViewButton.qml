@@ -9,7 +9,7 @@ SidebarItem {
 
 	property string appletIconName: ""
 	readonly property string internalIconName: control.checked ? (appletIconName + "-selected") : appletIconName
-	readonly property string appletIconFilename: appletIconName ? plasmoid.file("", "icons/" + internalIconName + ".svg") : ""
+	readonly property string appletIconFilename: appletIconName ? Qt.resolvedUrl("../icons/" + internalIconName + ".svg") : ""
 
 	checkedEdge: Qt.LeftEdge
 	checkedEdgeWidth: 4 * Screen.devicePixelRatio // Twice as thick as normal

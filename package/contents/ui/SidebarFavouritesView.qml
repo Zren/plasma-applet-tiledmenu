@@ -7,7 +7,7 @@ Repeater {
 	property int minVisibleIndex: count - numAvailable // Hide items with an index smaller than this
 
 	delegate: SidebarItem {
-		icon: symbolicIconName || model.iconName || model.decoration
+		icon.name: symbolicIconName || model.iconName || model.decoration
 		text: xdgDisplayName || model.name || model.display
 		sidebarMenu: repeater.parent.parent // SidebarContextMenu { Column { Repeater{} } }
 		onClicked: {

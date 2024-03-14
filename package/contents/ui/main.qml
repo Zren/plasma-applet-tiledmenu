@@ -224,23 +224,46 @@ PlasmoidItem {
 		}
 	}
 
-	function action_kinfocenter() { appsModel.launch('org.kde.kinfocenter') }
-	function action_konsole() { appsModel.launch('org.kde.konsole') }
-	function action_ksysguard() { appsModel.launch('org.kde.ksysguard') }
-	function action_systemsettings() { appsModel.launch('systemsettings') }
-	function action_filemanager() { appsModel.launch('org.kde.dolphin') }
-	function action_menuedit() { processRunner.runMenuEditor(); }
+	Plasmoid.contextualActions: [
+		PlasmaCore.Action {
+			text: i18n("System Info")
+			icon.name: "hwinfo"
+			onTriggered: appsModel.launch('org.kde.kinfocenter')
+		},
+		PlasmaCore.Action {
+			text: i18n("Terminal")
+			icon.name: "utilities-terminal"
+			onTriggered: appsModel.launch('org.kde.konsole')
+		},
+		PlasmaCore.Action {
+			isSeparator: true
+		},
+		PlasmaCore.Action {
+			text: i18n("Task Manager")
+			icon.name: "ksysguardd"
+			onTriggered: appsModel.launch('org.kde.ksysguard')
+		},
+		PlasmaCore.Action {
+			text: i18n("System Settings")
+			icon.name: "systemsettings"
+			onTriggered: appsModel.launch('systemsettings')
+		},
+		PlasmaCore.Action {
+			text: i18n("File Manager")
+			icon.name: "folder"
+			onTriggered: appsModel.launch('org.kde.dolphin')
+		},
+		PlasmaCore.Action {
+			isSeparator: true
+		},
+		PlasmaCore.Action {
+			text: i18n("Edit Applications...")
+			icon.name: "kmenuedit"
+			onTriggered: processRunner.runMenuEditor()
+		}
+	]
 
 	Component.onCompleted: {
-		plasmoid.setAction("kinfocenter", i18n("System Info"), "hwinfo");
-		plasmoid.setAction("konsole", i18n("Terminal"), "utilities-terminal");
-		plasmoid.setActionSeparator("systemAppsSection")
-		plasmoid.setAction("ksysguard", i18n("Task Manager"), "ksysguardd");
-		plasmoid.setAction("systemsettings", i18n("System Settings"), "systemsettings");
-		plasmoid.setAction("filemanager", i18n("File Manager"), "folder");
-		plasmoid.setActionSeparator("configSection")
-		plasmoid.setAction("menuedit", i18n("Edit Applications..."), "kmenuedit");
-
-		// plasmoid.action('configure').trigger() // Uncomment to open the config window on load.
+		// Plasmoid.internalAction("configure").trigger() // Uncomment to open the config window on load.
 	}
 }

@@ -17,7 +17,7 @@ Item {
 	//     find /usr/share/kservices5/ -iname "plasma-runner-*.desktop" -print0 | xargs -0 grep "PluginInfo-Name" | sort
 	property var filters: []
 	onFiltersChanged: {
-		runnerModel.deleteWhenEmpty = !runnerModel.deleteWhenEmpty // runnerModel.clear()
+		// runnerModel.deleteWhenEmpty = !runnerModel.deleteWhenEmpty // runnerModel.clear()
 		runnerModel.runners = filters
 		clearQueryPrefix()
 		runnerModel.query = search.query

@@ -77,7 +77,7 @@ GridView {
 		}
 		
 		onClicked: {
-			// appsView.show(stackView.zoomIn)
+			appsView.show() // appsView.show(stackView.zoomIn)
 			appsView.jumpToSection(section)
 		}
 	}

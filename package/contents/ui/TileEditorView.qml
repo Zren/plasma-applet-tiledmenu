@@ -146,7 +146,7 @@ ColumnLayout {
 
 	function show() {
 		if (stackView.currentItem != tileEditorView) {
-			stackView.push(tileEditorView, true)
+			stackView.pushReplace(tileEditorView)
 		}
 	}
 

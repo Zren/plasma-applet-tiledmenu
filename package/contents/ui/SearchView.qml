@@ -56,6 +56,7 @@ Item {
 	function showTilesOnly() {
 		if (!showingAppList) {
 			// appsView.show(stackView.noTransition)
+			appsView.show()
 		}
 		config.showSearch = false
 	}
@@ -104,7 +105,7 @@ Item {
 				target: search
 				function onQueryChanged() {
 					if (search.query.length > 0 && stackView.currentItem != searchResultsView) {
-						stackView.push(searchResultsView, true)
+						stackView.pushReplace(searchResultsView)
 					}
 					searchResultsView.filterViewOpen = false
 				}
@@ -118,7 +119,7 @@ Item {
 
 			function showDefaultSearch() {
 				if (stackView.currentItem != searchResultsView) {
-					stackView.push(searchResultsView, true)
+					stackView.pushReplace(searchResultsView)
 				}
 				search.applyDefaultFilters()
 			}
@@ -142,10 +143,7 @@ Item {
 				config.showSearch = true
 				if (stackView.currentItem != appsView) {
 					// stackView.delegate = animation || stackView.panUp
-					stackView.push({
-						item: appsView,
-						replace: true,
-					})
+					stackView.pushReplace(appsView)
 				}
 				appsView.scrollToTop()
 			}
@@ -169,10 +167,7 @@ Item {
 				config.showSearch = true
 				if (stackView.currentItem != jumpToLetterView) {
 					// stackView.delegate = stackView.zoomOut
-					stackView.push({
-						item: jumpToLetterView,
-						replace: true,
-					})
+					stackView.pushReplace(jumpToLetterView)
 				}
 			}
 		}

@@ -5,6 +5,10 @@ QQC2.StackView {
 	id: stackView
 	clip: true
 
+	function pushReplace(item) {
+		stackView.push(item, QQC2.StackView.ReplaceTransition)
+	}
+
 	// delegate: panUp
 
 	property int zoomDuration: 250

@@ -7,7 +7,7 @@ Item {
 
 	property QtObject menu
 	property Item visualParent
-	property bool opened: menu ? (menu.status != PlasmaComponents2.DialogStatus.Closed) : false
+	property bool opened: menu ? (menu.status != PlasmaExtras.Menu.Closed) : false
 	property int tileIndex: -1
 
 	signal closed

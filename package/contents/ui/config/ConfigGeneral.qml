@@ -10,7 +10,7 @@ import ".." as TiledMenu
 import "../libconfig" as LibConfig
 
 
-Kirigami.FormLayout {
+LibConfig.FormKCM {
 	id: formLayout
 
 	readonly property string plasmaStyleLabelText: {

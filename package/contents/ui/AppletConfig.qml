@@ -95,18 +95,18 @@ Item {
 		if (PlasmaCore.Theme.themeName == "oxygen") {
 			return "#20FFFFFF"
 		} else {
-			return PlasmaCore.Theme.buttonBackgroundColor
+			return Kirigami.Theme.buttonBackgroundColor
 		}
 	}
 	readonly property color defaultTileColor: plasmoid.configuration.defaultTileColor || themeButtonBgColor
 	readonly property bool defaultTileGradient: plasmoid.configuration.defaultTileGradient
-	readonly property color sidebarBackgroundColor: plasmoid.configuration.sidebarBackgroundColor || PlasmaCore.Theme.backgroundColor
-	readonly property color menuItemTextColor2: setAlpha(PlasmaCore.Theme.textColor, 0.6)
-	readonly property color favHoverOutlineColor: setAlpha(PlasmaCore.Theme.textColor, 0.8)
+	readonly property color sidebarBackgroundColor: plasmoid.configuration.sidebarBackgroundColor || Kirigami.Theme.backgroundColor
+	readonly property color menuItemTextColor2: setAlpha(Kirigami.Theme.textColor, 0.6)
+	readonly property color favHoverOutlineColor: setAlpha(Kirigami.Theme.textColor, 0.8)
 	readonly property color flatButtonBgHoverColor: themeButtonBgColor
 	readonly property color flatButtonBgColor: Qt.rgba(flatButtonBgHoverColor.r, flatButtonBgHoverColor.g, flatButtonBgHoverColor.b, 0)
-	readonly property color flatButtonBgPressedColor: PlasmaCore.Theme.highlightColor
-	readonly property color flatButtonCheckedColor: PlasmaCore.Theme.highlightColor
+	readonly property color flatButtonBgPressedColor: Kirigami.Theme.highlightColor
+	readonly property color flatButtonCheckedColor: Kirigami.Theme.highlightColor
 
 	//--- Style
 	// Tiles

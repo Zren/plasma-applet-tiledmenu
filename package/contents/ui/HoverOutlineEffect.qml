@@ -23,7 +23,7 @@ Item {
 	property int effectRadius: hoverOutlineEffect.pressed ? pressedRadius : hoverRadius
 	Behavior on effectRadius {
 		NumberAnimation {
-			duration: PlasmaCore.Units.longDuration
+			duration: Kirigami.Units.longDuration
 		}
 	}
 
@@ -32,7 +32,7 @@ Item {
 	function alpha(c, a) {
 		return Qt.rgba(c.r, c.g, c.b, a)
 	}
-	property color effectColor: PlasmaCore.Theme.textColor
+	property color effectColor: Kirigami.Theme.textColor
 	property color fillColor: alpha(effectColor, 1/16)
 	property color pressedFillColor: alpha(effectColor, 4/16)
 	property color borderColor: alpha(effectColor, 8/16)
@@ -55,7 +55,7 @@ Item {
 
 		Behavior on color {
 			ColorAnimation {
-				duration: PlasmaCore.Units.longDuration
+				duration: Kirigami.Units.longDuration
 			}
 		}
 	}

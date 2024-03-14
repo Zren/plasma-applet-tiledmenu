@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-__version__ = '17'
+__version__ = '24'
 
 #--- User Configurable Defaults
 # You can use `kpac --dir=package --i18ndir=package/translate`
@@ -596,6 +596,8 @@ class KPackage:
 		# self.translateDir = 'package/translate/'
 		# self.translateRoot = '..'
 
+		self.removeOldI18nScripts()
+
 		self.checkI18nCommand('xgettext')
 
 		echoGray("[kpac-i18n] " + TC.Bold + "[Extracting messages]")
@@ -1051,10 +1053,48 @@ package/contents/locale/fr/LC_MESSAGES/plasma_applet_{self.packageNamespace}.mo
 
 		echoGreen("[kpac-i18n] Done compiling messages")
 
+	def removeOldI18nScripts(self):
+		#--- Delete obsolete Zren i18n scripts
+		trBuildPath = os.path.join(self.translateDir, 'build')
+		if os.path.exists(trBuildPath):
+			echoWarning("[kpac-plasma6] Deleting obsolete '{}'. Use: ./kpac i18n".format(trBuildPath))
+			os.remove(trBuildPath)
+		trMergePath = os.path.join(self.translateDir, 'merge')
+		if os.path.exists(trMergePath):
+			echoWarning("[kpac-plasma6] Deleting obsolete '{}'. Use: ./kpac i18n".format(trMergePath))
+			os.remove(trMergePath)
+		trLocaleTestPath = os.path.join(self.translateDir, 'plasmoidlocaletest')
+		if os.path.exists(trLocaleTestPath):
+			echoWarning("[kpac-plasma6] Deleting obsolete '{}'. Use: ./kpac localetest".format(trLocaleTestPath))
+			os.remove(trLocaleTestPath)
+
 	#---
 	# https://develop.kde.org/docs/plasma/widget/porting_kf6/
 	def portToPlasma6(self):
+		self.portMetadataFileToPlasma6()
+		self.removeOldI18nScripts()
+
+		#--- Replace keywords in QML files
+		echoGray('[kpac-plasma6] ' + TC.Bold + 'Replacing keywords in .qml files')
+		for qmlFilepath in glob.glob(os.path.join(self.sourceDir, '**/*.qml'), recursive=True):
+			self.portQmlFileToPlasma6(qmlFilepath)
+
+	def portFileToPlasma6(self, filepath):
+		# echoGray('[kpac-plasma6] ' + filepath)
+		if not os.path.exists(filepath):
+			echoWarning(f"[kpac-plasma6] '{filepath}' does not exist!")
+			return
+		if os.path.abspath(filepath) == os.path.abspath(self.jsonMetaFilepath) or \
+		   os.path.abspath(filepath) == os.path.abspath(self.desktopMetaFilepath):
+			self.portMetadataFileToPlasma6()
+		elif os.path.splitext(filepath)[1] == '.qml':
+			self.portQmlFileToPlasma6(filepath)
+		else:
+			echoWarning(f"[kpac-plasma6] Unable to port filetype '{filepath}'")
+
+	def portMetadataFileToPlasma6(self):
 		if os.path.exists(self.desktopMetaFilepath):
+			echoWarning("[kpac-plasma6] Converting metadata.desktop to .json")
 			if not os.path.exists(self.jsonMetaFilepath):
 				if not isCommandInstalled('desktoptojson'):
 					echoError('[kpac-plasma6] desktoptojson is not installed')
@@ -1108,7 +1148,7 @@ package/contents/locale/fr/LC_MESSAGES/plasma_applet_{self.packageNamespace}.mo
 						sys.exit(1)
 					else:
 						print("X-Plasma-MainScript={} will be renamed to the default ui/main.qml".format(metadata['X-Plasma-MainScript']))
-						shutil.mv(oldMainScript, newMainScript)
+						os.rename(oldMainScript, newMainScript)
 				else:
 					echoError("Unable to rename {} to ui/main.qml since it doesn't exist!".format(oldMainScript))
 					sys.exit(1)
@@ -1119,24 +1159,7 @@ package/contents/locale/fr/LC_MESSAGES/plasma_applet_{self.packageNamespace}.mo
 		# pprint(metadata)
 		jsonDumpTabbed(self.jsonMetaFilepath, metadata)
 
-		#--- Delete obsolete Zren i18n scripts
-		trBuildPath = os.path.join(self.translateDir, 'build')
-		if os.path.exists(trBuildPath):
-			echoWarning("[kpac-plasma6] Deleting obsolete '{}'. Use: ./kpac i18n".format(trBuildPath))
-		trMergePath = os.path.join(self.translateDir, 'merge')
-		if os.path.exists(trMergePath):
-			echoWarning("[kpac-plasma6] Deleting obsolete '{}'. Use: ./kpac i18n".format(trMergePath))
-		trLocaleTestPath = os.path.join(self.translateDir, 'plasmoidlocaletest')
-		if os.path.exists(trLocaleTestPath):
-			echoWarning("[kpac-plasma6] Deleting obsolete '{}'. Use: ./kpac localetest".format(trLocaleTestPath))
-
-		#--- Replace keywords in QML files
-		echoGray('[kpac-plasma6] ' + TC.Bold + 'Replacing keywords in .qml files')
-		for qmlFilepath in glob.glob(os.path.join(self.sourceDir, '**/*.qml'), recursive=True):
-			self.portFileToPlasma6(qmlFilepath)
-
-
-	def portFileToPlasma6(self, qmlFilepath):
+	def portQmlFileToPlasma6(self, qmlFilepath):
 		echoGray('[kpac-plasma6] ' + qmlFilepath)
 
 		#--- Imports and KeywordReplace
@@ -1173,6 +1196,13 @@ package/contents/locale/fr/LC_MESSAGES/plasma_applet_{self.packageNamespace}.mo
 				nsKeyword = re.sub(r'PlasmaComponents(\d+)\.', 'PlasmaComponents.', nsVerKeyword)
 				line = line.replace(nsKeyword, replacement)
 			return line
+		def replaceNotComment(line, matchStr, replacement, commentSyntax='//'):
+			tokens = line.split(commentSyntax, 1)
+			if len(tokens) >= 2:
+				tokens[0] = tokens[0].replace(matchStr, replacement)
+				return tokens[0] + commentSyntax + tokens[1]
+			else:
+				return tokens[0].replace(matchStr, replacement)
 
 		isMain = os.path.join(self.sourceDir, 'contents/ui/main.qml') == qmlFilepath
 		isMainItem = False
@@ -1299,7 +1329,7 @@ package/contents/locale/fr/LC_MESSAGES/plasma_applet_{self.packageNamespace}.mo
 				]
 
 				#---
-				line = line.replace('KCMShell.authorize(', 'KCM.KCMLauncher.authorize(')
+				line = line.replace('KCMShell.authorize(', 'KConfig.KAuthorized.authorizeControlModule(') # TODO ('kcm_users.desktop') => ('kcm_users')
 				line = line.replace('KCMShell.open(', 'KCM.KCMLauncher.open(')
 
 				line = line.replace('PlasmaCore.Svg', 'KSvg.Svg')
@@ -1314,7 +1344,7 @@ package/contents/locale/fr/LC_MESSAGES/plasma_applet_{self.packageNamespace}.mo
 				line = line.replace('KQuickAddons.IconDialog', 'KIconThemes.IconDialog')
 
 				#--- Qt
-				line = line.replace('RegExpValidator', 'RegularExpressionValidator') # Also { regExp: // } => { regularExpression: // }
+				line = replaceNotComment(line, 'RegExpValidator', 'RegularExpressionValidator') # Also { regExp: // } => { regularExpression: // }
 
 				#--- Zren's Patterns
 				line = line.replace('plasmoid.action("configure").trigger()', 'Plasmoid.internalAction("configure").trigger()')
@@ -1342,6 +1372,7 @@ package/contents/locale/fr/LC_MESSAGES/plasma_applet_{self.packageNamespace}.mo
 		checkImport('KIconThemes', 'org.kde.iconthemes')
 		checkImport('KItemModels', 'org.kde.kitemmodels')
 		checkImport('Kirigami', 'org.kde.kirigami')
+		checkImport('KConfig', 'org.kde.config')
 
 		#--- Remove Unused Imports TODO
 		# import org.kde.kquickcontrolsaddons 2.0 // KCMShell
@@ -1451,9 +1482,6 @@ def kpac_build(kpackage, args):
 def kpac_plasma6(kpackage, args):
 	if len(args.filepathList) >= 1:
 		for filepath in args.filepathList:
-			if not os.path.exists(filepath):
-				echoWarning(f"[kpac-plasma6] '{filepath}' does not exist!")
-				continue
 			kpackage.portFileToPlasma6(filepath)
 	else:
 		kpackage.portToPlasma6()
@@ -1482,7 +1510,10 @@ def kpac_updatelib(kpackage, args):
 		echoError(f"[kpac-updatelib] '{args.libpath}' does not exist!")
 		sys.exit(1)
 
+	kpackage.removeOldI18nScripts()
+
 	syncedFilePaths = [
+		'package/contents/ui/libconfig/BackgroundToggle.qml',
 		'package/contents/ui/libconfig/CheckBox.qml',
 		'package/contents/ui/libconfig/ColorField.qml',
 		'package/contents/ui/libconfig/ComboBox.qml',

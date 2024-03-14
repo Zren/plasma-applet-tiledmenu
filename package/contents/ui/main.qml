@@ -152,11 +152,11 @@ PlasmoidItem {
 
 		onWidthChanged: {
 			// console.log('popup.size', width, height, 'width')
-			resizeToFit.run()
+			// resizeToFit.run()
 		}
 		onHeightChanged: {
 			// console.log('popup.size', width, height, 'height')
-			resizeHeight.restart()
+			// resizeHeight.restart()
 		}
 
 		// Make popup resizeable like default Kickoff widget.

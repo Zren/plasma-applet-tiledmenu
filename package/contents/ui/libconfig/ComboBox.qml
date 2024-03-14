@@ -1,7 +1,7 @@
-// Version 7
+// Version 8
 
-import QtQuick 2.0
-import QtQuick.Controls 2.0 as QQC2
+import QtQuick
+import QtQuick.Controls as QQC2
 
 /*
 ** Example:

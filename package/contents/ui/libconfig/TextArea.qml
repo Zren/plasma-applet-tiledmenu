@@ -1,9 +1,9 @@
-// Version 6
+// Version 7
 
-import QtQuick 2.0
-import QtQuick.Controls 2.1 as QQC2
-import QtQuick.Layouts 1.0
-import org.kde.kirigami 2.3 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
 
 QQC2.TextArea {
 	id: textArea

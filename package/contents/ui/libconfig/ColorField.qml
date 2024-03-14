@@ -1,12 +1,13 @@
-// Version 6
+// Version 7
 
-import QtQuick 2.4
-import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Dialogs 1.2
-import QtQuick.Window 2.2
-import QtGraphicalEffects 1.12 as QtGraphicalEffects
-import org.kde.kirigami 2.2 as Kirigami
-// import org.kde.kirigami 2.12 as Kirigami
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Dialogs
+import QtQuick.Window
+import org.kde.kirigami as Kirigami
+
+// https://doc.qt.io/qt-6/qtgraphicaleffects5-index.html
+import Qt5Compat.GraphicalEffects as QtGraphicalEffects // TODO Deprecated in Qt6
 
 
 QQC2.TextField {
@@ -159,25 +160,30 @@ QQC2.TextField {
 		active: false
 		sourceComponent: ColorDialog {
 			id: dialog
-			visible: false
+			visible: true
 			modality: Qt.WindowModal
-			showAlphaChannel: colorField.showAlphaChannel
-			color: colorField.valueColor
-			onCurrentColorChanged: {
-				if (visible && color != currentColor) {
-					colorField.text = currentColor
+			options: colorField.showAlphaChannel ? ColorDialog.ShowAlphaChannel : 0
+			selectedColor: colorField.valueColor
+			onSelectedColorChanged: {
+				if (visible) {
+					colorField.text = selectedColor
 				}
 			}
-			onVisibleChanged: {
-				if (!visible) {
-					dialogLoader.active = false
-				}
+			onAccepted: {
+				colorField.text = selectedColor
+				dialogLoader.active = false
+			}
+			onRejected: {
+				// This event is also triggered when the user clicks outside the popup modal.
+				// TODO Find a way to only trigger when Cancel is clicked.
+				colorField.text = initColor
+				dialogLoader.active = false
 			}
 
-			// showAlphaChannel must be set before opening the dialog.
-			// If we create the dialog with visible=true, the showAlphaChannelbinding
-			// will not be set before it opens.
-			Component.onCompleted: visible = true
+			property color initColor
+			Component.onCompleted: {
+				initColor = colorField.valueColor
+			}
 		}
 	}
 }

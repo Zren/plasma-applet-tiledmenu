@@ -159,7 +159,7 @@ AppToolButton {
 	}
 
 	acceptedButtons: Qt.LeftButton | Qt.RightButton
-	onClicked: {
+	onClicked: function(mouse) {
 		mouse.accepted = true
 		resetDragState()
 		logger.debug('MenuListItem.onClicked', mouse.button, Qt.LeftButton, Qt.RightButton)
@@ -178,7 +178,7 @@ AppToolButton {
 	// property var actionList: hasActionList ? listView.model.getActionList(index) : []
 	AppContextMenu {
 		id: contextMenu
-		onPopulateMenu: {
+		onPopulateMenu: function(menu) {
 			if (launcherUrl && !plasmoid.configuration.tilesLocked) {
 				menu.addPinToMenuAction(launcherUrl)
 			}

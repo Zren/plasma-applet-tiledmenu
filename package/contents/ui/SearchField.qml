@@ -82,7 +82,7 @@ PlasmaComponents3.TextField {
 	}
 
 	property var listView: searchResultsView.listView
-	Keys.onPressed: {
+	Keys.onPressed: function(event) {
 		if (event.key == Qt.Key_Up) {
 			event.accepted = true; listView.goUp()
 		} else if (event.key == Qt.Key_Down) {

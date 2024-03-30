@@ -62,10 +62,6 @@ PlasmoidItem {
 			id: processRunner
 			// .runMenuEditor() to run kmenuedit
 		}
-
-		Kicker.WindowSystem {
-			id: windowSystem
-		}
 	}
 
 	AppletConfig {

@@ -105,7 +105,7 @@ Item {
 				target: search
 				function onQueryChanged() {
 					if (search.query.length > 0 && stackView.currentItem != searchResultsView) {
-						stackView.pushReplace(searchResultsView)
+						stackView.replace(searchResultsView)
 					}
 					searchResultsView.filterViewOpen = false
 				}
@@ -119,7 +119,7 @@ Item {
 
 			function showDefaultSearch() {
 				if (stackView.currentItem != searchResultsView) {
-					stackView.pushReplace(searchResultsView)
+					stackView.replace(searchResultsView)
 				}
 				search.applyDefaultFilters()
 			}
@@ -143,7 +143,7 @@ Item {
 				config.showSearch = true
 				if (stackView.currentItem != appsView) {
 					// stackView.delegate = animation || stackView.panUp
-					stackView.pushReplace(appsView)
+					stackView.replace(appsView)
 				}
 				appsView.scrollToTop()
 			}
@@ -167,7 +167,7 @@ Item {
 				config.showSearch = true
 				if (stackView.currentItem != jumpToLetterView) {
 					// stackView.delegate = stackView.zoomOut
-					stackView.pushReplace(jumpToLetterView)
+					stackView.replace(jumpToLetterView)
 				}
 			}
 		}

@@ -109,7 +109,7 @@ PlasmoidItem {
 		if (expanded) {
 			search.query = ""
 			search.applyDefaultFilters()
-			config.showSearch = false
+			// config.showSearch = false
 			// TODO popup is an invalid reference here for some reason
 			fullRepresentationItem.searchView.searchField.forceActiveFocus()
 			fullRepresentationItem.searchView.showDefaultView()

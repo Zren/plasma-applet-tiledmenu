@@ -42,12 +42,16 @@ Item {
 		var defView = plasmoid.configuration.defaultAppListView
 		if (defView == 'Alphabetical') {
 			appsView.showAppsAlphabetically()
+			config.showSearch = true
 		} else if (defView == 'Categories') {
 			appsView.showAppsCategorically()
+			config.showSearch = true
 		} else if (defView == 'JumpToLetter') {
 			jumpToLetterView.showLetters()
+			config.showSearch = true
 		} else if (defView == 'JumpToCategory') {
 			jumpToLetterView.showCategories()
+			config.showSearch = true
 		} else if (defView == 'TilesOnly') {
 			searchView.showTilesOnly()
 		}

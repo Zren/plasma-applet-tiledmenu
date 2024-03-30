@@ -19,16 +19,19 @@ ListModel {
 
 	function parseAppsModelItem(model, i) {
 		// https://github.com/KDE/plasma-desktop/blob/master/applets/kicker/plugin/actionlist.h#L30
-		var DescriptionRole = Qt.UserRole + 1;
-		var GroupRole = DescriptionRole + 1;
-		var FavoriteIdRole = DescriptionRole + 2;
-		var IsSeparatorRole = DescriptionRole + 3;
-		var IsDropPlaceholderRole = DescriptionRole + 4;
-		var IsParentRole = DescriptionRole + 5;
-		var HasChildrenRole = DescriptionRole + 6;
-		var HasActionListRole = DescriptionRole + 7;
-		var ActionListRole = DescriptionRole + 8;
-		var UrlRole = DescriptionRole + 9;
+		var DescriptionRole = Qt.UserRole + 1
+		var GroupRole = Qt.UserRole + 2
+		var FavoriteIdRole = Qt.UserRole + 3
+		var IsSeparatorRole = Qt.UserRole + 4
+		var IsDropPlaceholderRole = Qt.UserRole + 5
+		var IsParentRole = Qt.UserRole + 6
+		var HasChildrenRole = Qt.UserRole + 7
+		var HasActionListRole = Qt.UserRole + 8
+		var ActionListRole = Qt.UserRole + 9
+		var UrlRole = Qt.UserRole + 10
+		var DisabledRole = Qt.UserRole + 11 // @since: Plasma 5.20
+		var IsMultilineTextRole = Qt.UserRole + 12 // @since: Plasma 5.24
+		var DisplayWrappedRole = Qt.UserRole + 13 // @since: Plasma 6.0
 
 		var modelIndex = model.index(i, 0);
 
@@ -38,6 +41,7 @@ ListModel {
 			name: model.data(modelIndex, Qt.DisplayRole),
 			description: model.data(modelIndex, DescriptionRole),
 			favoriteId: model.data(modelIndex, FavoriteIdRole),
+			disabled: false, // for SidebarContextMenu
 			largeIcon: false, // for KickerListView
 		};
 
@@ -59,6 +63,11 @@ ListModel {
 			item.icon = icon
 		} else if (typeof icon === 'string') {
 			item.iconName = icon
+		}
+
+		var isDisabled = model.data(modelIndex, DisabledRole)
+		if (typeof isDisabled !== 'undefined') {
+			item.disabled = isDisabled
 		}
 
 		return item;
@@ -109,7 +118,7 @@ ListModel {
 
 	function hasActionList(index) {
 		var DescriptionRole = Qt.UserRole + 1;
-		var HasActionListRole = DescriptionRole + 7;
+		var HasActionListRole = Qt.UserRole + 8
 
 		var item = list[index]
 		var modelIndex = item.parentModel.index(item.indexInParent, 0)
@@ -118,7 +127,7 @@ ListModel {
 
 	function getActionList(index) {
 		var DescriptionRole = Qt.UserRole + 1;
-		var ActionListRole = DescriptionRole + 8;
+		var ActionListRole = Qt.UserRole + 9
 
 		var item = list[index]
 		var modelIndex = item.parentModel.index(item.indexInParent, 0)

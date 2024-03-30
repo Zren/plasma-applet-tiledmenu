@@ -12,7 +12,7 @@ ListModel {
 	onListChanged: {
 		clear()
 		for (var i = 0; i < list.length; i++) {
-			append(list[i]);
+			append(list[i])
 		}
 	}
 
@@ -33,7 +33,7 @@ ListModel {
 		var IsMultilineTextRole = Qt.UserRole + 12 // @since: Plasma 5.24
 		var DisplayWrappedRole = Qt.UserRole + 13 // @since: Plasma 6.0
 
-		var modelIndex = model.index(i, 0);
+		var modelIndex = model.index(i, 0)
 
 		var item = {
 			parentModel: model,
@@ -43,22 +43,22 @@ ListModel {
 			favoriteId: model.data(modelIndex, FavoriteIdRole),
 			disabled: false, // for SidebarContextMenu
 			largeIcon: false, // for KickerListView
-		};
+		}
 
 		if (typeof model.name === 'string') {
 			item.parentName = model.name
 		}
 
 		// ListView.append() doesn't like it when we have { key: [object] }.
-		var url = model.data(modelIndex, UrlRole);
+		var url = model.data(modelIndex, UrlRole)
 		if (typeof url === 'object') {
-			url = url.toString();
+			url = url.toString()
 		}
 		if (typeof url === 'string') {
 			item.url = url
 		}
 
-		var icon =  model.data(modelIndex, Qt.DecorationRole);
+		var icon =  model.data(modelIndex, Qt.DecorationRole)
 		if (typeof icon === 'object') {
 			item.icon = icon
 		} else if (typeof icon === 'string') {
@@ -70,23 +70,23 @@ ListModel {
 			item.disabled = isDisabled
 		}
 
-		return item;
+		return item
 	}
 
 	function parseModel(appList, model, path) {
-		// console.log(path, model, model.description, model.count);
+		// console.log(path, model, model.description, model.count)
 		for (var i = 0; i < model.count; i++) {
-			var item = model.modelForRow(i);
+			var item = model.modelForRow(i)
 			if (!item) {
-				item = parseAppsModelItem(model, i);
+				item = parseAppsModelItem(model, i)
 			}
-			var itemPath = (path || []).concat(i);
+			var itemPath = (path || []).concat(i)
 			if (item && item.hasChildren) {
 				// console.log(item)
-				parseModel(appList, item, itemPath);
+				parseModel(appList, item, itemPath)
 			} else {
-				// console.log(itemPath, item, item.description);
-				appList.push(item);
+				// console.log(itemPath, item, item.description)
+				appList.push(item)
 			}
 		}
 	}
@@ -100,7 +100,7 @@ ListModel {
 
 	function log() {
 		for (var i = 0; i < list.length; i++) {
-			var item = list[i];
+			var item = list[i]
 			console.log(JSON.stringify({
 				name: item.name,
 				description: item.description,
@@ -110,14 +110,14 @@ ListModel {
 
 	function triggerIndex(index) {
 		var item = list[index]
-		item.parentModel.trigger(item.indexInParent, "", null);
+		item.parentModel.trigger(item.indexInParent, "", null)
 		itemTriggered()
 	}
 
 	signal itemTriggered()
 
 	function hasActionList(index) {
-		var DescriptionRole = Qt.UserRole + 1;
+		var DescriptionRole = Qt.UserRole + 1
 		var HasActionListRole = Qt.UserRole + 8
 
 		var item = list[index]
@@ -126,7 +126,7 @@ ListModel {
 	}
 
 	function getActionList(index) {
-		var DescriptionRole = Qt.UserRole + 1;
+		var DescriptionRole = Qt.UserRole + 1
 		var ActionListRole = Qt.UserRole + 9
 
 		var item = list[index]
@@ -154,7 +154,7 @@ ListModel {
 
 	function hasApp(favoriteId) {
 		for (var i = 0; i < count; i++) {
-			var item = get(i);
+			var item = get(i)
 			if (item.favoriteId == favoriteId) {
 				return true
 			}

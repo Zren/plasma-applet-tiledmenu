@@ -40,10 +40,6 @@ PlasmoidItem {
 			// Cast it to string first before checking if it's empty by casting to bool.
 			readonly property bool hasFaceIcon: (''+faceIconUrl)
 		}
-		
-		Kicker.SystemSettings {
-			id: systemSettings
-		}
 
 		Kicker.DragHelper {
 			id: dragHelper

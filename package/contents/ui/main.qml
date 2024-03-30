@@ -32,8 +32,8 @@ PlasmoidItem {
 	}
 
 	Item {
-		// https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kcoreaddons/kuserproxy.h
-		// https://invent.kde.org/frameworks/kdeclarative/-/blob/master/src/qmlcontrols/kcoreaddons/kuserproxy.cpp
+		// https://invent.kde.org/frameworks/kcoreaddons/-/blob/master/src/qml/kuserproxy.h
+		// https://invent.kde.org/frameworks/kcoreaddons/-/blob/master/src/qml/kuserproxy.cpp
 		KCoreAddons.KUser {
 			id: kuser
 			// faceIconUrl is an empty QUrl 'object' when ~/.face.icon doesn't exist.

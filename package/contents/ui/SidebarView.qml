@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Layouts
 import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
 import org.kde.config as KConfig
 import org.kde.draganddrop as DragAndDrop
 import org.kde.kcmutils as KCM // KCMLauncher
@@ -40,7 +41,7 @@ Item {
 			spacing: 0
 
 			// SidebarItem {
-			// 	iconName: 'open-menu-symbolic'
+			// 	icon.name: 'open-menu-symbolic'
 			// 	text: i18n("Menu")
 			// 	closeOnClick: false
 			// 	onClicked: sidebarMenu.open = !sidebarMenu.open
@@ -80,25 +81,25 @@ Item {
 			spacing: 0
 
 			SidebarItem {
+				id: userMenuButton
 				icon.name: kuser.hasFaceIcon ? kuser.faceIconUrl : 'user-identity'
 				text: kuser.fullName
-				submenu: userMenu
-
+				onClicked: {
+					userMenu.toggleOpen()
+				}
 				SidebarContextMenu {
 					id: userMenu
+					visualParent: userMenuButton
+					model: appsModel.sessionActionsModel
 
-					SidebarItem {
-						icon.name: 'system-users'
+					PlasmaExtras.MenuItem {
+						icon: 'system-users'
 						text: i18n("User Manager")
-						buttonHeight: config.sidebarPopupButtonSize
 						onClicked: KCM.KCMLauncher.open('kcm_users')
 						visible: KConfig.KAuthorized.authorizeControlModule('kcm_users')
 					}
 
-					SidebarItemRepeater {
-						model: appsModel.sessionActionsModel
-						buttonHeight: config.sidebarPopupButtonSize
-					}
+					// ... appsModel.sessionActionsModel
 				}
 			}
 
@@ -108,17 +109,16 @@ Item {
 			}
 
 			SidebarItem {
+				id: powerMenuButton
 				icon.name: 'system-shutdown-symbolic'
 				text: i18n("Power")
-				submenu: powerMenu
-
+				onClicked: {
+					powerMenu.toggleOpen()
+				}
 				SidebarContextMenu {
 					id: powerMenu
-					
-					SidebarItemRepeater {
-						model: appsModel.powerActionsModel
-						buttonHeight: config.sidebarPopupButtonSize
-					}
+					visualParent: powerMenuButton
+					model: appsModel.powerActionsModel
 				}
 			}
 		}

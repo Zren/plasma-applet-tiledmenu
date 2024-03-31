@@ -1,8 +1,8 @@
-// Version 7
+// Version 8
 
 import QtQuick
 import QtQuick.Controls as QQC2
-import QtQuick.Dialogs
+import QtQuick.Dialogs as QtDialogs
 import QtQuick.Window
 import org.kde.kirigami as Kirigami
 
@@ -75,35 +75,6 @@ QQC2.TextField {
 	readonly property int defaultWidth: Math.ceil(fontMetrics.advanceWidth(defaultText))
 	implicitWidth: rightPadding + Math.max(defaultWidth, contentWidth) + leftPadding
 
-	// Note: There's a function in Kirigami 5.12:
-	// Kirigami.ColorUtils.linearInterpolation(aColor, bColor, balance)
-	// but it requires KF5 5.69, while Ubuntu 20.04 currently only has KF5 5.68
-	// https://invent.kde.org/frameworks/kirigami/-/blob/master/src/colorutils.h#L88
-	// https://invent.kde.org/frameworks/kirigami/-/blob/master/src/colorutils.cpp#L59
-	// https://repology.org/project/plasma-framework/versions
-	function isTransparent(c) {
-		return c.r == 0 && c.g == 0 && c.b == 0 && c.a == 0
-	}
-	function scaleAlpha(c, factor) {
-		return Qt.rgba(c.r, c.g, c.b, c.a * factor)
-	}
-	function lerpDouble(a, b, balance) {
-		return a + (b - a) * balance
-	}
-	function lerpColor(oneColor, twoColor, balance) {
-		if (isTransparent(oneColor)) {
-			return scaleAlpha(twoColor, balance)
-		}
-		if (isTransparent(twoColor)) {
-			return scaleAlpha(oneColor, balance)
-		}
-		var r = lerpDouble(oneColor.r, twoColor.r, balance)
-		var g = lerpDouble(oneColor.g, twoColor.g, balance)
-		var b = lerpDouble(oneColor.b, twoColor.b, balance)
-		var a = lerpDouble(oneColor.a, twoColor.a, balance)
-		return Qt.rgba(r, g, b, a)
-	}
-
 	MouseArea {
 		id: mouseArea
 		anchors.leftMargin: parent.rightPadding
@@ -123,7 +94,7 @@ QQC2.TextField {
 			id: previewBgMask
 			visible: false
 			anchors.fill: parent
-			border.width: 1 * Kirigami.Units.devicePixelRatio
+			border.width: 1 * Screen.devicePixelRatio
 			border.color: "transparent"
 			radius: width / 2
 		}
@@ -148,9 +119,8 @@ QQC2.TextField {
 			id: previewFill
 			anchors.fill: parent
 			color: colorField.valueColor
-			border.width: 1 * Kirigami.Units.devicePixelRatio
-			border.color: lerpColor(color, Kirigami.Theme.textColor, 0.5)
-			// border.color: Kirigami.ColorUtils.linearInterpolation(color, Kirigami.Theme.textColor, 0.5)
+			border.width: 1 * Screen.devicePixelRatio
+			border.color: Kirigami.ColorUtils.linearInterpolation(color, Kirigami.Theme.textColor, 0.5)
 			radius: width / 2
 		}
 	}
@@ -158,11 +128,11 @@ QQC2.TextField {
 	Loader {
 		id: dialogLoader
 		active: false
-		sourceComponent: ColorDialog {
+		sourceComponent: QtDialogs.ColorDialog {
 			id: dialog
 			visible: true
 			modality: Qt.WindowModal
-			options: colorField.showAlphaChannel ? ColorDialog.ShowAlphaChannel : 0
+			options: colorField.showAlphaChannel ? QtDialogs.ColorDialog.ShowAlphaChannel : 0
 			selectedColor: colorField.valueColor
 			onSelectedColorChanged: {
 				if (visible) {

@@ -94,33 +94,22 @@ ColumnLayout {
 				}
 			}
 
-			TileEditorField {
+			TileEditorFileField {
 				id: backgroundImageField
 				title: i18n("Background Image")
 				key: 'backgroundImage'
-
-				PlasmaComponents3.Button {
-					icon.name: 'document-open'
-					onClicked: imagePicker.open()
-
-					QtDialogs.FileDialog {
-						id: imagePicker
-
-						title: i18n("Choose an image")
-
-						selectFolder: false
-						selectMultiple: false
-
-						nameFilters: [ i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)") ]
-
-						onFileUrlChanged: {
-							backgroundImageField.text = fileUrl
-							if (fileUrl) {
-								labelField.checked = false
-								iconField.checked = false
-							}
-						}
+				onTextChanged: {
+					if (text) {
+						labelField.checked = false
+						iconField.checked = false
 					}
+				}
+				onDialogOpen: function(dialog) {
+					dialog.title = i18n("Choose an image")
+					dialog.nameFilters = [
+						i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"),
+						i18n("All files (%1)", "*"),
+					]
 				}
 			}
 

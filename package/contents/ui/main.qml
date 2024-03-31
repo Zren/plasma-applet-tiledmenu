@@ -113,7 +113,11 @@ PlasmoidItem {
 			// TODO popup is an invalid reference here for some reason
 			fullRepresentationItem.searchView.searchField.forceActiveFocus()
 			fullRepresentationItem.searchView.showDefaultView()
-			// fullRepresentationItem.searchView.tileEditorView.open('preferred://browser')
+
+			// Debug TileEditorView
+			// fullRepresentationItem.tileGrid.addDefaultTiles()
+			// var testTile = fullRepresentationItem.tileGrid.getTileAt(0, 1)
+			// fullRepresentationItem.tileGrid.editTile(testTile)
 		}
 	}
 

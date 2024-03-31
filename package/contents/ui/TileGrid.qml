@@ -735,5 +735,10 @@ DropArea {
 		return addTile(x, y, groupProps)
 	}
 
+	// Use for quickly testing on widget load
+	function addDefaultTiles() {
+		tileGridPresets.addDefault()
+	}
+
 	signal editTile(var tile)
 }

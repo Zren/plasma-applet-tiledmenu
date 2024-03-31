@@ -1,12 +1,10 @@
-import QtQuick 2.0
-// import QtQuick.Controls 1.1
-// import QtQuick.Controls.Styles 1.1
-import QtQuick.Layouts 1.1
-// import QtQuick.Window 2.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-// import org.kde.plasma.components 2.0 as PlasmaComponents
-import org.kde.draganddrop 2.0 as DragAndDrop
-import org.kde.kquickcontrolsaddons 2.0 // KCMShell
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.core as PlasmaCore
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.config as KConfig
+import org.kde.draganddrop as DragAndDrop
+import org.kde.kcmutils as KCM // KCMLauncher
 import "Utils.js" as Utils
 
 Item {
@@ -43,7 +41,7 @@ Item {
 			spacing: 0
 
 			// SidebarItem {
-			// 	iconName: 'open-menu-symbolic'
+			// 	icon.name: 'open-menu-symbolic'
 			// 	text: i18n("Menu")
 			// 	closeOnClick: false
 			// 	onClicked: sidebarMenu.open = !sidebarMenu.open
@@ -70,12 +68,12 @@ Item {
 				checked: searchView.showingAppsCategorically
 			}
 			// SidebarItem {
-			// 	iconName: 'system-search-symbolic'
+			// 	icon.name: 'system-search-symbolic'
 			// 	text: i18n("Search")
 			// 	onClicked: searchResultsView.showDefaultSearch()
 			// 	// checked: stackView.currentItem == searchResultsView
 			// 	// checkedEdge: Qt.RightEdge
-			// 	// checkedEdgeWidth: 4 * PlasmaCore.Units.devicePixelRatio // Twice as thick as normal
+			// 	// checkedEdgeWidth: 4 * Screen.devicePixelRatio // Twice as thick as normal
 			// }
 		}
 		ColumnLayout {
@@ -83,32 +81,25 @@ Item {
 			spacing: 0
 
 			SidebarItem {
-				iconName: kuser.hasFaceIcon ? kuser.faceIconUrl : 'user-identity'
+				id: userMenuButton
+				icon.name: kuser.hasFaceIcon ? kuser.faceIconUrl : 'user-identity'
 				text: kuser.fullName
-				submenu: userMenu
-
+				onClicked: {
+					userMenu.toggleOpen()
+				}
 				SidebarContextMenu {
 					id: userMenu
+					visualParent: userMenuButton
+					model: appsModel.sessionActionsModel
 
-					SidebarItem {
-						iconName: 'system-users'
+					PlasmaExtras.MenuItem {
+						icon: 'system-users'
 						text: i18n("User Manager")
-						buttonHeight: config.sidebarPopupButtonSize
-						onClicked: {
-							KCMShell.open([
-								'user_manager', // Plasma 5.19
-								'kcm_users' // Plasma 5.20
-							])
-						}
-						// An uninstalled KCM like 'user_manager.desktop' in Plasma 5.20 is returned
-						// in the output list, so we need to check if user has permission for both.
-						visible: KCMShell.authorize(['user_manager.desktop', 'kcm_users.desktop']).length == 2
+						onClicked: KCM.KCMLauncher.open('kcm_users')
+						visible: KConfig.KAuthorized.authorizeControlModule('kcm_users')
 					}
 
-					SidebarItemRepeater {
-						model: appsModel.sessionActionsModel
-						buttonHeight: config.sidebarPopupButtonSize
-					}
+					// ... appsModel.sessionActionsModel
 				}
 			}
 
@@ -118,17 +109,16 @@ Item {
 			}
 
 			SidebarItem {
-				iconName: 'system-shutdown-symbolic'
+				id: powerMenuButton
+				icon.name: 'system-shutdown-symbolic'
 				text: i18n("Power")
-				submenu: powerMenu
-
+				onClicked: {
+					powerMenu.toggleOpen()
+				}
 				SidebarContextMenu {
 					id: powerMenu
-					
-					SidebarItemRepeater {
-						model: appsModel.powerActionsModel
-						buttonHeight: config.sidebarPopupButtonSize
-					}
+					visualParent: powerMenuButton
+					model: appsModel.powerActionsModel
 				}
 			}
 		}

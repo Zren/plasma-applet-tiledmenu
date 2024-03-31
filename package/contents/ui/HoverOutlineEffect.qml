@@ -1,10 +1,15 @@
-import QtQuick 2.0
-import QtGraphicalEffects 1.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import org.kde.kirigami as Kirigami
+
+
+// https://doc.qt.io/qt-5/graphicaleffects.html
+// https://doc.qt.io/qt-6/qtgraphicaleffects5-index.html
+// import QtGraphicalEffects 1.0 // TODO Deprecated in Qt6
+import Qt5Compat.GraphicalEffects as QtGraphicalEffects
 
 Item {
 	id: hoverOutlineEffect
-	property int hoverOutlineSize: 1 * PlasmaCore.Units.devicePixelRatio
+	property int hoverOutlineSize: 1 * Screen.devicePixelRatio
 	property int hoverRadius: 40
 	property int pressedRadius: hoverRadius
 	property bool useOutlineMask: true
@@ -18,7 +23,7 @@ Item {
 	property int effectRadius: hoverOutlineEffect.pressed ? pressedRadius : hoverRadius
 	Behavior on effectRadius {
 		NumberAnimation {
-			duration: PlasmaCore.Units.longDuration
+			duration: Kirigami.Units.longDuration
 		}
 	}
 
@@ -27,7 +32,7 @@ Item {
 	function alpha(c, a) {
 		return Qt.rgba(c.r, c.g, c.b, a)
 	}
-	property color effectColor: PlasmaCore.Theme.textColor
+	property color effectColor: Kirigami.Theme.textColor
 	property color fillColor: alpha(effectColor, 1/16)
 	property color pressedFillColor: alpha(effectColor, 4/16)
 	property color borderColor: alpha(effectColor, 8/16)
@@ -50,12 +55,12 @@ Item {
 
 		Behavior on color {
 			ColorAnimation {
-				duration: PlasmaCore.Units.longDuration
+				duration: Kirigami.Units.longDuration
 			}
 		}
 	}
 
-	RadialGradient {
+	QtGraphicalEffects.RadialGradient {
 		id: hoverOutlineMask
 		visible: false
 		anchors.fill: parent
@@ -69,7 +74,7 @@ Item {
 		}
 	}
 
-	OpacityMask {
+	QtGraphicalEffects.OpacityMask {
 		anchors.fill: parent
 		visible: hoverOutlineEffect.useOutlineMask
 		source: hoverOutline

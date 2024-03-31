@@ -1,4 +1,4 @@
-import QtQuick 2.0
+import QtQuick
 
 Repeater {
 	id: repeater
@@ -8,7 +8,7 @@ Repeater {
 	delegate: SidebarItem {
 		buttonHeight: repeater.buttonHeight
 		iconSize: repeater.iconSize
-		icon:  model.iconName || model.decoration
+		icon.name:  model.iconName || model.decoration
 		text: model.name || model.display
 		sidebarMenu: repeater.parent.parent // SidebarContextMenu { Column { Repeater{} } }
 		onClicked: {

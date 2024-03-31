@@ -1,6 +1,4 @@
-import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Layouts 1.0
+import QtQuick
 
 Item {
 	id: searchView
@@ -44,12 +42,16 @@ Item {
 		var defView = plasmoid.configuration.defaultAppListView
 		if (defView == 'Alphabetical') {
 			appsView.showAppsAlphabetically()
+			config.showSearch = true
 		} else if (defView == 'Categories') {
 			appsView.showAppsCategorically()
+			config.showSearch = true
 		} else if (defView == 'JumpToLetter') {
 			jumpToLetterView.showLetters()
+			config.showSearch = true
 		} else if (defView == 'JumpToCategory') {
 			jumpToLetterView.showCategories()
+			config.showSearch = true
 		} else if (defView == 'TilesOnly') {
 			searchView.showTilesOnly()
 		}
@@ -57,7 +59,8 @@ Item {
 
 	function showTilesOnly() {
 		if (!showingAppList) {
-			appsView.show(stackView.noTransition)
+			// appsView.show(stackView.noTransition)
+			appsView.show()
 		}
 		config.showSearch = false
 	}
@@ -106,7 +109,7 @@ Item {
 				target: search
 				function onQueryChanged() {
 					if (search.query.length > 0 && stackView.currentItem != searchResultsView) {
-						stackView.push(searchResultsView, true)
+						stackView.replace(searchResultsView)
 					}
 					searchResultsView.filterViewOpen = false
 				}
@@ -120,7 +123,7 @@ Item {
 
 			function showDefaultSearch() {
 				if (stackView.currentItem != searchResultsView) {
-					stackView.push(searchResultsView, true)
+					stackView.replace(searchResultsView)
 				}
 				search.applyDefaultFilters()
 			}
@@ -143,11 +146,8 @@ Item {
 			function show(animation) {
 				config.showSearch = true
 				if (stackView.currentItem != appsView) {
-					stackView.delegate = animation || stackView.panUp
-					stackView.push({
-						item: appsView,
-						replace: true,
-					})
+					// stackView.delegate = animation || stackView.panUp
+					stackView.replace(appsView)
 				}
 				appsView.scrollToTop()
 			}
@@ -170,11 +170,8 @@ Item {
 			function show() {
 				config.showSearch = true
 				if (stackView.currentItem != jumpToLetterView) {
-					stackView.delegate = stackView.zoomOut
-					stackView.push({
-						item: jumpToLetterView,
-						replace: true,
-					})
+					// stackView.delegate = stackView.zoomOut
+					stackView.replace(jumpToLetterView)
 				}
 			}
 		}

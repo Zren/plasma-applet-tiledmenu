@@ -1,6 +1,6 @@
-import QtQuick 2.2
-import QtQuick.Controls 2.0 as QQC2
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.plasma.core as PlasmaCore
 
 Item {
 	id: tileItem
@@ -66,7 +66,7 @@ Item {
 
 		property int pressX: -1
 		property int pressY: -1
-		onPressed: {
+		onPressed: function(mouse) {
 			pressX = mouse.x
 			pressY = mouse.y
 		}
@@ -76,7 +76,7 @@ Item {
 
 		// This MouseArea will spam "QQuickItem::ungrabMouse(): Item is not the mouse grabber."
 		// but there's no other way of having a clickable drag area.
-		onClicked: {
+		onClicked: function(mouse) {
 			mouse.accepted = true
 			tileGrid.resetDrag()
 			if (mouse.button == Qt.LeftButton) {
@@ -97,7 +97,7 @@ Item {
 	// We use this drag pattern to use the internal drag with events.
 	// https://stackoverflow.com/a/24729837/947742
 	readonly property bool dragActive: tileMouseArea.drag.active
-	onDragActiveChanged: {
+	onDragActiveChanged: function(dragActive) {
 		if (dragActive) {
 			// console.log("drag started")
 			// console.log('onDragStarted', JSON.stringify(modelData), index, tileModel.length)
@@ -132,7 +132,7 @@ Item {
 		sourceComponent: Rectangle {
 			id: groupOutline
 			color: "transparent"
-			border.width: Math.max(1, Math.round(1 * PlasmaCore.Units.devicePixelRatio))
+			border.width: Math.max(1, Math.round(1 * Screen.devicePixelRatio))
 			border.color: "#80ffffff"
 			y: modelData.h * cellBoxSize
 			z: 100
@@ -144,7 +144,7 @@ Item {
 	AppContextMenu {
 		id: contextMenu
 		tileIndex: index
-		onPopulateMenu: {
+		onPopulateMenu: function(menu) {
 			if (!plasmoid.configuration.tilesLocked) {
 				menu.addPinToMenuAction(modelData.url)
 			}

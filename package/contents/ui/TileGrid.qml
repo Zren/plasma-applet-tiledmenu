@@ -1,18 +1,17 @@
-import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick
+import QtQuick.Controls as QQC2
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.extras as PlasmaExtras
 import "Utils.js" as Utils
 
 DropArea {
 	id: tileGrid
 
-	property int cellSize: 60 * PlasmaCore.Units.devicePixelRatio
-	property real cellMargin: 3 * PlasmaCore.Units.devicePixelRatio
-	property real cellPushedMargin: 6 * PlasmaCore.Units.devicePixelRatio
+	property int cellSize: 60 * Screen.devicePixelRatio
+	property real cellMargin: 3 * Screen.devicePixelRatio
+	property real cellPushedMargin: 6 * Screen.devicePixelRatio
 	property int cellBoxSize: cellMargin + cellSize + cellMargin
-	property int hoverOutlineSize: 2 * PlasmaCore.Units.devicePixelRatio
+	property int hoverOutlineSize: 2 * Screen.devicePixelRatio
 
 	property int minColumns: Math.floor(width / cellBoxSize)
 	property int minRows: Math.floor(height / cellBoxSize)
@@ -388,7 +387,7 @@ DropArea {
 		tileGrid.tileModelChanged()
 	}
 
-	ScrollView {
+	QQC2.ScrollView {
 		id: scrollView
 		anchors.fill: parent
 
@@ -405,10 +404,10 @@ DropArea {
 			}
 		}
 
-		__wheelAreaScrollSpeed: cellBoxSize
-		style: ScrollViewStyle {
-			transientScrollBars: true
-		}
+		// __wheelAreaScrollSpeed: cellBoxSize
+		// style: ScrollViewStyle {
+		// 	transientScrollBars: true
+		// }
 		
 		Item {
 			id: scrollItem
@@ -480,7 +479,7 @@ DropArea {
 					MouseArea {
 						anchors.fill: parent
 						acceptedButtons: Qt.RightButton
-						onClicked: {
+						onClicked: function(mouse) {
 							if (mouse.button == Qt.RightButton) {
 								cellContextMenu.cellX = cellItem.modelX
 								cellContextMenu.cellY = cellItem.modelY
@@ -492,12 +491,12 @@ DropArea {
 					}
 				}
 			}
-			PlasmaComponents.ContextMenu {
+			PlasmaExtras.Menu {
 				id: cellContextMenu
 				property int cellX: -1
 				property int cellY: -1
 
-				PlasmaComponents.MenuItem {
+				PlasmaExtras.MenuItem {
 					icon: "group-new"
 					text: i18n("New Group")
 					visible: !plasmoid.configuration.tilesLocked
@@ -512,7 +511,7 @@ DropArea {
 					visible: !plasmoid.configuration.tilesLocked
 				}
 
-				PlasmaComponents.MenuItem {
+				PlasmaExtras.MenuItem {
 					icon: plasmoid.configuration.tilesLocked ? "object-unlocked" : "object-locked"
 					text: plasmoid.configuration.tilesLocked ? i18n("Unlock Tiles") : i18n("Lock Tiles")
 					onClicked: {
@@ -577,7 +576,7 @@ DropArea {
 			anchors.fill: parent
 			opacity: parent.ticking ? 1 : 0
 			gradient: Gradient {
-				GradientStop { position: 0.0; color: PlasmaCore.Theme.highlightColor }
+				GradientStop { position: 0.0; color: Kirigami.Theme.highlightColor }
 				GradientStop { position: 0.3; color: "transparent" }
 			}
 		}
@@ -613,7 +612,7 @@ DropArea {
 			opacity: parent.ticking ? 1 : 0
 			gradient: Gradient {
 				GradientStop { position: 0.7; color: "transparent" }
-				GradientStop { position: 1.0; color: PlasmaCore.Theme.highlightColor }
+				GradientStop { position: 1.0; color: Kirigami.Theme.highlightColor }
 			}
 		}
 	}
@@ -734,6 +733,11 @@ DropArea {
 			}
 		}
 		return addTile(x, y, groupProps)
+	}
+
+	// Use for quickly testing on widget load
+	function addDefaultTiles() {
+		tileGridPresets.addDefault()
 	}
 
 	signal editTile(var tile)

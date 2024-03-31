@@ -1,7 +1,8 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.draganddrop 2.0 as DragAndDrop
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.core as PlasmaCore
+import org.kde.draganddrop as DragAndDrop
+import org.kde.kirigami as Kirigami
 
 MouseArea {
 	id: launcherIcon
@@ -18,7 +19,7 @@ MouseArea {
 		case PlasmaCore.Types.Horizontal:
 			return height
 		default:
-			return PlasmaCore.Units.gridUnit * 3
+			return Kirigami.Units.gridUnit * 3
 		}
 	}
 
@@ -29,7 +30,7 @@ MouseArea {
 		case PlasmaCore.Types.Horizontal:
 			return 0
 		default:
-			return PlasmaCore.Units.gridUnit * 3
+			return Kirigami.Units.gridUnit * 3
 		}
 	}
 
@@ -37,7 +38,9 @@ MouseArea {
 	property int size: {
 		if (inPanel) {
 			if (plasmoid.configuration.fixedPanelIcon) {
-				return PlasmaCore.Units.iconSizeHints.panel
+				// Was PlasmaCore.Units.iconSizeHints.panel in Plasma5
+				// In Plasma6 https://invent.kde.org/plasma/plasma-desktop/-/merge_requests/1390/diffs
+				return 48 // Kickoff uses this hardcoded number
 			} else {
 				return maxSize
 			}
@@ -52,7 +55,7 @@ MouseArea {
 	property int iconSize: Math.min(width, height)
 	property alias iconSource: icon.source
 
-	PlasmaCore.IconItem {
+	Kirigami.Icon {
 		id: icon
 		anchors.centerIn: parent
 		source: "start-here-kde"

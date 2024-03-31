@@ -1,7 +1,6 @@
-import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Layouts
+import org.kde.plasma.core as PlasmaCore
 
 GridView {
 	id: jumpToSectionView
@@ -15,7 +14,7 @@ GridView {
 
 	Connections {
 		target: appsModel.allAppsModel
-		onRefreshed: jumpToLetterView.update()
+		function onRefreshed() { jumpToLetterView.update() }
 	}
 
 	signal update()
@@ -27,9 +26,9 @@ GridView {
 
 	property int buttonSize: {
 		if (squareView) {
-			return 70 * PlasmaCore.Units.devicePixelRatio
+			return 70 * Screen.devicePixelRatio
 		} else {
-			return 36 * PlasmaCore.Units.devicePixelRatio
+			return 36 * Screen.devicePixelRatio
 		}
 	}
 
@@ -78,7 +77,7 @@ GridView {
 		}
 		
 		onClicked: {
-			appsView.show(stackView.zoomIn)
+			appsView.show() // appsView.show(stackView.zoomIn)
 			appsView.jumpToSection(section)
 		}
 	}

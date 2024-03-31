@@ -1,14 +1,14 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.0
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.extras as PlasmaExtras
 
 ColumnLayout {
 	// inherits tileGridPresets from Loader
 	// inherits maxWidth from Loader
 
-	spacing: PlasmaCore.Units.largeSpacing
+	spacing: Kirigami.Units.largeSpacing
 
 	PlasmaExtras.Heading {
 		Layout.alignment: Qt.AlignHCenter

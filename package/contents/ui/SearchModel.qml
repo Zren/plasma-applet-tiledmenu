@@ -1,12 +1,5 @@
-import QtQuick 2.0
-import QtQuick.Controls 1.1
-import QtQuick.Controls.Styles 1.1
-import QtQuick.Layouts 1.1
-import QtQuick.Window 2.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 2.0 as PlasmaComponents
-
-import org.kde.plasma.private.kicker 0.1 as Kicker
+import QtQuick
+import org.kde.plasma.private.kicker as Kicker
 
 Item {
 	id: search
@@ -24,8 +17,8 @@ Item {
 	//     find /usr/share/kservices5/ -iname "plasma-runner-*.desktop" -print0 | xargs -0 grep "PluginInfo-Name" | sort
 	property var filters: []
 	onFiltersChanged: {
-		runnerModel.deleteWhenEmpty = !runnerModel.deleteWhenEmpty // runnerModel.clear()
-		runnerModel.runners = filters
+		// runnerModel.deleteWhenEmpty = !runnerModel.deleteWhenEmpty // runnerModel.clear()
+		// runnerModel.runners = filters
 		clearQueryPrefix()
 		runnerModel.query = search.query
 	}
@@ -37,7 +30,7 @@ Item {
 		favoritesModel: rootModel.favoritesModel
 		mergeResults: config.searchResultsMerged
 
-		runners: [] // Empty = All runners.
+		// runners: [] // Empty = All runners.
 
 		// deleteWhenEmpty: isDash
 		// deleteWhenEmpty: false

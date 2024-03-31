@@ -1,4 +1,5 @@
-import QtQuick 2.0
+import QtQuick
+import "./lib/" as Lib
 
 Repeater {
 	id: repeater
@@ -6,23 +7,25 @@ Repeater {
 	property int numAvailable: maxHeight / config.flatButtonSize
 	property int minVisibleIndex: count - numAvailable // Hide items with an index smaller than this
 
+	property QtObject xdgUserDir: Lib.XdgUserDir {}
+
 	delegate: SidebarItem {
-		icon: symbolicIconName || model.iconName || model.decoration
+		icon.name: symbolicIconName || model.iconName || model.decoration
 		text: xdgDisplayName || model.name || model.display
 		sidebarMenu: repeater.parent.parent // SidebarContextMenu { Column { Repeater{} } }
 		onClicked: {
 			repeater.parent.parent.open = false // SidebarContextMenu { Column { Repeater{} } }
 			var xdgFolder = isLocalizedFolder()
 			if (xdgFolder === 'DOCUMENTS') {
-				executable.exec('xdg-open $(xdg-user-dir DOCUMENTS)')
+				Qt.openUrlExternally(xdgUserDir.documents)
 			} else if (xdgFolder === 'DOWNLOAD') {
-				executable.exec('xdg-open $(xdg-user-dir DOWNLOAD)')
+				Qt.openUrlExternally(xdgUserDir.download)
 			} else if (xdgFolder === 'MUSIC') {
-				executable.exec('xdg-open $(xdg-user-dir MUSIC)')
+				Qt.openUrlExternally(xdgUserDir.music)
 			} else if (xdgFolder === 'PICTURES') {
-				executable.exec('xdg-open $(xdg-user-dir PICTURES)')
+				Qt.openUrlExternally(xdgUserDir.pictures)
 			} else if (xdgFolder === 'VIDEOS') {
-				executable.exec('xdg-open $(xdg-user-dir VIDEOS)')
+				Qt.openUrlExternally(xdgUserDir.videos)
 			} else {
 				repeater.model.triggerIndex(index)
 			}

@@ -1,5 +1,6 @@
-import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import org.kde.kirigami as Kirigami
+import org.kde.ksvg as KSvg
 
 SidebarItem {
 	id: control
@@ -8,20 +9,20 @@ SidebarItem {
 
 	property string appletIconName: ""
 	readonly property string internalIconName: control.checked ? (appletIconName + "-selected") : appletIconName
-	readonly property string appletIconFilename: appletIconName ? plasmoid.file("", "icons/" + internalIconName + ".svg") : ""
+	readonly property string appletIconFilename: appletIconName ? Qt.resolvedUrl("../icons/" + internalIconName + ".svg") : ""
 
 	checkedEdge: Qt.LeftEdge
-	checkedEdgeWidth: 4 * PlasmaCore.Units.devicePixelRatio // Twice as thick as normal
+	checkedEdgeWidth: 4 * Screen.devicePixelRatio // Twice as thick as normal
 
-	PlasmaCore.SvgItem {
+	KSvg.SvgItem {
 		id: icon
 
-		svg: PlasmaCore.Svg {
+		svg: KSvg.Svg {
 			imagePath: control.appletIconFilename
 		}
 
 		// From FlatButton.qml, modifed so icon is also 16px
-		property int iconSize: PlasmaCore.Units.roundToIconSize(config.flatButtonIconSize)
+		property int iconSize: Kirigami.Units.iconSizes.roundedIconSize(config.flatButtonIconSize)
 		width: iconSize
 		height: iconSize
 		anchors.centerIn: parent

@@ -1,4 +1,35 @@
 #!/bin/bash
-# Version 1
+# Version 4
 
-kpackagetool5 -t Plasma/Applet -r package
+# Eg: kpackagetool6 --type "Plasma/Applet" --remove package
+
+if [ -f "$PWD/package/metadata.json" ]; then # Plasma6 (and later versions of Plasma5)
+	packageNamespace=`python3 -c 'import sys, json; print(json.load(sys.stdin).get("KPlugin", {}).get("Id", ""))' < "$PWD/package/metadata.json"`
+	packageServiceType=`python3 -c 'import sys, json; print(json.load(sys.stdin).get("KPackageStructure",""))' < "$PWD/package/metadata.json"`
+	if [ -z "$packageServiceType" ]; then # desktoptojson will set KPlugin.ServiceTypes[0] instead of KPackageStructure
+		packageServiceType=`python3 -c 'import sys, json; print((json.load(sys.stdin).get("KPlugin", {}).get("ServiceTypes", [])+[""])[0])' < "$PWD/package/metadata.json"`
+		echo "[warning] metadata.json needs KPackageStructure set in Plasma6"
+	fi
+elif [ -f "$PWD/package/metadata.desktop" ]; then # Plasma5
+	packageNamespace=`kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="X-KDE-PluginInfo-Name"`
+	packageServiceType=`kreadconfig5 --file="$PWD/package/metadata.desktop" --group="Desktop Entry" --key="X-KDE-ServiceTypes"`
+else
+	echo "[error] Could not find 'package/metadata.json' or 'package/metadata.desktop'"
+	exit 1
+fi
+echo "Namespace: ${packageNamespace}"
+echo "Type: ${packageServiceType}"
+if [ -z "$packageServiceType" ]; then
+	echo "[error] Could not parse metadata"
+	exit 1
+fi
+
+if command -v kpackagetool6 &> /dev/null ; then kpackagetool="kpackagetool6" # Plasma6
+elif command -v kpackagetool5 &> /dev/null ; then kpackagetool="kpackagetool5" # Plasma5
+else
+	echo "[error] Could not find 'kpackagetool6'"
+	exit 1
+fi
+
+# Eg: kpackagetool6 --type "Plasma/Applet" --remove package
+"$kpackagetool" -t "${packageServiceType}" -r package

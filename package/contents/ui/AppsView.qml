@@ -1,6 +1,5 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.3 as QQC2 // Qt 5.10
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Controls as QQC2
 
 QQC2.ScrollView {
 	id: appsView

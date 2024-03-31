@@ -1,8 +1,7 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.kirigami 2.3 as Kirigami
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
 
 AppToolButton {
 	id: control
@@ -16,11 +15,11 @@ AppToolButton {
 		anchors.bottomMargin: control.paddingBottom
 
 		opacity: control.enabled ? 1 : 0.5
-		spacing: PlasmaCore.Units.smallSpacing
+		spacing: Kirigami.Units.smallSpacing
 
-		Layout.preferredHeight: Math.max(PlasmaCore.Units.iconSizes.small, label.implicitHeight)
+		Layout.preferredHeight: Math.max(Kirigami.Units.iconSizes.small, label.implicitHeight)
 
-		PlasmaCore.IconItem {
+		Kirigami.Icon {
 			id: icon
 			source: control.iconName || control.iconSource
 
@@ -34,18 +33,17 @@ AppToolButton {
 			Layout.maximumHeight: Layout.minimumWidth
 			Layout.alignment: Qt.AlignHCenter | Qt.AlignVCenter
 			active: control.containsMouse
-			colorGroup: control.containsMouse ? PlasmaCore.Theme.ButtonColorGroup : PlasmaCore.ColorScope.colorGroup
 		}
 
 		PlasmaComponents3.Label {
 			id: label
 			Layout.minimumWidth: implicitWidth
 			text: control.Kirigami.MnemonicData.richTextLabel
-			font: control.font || PlasmaCore.Theme.defaultFont
+			font: control.font || Kirigami.Theme.defaultFont
 			visible: control.text != ""
 			Layout.fillWidth: true
 			height: parent.height
-			color: control.containsMouse ? PlasmaCore.Theme.buttonTextColor : PlasmaCore.ColorScope.textColor
+			color: control.containsMouse ? Kirigami.Theme.highlightColor : Kirigami.Theme.textColor
 			horizontalAlignment: icon.valid ? Text.AlignLeft : Text.AlignHCenter
 			verticalAlignment: Text.AlignVCenter
 			elide: Text.ElideRight

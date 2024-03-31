@@ -1,16 +1,15 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.5 as QQC2
-import QtQuick.Layouts 1.0
-
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.kirigami 2.5 as Kirigami
-import org.kde.kcoreaddons 1.0 as KCoreAddons
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.core as PlasmaCore
+import org.kde.coreaddons as KCoreAddons
 
 import ".." as TiledMenu
 import "../libconfig" as LibConfig
 
 
-Kirigami.FormLayout {
+LibConfig.FormKCM {
 	id: formLayout
 
 	readonly property string plasmaStyleLabelText: {

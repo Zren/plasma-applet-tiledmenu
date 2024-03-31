@@ -1,8 +1,8 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.2 as QQC2
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.kirigami as Kirigami
 
 GridLayout {
 	id: searchResultsView
@@ -17,7 +17,7 @@ GridLayout {
 		Layout.fillWidth: true
 
 		FlatButton {
-			iconName: "system-search-symbolic"
+			icon.name: "system-search-symbolic"
 			Layout.preferredHeight: parent.Layout.preferredHeight
 			Layout.preferredWidth: parent.Layout.preferredHeight
 			onClicked: search.applyDefaultFilters()
@@ -25,7 +25,7 @@ GridLayout {
 			checkedEdge: searchView.searchOnTop ?  Qt.TopEdge : Qt.BottomEdge
 		}
 		FlatButton {
-			iconName: "window"
+			icon.name: "window"
 			Layout.preferredHeight: parent.Layout.preferredHeight
 			Layout.preferredWidth: parent.Layout.preferredHeight
 			onClicked: search.filters = ['services']
@@ -33,7 +33,7 @@ GridLayout {
 			checkedEdge: searchView.searchOnTop ?  Qt.TopEdge : Qt.BottomEdge
 		}
 		FlatButton {
-			iconName: "document-new"
+			icon.name: "document-new"
 			Layout.preferredHeight: parent.Layout.preferredHeight
 			Layout.preferredWidth: parent.Layout.preferredHeight
 			onClicked: search.filters = ['baloosearch']
@@ -41,7 +41,7 @@ GridLayout {
 			checkedEdge: searchView.searchOnTop ?  Qt.TopEdge : Qt.BottomEdge
 		}
 		// FlatButton {
-		// 	iconName: "globe"
+		// 	icon.name: "globe"
 		// 	Layout.preferredHeight: parent.Layout.preferredHeight
 		// 	Layout.preferredWidth: parent.Layout.preferredHeight
 		// 	onClicked: search.filters = ['bookmarks']
@@ -55,7 +55,8 @@ GridLayout {
 			id: moreFiltersButton
 			Layout.preferredHeight: parent.Layout.preferredHeight
 			Layout.preferredWidth: moreFiltersButtonRow.implicitWidth + padding*2
-			property int padding: (config.searchFilterRowHeight - config.flatButtonIconSize) / 2
+			// property int padding: (config.searchFilterRowHeight - config.flatButtonIconSize) / 2
+			padding: (config.searchFilterRowHeight - config.flatButtonIconSize) / 2
 			// enabled: false
 
 			RowLayout {
@@ -67,14 +68,14 @@ GridLayout {
 					id: moreFiltersButtonLabel
 					text: i18n("Filters")
 				}
-				PlasmaCore.IconItem {
+				Kirigami.Icon {
 					source: "usermenu-down"
 					rotation: searchResultsView.filterViewOpen ? 180 : 0
 					Layout.preferredHeight: config.flatButtonIconSize
 					Layout.preferredWidth: config.flatButtonIconSize
 
 					Behavior on rotation {
-						NumberAnimation { duration: PlasmaCore.Units.longDuration }
+						NumberAnimation { duration: Kirigami.Units.longDuration }
 					}
 				}
 			}

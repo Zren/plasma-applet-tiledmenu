@@ -1,6 +1,7 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.core as PlasmaCore
 
 MouseArea {
 	id: popup
@@ -36,7 +37,7 @@ MouseArea {
 
 			tileModel: config.tileModel.value
 
-			onEditTile: tileEditorViewLoader.open(tile)
+			onEditTile: function(tile) { tileEditorViewLoader.open(tile) }
 
 			onTileModelChanged: saveTileModel.restart()
 			Timer {
@@ -56,8 +57,8 @@ MouseArea {
 		visible: !plasmoid.configuration.tilesLocked && !(plasmoid.location == PlasmaCore.Types.TopEdge || plasmoid.location == PlasmaCore.Types.RightEdge)
 		anchors.top: parent.top
 		anchors.right: parent.right
-		width: PlasmaCore.Units.largeSpacing
-		height: PlasmaCore.Units.largeSpacing
+		width: Kirigami.Units.largeSpacing
+		height: Kirigami.Units.largeSpacing
 		cursorShape: Qt.WhatsThisCursor
 
 		PlasmaCore.ToolTipArea {
@@ -72,8 +73,8 @@ MouseArea {
 		visible: !plasmoid.configuration.tilesLocked && !(plasmoid.location == PlasmaCore.Types.BottomEdge || plasmoid.location == PlasmaCore.Types.RightEdge)
 		anchors.bottom: parent.bottom
 		anchors.right: parent.right
-		width: PlasmaCore.Units.largeSpacing
-		height: PlasmaCore.Units.largeSpacing
+		width: Kirigami.Units.largeSpacing
+		height: Kirigami.Units.largeSpacing
 		cursorShape: Qt.WhatsThisCursor
 
 		PlasmaCore.ToolTipArea {

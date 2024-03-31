@@ -1,8 +1,8 @@
-import QtQuick 2.0
-import QtQuick.Layouts 1.1
-import org.kde.plasma.core 2.0 as PlasmaCore
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.draganddrop 2.0 as DragAndDrop
+import QtQuick
+import QtQuick.Layouts
+import org.kde.kirigami as Kirigami
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.draganddrop as DragAndDrop
 
 AppToolButton {
 	id: itemDelegate
@@ -58,12 +58,15 @@ AppToolButton {
 		var dragIcon = iconInstance
 		if (typeof dragIcon === "string") {
 			// startDrag must use QIcon. See Issue #75.
-			dragIcon = dragHelper.defaultIcon
+			// dragIcon = dragHelper.defaultIcon
+			dragIcon = null
 		}
 		// console.log('startDrag', widget, model.url, "favoriteId", model.favoriteId)
 		// console.log('    iconInstance', iconInstance)
 		// console.log('    dragIcon', dragIcon)
-		dragHelper.startDrag(widget, model.url || model.favoriteId, dragIcon, "favoriteId", model.favoriteId)
+		if (dragIcon) {
+			dragHelper.startDrag(widget, model.url || model.favoriteId, dragIcon, "favoriteId", model.favoriteId)
+		}
 
 		resetDragState()
 	}
@@ -71,17 +74,17 @@ AppToolButton {
 		pressX = -1
 		pressY = -1
 	}
-	onPressed: {
+	onPressed: function(mouse) {
 		if (mouse.buttons & Qt.LeftButton) {
 			initDrag(mouse)
 		}
 	}
-	onContainsMouseChanged: {
+	onContainsMouseChanged: function(containsMouse) {
 		if (!containsMouse) {
 			resetDragState()
 		}
 	}
-	onPositionChanged: {
+	onPositionChanged: function(mouse) {
 		if (shouldStartDrag(mouse)) {
 			startDrag()
 		}
@@ -90,16 +93,16 @@ AppToolButton {
 	RowLayout { // ItemListDelegate
 		id: row
 		anchors.left: parent.left
-		anchors.leftMargin: PlasmaCore.Units.smallSpacing
+		anchors.leftMargin: Kirigami.Units.smallSpacing
 		anchors.right: parent.right
-		anchors.rightMargin: PlasmaCore.Units.smallSpacing
+		anchors.rightMargin: Kirigami.Units.smallSpacing
 
 		Item {
 			Layout.fillHeight: true
 			implicitHeight: itemIcon.implicitHeight
 			implicitWidth: itemIcon.implicitWidth
 
-			PlasmaCore.IconItem {
+			Kirigami.Icon {
 				id: itemIcon
 				anchors.centerIn: parent
 				implicitHeight: itemDelegate.iconSize
@@ -156,7 +159,7 @@ AppToolButton {
 	}
 
 	acceptedButtons: Qt.LeftButton | Qt.RightButton
-	onClicked: {
+	onClicked: function(mouse) {
 		mouse.accepted = true
 		resetDragState()
 		logger.debug('MenuListItem.onClicked', mouse.button, Qt.LeftButton, Qt.RightButton)
@@ -175,7 +178,7 @@ AppToolButton {
 	// property var actionList: hasActionList ? listView.model.getActionList(index) : []
 	AppContextMenu {
 		id: contextMenu
-		onPopulateMenu: {
+		onPopulateMenu: function(menu) {
 			if (launcherUrl && !plasmoid.configuration.tilesLocked) {
 				menu.addPinToMenuAction(launcherUrl)
 			}

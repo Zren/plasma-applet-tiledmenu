@@ -1,10 +1,9 @@
-import QtQuick 2.2
-import QtQuick.Layouts 1.0
-import QtQuick.Dialogs 1.0 as QtDialogs
-
-import org.kde.plasma.components 3.0 as PlasmaComponents3
-import org.kde.plasma.extras 2.0 as PlasmaExtras
-import org.kde.kquickcontrolsaddons 2.0 as KQuickAddons
+import QtQuick
+import QtQuick.Layouts
+import QtQuick.Dialogs as QtDialogs
+import org.kde.plasma.components as PlasmaComponents3
+import org.kde.plasma.extras as PlasmaExtras
+import org.kde.iconthemes as KIconThemes // IconDialog
 
 ColumnLayout {
 	id: tileEditorView
@@ -88,40 +87,29 @@ ColumnLayout {
 					icon.name: "document-open"
 					onClicked: iconDialog.open()
 
-					KQuickAddons.IconDialog {
+					KIconThemes.IconDialog {
 						id: iconDialog
 						onIconNameChanged: iconField.text = iconName
 					}
 				}
 			}
 
-			TileEditorField {
+			TileEditorFileField {
 				id: backgroundImageField
 				title: i18n("Background Image")
 				key: 'backgroundImage'
-
-				PlasmaComponents3.Button {
-					icon.name: 'document-open'
-					onClicked: imagePicker.open()
-
-					QtDialogs.FileDialog {
-						id: imagePicker
-
-						title: i18n("Choose an image")
-
-						selectFolder: false
-						selectMultiple: false
-
-						nameFilters: [ i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)") ]
-
-						onFileUrlChanged: {
-							backgroundImageField.text = fileUrl
-							if (fileUrl) {
-								labelField.checked = false
-								iconField.checked = false
-							}
-						}
+				onTextChanged: {
+					if (text) {
+						labelField.checked = false
+						iconField.checked = false
 					}
+				}
+				onDialogOpen: function(dialog) {
+					dialog.title = i18n("Choose an image")
+					dialog.nameFilters = [
+						i18n("Image Files (*.png *.jpg *.jpeg *.bmp *.svg *.svgz)"),
+						i18n("All files (%1)", "*"),
+					]
 				}
 			}
 
@@ -147,7 +135,7 @@ ColumnLayout {
 
 	function show() {
 		if (stackView.currentItem != tileEditorView) {
-			stackView.push(tileEditorView, true)
+			stackView.replace(tileEditorView)
 		}
 	}
 

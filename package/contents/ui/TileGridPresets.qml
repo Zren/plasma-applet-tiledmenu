@@ -1,7 +1,7 @@
-import QtQuick 2.0
-import org.kde.plasma.components 2.0 as PlasmaComponents
+import QtQuick
+import org.kde.plasma.extras as PlasmaExtras
 
-PlasmaComponents.MenuItem {
+PlasmaExtras.MenuItem {
 	id: presetMenuItem
 	icon: "list-add-symbolic"
 	text: i18n("Add Preset")
@@ -135,10 +135,10 @@ PlasmaComponents.MenuItem {
 
 
 	//---
-	PlasmaComponents.ContextMenu {
+	readonly property var presetSubMenu: PlasmaExtras.Menu {
 		visualParent: presetMenuItem.action
 
-		PlasmaComponents.MenuItem {
+		PlasmaExtras.MenuItem {
 			icon: "libreoffice-startcenter"
 			text: i18n("Productivity")
 			onClicked: {
@@ -147,7 +147,7 @@ PlasmaComponents.MenuItem {
 			}
 		}
 
-		PlasmaComponents.MenuItem {
+		PlasmaExtras.MenuItem {
 			icon: "internet-web-browser"
 			text: i18n("Explore")
 			onClicked: {
@@ -156,7 +156,7 @@ PlasmaComponents.MenuItem {
 			}
 		}
 
-		PlasmaComponents.MenuItem {
+		PlasmaExtras.MenuItem {
 			icon: "mail-message"
 			text: i18n("Gmail")
 			onClicked: {

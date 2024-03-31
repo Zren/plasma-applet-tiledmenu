@@ -1,12 +1,12 @@
-// Version 5
+// Version 6
 
-import QtQuick 2.0
-import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Layouts 1.0
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
-import "." as LibInput
+import "." as LibConfig
 
-LibInput.TextArea {
+LibConfig.TextArea {
 	id: textArea
 
 	// Load

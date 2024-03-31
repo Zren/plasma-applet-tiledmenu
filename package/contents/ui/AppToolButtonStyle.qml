@@ -1,5 +1,5 @@
-import QtQuick 2.0
-import org.kde.plasma.core 2.0 as PlasmaCore
+import QtQuick
+import org.kde.ksvg as KSvg
 
 Item {
 	id: style
@@ -26,14 +26,14 @@ Item {
 			}
 		}
 	}
-	PlasmaCore.FrameSvgItem {
+	KSvg.FrameSvgItem {
 		id: surfaceNormal
 		anchors.fill: parent
 		imagePath: "widgets/button"
 		prefix: "normal"
 		enabledBorders: "AllBorders"
 	}
-	PlasmaCore.FrameSvgItem {
+	KSvg.FrameSvgItem {
 		id: surfacePressed
 		anchors.fill: parent
 		imagePath: "widgets/button"

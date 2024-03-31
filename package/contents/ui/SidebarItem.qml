@@ -1,30 +1,19 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.0 as QQC2
-import QtQuick.Layouts 1.1
+import QtQuick
+import QtQuick.Controls as QQC2
+import QtQuick.Layouts
 
 FlatButton {
 	id: sidebarItem
 	Layout.fillWidth: true
 	Layout.minimumWidth: expanded ? config.sidebarMinOpenWidth : implicitWidth
 	property var sidebarMenu: parent.parent // Column.SidebarMenu
-	property bool expanded: sidebarMenu ? sidebarMenu.open : false
+	expanded: sidebarMenu ? sidebarMenu.open : false
 	labelVisible: expanded
 	property bool closeOnClick: true
-	property Item submenu: null
-	readonly property bool submenuOpen: submenu ? submenu.open : false
-
-	onClicked: {
-		if (sidebarMenu && sidebarMenu.open && closeOnClick) {
-			sidebarMenu.open = false
-		}
-		if (submenu) {
-			submenu.open = !submenu.open
-		}
-	}
 
 	QQC2.ToolTip {
 		id: control
-		visible: sidebarItem.hovered && !(sidebarItem.expanded || sidebarItem.submenuOpen)
+		visible: sidebarItem.hovered && !sidebarItem.expanded
 		text: sidebarItem.text
 		delay: 0
 		x: parent.width + rightPadding

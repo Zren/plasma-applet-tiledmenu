@@ -1,3 +1,38 @@
+## v46 - March 30 2024
+
+* **Plasma 6 TODO:**
+* Right Clicking Search Results will crash Plasma
+* Resizing the Popup no longer auto-resize/snap to the width of a tile
+* Drag and Drop is disabled
+* App List Transitions/Animations need to be re-implemented
+* There's some bugs with Tiles Only mode and Search
+* Sidebar Buttons don't use the hover outline effect
+* Cannot customize panel icon
+* **Plasma 6 Changes:**
+* Changed implicit onFoo Connection properties to functions by @BVengo (PR #153)
+* Convert to Plasma6's metadata.json
+* Add kpac and other scripts to parse metadata.json. The old i18n merge scripts are now part of kpac. TODO: Add a simple bash script to convert .po => .mo for distro packaging.
+* PlasmaComponents2.Menu => PlasmaExtras.Menu, Use Screen.devicePixelRatio, QtGraphicalEffects is now in Qt5Compat, PlasmaCore.IconItem => Kirigami.Icon, PlasmaCore.FrameSvgItem => KSvg.FrameSvgItem, KQuickControlsAddons.KCMShell => KCM.KCMLauncher, KQuickControlsAddons.IconDialog => KIconThemes.IconDialog, KCMLauncher.authorize => KConfig.KAuthorized.authorizeControlModule,
+* Use Qt.resolvedUrl() instead of plasmoid.file()
+* Add LibConfig.FormKCM to force the config window to default to a minimum of 800px wide
+* Sync ConfigurationShortcuts.qml with upstream
+* Port to Plasmoid.contextualActions
+* Drop import versions thanks to Qt6
+* QQC1 Buttons+StackView to QQC2
+* Remove deprecated Kicker.RootModel properties
+* Rename Main.qml => main.qml, use PlasmoidItem
+* Remove executable datasource used to open `xdg-user-dir`s and use Qt6's StandardPaths.
+* Update to Qt6's new QtDialogs API
+* Detect Kicker's disabled Shutdown options (maybe)
+* **Plasma 5 Changes:** (Before Plasma 6 fixes)
+* Make popup resizeable like default Kickoff widget (Note this hasn't been tested in Plasma 6)
+* Make it easier to showRecentDocs by magic index number (Issue #140)
+* Add krunner_systemsettings default toggle (Issue #127)
+* Add Persian translations by @alr86 (PR 154)
+* Updated Traditional Chinese (zh_TW) translations by @kisaragi-hiu (PR #137)
+* Updated Japanese translations by @kisaragi-hiu (PR #136)
+* Updated Korean translations by @kuroehanako (PR #128)
+
 ## v45 - April 28 2022
 
 * Force a minimum popup height of 5 sidebar buttons (Issue #125)

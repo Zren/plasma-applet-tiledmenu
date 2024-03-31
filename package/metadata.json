@@ -40,7 +40,7 @@
 		"Name[sl]": "Meni s ploščicami",
 		"Name[tr]": "Döşeli Menü",
 		"Name[zh_TW]": "方塊磚選單",
-		"Version": "45",
+		"Version": "46",
 		"Website": "https://github.com/Zren/plasma-applet-tiledmenu"
 	},
 	"X-Plasma-API-Minimum-Version": "6.0",

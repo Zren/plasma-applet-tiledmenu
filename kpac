@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-__version__ = '26'
+__version__ = '29'
 
 #--- User Configurable Defaults
 # You can use `kpac --dir=package --i18ndir=package/translate`
@@ -61,7 +61,10 @@ class TC:
 		return re.sub('\033' + '\[((\d{1,2});)?(\d{1,2})m', '', str)
 
 def echoTC(terminalColor, *args):
-	print(terminalColor + ' '.join(args) + TC.Reset)
+	line = terminalColor + ' '.join(args) + TC.Reset
+	if not sys.stdout.isatty():
+		line = TC.stripColors(line)
+	print(line)
 def echoGray(*args):
 	echoTC(TC.FG_DarkGray, *args)
 def echoRed(*args):
@@ -466,10 +469,47 @@ class KPackage:
 
 		if isAlreadyInstalled:
 			# kpackagetool5 -t Plasma/Applet -u package
-			subprocess.call([kpackagetool(),
+			proc = subprocess.run([kpackagetool(),
 				'--type', self.packageServiceType,
 				'--upgrade', self.sourceDir,
-			])
+			], capture_output=True)
+			outText = proc.stdout.decode('utf-8').strip()
+			errText = proc.stderr.decode('utf-8').strip()
+			if proc.returncode == 0:
+				if outText:
+					print(outText)
+			else:
+				failOutText = 'Error: Plugin {} is not installed.'.format(self.packageNamespace)
+				failErrPattern = r'KPackageStructure of KPluginMetaData\(pluginId:"{}", fileName: "(.+){}"\) does not match requested format "{}"'.format(
+					re.escape(self.packageNamespace),
+					re.escape(os.path.join(self.packageNamespace, 'metadata.json')),
+					re.escape(self.packageServiceType)
+				)
+				m = re.search(failErrPattern, errText)
+				if outText == failOutText and m:
+					print(m.group(0))
+					echoWarning("[Note] When trying to upgrade a Plasma 5 package with metadata.desktop in Plasma 6, we need to remove the old install first.")
+					# Note: kpackagetool6 --remove will also fail.
+					if isCommandInstalled('kpackagetool5'):
+						echoWarning("[Note] Detected kpackagetool5, running: kpackagetool5 --type {} --remove {}".format(self.packageServiceType, self.sourceDir))
+						proc = subprocess.call(['kpackagetool5',
+							'--type', self.packageServiceType,
+							'--remove', self.sourceDir,
+						])
+					else:
+						echoError("[error] kpackagetool5 not found.")
+						installedPath = os.path.join(m.group(1), self.packageNamespace)
+						echoError("[error] Please manually delete the '{}' folder.".format(installedPath))
+						sys.exit(1)
+
+					exitCode = subprocess.call([kpackagetool(),
+						'--type', self.packageServiceType,
+						'--install', self.sourceDir,
+					])
+					if exitCode != 0:
+						echoError("[error] Error when calling: {} --type {} --install {}".format(kpackagetool(), self.packageServiceType, self.sourceDir))
+						sys.exit(1)
+
 			if restart:
 				subprocess.call([kstart(),
 					'--',
@@ -1499,7 +1539,7 @@ def updateFile(kpackage, libPath, fileRelativePath):
 
 	diffStr = git_diff_color_noindex(fileProjectPath, fileLibPath)
 	if diffStr.strip() != "":
-		echoWarning(f"[kpac-plasma6] Update '{fileRelativePath}'?")
+		echoWarning(f"[kpac-updatelib] Update '{fileRelativePath}'?")
 		print(diffStr)
 		print('')
 		if input('Copy? [y]/n > ') != 'n':

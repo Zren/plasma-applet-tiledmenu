@@ -1,6 +1,6 @@
 # Tiled Menu
 
-https://store.kde.org/p/1160672/
+https://store.kde.org/p/2142716/
 
 A menu based on Windows 10's Start Menu.
 

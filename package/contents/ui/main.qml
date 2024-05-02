@@ -100,7 +100,7 @@ PlasmoidItem {
 	// TODO Plasma6 update broke button so need to check default
 	// compactRepresentation: LauncherIcon {
 	// 	id: panelItem
-	// 	iconSource: plasmoid.configuration.icon || "start-here-kde"
+	// 	iconSource: plasmoid.configuration.icon || "start-here-kde-symbolic"
 	// }
 
 	hideOnWindowDeactivate: !widget.userConfiguring

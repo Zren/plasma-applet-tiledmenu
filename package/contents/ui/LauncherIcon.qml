@@ -58,7 +58,7 @@ MouseArea {
 	Kirigami.Icon {
 		id: icon
 		anchors.centerIn: parent
-		source: "start-here-kde"
+		source: "start-here-kde-symbolic"
 		width: launcherIcon.iconSize
 		height: launcherIcon.iconSize
 		active: launcherIcon.containsMouse

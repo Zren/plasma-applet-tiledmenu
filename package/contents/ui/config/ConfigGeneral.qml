@@ -115,8 +115,18 @@ LibConfig.FormKCM {
 	LibConfig.IconField {
 		Layout.fillWidth: true
 		configKey: 'icon'
-		defaultValue: 'start-here-kde'
+		defaultValue: 'start-here-kde-symbolic'
 		previewIconSize: Kirigami.Units.iconSizes.large
+		presetValues: [
+			'format-border-set-none-symbolic',
+			'applications-all-symbolic',
+			'kde-symbolic',
+			// 'openSUSE-distributor-logo',
+			'choice-rhomb-symbolic',
+			'choice-round-symbolic',
+			'stateshape-symbolic',
+			// 'beamerblock-symbolic',
+		]
 
 		LibConfig.CheckBox {
 			text: i18n("Fixed Size")

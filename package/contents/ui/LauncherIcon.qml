@@ -3,6 +3,7 @@ import QtQuick.Layouts
 import org.kde.plasma.core as PlasmaCore
 import org.kde.draganddrop as DragAndDrop
 import org.kde.kirigami as Kirigami
+import org.kde.plasma.plasmoid
 
 MouseArea {
 	id: launcherIcon
@@ -61,7 +62,7 @@ MouseArea {
 		source: "start-here-kde-symbolic"
 		width: launcherIcon.iconSize
 		height: launcherIcon.iconSize
-		active: launcherIcon.containsMouse
+		active: launcherIcon.containsMouse && !justOpenedTimer.running
 		smooth: true
 	}
 	
@@ -69,22 +70,20 @@ MouseArea {
 	// Rectangle { anchors.fill: parent; border.color: "#ff0"; color: "transparent"; border.width: 1; }
 	// Rectangle { anchors.fill: icon; border.color: "#f00"; color: "transparent"; border.width: 1; }
 
+	Accessible.name: Plasmoid.title
+	Accessible.role: Accessible.Button
 
 	hoverEnabled: true
 	// cursorShape: Qt.PointingHandCursor
 
-	onClicked: {
-		plasmoid.expanded = !plasmoid.expanded
-	}
+	property bool wasExpanded
+	onPressed: wasExpanded = widget.expanded
+	onClicked: widget.expanded = !wasExpanded
 
 	property alias activateOnDrag: dropArea.enabled
 	DragAndDrop.DropArea {
 		id: dropArea
 		anchors.fill: parent
-
-		onDragEnter: {
-			dragHoverTimer.restart()
-		}
 	}
 
 	onContainsMouseChanged: {
@@ -96,6 +95,7 @@ MouseArea {
 	Timer {
 		id: dragHoverTimer
 		interval: 250 // Same as taskmanager's activationTimer in MouseHandler.qml
-		onTriggered: plasmoid.expanded = true
+		running: dropArea.containsDrag
+		onTriggered: widget.expanded = true
 	}
 }

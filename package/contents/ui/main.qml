@@ -97,11 +97,10 @@ PlasmoidItem {
 	toolTipMainText: ""
 	toolTipSubText: ""
 
-	// TODO Plasma6 update broke button so need to check default
-	// compactRepresentation: LauncherIcon {
-	// 	id: panelItem
-	// 	iconSource: plasmoid.configuration.icon || "start-here-kde-symbolic"
-	// }
+	compactRepresentation: LauncherIcon {
+		id: panelItem
+		iconSource: plasmoid.configuration.icon || "start-here-kde-symbolic"
+	}
 
 	hideOnWindowDeactivate: !widget.userConfiguring
 	activationTogglesExpanded: true
@@ -118,7 +117,15 @@ PlasmoidItem {
 			// fullRepresentationItem.tileGrid.addDefaultTiles()
 			// var testTile = fullRepresentationItem.tileGrid.getTileAt(0, 1)
 			// fullRepresentationItem.tileGrid.editTile(testTile)
+
+			// Show icon active effect without hovering
+			justOpenedTimer.start()
 		}
+	}
+	Timer {
+		id: justOpenedTimer
+		repeat: false
+		interval: 600
 	}
 
 	// property alias searchResultsView: popup.searchView.searchResultsView

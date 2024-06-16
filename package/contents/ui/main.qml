@@ -233,8 +233,8 @@ PlasmoidItem {
 		},
 		PlasmaCore.Action {
 			text: i18n("Task Manager")
-			icon.name: "ksysguardd"
-			onTriggered: appsModel.launch('org.kde.ksysguard')
+			icon.name: "utilities-system-monitor"
+			onTriggered: appsModel.launch('org.kde.plasma-systemmonitor')
 		},
 		PlasmaCore.Action {
 			text: i18n("System Settings")

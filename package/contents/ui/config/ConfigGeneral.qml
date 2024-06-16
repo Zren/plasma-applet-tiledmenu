@@ -525,4 +525,23 @@ LibConfig.FormKCM {
 	// 	configKey: 'searchResultsCustomSort'
 	// }
 
+
+
+	//-------------------------------------------------------
+	LibConfig.Heading {
+		text: i18n("Right Click Menu")
+	}
+	LibConfig.TextField {
+		configKey: 'terminalApp'
+		Kirigami.FormData.label: i18n("Terminal")
+	}
+	LibConfig.TextField {
+		configKey: 'taskManagerApp'
+		Kirigami.FormData.label: i18n("Task Manager")
+	}
+	LibConfig.TextField {
+		configKey: 'fileManagerApp'
+		Kirigami.FormData.label: i18n("File Manager")
+	}
+
 }

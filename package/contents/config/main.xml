@@ -47,6 +47,17 @@
 			<default>Alphabetical</default>
 		</entry>
 
+		<!-- Apps -->
+		<entry name="terminalApp" type="string">
+			<default>org.kde.konsole.desktop</default>
+		</entry>
+		<entry name="taskManagerApp" type="string">
+			<default>org.kde.plasma-systemmonitor.desktop</default>
+		</entry>
+		<entry name="fileManagerApp" type="string">
+			<default>org.kde.dolphin.desktop</default>
+		</entry>
+
 		<!-- Base64 encoded JSON -->
 		<entry name="tileModel" type="string" stringType="base64json">
 			<!-- Schema: [{ url: "konsole.desktop", x: 3, y: 0, w: 2, h: 2, label: "Terminal" }, ...] -->

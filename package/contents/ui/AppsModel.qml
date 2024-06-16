@@ -504,9 +504,12 @@ Item {
 	}
 
 	function launch(launcherName) {
+		if (!endsWith(launcherName, '.desktop')) {
+			launcherName += '.desktop'
+		}
 		for (var i = 0; i < allAppsModel.count; i++) {
 			var item = allAppsModel.get(i);
-			if (item.url && endsWith(item.url, '/' + launcherName + '.desktop')) {
+			if (item.url && endsWith(item.url, '/' + launcherName)) {
 				item.parentModel.trigger(item.indexInParent, "", null);
 				break;
 			}

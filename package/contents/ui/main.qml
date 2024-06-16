@@ -226,7 +226,7 @@ PlasmoidItem {
 		PlasmaCore.Action {
 			text: i18n("Terminal")
 			icon.name: "utilities-terminal"
-			onTriggered: appsModel.launch('org.kde.konsole')
+			onTriggered: appsModel.launch(plasmoid.configuration.terminalApp) // TODO: Read SystemSettings
 		},
 		PlasmaCore.Action {
 			isSeparator: true
@@ -234,7 +234,7 @@ PlasmoidItem {
 		PlasmaCore.Action {
 			text: i18n("Task Manager")
 			icon.name: "utilities-system-monitor"
-			onTriggered: appsModel.launch('org.kde.plasma-systemmonitor')
+			onTriggered: appsModel.launch(plasmoid.configuration.taskManagerApp)
 		},
 		PlasmaCore.Action {
 			text: i18n("System Settings")
@@ -244,7 +244,7 @@ PlasmoidItem {
 		PlasmaCore.Action {
 			text: i18n("File Manager")
 			icon.name: "folder"
-			onTriggered: appsModel.launch('org.kde.dolphin')
+			onTriggered: appsModel.launch(plasmoid.configuration.fileManagerApp) // TODO: Read SystemSettings
 		},
 		PlasmaCore.Action {
 			isSeparator: true

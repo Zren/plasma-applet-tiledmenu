@@ -1,4 +1,4 @@
-// Version 10
+// Version 11
 
 import QtQuick
 import QtQuick.Controls as QQC2
@@ -25,6 +25,7 @@ RowLayout {
 	property string defaultValue: ""
 	property alias placeholderValue: textField.placeholderText
 	property var presetValues: []
+	property bool showPresetLabel: true
 
 	// Based on org.kde.plasma.kickoff
 	QQC2.Button {
@@ -117,8 +118,10 @@ RowLayout {
 				model: presetValues
 				QQC2.Button {
 					icon.name: modelData
-					text: modelData
+					text: iconField.showPresetLabel ? modelData : ''
 					onClicked: iconField.value = modelData
+					QQC2.ToolTip.text: modelData
+					QQC2.ToolTip.visible: !iconField.showPresetLabel && hovered
 				}
 			}
 		}

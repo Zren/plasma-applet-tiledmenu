@@ -121,12 +121,13 @@ LibConfig.FormKCM {
 			'format-border-set-none-symbolic',
 			'applications-all-symbolic',
 			'kde-symbolic',
-			// 'openSUSE-distributor-logo',
+			'openSUSE-distributor-logo',
 			'choice-rhomb-symbolic',
 			'choice-round-symbolic',
 			'stateshape-symbolic',
-			// 'beamerblock-symbolic',
+			'beamerblock-symbolic',
 		]
+		showPresetLabel: false
 
 		LibConfig.CheckBox {
 			text: i18n("Fixed Size")

@@ -10,11 +10,12 @@ FlatButton {
 	expanded: sidebarMenu ? sidebarMenu.open : false
 	labelVisible: expanded
 	property bool closeOnClick: true
+	property string tooltipText: ""
 
 	QQC2.ToolTip {
 		id: control
 		visible: sidebarItem.hovered && !sidebarItem.expanded
-		text: sidebarItem.text
+		text: sidebarItem.tooltipText == "" ? sidebarItem.text : sidebarItem.tooltipText
 		delay: 0
 		x: parent.width + rightPadding
 		y: (parent.height - height) / 2

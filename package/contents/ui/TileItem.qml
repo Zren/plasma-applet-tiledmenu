@@ -96,13 +96,13 @@ Item {
 
 	// We use this drag pattern to use the internal drag with events.
 	// https://stackoverflow.com/a/24729837/947742
-	readonly property bool dragActive: tileMouseArea.drag.active
-	onDragActiveChanged: function(dragActive) {
+	property bool dragActive: tileMouseArea.drag.active
+	onDragActiveChanged: {
 		if (dragActive) {
 			// console.log("drag started")
 			// console.log('onDragStarted', JSON.stringify(modelData), index, tileModel.length)
 			tileGrid.startDrag(index)
-			// tileGrid.dropOffsetX = 0
+			tileGrid.dropOffsetX = 0
 			// tileGrid.dropOffsetY = 0
 			tileItem.z = 1
 			Drag.start()

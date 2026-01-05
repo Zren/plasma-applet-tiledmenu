@@ -84,6 +84,10 @@ MouseArea {
 	DragAndDrop.DropArea {
 		id: dropArea
 		anchors.fill: parent
+
+		onDragEnter: {
+			dragHoverTimer.restart()
+		}
 	}
 
 	onContainsMouseChanged: {

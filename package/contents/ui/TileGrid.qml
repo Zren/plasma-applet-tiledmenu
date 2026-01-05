@@ -2,6 +2,7 @@ import QtQuick
 import QtQuick.Controls as QQC2
 import org.kde.kirigami as Kirigami
 import org.kde.plasma.extras as PlasmaExtras
+import org.kde.draganddrop as DragAndDrop
 import "Utils.js" as Utils
 
 DropArea {
@@ -50,31 +51,35 @@ DropArea {
 
 	//--- Drag and Drop events
 	// onContainsDragChanged: console.log('containsDrag', containsDrag)
-	onEntered: {
+	onEntered: drag => {
 		// console.log('onEntered', drag)
 		dragTick(drag)
 	}
-	onPositionChanged: {
+	onPositionChanged: drag => {
 		// console.log('onPositionChanged', drag)
 		dragTick(drag)
 	}
-	onExited: {
+	onExited: drag => {
 		// console.log('onExited')
 		resetDragHover()
 	}
-	onDropped: {
+	onDropped: drop => {
+		dragTick(drop)
 		// console.log('onDropped', drop)
-		if (draggedItem) {
-			tileGrid.moveTile(draggedItem, dropHoverX, dropHoverY)
-			tileGrid.resetDrag()
-			// event.accept(Qt.MoveAction)
-		} else if (addedItem) {
-			addedItem.x = dropHoverX
-			addedItem.y = dropHoverY
-			tileGrid.tileModel.push(addedItem)
-			tileGrid.tileModelChanged()
-			tileGrid.resetDrag()
+		if (canDrop) {
+			if (draggedItem) {
+				tileGrid.moveTile(draggedItem, dropHoverX, dropHoverY)
+				tileGrid.resetDrag()
+				// event.accept(Qt.MoveAction)
+			} else if (addedItem) {
+				addedItem.x = dropHoverX
+				addedItem.y = dropHoverY
+				tileGrid.tileModel.push(addedItem)
+				tileGrid.tileModelChanged()
+				tileGrid.resetDrag()
+			}
 		}
+		tileGrid.resetDrag()
 	}
 
 	// Drag and Drop functions
@@ -177,8 +182,8 @@ DropArea {
 	// https://github.com/qt/qtdeclarative/blob/a4aa8d9ade44d75cb5a1d84bd7c1773fadc73095/src/quick/items/qquickdroparea_p.h#L63
 	function dragTick(event) {
 		// console.log('dragTick', event.x, event.y)
-		var dragX = event.x + scrollView.flickableItem.contentX - dropOffsetX
-		var dragY = event.y + scrollView.flickableItem.contentY - dropOffsetY
+		var dragX = event.x + dropOffsetX
+		var dragY = event.y + dropOffsetY
 		var modelX = Math.floor(dragX / cellBoxSize)
 		var modelY = Math.floor(dragY / cellBoxSize)
 		var globalPoint = popup.mapFromItem(tileGrid, event.x, event.y)

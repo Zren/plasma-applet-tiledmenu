@@ -9,7 +9,7 @@ import Qt5Compat.GraphicalEffects as QtGraphicalEffects
 
 Item {
 	id: hoverOutlineEffect
-	property int hoverOutlineSize: 1 * Screen.devicePixelRatio
+	property int hoverOutlineSize: 1 * config.scaleFactor
 	property int hoverRadius: 40
 	property int pressedRadius: hoverRadius
 	property bool useOutlineMask: true

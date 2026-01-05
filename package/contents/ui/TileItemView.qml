@@ -16,10 +16,10 @@ Rectangle {
 	}
 	gradient: appObj.backgroundGradient ? tileGradient.createObject(tileItemView) : null
 
-	readonly property int tilePadding: 4 * Screen.devicePixelRatio
-	readonly property int smallIconSize: 32 * Screen.devicePixelRatio
-	readonly property int mediumIconSize: 72 * Screen.devicePixelRatio
-	readonly property int largeIconSize: 96 * Screen.devicePixelRatio
+	readonly property int tilePadding: 4 * config.scaleFactor
+	readonly property int smallIconSize: 32 * config.scaleFactor
+	readonly property int mediumIconSize: 72 * config.scaleFactor
+	readonly property int largeIconSize: 96 * config.scaleFactor
 
 	readonly property int labelAlignment: appObj.isGroup ? config.groupLabelAlignment : config.tileLabelAlignment
 

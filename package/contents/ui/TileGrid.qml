@@ -7,11 +7,11 @@ import "Utils.js" as Utils
 DropArea {
 	id: tileGrid
 
-	property int cellSize: 60 * Screen.devicePixelRatio
-	property real cellMargin: 3 * Screen.devicePixelRatio
-	property real cellPushedMargin: 6 * Screen.devicePixelRatio
+	property int cellSize: 60 * config.scaleFactor
+	property real cellMargin: 3 * config.scaleFactor
+	property real cellPushedMargin: 6 * config.scaleFactor
 	property int cellBoxSize: cellMargin + cellSize + cellMargin
-	property int hoverOutlineSize: 2 * Screen.devicePixelRatio
+	property int hoverOutlineSize: 2 * config.scaleFactor
 
 	property int minColumns: Math.floor(width / cellBoxSize)
 	property int minRows: Math.floor(height / cellBoxSize)

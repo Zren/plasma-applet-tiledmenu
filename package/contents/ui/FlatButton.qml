@@ -21,7 +21,7 @@ QQC2.ToolButton {
 
 	// http://doc.qt.io/qt-5/qt.html#Edge-enum
 	property int checkedEdge: 0 // 0 = all edges
-	property int checkedEdgeWidth: 2 * Screen.devicePixelRatio
+	property int checkedEdgeWidth: 2 * config.scaleFactor
 
 	property int buttonHeight: config.flatButtonSize
 	property int iconSize: config.flatButtonIconSize
@@ -56,7 +56,7 @@ QQC2.ToolButton {
 	// 	Item {
 	// 		id: spacingItem
 	// 		Layout.fillHeight: true
-	// 		implicitWidth: 4 * Screen.devicePixelRatio
+	// 		implicitWidth: 4 * config.scaleFactor
 	// 		visible: control.labelVisible
 
 	// 		// Rectangle { border.color: "#f00"; anchors.fill: parent; border.width: 1; color: "transparent"; }

@@ -23,7 +23,7 @@ PlasmaComponents3.TextField {
 	}
 	property int topMargin: 0
 	property int bottomMargin: 0
-	property int defaultFontSize: 16 * Screen.devicePixelRatio // Not the same as pointSize=16
+	property int defaultFontSize: 16 * config.scaleFactor // Not the same as pointSize=16
 	property int styleMaxFontSize: height - topMargin - bottomMargin
 	font.pixelSize: Math.min(defaultFontSize, styleMaxFontSize)
 

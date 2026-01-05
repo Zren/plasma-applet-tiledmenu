@@ -73,7 +73,7 @@ Item {
 			// 	onClicked: searchResultsView.showDefaultSearch()
 			// 	// checked: stackView.currentItem == searchResultsView
 			// 	// checkedEdge: Qt.RightEdge
-			// 	// checkedEdgeWidth: 4 * Screen.devicePixelRatio // Twice as thick as normal
+			// 	// checkedEdgeWidth: 4 * config.scaleFactor // Twice as thick as normal
 			// }
 		}
 		ColumnLayout {

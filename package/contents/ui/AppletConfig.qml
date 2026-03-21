@@ -10,16 +10,20 @@ Item {
 		return c2
 	}
 
+	//--- Miscellaneous
+	readonly property bool useSystemScaling: plasmoid.configuration.useSystemScaling
+	readonly property real scaleFactor: useSystemScaling ? 1.0 : Screen.devicePixelRatio
+
 	//--- Sizes
-	readonly property int panelIconSize: 24 * Screen.devicePixelRatio
-	readonly property int flatButtonSize: plasmoid.configuration.sidebarButtonSize * Screen.devicePixelRatio
-	readonly property int flatButtonIconSize: plasmoid.configuration.sidebarIconSize * Screen.devicePixelRatio
+	readonly property int panelIconSize: 24 * scaleFactor
+	readonly property int flatButtonSize: plasmoid.configuration.sidebarButtonSize * scaleFactor
+	readonly property int flatButtonIconSize: plasmoid.configuration.sidebarIconSize * scaleFactor
 	readonly property int sidebarWidth: flatButtonSize
-	readonly property int sidebarMinOpenWidth: 200 * Screen.devicePixelRatio
-	readonly property int sidebarRightMargin: 4 * Screen.devicePixelRatio
-	readonly property int sidebarPopupButtonSize: plasmoid.configuration.sidebarPopupButtonSize * Screen.devicePixelRatio
-	readonly property int appListWidth: plasmoid.configuration.appListWidth * Screen.devicePixelRatio
-	readonly property int tileEditorMinWidth: Math.max(350, 350 * Screen.devicePixelRatio)
+	readonly property int sidebarMinOpenWidth: 200 * scaleFactor
+	readonly property int sidebarRightMargin: 4 * scaleFactor
+	readonly property int sidebarPopupButtonSize: plasmoid.configuration.sidebarPopupButtonSize * scaleFactor
+	readonly property int appListWidth: plasmoid.configuration.appListWidth * scaleFactor
+	readonly property int tileEditorMinWidth: Math.max(350, 350 * scaleFactor)
 	readonly property int minimumHeight: flatButtonSize * 5 // Issue #125
 
 	property bool showSearch: false
@@ -40,22 +44,22 @@ Item {
 	readonly property int cellBoxUnits: 80
 	readonly property int cellMarginUnits: plasmoid.configuration.tileMargin
 	readonly property int cellSizeUnits: cellBoxUnits - cellMarginUnits*2
-	readonly property int cellSize: cellSizeUnits * tileScale * Screen.devicePixelRatio
-	readonly property real cellMargin: cellMarginUnits * tileScale * Screen.devicePixelRatio
+	readonly property int cellSize: cellSizeUnits * tileScale * scaleFactor
+	readonly property real cellMargin: cellMarginUnits * tileScale * scaleFactor
 	readonly property real cellPushedMargin: cellMargin * 2
 	readonly property int cellBoxSize: cellMargin + cellSize + cellMargin
 	readonly property int tileGridWidth: plasmoid.configuration.favGridCols * cellBoxSize
 
-	readonly property int favCellWidth: 60 * Screen.devicePixelRatio
-	readonly property int favCellPushedMargin: 5 * Screen.devicePixelRatio
-	readonly property int favCellPadding: 3 * Screen.devicePixelRatio
+	readonly property int favCellWidth: 60 * scaleFactor
+	readonly property int favCellPushedMargin: 5 * scaleFactor
+	readonly property int favCellPadding: 3 * scaleFactor
 	readonly property int favColWidth: ((favCellWidth + favCellPadding * 2) * 2) // = 132 (Medium Size)
-	readonly property int favViewDefaultWidth: (favColWidth * 3) * Screen.devicePixelRatio
-	readonly property int favSmallIconSize: 32 * Screen.devicePixelRatio
-	readonly property int favMediumIconSize: 72 * Screen.devicePixelRatio
+	readonly property int favViewDefaultWidth: (favColWidth * 3) * scaleFactor
+	readonly property int favSmallIconSize: 32 * scaleFactor
+	readonly property int favMediumIconSize: 72 * scaleFactor
 	readonly property int favGridWidth: (plasmoid.configuration.favGridCols/2) * favColWidth
 
-	readonly property int searchFieldHeight: plasmoid.configuration.searchFieldHeight * Screen.devicePixelRatio
+	readonly property int searchFieldHeight: plasmoid.configuration.searchFieldHeight * scaleFactor
 
 	readonly property int popupWidth: {
 		if (plasmoid.configuration.fullscreen) {
@@ -69,7 +73,7 @@ Item {
 			return Screen.desktopAvailableHeight
 		} else {
 			// implicit Math.floor() when cast as int
-			var dPR = Screen.devicePixelRatio
+			var dPR = scaleFactor
 			var pH3 = plasmoid.configuration.popupHeight
 			var pH4 = pH3 * dPR
 			var pH5 = Math.floor(pH4)
@@ -78,7 +82,7 @@ Item {
 		}
 	}
 	
-	readonly property int menuItemHeight: plasmoid.configuration.menuItemHeight * Screen.devicePixelRatio
+	readonly property int menuItemHeight: plasmoid.configuration.menuItemHeight * scaleFactor
 	
 	readonly property int searchFilterRowHeight: {
 		if (plasmoid.configuration.appListWidth >= 310) {

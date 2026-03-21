@@ -216,32 +216,74 @@ ListModel {
 	
 	signal itemTriggered()
 
-	function hasActionList(index) {
-		var DescriptionRole = Qt.UserRole + 1;
-		var HasActionListRole = DescriptionRole + 7;
+	// Look up a search result in appsModel.allAppsModel by favoriteId or url.
+	function findInAllAppsModel(favoriteId, url)
+	{
+		var list = appsModel.allAppsModel.list
+		for (var index = 0; index < list.length; ++index)
+		{
+			var item = list[index]
+			if (favoriteId && item.favoriteId && item.favoriteId === favoriteId)
+				return item
+			if (url && item.url && item.url === url) 
+				return item
+		}
+		return null
+	}
 
-		var model = resultModel.get(index)
-		var runner = runnerModel.modelForRow(model.runnerIndex)
-		var modelIndex = runner.index(model.runnerItemIndex, 0)
-		return runner.data(modelIndex, HasActionListRole)
+	function hasActionList(index) {
+		const HasActionListRoleOffset = 8
+		var HasActionListRole = Qt.UserRole + HasActionListRoleOffset
+
+		var entry = resultModel.get(index)
+		if (!entry) 
+			return false
+
+		var appItem = findInAllAppsModel(entry.favoriteId, entry.url)
+		if (!appItem) 
+			return false
+
+		var modelIndex = appItem.parentModel.index(appItem.indexInParent, 0)
+		return appItem.parentModel.data(modelIndex, HasActionListRole)
 	}
 
 	function getActionList(index) {
-		var DescriptionRole = Qt.UserRole + 1;
-		var ActionListRole = DescriptionRole + 8;
+		const ActionListRoleOffset = 9
+		var ActionListRole = Qt.UserRole + ActionListRoleOffset
 
-		var model = resultModel.get(index)
-		var runner = runnerModel.modelForRow(model.runnerIndex)
-		var modelIndex = runner.index(model.runnerItemIndex, 0)
-		return runner.data(modelIndex, ActionListRole)
+		var entry = resultModel.get(index)
+		if (!entry) 
+			return []
+
+		var appItem = findInAllAppsModel(entry.favoriteId, entry.url)
+		if (!appItem) 
+			return []
+
+		var modelIndex = appItem.parentModel.index(appItem.indexInParent, 0)
+		return appItem.parentModel.data(modelIndex, ActionListRole) || []
 	}
 
 	function triggerIndexAction(index, actionId, actionArgument) {
-		// kicker/code/tools.js triggerAction()
-		var model = resultModel.get(index)
-		var runner = runnerModel.modelForRow(model.runnerIndex)
-		var closeRequested = runner.trigger(model.runnerItemIndex, actionId, actionArgument)
-		if (closeRequested) {
+		var entry = resultModel.get(index)
+		if (!entry) 
+			return
+
+		// Use the kicker app model trigger if the result maps to a known app
+		var appItem = findInAllAppsModel(entry.favoriteId, entry.url)
+		if (appItem) 
+		{
+			appItem.parentModel.trigger(appItem.indexInParent, actionId, actionArgument)
+			itemTriggered()
+			return
+		}
+
+		// Fallback: trigger via the runner for non-app results
+		var runner = runnerModel.modelForRow(entry.runnerIndex)
+		if (!runner) 
+			return
+		var closeRequested = runner.trigger(entry.runnerItemIndex, actionId, actionArgument)
+		if (closeRequested) 
+		{
 			plasmoid.expanded = false
 		}
 		itemTriggered()

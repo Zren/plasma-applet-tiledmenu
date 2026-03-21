@@ -26,9 +26,9 @@ GridView {
 
 	property int buttonSize: {
 		if (squareView) {
-			return 70 * Screen.devicePixelRatio
+			return 70 * config.scaleFactor
 		} else {
-			return 36 * Screen.devicePixelRatio
+			return 36 * config.scaleFactor
 		}
 	}
 

@@ -23,11 +23,15 @@ Item {
 
 	function open(x, y) {
 		refreshMenu()
-
+		if (!menu) { 
+			console.log('AppContextMenu.open: menu is null, returning')
+			return 
+		}
 		if (menu.content.length === 0) {
+			console.log('AppContextMenu.open: content empty, returning')
 			return
 		}
-
+		
 		if (x && y) {
 			menu.open(x, y)
 		} else {
@@ -38,15 +42,27 @@ Item {
 	function destroyMenu() {
 		if (menu) {
 			menu.destroy()
-			// menu = null // Don't null here. Binding loop: onOpended=false => closed() => destroyMenu() => menu=null => opened=false
-			logger.debug('AppContextMenu.destroyMenu', menu)
+			menu = null
 		}
 	}
 
 	function refreshMenu() {
 		destroyMenu()
 		menu = contextMenuComponent.createObject(root)
+		if (!menu) { 
+			console.log('AppContextMenu.refreshMenu: createObject returned null'); return 
+		}
 		populateMenu(menu)
+	}
+
+	Component {
+		id: menuItemComponent
+		PlasmaExtras.MenuItem {}
+	}
+
+	Component {
+		id: menuSeparatorComponent
+		PlasmaExtras.MenuItem { separator: true }
 	}
 
 	Component {
@@ -57,14 +73,17 @@ Item {
 			visualParent: root.visualParent
 
 			function newSeperator() {
-				return Qt.createQmlObject("import org.kde.plasma.extras as PlasmaExtras; PlasmaExtras.MenuItem { separator: true }", contextMenu)
+				return menuSeparatorComponent.createObject(contextMenu)
 			}
 			function newMenuItem() {
-				return Qt.createQmlObject("import org.kde.plasma.extras as PlasmaExtras; PlasmaExtras.MenuItem {}", contextMenu)
+				return menuItemComponent.createObject(contextMenu)
 			}
 
 			function addPinToMenuAction(favoriteId) {
 				var menuItem = menu.newMenuItem()
+				if (!menuItem) { 
+					console.log('addPinToMenuAction: menuItem null, returning'); return 
+				}
 				if (tileGrid.hasAppTile(favoriteId)) {
 					menuItem.text = i18n("Unpin from Menu")
 					menuItem.icon = "list-remove"
@@ -89,6 +108,9 @@ Item {
 			// https://invent.kde.org/plasma/plasma-desktop/-/blob/Plasma/5.27/applets/taskmanager/package/contents/ui/ContextMenu.qml#L75
 			// https://invent.kde.org/plasma/plasma-desktop/-/blob/master/applets/taskmanager/package/contents/ui/ContextMenu.qml
 			function addActionList(actionList, listModel, index) {
+				if (!actionList || !actionList.forEach) {
+					return
+				}
 				// .desktop file Exec actions
 				// ------
 				// Pin to Taskbar / Desktop / Panel
@@ -101,6 +123,8 @@ Item {
 				actionList.forEach(function(actionItem) {
 					// console.log(index, actionItem.actionId, actionItem.actionArgument, actionItem.text)
 					var menuItem = menu.newMenuItem()
+					if (!menuItem) 
+						return
 					menuItem.text = actionItem.text ? actionItem.text : ""
 					menuItem.enabled = actionItem.type != "title" && ("enabled" in actionItem ? actionItem.enabled : true)
 					menuItem.separator = actionItem.type == "separator"

@@ -5,9 +5,21 @@
 			{
 				"Email": "zrenfire@gmail.com",
 				"Name": "Chris Holland"
+			},
+			{
+				"Email": "bruce@passioncomputing.com.au",
+				"Name": "Bruce Andrewartha"
+			},
+			{
+				"Email": "wauters.johan@telenet.be",
+				"Name": "Johan Wauters"
+			},
+			{
+				"Email": "infinitesnails@gmail.com",
+				"Name": "Nick Irwin"
 			}
 		],
-		"BugReportUrl": "https://github.com/Zren/plasma-applet-tiledmenu/issues",
+		"BugReportUrl": "https://github.com/nirwin81/plasma-applet-tiledmenu/issues",
 		"Category": "Application Launchers",
 		"Description": "A menu based on Windows 10's Start Menu.",
 		"Description[es]": "Menú basado en el menú de inicio de Windows 10",
@@ -24,7 +36,7 @@
 		"Description[tr]": "Windows 10'un Başlat Menüsü'nü temel alan bir menü.",
 		"Description[zh_TW]": "一個基於 Windows 10 開始功能表的選單。",
 		"Icon": "start-here-kde",
-		"Id": "com.github.zren.tiledmenu",
+		"Id": "com.github.nirwin81.tiledmenu",
 		"License": "GPL-2.0+",
 		"Name": "Tiled Menu",
 		"Name[es]": "Menú con Baldosas",
@@ -40,8 +52,8 @@
 		"Name[sl]": "Meni s ploščicami",
 		"Name[tr]": "Döşeli Menü",
 		"Name[zh_TW]": "方塊磚選單",
-		"Version": "46",
-		"Website": "https://github.com/Zren/plasma-applet-tiledmenu"
+		"Version": "48",
+		"Website": "https://github.com/nirwin81/plasma-applet-tiledmenu"
 	},
 	"X-Plasma-API-Minimum-Version": "6.0",
 	"X-Plasma-Provides": [

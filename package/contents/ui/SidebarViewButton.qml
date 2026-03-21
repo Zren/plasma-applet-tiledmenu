@@ -11,7 +11,7 @@ SidebarItem {
 	readonly property string appletIconFilename: appletIconName ? Qt.resolvedUrl("../icons/" + appletIconName + ".svg") : ""
 
 	checkedEdge: Qt.LeftEdge
-	checkedEdgeWidth: 4 * Screen.devicePixelRatio // Twice as thick as normal
+	checkedEdgeWidth: 4 * config.scaleFactor // Twice as thick as normal
 
 	Kirigami.Icon {
 		id: icon

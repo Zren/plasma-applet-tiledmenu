@@ -96,7 +96,7 @@ PlasmaComponents3.TextField {
 			id: previewBgMask
 			visible: false
 			anchors.fill: parent
-			border.width: 1 * Screen.devicePixelRatio
+			border.width: 1 * config.scaleFactor
 			border.color: "transparent"
 			radius: width / 2
 		}

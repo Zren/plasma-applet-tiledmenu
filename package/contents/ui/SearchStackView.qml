@@ -9,8 +9,8 @@ QQC2.StackView {
 
 	property int zoomDuration: 250
 	property int zoomDelta: 100
-	property real zoomedInRatio: Math.max(1, stackView.width + zoomDelta * Screen.devicePixelRatio) / stackView.width
-	property real zoomedOutRatio: Math.max(1, stackView.width - zoomDelta * Screen.devicePixelRatio) / stackView.width
+	property real zoomedInRatio: Math.max(1, stackView.width + zoomDelta * config.scaleFactor) / stackView.width
+	property real zoomedOutRatio: Math.max(1, stackView.width - zoomDelta * config.scaleFactor) / stackView.width
 
 	// readonly property var noTransition: StackViewDelegate {}
 

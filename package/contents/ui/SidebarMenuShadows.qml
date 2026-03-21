@@ -1,7 +1,7 @@
 import QtQuick
 
 Item {
-	property int dropShadowSize: 4 * Screen.devicePixelRatio
+	property int dropShadowSize: 4 * config.scaleFactor
 	property int roundShadowHack: dropShadowSize/2 // "dropShadowSize/2" draws enough to fool the eye.
 	Rectangle {
 		id: topShadow

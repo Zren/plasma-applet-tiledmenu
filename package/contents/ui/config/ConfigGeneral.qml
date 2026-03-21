@@ -529,7 +529,8 @@ LibConfig.FormKCM {
 
 
 	//-------------------------------------------------------
-	LibConfig.Heading {
+	// Disabling for now as there appears to be a problem using the TextField.qml file
+	/*LibConfig.Heading {
 		text: i18n("Right Click Menu")
 	}
 	LibConfig.TextField {
@@ -543,6 +544,17 @@ LibConfig.FormKCM {
 	LibConfig.TextField {
 		configKey: 'fileManagerApp'
 		Kirigami.FormData.label: i18n("File Manager")
+	}*/
+
+	//-------------------------------------------------------
+	LibConfig.Heading {
+		text: i18n("Miscellaneous")
+	}
+
+	LibConfig.CheckBox {
+		id: useSystemScalingCheckbox
+		text: i18n("Use system scaling")
+		configKey: 'useSystemScaling'
 	}
 
 }
